@@ -16,4 +16,3 @@ Uniting the World Through News - One Language at a Time.
 - [ ] Solicit donations and no-tracker honor-system subscriptions via coinbase and/or patreon
 - [ ] Properly market
 - [x] Register TranslateTribune.com
-- [-] Ask for permission
