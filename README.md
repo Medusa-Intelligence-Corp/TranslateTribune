@@ -4,6 +4,7 @@ Uniting the World Through News - One Language at a Time.
 ## TODOs
 
 - [ ] create dummy json objects for each article type/section
+- [ ] add scores for importance? what do we scrape? how do we get articles or do we capture the "vibes" of the front pages? see [https://www.frontpages.com/](https://www.frontpages.com/)
 - [ ] define sections and sources
 - [ ] create basic layout
 - [ ] alpha scrapers (elaborate, by site) 
