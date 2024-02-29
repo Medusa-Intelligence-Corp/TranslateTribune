@@ -11,20 +11,16 @@ RUN apt-get update && \
     python3 \
     python3-pip \
     wget \
-    unzip
+    unzip \
+    xvfb
 
 # Install Python dependencies
 RUN pip3 install --no-cache-dir \
-    'selenium==4.1.0'
-
-# Download and extract the bypass-paywalls-chrome-clean-master.zip
-RUN wget -O bypass-paywalls-chrome-clean-master.zip "https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean/-/archive/master/bypass-paywalls-chrome-clean-master.zip" && \
-    unzip bypass-paywalls-chrome-clean-master.zip && \
-    rm bypass-paywalls-chrome-clean-master.zip
+    'selenium==4.1.0' \
+    anthropic \
+    beautifulsoup4
 
 # Copy the rest of your application's code
 COPY . .
 
-# Expose port 4444 for Selenium Server
-EXPOSE 4444
-
+CMD ["python3","scraper.py"]

@@ -15,13 +15,15 @@
             margin: auto;
             background: white;
             padding: 20px;
+            column-count: 3;
+            column-gap: 40px;
+        }
+        .header, .section {
+            column-span: all;
         }
         .header {
             text-align: center;
             margin-bottom: 50px;
-        }
-        .section {
-            margin-bottom: 40px;
         }
         .section-title {
             font-size: 24px;
@@ -30,6 +32,7 @@
         }
         .article {
             margin-bottom: 20px;
+            break-inside: avoid;
         }
         .article-title {
             font-size: 20px;
@@ -37,9 +40,14 @@
         }
         .article-source {
             font-style: italic;
+            display: flex;
+            align-items: center;
         }
         .article-content {
             text-align: justify;
+        }
+        .flag-icon {
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -50,50 +58,95 @@
             <p>Your Global News Digest</p>
         </div>
 
-        <!-- Politics Section -->
+        <!-- Russia/Ukraine Conflict -->
         <div class="section">
-            <div class="section-title">Politics</div>
+            <div class="section-title">Russia/Ukraine Conflict</div>
             <div class="article">
-                <div class="article-title">Global Political Shifts</div>
-                <div class="article-source">Source: Le Monde</div>
-                <p class="article-content">A comprehensive analysis of the recent political shifts observed in various countries around the globe...</p>
+                <div class="article-title">🇺🇦 Ukraine's Strategy Amidst Tensions</div>
+                <div class="article-source"><span class="flag-icon">🇺🇦</span><a href="https://www.pravda.com.ua">Ukrainska Pravda</a></div>
+                <p class="article-content">An analysis of Ukraine's current military and diplomatic strategies in the ongoing conflict...</p>
             </div>
             <div class="article">
-                <div class="article-title">Election Updates from Brazil</div>
-                <div class="article-source">Source: Folha de S.Paulo</div>
-                <p class="article-content">The latest updates on the Brazilian elections and what it means for the future of the country...</p>
+                <div class="article-title">🇷🇺 Russia's Perspective on the Conflict</div>
+                <div class="article-source"><span class="flag-icon">🇷🇺</span><a href="https://www.rt.com">RT News</a></div>
+                <p class="article-content">Insights into Russia's stance and objectives in the ongoing tensions with Ukraine...</p>
             </div>
         </div>
 
-        <!-- Technology Section -->
+        <!-- Palestine/Israel -->
         <div class="section">
-            <div class="section-title">Technology</div>
+            <div class="section-title">Palestine/Israel</div>
             <div class="article">
-                <div class="article-title">Innovations in AI</div>
-                <div class="article-source">Source: Der Spiegel</div>
-                <p class="article-content">Exploring the latest innovations in artificial intelligence and how they are shaping our future...</p>
+                <div class="article-title">🇮🇱 Israel's Security Measures</div>
+                <div class="article-source"><span class="flag-icon">🇮🇱</span><a href="https://www.haaretz.com">Haaretz</a></div>
+                <p class="article-content">A look into the latest security measures taken by Israel in response to escalating tensions...</p>
             </div>
             <div class="article">
-                <div class="article-title">The Rise of Quantum Computing</div>
-                <div class="article-source">Source: South China Morning Post</div>
-                <p class="article-content">A deep dive into the world of quantum computing and its potential to revolutionize technology...</p>
+                <div class="article-title">🇵🇸 Voices from Palestine</div>
+                <div class="article-source"><span class="flag-icon">🇵🇸</span><a href="http://www.maannews.net">Ma'an News Agency</a></div>
+                <p class="article-content">Perspectives and stories from Palestinian voices on the ground amidst ongoing conflict...</p>
             </div>
         </div>
 
-        <!-- Culture Section -->
+        <!-- Mainland China and Taiwan -->
         <div class="section">
-            <div class="section-title">Culture</div>
+            <div class="section-title">Mainland China and Taiwan</div>
             <div class="article">
-                <div class="article-title">Art Movements Across the Globe</div>
-                <div class="article-source">Source: The Guardian</div>
-                <p class="article-content">An exploration of various art movements that have emerged across different cultures and time periods...</p>
+                <div class="article-title">🇨🇳 China's Stance on Taiwan</div>
+                <div class="article-source"><span class="flag-icon">🇨🇳</span><a href="https://www.globaltimes.cn">Global Times</a></div>
+                <p class="article-content">Exploring the official stance of Mainland China on the issue of Taiwan and cross-strait relations...</p>
             </div>
             <div class="article">
-                <div class="article-title">Cinema's Influence on Society</div>
-                <div class="article-source">Source: El País</div>
-                <p class="article-content">Analyzing how cinema has influenced societal norms and values across different cultures...</p>
+                <div class="article-title">🇹🇼 Taiwan's Diplomatic Efforts</div>
+                <div class="article-source"><span class="flag-icon">🇹🇼</span><a href="https://www.taipeitimes.com">Taipei Times</a></div>
+                <p class="article-content">An overview of Taiwan's recent diplomatic efforts and international engagements...</p>
             </div>
         </div>
+
+        <!-- Arts -->
+        <div class="section">
+            <div class="section-title">Arts</div>
+            <div class="article">
+                <div class="article-title">🇯🇵 Japan's Video Game Industry Trends</div>
+                <div class="article-source"><span class="flag-icon">🇯🇵</span><a href="https://www.famitsu.com">Famitsu</a></div>
+                <p class="article-content">The latest trends and developments in Japan's video game industry...</p>
+            </div>
+            <div class="article">
+                <div class="article-title">🇫🇷 French Wine Innovations</div>
+                <div class="article-source"><span class="flag-icon">🇫🇷</span><a href="https://www.lefigaro.fr/vin">Le Figaro Vin</a></div>
+                <p class="article-content">Exploring the latest innovations in the French wine industry and their global impact...</p>
+            </div>
+            <div class="article">
+                <div class="article-title">🇲🇽 Mexico's Culinary Scene</div>
+                <div class="article-source"><span class="flag-icon">🇲🇽</span><a href="https://www.mexicodesconocido.com.mx">México Desconocido</a></div>
+                <p class="article-content">A deep dive into Mexico's rich culinary scene and its influence on global cuisine...</p>
+            </div>
+            <div class="article">
+                <div class="article-title">🇮🇹 Italy's Food Culture Evolution</div>
+                <div class="article-source"><span class="flag-icon">🇮🇹</span><a href="https://www.gamberorosso.it">Gambero Rosso</a></div>
+                <p class="article-content">An exploration of how Italy's food culture is evolving in the modern era...</p>
+            </div>
+        </div>
+
+        <!-- Health -->
+        <div class="section">
+            <div class="section-title">Health</div>
+            <!-- Add health-related articles here -->
+        </div>
+
+        <!-- Style -->
+        <div class="section">
+            <div class="section-title">Style</div>
+            <!-- Add style and fashion-related articles here -->
+        </div>
+
+        <!-- US News from a Foreign Perspective -->
+        <div class="section">
+            <div class="section-title">US News from a Foreign Perspective</div>
+            <!-- Add articles here -->
+        </div>
+
+        <!-- Add more sections and articles as needed -->
 
     </div>
 </body>
