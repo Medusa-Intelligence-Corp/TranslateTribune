@@ -3,6 +3,7 @@ Uniting the World Through News - One Language at a Time.
 
 ## TODOs
 - [ ] define sections and sources
+- [ ] create "top link finder" that finds the best link in a homepage
 - [ ] create dummy json objects for each article type/section, add importance scores, the AI model to use, paywalled or not, original language, propaganda/trigger warning stuff.
 - [ ] create basic index.html layout to feed off of json objects and propegate
 - [ ] setup jobs for scrapers (Airflow, DataPipeline etc... check options and architect properly), commit new objects to github or direct to s3?
