@@ -17,7 +17,7 @@
     "url": "https://www.lefigaro.fr",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a French news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in French below, please summarize the content of the article in English and add a few key French vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in French below, please summarize the content of the article in English and add a few key French vocabulary phrases that a student learning French might want to know:"
   },
   {
     "name": "People's Republic of China (Mainland)",
@@ -27,7 +27,7 @@
     "url": "http://www.people.com.cn",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Chinese news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning Mandarin might want to know:"
   },
   {
     "name": "Republic of China (Taiwan)",
@@ -37,7 +37,7 @@
     "url": "https://www.ltn.com.tw",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Chinese news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning Mandarin might want to know:"
   },
   {
     "name": "Palestinian Territories",
@@ -47,7 +47,7 @@
     "url": "http://www.al-ayyam.com",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Arabic news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Arabic below, please summarize the content of the article in English and add a few key Arabic vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Arabic below, please summarize the content of the article in English and add a few key Arabic vocabulary phrases that a student learning Arabic might want to know:"
   },
   {
     "name": "State of Israel",
@@ -57,7 +57,7 @@
     "url": "https://www.ynet.co.il",
     "model": "Claude 2",
     "finder":"Please search the raw html below from an Israeli (Hebrew) news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Hebrew below, please summarize the content of the article in English and add a few key Hebrew vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Hebrew below, please summarize the content of the article in English and add a few key Hebrew vocabulary phrases that a student learning Hebrew might want to know:"
   },
   {
     "name": "Russian Federation",
@@ -67,7 +67,7 @@
     "url": "https://iz.ru",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Russian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Russian below, please summarize the content of the article in English and add a few key Russian vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Russian below, please summarize the content of the article in English and add a few key Russian vocabulary phrases that a student learning Russian might want to know:"
   },
   {
     "name": "Ukraine",
@@ -77,7 +77,7 @@
     "url": "https://www.pravda.com.ua",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Ukranian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Ukranian below, please summarize the content of the article in English and add a few key Ukranian vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Ukranian below, please summarize the content of the article in English and add a few key Ukranian vocabulary phrases that a student learning Ukranian might want to know:"
   },
   {
     "name": "Federative Republic of Brazil",
@@ -87,7 +87,7 @@
     "url": "https://www.folha.uol.com.br",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Brazilian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Portugese below, please summarize the content of the article in English and add a few key Portugese vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Portugese below, please summarize the content of the article in English and add a few key Portugese vocabulary phrases that a student learning Portugese might want to know:"
   },
   {
     "name": "Republic of Korea (South Korea)",
@@ -97,7 +97,7 @@
     "url": "https://www.joongang.co.kr",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Korean news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning Korean might want to know:"
   },
   {
     "name": "Democratic People's Republic of Korea (North Korea)",
@@ -107,17 +107,17 @@
     "url": "http://www.rodong.rep.kp",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Korean news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning Korean might want to know:"
   },
   {
     "name": "Islamic Republic of Iran",
     "language": "Persian",
     "flag": "&#127470;&#127466;",
-    "source": "Iran Daily",
-    "url": "http://www.iran-daily.com",
+    "source": "Ettela'at",
+    "url": "https://ettelaat.com/",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a Iranian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Persian below, please summarize the content of the article in English and add a few key Persian vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Persian below, please summarize the content of the article in English and add a few key Persian vocabulary phrases that a student learning Persian might want to know:"
   },
   {
     "name": "Federal Republic of Germany",
@@ -127,7 +127,7 @@
     "url": "https://www.sueddeutsche.de",
     "model": "Claude 2",
     "finder":"Please search the raw html below from a German news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in German below, please summarize the content of the article in English and add a few key German vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in German below, please summarize the content of the article in English and add a few key German vocabulary phrases that a student learning German might want to know:"
   },
   {
     "name": "Italian Republic",
@@ -137,6 +137,6 @@
     "url": "https://www.repubblica.it",
     "model": "Claude 2",
     "finder":"Please search the raw html below from an Italian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
-    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Italian below, please summarize the content of the article in English and add a few key Italian vocabulary phrases that a student learning spanish might want to know:"
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Italian below, please summarize the content of the article in English and add a few key Italian vocabulary phrases that a student learning Italian might want to know:"
   }
 ]
