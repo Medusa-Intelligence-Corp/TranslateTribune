@@ -76,5 +76,9 @@ def get_article_summary(url, instructions, model):
 
 if __name__ == "__main__":
     #TODO get json from file and iterate through sources
+    #TODO randomize the order that you process
     scrape("https://avis-vin.lefigaro.fr/domaines-et-vignerons/o157408-biodynamie-polyculture-elevage-decouverte-d-un-domaine-pas-comme-les-autres-a-chinon")
+
+    #TODO use an html template here and output it
+    print("Done")
 
