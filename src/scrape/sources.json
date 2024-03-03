@@ -4,97 +4,139 @@
     "language": "Spanish",
     "flag": "&#127474;&#127485;",
     "source": "La Jornada",
-    "url": "https://www.jornada.com.mx"
+    "url": "https://www.jornada.com.mx",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Mexican news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Spanish below, please summarize the content of the article in English and add a few key Spanish vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "French Republic",
     "language": "French",
     "flag": "&#127467;&#127479;",
     "source": "Le Figaro",
-    "url": "https://www.lefigaro.fr"
+    "url": "https://www.lefigaro.fr",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a French news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in French below, please summarize the content of the article in English and add a few key French vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "People's Republic of China (Mainland)",
     "language": "Mandarin",
     "flag": "&#127464;&#127475;",
     "source": "Renmin Ribao",
-    "url": "http://www.people.com.cn"
+    "url": "http://www.people.com.cn",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Chinese news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Republic of China (Taiwan)",
     "language": "Mandarin",
     "flag": "&#127470;&#127475;",
     "source": "Liberty Times",
-    "url": "https://www.ltn.com.tw"
+    "url": "https://www.ltn.com.tw",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Chinese news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Mandarin below, please summarize the content of the article in English and add a few key Mandarin vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Palestinian Territories",
     "language": "Arabic",
     "flag": "&#127477;&#127473;",
     "source": "Al-Ayyam",
-    "url": "http://www.al-ayyam.com"
+    "url": "http://www.al-ayyam.com",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Arabic news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Arabic below, please summarize the content of the article in English and add a few key Arabic vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "State of Israel",
     "language": "Hebrew",
     "flag": "&#127470;&#127474;",
     "source": "Yedioth Ahronoth",
-    "url": "https://www.ynet.co.il"
+    "url": "https://www.ynet.co.il",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from an Israeli (Hebrew) news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Hebrew below, please summarize the content of the article in English and add a few key Hebrew vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Russian Federation",
     "language": "Russian",
     "flag": "&#127479;&#127482;",
     "source": "Izvestia",
-    "url": "https://iz.ru"
+    "url": "https://iz.ru",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Russian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Russian below, please summarize the content of the article in English and add a few key Russian vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Ukraine",
     "language": "Ukranian",
     "flag": "&#127482;&#127462;",
     "source": "Ukrayinska Pravda",
-    "url": "https://www.pravda.com.ua"
+    "url": "https://www.pravda.com.ua",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Ukranian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Ukranian below, please summarize the content of the article in English and add a few key Ukranian vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Federative Republic of Brazil",
     "language": "Portugese",
     "flag": "&#127463;&#127479;",
     "source": "Folha de S.Paulo",
-    "url": "https://www.folha.uol.com.br"
+    "url": "https://www.folha.uol.com.br",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Brazilian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Portugese below, please summarize the content of the article in English and add a few key Portugese vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Republic of Korea (South Korea)",
     "language": "Korean",
     "flag": "&#127472;&#127479;",
     "source": "JoongAng Ilbo",
-    "url": "https://www.joongang.co.kr"
+    "url": "https://www.joongang.co.kr",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Korean news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Democratic People's Republic of Korea (North Korea)",
     "language": "Korean",
     "flag": "&#127487;&#127462;",
     "source": "Rodong Sinmun",
-    "url": "http://www.rodong.rep.kp"
+    "url": "http://www.rodong.rep.kp",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Korean news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Korean below, please summarize the content of the article in English and add a few key Korean vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Islamic Republic of Iran",
     "language": "Persian",
     "flag": "&#127470;&#127466;",
     "source": "Iran Daily",
-    "url": "http://www.iran-daily.com"
+    "url": "http://www.iran-daily.com",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a Iranian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Persian below, please summarize the content of the article in English and add a few key Persian vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Federal Republic of Germany",
     "language": "German",
     "flag": "&#127465;&#127466;",
     "source": "Süddeutsche Zeitung",
-    "url": "https://www.sueddeutsche.de"
+    "url": "https://www.sueddeutsche.de",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from a German news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in German below, please summarize the content of the article in English and add a few key German vocabulary phrases that a student learning spanish might want to know:"
   },
   {
     "name": "Italian Republic",
     "language": "Italian",
     "flag": "&#127470;&#127481;",
     "source": "La Repubblica",
-    "url": "https://www.repubblica.it"
+    "url": "https://www.repubblica.it",
+    "model": "Claude 2",
+    "finder":"Please search the raw html below from an Italian news website, please return a link to an article that a United States-based audience might be interested in, something that represents a different perspective or would be interesting or even funny to an American.",
+    "summarizer":"Please act as a translator and summarizer, I'm going to give you the text of an article in Italian below, please summarize the content of the article in English and add a few key Italian vocabulary phrases that a student learning spanish might want to know:"
   }
 ]

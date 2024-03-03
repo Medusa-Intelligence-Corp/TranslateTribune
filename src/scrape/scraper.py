@@ -12,6 +12,12 @@ from bs4 import BeautifulSoup
 
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 
+class UnsupportedModelException(Exception):
+    """Exception raised for unsupported models."""
+    def __init__(self, model, message="Model not supported"):
+        self.model = model
+        self.message = message
+        super().__init__(self.message)
 
 def setup_driver():
     # Initialize Chrome Options
@@ -25,7 +31,7 @@ def setup_driver():
     driver = webdriver.Chrome(options=chrome_options)
     return driver
 
-def summarize_with_anthropic(text_chunk, instructions="Provide a concise summary (in english) focusing on the main ideas in the text from the given article below:"):
+def send_to_anthropic(text_chunk, instructions):
     anthropic = Anthropic()
 
     completion = anthropic.completions.create(
@@ -36,7 +42,12 @@ def summarize_with_anthropic(text_chunk, instructions="Provide a concise summary
 
     return completion.completion
 
-def scrape(url):
+def get_best_article(url, instructions, model):
+    # TODO
+    article_url = "https://localhost"
+    return article_url
+
+def get_article_summary(url, instructions, model):
     driver = setup_driver()
     
     driver.get(url)
@@ -53,14 +64,17 @@ def scrape(url):
 
 
     # TODO check for token size and chunk if needed
-    summary = summarize_with_anthropic(text)
-   
-    # TODO return json instead
+    if model=="Claude 2":
+        summary = send_to_anthropic(text, instructions)
+    else:
+        raise UnsupportedModelException(model)
+
     print(summary)
 
     # Clean up
     driver.quit()
 
 if __name__ == "__main__":
+    #TODO get json from file and iterate through sources
     scrape("https://avis-vin.lefigaro.fr/domaines-et-vignerons/o157408-biodynamie-polyculture-elevage-decouverte-d-un-domaine-pas-comme-les-autres-a-chinon")
 
