@@ -17,10 +17,14 @@ RUN apt-get update && \
 # Install Python dependencies
 RUN pip3 install --no-cache-dir \
     selenium \
+    beautifulsoup4 \
+    urlextract \
+    validators \
+    Jinja2 \
     anthropic 
    
 
 # Copy the rest of your application's code
 COPY . .
 
-CMD ["python3","create_tribune.py"]
+CMD ["python3","publisher.py"]

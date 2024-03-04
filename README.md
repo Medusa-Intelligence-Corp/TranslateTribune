@@ -2,19 +2,14 @@
 Uniting the World Through News - One Language at a Time.
 
 ## TODOs
-- [ ] process json in order
-- [ ] prioritize/decide "front page" after summarization (make scores)
-- [ ] in curation/finder phase, only send <a> links
-- [ ] add GPT-4, consider moving Persian to TODO.json and add Turkish and a few others.
-- [ ] test sites
-- [ ] better token approximator to avoid overflows (do some research)
-- [ ] create basic index.html from results
+- [ ] test output index.html
 - [ ] Commit new objects direct to s3.
 - [ ] setup jobs for scrapers (Airflow? Lambda? Kubernetes shit on Vultr?) 
 - [ ] Setup S3 static hosting (see bf.com)
 - [ ] Setup github actions
 - [ ] Solicit source feedback (via github issues)
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
+- [ ] Add more models as needed
 - [ ] Properly market
 - [x] Register TranslateTribune.com
 - [x] alpha scraper setup 
