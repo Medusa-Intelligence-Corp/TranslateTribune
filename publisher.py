@@ -32,7 +32,7 @@ if __name__ == "__main__":
             print("---------------PART-1-CURATION--------------------")
             print("--------------------------------------------------")
 
-            finder = f"""Act as a polyglot international newspaper editor, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to the {name}. The article should be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Here's an example of what I'm looking for in a response: 'Based on the content, an interesting article is \"Title\" with a unique perspective on [topic]. The URL is https://...'. Thank you!"""
+            finder = f"""Act as a polyglot international newspaper editor, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to the {name}. The article should be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Here's an example of what I'm looking for in a response: 'Based on the title, an interesting article might be \"Title\"  The URL is https://...'."""
             print(f"Finder: {finder}")
 
             print("--------------------------------------------------")
