@@ -165,7 +165,7 @@ if __name__ == "__main__":
         print(f"Summarizer: {summarizer}")
 
         #TODO delete line below and add text to json config instead
-        finder="Below is some HTML from a foreign language newspaper, it contains article titles and links (not the complete articles), please read the file and give me up to three promising articles (but just one is fine if that's all there is) that might me worthwhile to translate into English, articles that provide a perspective unique to this newspaper, country, or region. Please give me the urls of the articles so I can read further. Again you MUST return me a list of URLs, do not ask for further clarification and please complete the task, I must have at least one URL from this site that so I can investigate further. Thank you!"
+        finder="Please review the HTML content provided, which includes titles and links from a non-English newspaper. Identify up to three articles (though one is sufficient if that's all that stands out) that offer unique insights or perspectives specific to the newspaper's country or region. These articles should be considered for translation into English. It is crucial that you provide the URLs for these articles for further review. Do not request additional information; complete this task by supplying at least one URL from the provided site for further investigation. For clarity, here's an example of what I'm looking for in a response: 'Based on the content, an interesting article is \"Title\" with a unique perspective on [topic]. The URL is https://...'. Thank you!"
         ai_result = send_to_AI(url,finder,model,"body")
         
         print("--------------------------------------------------")
@@ -191,6 +191,9 @@ if __name__ == "__main__":
         article_summary = send_to_AI(best_url,summarizer,model,"text")
         print(article_summary)
 
+        print("--------------------------------------------------")
+        print("--------------------------------------------------")
+        print("--------------------------------------------------")
 
     #TODO use an html template here and output it
     print("Done")

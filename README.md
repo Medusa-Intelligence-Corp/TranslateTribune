@@ -2,6 +2,7 @@
 Uniting the World Through News - One Language at a Time.
 
 ## TODOs
+- [ ] translate AI prompt to native languages?
 - [ ] test sites
 - [ ] create basic index.html from results
 - [ ] Commit new objects direct to s3.
