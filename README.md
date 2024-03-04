@@ -2,6 +2,9 @@
 Uniting the World Through News - One Language at a Time.
 
 ## TODOs
+- [ ] process json in order
+- [ ] prioritize/decide "front page" after summarization (make scores)
+- [ ] in curation/finder phase, only send <a> links
 - [ ] add GPT-4, consider moving Persian to TODO.json and add Turkish and a few others.
 - [ ] test sites
 - [ ] better token approximator to avoid overflows (do some research)
