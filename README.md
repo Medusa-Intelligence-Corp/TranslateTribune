@@ -2,8 +2,8 @@
 Uniting the World Through News - One Language at a Time.
 
 ## TODOs
-- [ ] translate AI prompt to native languages?
 - [ ] test sites
+- [ ] add GPT-4, consider moving Persian to TODO.json and add Turkish and a few others.
 - [ ] create basic index.html from results
 - [ ] Commit new objects direct to s3.
 - [ ] setup jobs for scrapers (Airflow? Lambda? Kubernetes shit on Vultr?) 

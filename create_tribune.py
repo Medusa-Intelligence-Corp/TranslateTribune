@@ -130,7 +130,7 @@ def send_to_AI(url, instructions, model, mode="text"):
         print(text[-100:])
 
     if model=="Claude 2":
-        chunks = text_to_chunks(text,125000)
+        chunks = text_to_chunks(text,100000)
         summary = send_to_anthropic(chunks[0], instructions)
     else:
         raise UnsupportedModelException(model)
