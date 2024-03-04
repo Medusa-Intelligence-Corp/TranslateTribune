@@ -38,11 +38,18 @@ def find_urls(text):
 
 
 def find_html(text):
-    main_content = BeautifulSoup(text, 'html.parser')
+    soup = BeautifulSoup(text, 'html.parser')
 
-    if main_content:
-        html_code = main_content.prettify()
-        return html_code
+    largest_block = None
+    largest_size = 0
+
+    for element in soup.children:
+        if element.name and len(list(element.descendants)) > largest_size:
+            largest_block = element
+            largest_size = len(list(element.descendants))
+
+    if largest_block:
+        return largest_block.prettify()
     else:
         return ""
 

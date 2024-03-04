@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
     <title>TranslateTribune - Your Global News Digest</title>
     <style>
         body {
@@ -15,15 +16,43 @@
             margin: auto;
             background: white;
             padding: 20px;
-            column-count: 3;
             column-gap: 40px;
+            display: flex; /* Changed to flex for better control */
+            flex-wrap: wrap; /* Allows flex items to wrap */
         }
         .header, .section {
-            column-span: all;
+            width: 100%; /* Each section takes up full width */
         }
         .header {
             text-align: center;
             margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-title {
+          width: 300px; /* set a fixed width */
+          height: 50px; /* set a fixed height */
+          overflow: hidden; /* hide any content that overflows the container */
+        }
+        .header h1 {
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 28px; /* decreased the font size */
+          line-height: 0px;
+          text-align: center;
+          white-space: nowrap;
+        }
+        .header a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .header p {
+            font-style: italic;
+        }
+        .header a:hover {
+            text-decoration: underline;
         }
         .section-title {
             font-size: 24px;
@@ -33,6 +62,7 @@
         .article {
             margin-bottom: 20px;
             break-inside: avoid;
+            width: 50%; /* Each article takes up half width */
         }
         .article-title {
             font-size: 20px;
@@ -49,19 +79,58 @@
         .flag-icon {
             margin-right: 5px;
         }
+        @media (max-width: 768px) { /* For mobile devices */
+            .article {
+                width: 100%; /* Each article takes up full width */
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header a {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>TranslateTribune</h1>
-            <p>Your Global News Digest</p>
+            <div class="header-title">
+              <h1>TranslateTribune</h1>
+            </div>
+            <div class="header-links">
+                <a href="https://github.com/Medusa-ML/TranslateTribune/issues">&#10067;</a>
+                <a href="https://medusaintel.co/">&#10084;&#65039;</a>
+            </div>
+            <p>"Your Global News Digest"</p>
+            
         </div>
 
         <div class="section">
             {{ article_html|safe }}
         </div>
     </div>
+  <script>
+    const title = document.querySelector('.header h1');
+    const chars = 'āăąçćčδēėęěėęğīįıĳĵķĸĺļľŀłńňņñøōŏőœřŕŗřśŝşšťțţůüűųūŭŵẃẍÿźżžÞþĐđßÆæØøÅåアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンァィゥェォッャュョーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンぁぃぅぇぉっゃゅょーヵヶぁぃぅぇぉゃゅょ';
+
+    setInterval(() => {
+      const index = Math.floor(Math.random() * title.textContent.length);
+      const char = title.textContent.charAt(index);
+      const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+      title.textContent = title.textContent.substring(0, index) + newChar + title.textContent.substring(index + 1);
+
+      // Change back to the original character after 500ms
+      setTimeout(() => {
+        title.textContent = title.textContent.substring(0, index) + char + title.textContent.substring(index + 1);
+      }, 200);
+    }, 400);
+  </script>
+
 </body>
 </html>
+
+
 

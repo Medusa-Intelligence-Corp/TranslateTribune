@@ -31,7 +31,7 @@ if __name__ == "__main__":
         print("---------------PART-1-CURATION--------------------")
         print("--------------------------------------------------")
 
-        finder = f"""Act as a polyglot international newspaper editor, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify up to two articles that offer unique insights or perspectives specific to the {name}. These articles should be considered for translation into English. Here's an example of what I'm looking for in a response: 'Based on the content, an interesting article is \"Title\" with a unique perspective on [topic]. The URL is https://...'. Thank you!"""
+        finder = f"""Act as a polyglot international newspaper editor, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify up to two articles that offer unique insights or perspectives specific to the {name}. These articles should be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Here's an example of what I'm looking for in a response: 'Based on the content, an interesting article is \"Title\" with a unique perspective on [topic]. The URL is https://...'. Thank you!"""
         print(f"Finder: {finder}")
 
         print("--------------------------------------------------")
@@ -66,7 +66,7 @@ if __name__ == "__main__":
                 <div class="article">
                     <div class="article-title">TITLE IN ENGLISH</div>
                     <div class="article-source"><span class="flag-icon">{flag}</span><a href="{link}">{source}</a></div>
-                    <p class="article-content">SUMMARY IN ENGLISH</p>
+                    <p class="article-content">SUMMARY IN ENGLISH (translated by {model})</p>
                     <p class="vocabulary">VOCABULARY</p>
                 </div>
                 ```

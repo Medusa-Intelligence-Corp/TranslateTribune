@@ -3,6 +3,7 @@ Uniting the World Through News - One Language at a Time.
 
 ## TODOs
 - [ ] test output index.html
+- [ ] fix what happens when the curator finds pdfs
 - [ ] Commit new objects direct to s3.
 - [ ] setup jobs for scrapers (Airflow? Lambda? Kubernetes shit on Vultr?) 
 - [ ] Setup S3 static hosting (see bf.com)
