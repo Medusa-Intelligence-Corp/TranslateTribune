@@ -21,12 +21,14 @@ class UnsupportedModelException(Exception):
         self.message = message
         super().__init__(self.message)
 
+
 class UnsupportedModeException(Exception):
     """Exception raised for unsupported modes."""
     def __init__(self, mode, message="Mode not supported"):
         self.mode = mode
         self.message = message
         super().__init__(self.message)
+
 
 def text_to_chunks(text, chunk_approx_tokens=200000, avg_token_length=3):
     """
@@ -67,11 +69,10 @@ def text_to_chunks(text, chunk_approx_tokens=200000, avg_token_length=3):
 
 
 def find_first_url(text):
-    # Regular expression pattern for matching URLs
-    pattern = r'https?://[^\s<>"]+|www\.[^\s<>"]+'
-    match = re.search(pattern, text)
-    if match:
-        return match.group()
+    urls = re.findall(r'https?://[^\s]+', text)
+    
+    if len(urls) > 0:
+        return urls[0]
     else:
         return None
 
@@ -87,6 +88,7 @@ def setup_driver():
     # Set up driver with options
     driver = webdriver.Chrome(options=chrome_options)
     return driver
+
 
 def send_to_anthropic(text_chunk, instructions):
     anthropic = Anthropic()
@@ -112,14 +114,20 @@ def send_to_AI(url, instructions, model, mode="text"):
         text = driver.execute_script("return document.body.innerText")
     elif mode=="source":
         text = driver.page_source
+    elif mode=="body":
+        text = driver.execute_script("return document.body.outerHTML")
     else:
         raise UnsupportedModeException(mode)
     
+    print("--------------------------------------------------")
     print("---------------SCRAPE-RESULT----------------------")
     print("--------------------------------------------------")
-    print(text)
-    print("--------------------------------------------------")
-    print("--------------------------------------------------")
+    if len(text) > 101:
+        print(text[:100])
+        print("...")
+        print("...")
+        print("...")
+        print(text[-100:])
 
     if model=="Claude 2":
         chunks = text_to_chunks(text,125000)
@@ -127,10 +135,11 @@ def send_to_AI(url, instructions, model, mode="text"):
     else:
         raise UnsupportedModelException(model)
 
-    print(summary)
-
     # Clean up
     driver.quit()
+
+    return summary
+
 
 if __name__ == "__main__":
     
@@ -154,20 +163,35 @@ if __name__ == "__main__":
         print(f"Model: {model}")
         print(f"Finder: {finder}")
         print(f"Summarizer: {summarizer}")
-        print("--------------------------------------------------")
-        print("--------------------------------------------------")
-        print("--------------------------------------------------")
 
-        best_url = find_first_url(send_to_AI(url,finder,model,"source"))
+        #TODO delete line below and add text to json config instead
+        finder="Below is some HTML from a foreign language newspaper, it contains article titles and links (not the complete articles), please read the file and give me up to three promising articles (but just one is fine if that's all there is) that might me worthwhile to translate into English, articles that provide a perspective unique to this newspaper, country, or region. Please give me the urls of the articles so I can read further. Again you MUST return me a list of URLs, do not ask for further clarification and please complete the task, I must have at least one URL from this site that so I can investigate further. Thank you!"
+        ai_result = send_to_AI(url,finder,model,"body")
         
         print("--------------------------------------------------")
+        print("---------------AI-CURATION------------------------")
         print("--------------------------------------------------")
+        print(ai_result)
+
         print("--------------------------------------------------")
+        print("----------------BEST-URL--------------------------")
+        print("--------------------------------------------------")
+        best_url = find_first_url(ai_result)
+        
+        if best_url is None:
+            print("whoops, didn't find any urls :(.")
+            continue
+
         print(best_url)
+
         print("--------------------------------------------------")
+        print("----------AI-TRANSLATION-AND-SUMMARY--------------")
         print("--------------------------------------------------")
-        print("--------------------------------------------------")
-    
+        
+        article_summary = send_to_AI(best_url,summarizer,model,"text")
+        print(article_summary)
+
+
     #TODO use an html template here and output it
     print("Done")
 
