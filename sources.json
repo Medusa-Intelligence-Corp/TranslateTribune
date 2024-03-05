@@ -37,7 +37,7 @@
   {
     "name": "Republic of China (Taiwan)",
     "language": "Mandarin",
-    "flag": "&#127470;&#127475;",
+    "flag": "&#127481;&#127484;",
     "source": "Liberty Times",
     "url": "https://www.ltn.com.tw",
     "article_title_length": 7,
@@ -83,19 +83,9 @@
     "token_length": 1
   },
   {
-    "name": "Democratic People's Republic of Korea (North Korea)",
-    "language": "Korean",
-    "flag": "&#127487;&#127462;",
-    "source": "Rodong Sinmun",
-    "url": "http://www.rodong.rep.kp",
-    "article_title_length": 7,
-    "tokens": 100000,
-    "token_length": 1
-  },
-  {
     "name": "Islamic Republic of Iran",
     "language": "Persian",
-    "flag": "&#127470;&#127466;",
+    "flag": "&#127470;&#127479;",
     "source": "Ettela'at",
     "url": "https://ettelaat.com/",
     "tokens": 100000,
@@ -113,7 +103,7 @@
   {
     "name": "State of Israel",
     "language": "Hebrew",
-    "flag": "&#127470;&#127474;",
+    "flag": "&#127470;&#127473;",
     "source": "Yedioth Ahronoth",
     "url": "https://www.ynet.co.il",
     "tokens": 100000,

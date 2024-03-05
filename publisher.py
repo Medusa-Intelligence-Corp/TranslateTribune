@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     random.shuffle(data)
 
-    article_html = '<div class="section">'
+    article_html = ''
 
     for item in data:
         try:
@@ -94,8 +94,8 @@ Article list:
                             article_text, summarizer, model, chunk_approx_tokens, avg_token_length, "html")
                     print(article_summary)
 
+                    article_html += "<!-- NEW ARTICLE -->"
                     article_html += article_summary
-                    article_html += '</div>' 
 
             print("--------------------------------------------------")
             print("--------------------------------------------------")

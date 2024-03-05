@@ -91,7 +91,8 @@
                 align-items: center;
             }
             .header a {
-                margin-right: 0;
+                margin-right: 5px;
+                margin-left: 5px;
                 margin-bottom: 10px;
             }
         }
@@ -110,8 +111,9 @@
             <p>"A Daily Dose of Global Insights,<br> Curated and Translated by AI for You."</p>
             
         </div>
-        
-        {{ article_html|safe }}
+        <div class="section">
+            {{ article_html|safe }}
+        </div>
     </div>
   <script>
     const title = document.querySelector('.header h1');
