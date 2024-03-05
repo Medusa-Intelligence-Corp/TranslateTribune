@@ -30,7 +30,8 @@ def deploy_website(article_html):
     bucket_name = 'translatetribune.com'
     s3_key='index.html'
     s3_client = boto3.client('s3')
-    s3_client.upload_file(output_path, bucket_name, s3_key)
+    extra_args = {'ContentType': 'text/html'}
+    s3_client.upload_file(output_path, bucket_name, s3_key, ExtraArgs=extra_args)
 
     #invalidate cloudfront cache
     distribution_id = 'E12FININDDZ0ME'

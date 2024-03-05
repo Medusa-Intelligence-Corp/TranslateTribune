@@ -30,7 +30,7 @@ def setup_driver():
     return driver
 
 
-def fetch_content(url, mode="text",article_title_length=15):
+def fetch_content(url, mode, article_title_length=0):
     driver = setup_driver()
     
     driver.get(url)
