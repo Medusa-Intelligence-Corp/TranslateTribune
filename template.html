@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TranslateTribune - Your Global News Digest</title>
     <style>
         body {
@@ -16,14 +16,12 @@
             margin: auto;
             background: white;
             padding: 20px;
-            column-gap: 40px;
-            display: flex; /* Changed to flex for better control */
-            flex-wrap: wrap; /* Allows flex items to wrap */
-        }
-        .header, .section {
-            width: 100%; /* Each section takes up full width */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .header {
+            width: 100%;
             text-align: center;
             margin-bottom: 50px;
             display: flex;
@@ -31,16 +29,16 @@
             align-items: center;
         }
         .header-title {
-          width: 300px; /* set a fixed width */
-          height: 50px; /* set a fixed height */
-          overflow: hidden; /* hide any content that overflows the container */
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
         }
         .header h1 {
-          font-family: 'Courier New', Courier, monospace;
-          font-size: 28px; /* decreased the font size */
-          line-height: 0px;
-          text-align: center;
-          white-space: nowrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 28px;
+            line-height: 0px;
+            text-align: center;
+            white-space: nowrap;
         }
         .header a {
             text-decoration: none;
@@ -54,41 +52,46 @@
         .header a:hover {
             text-decoration: underline;
         }
-        .section-title {
-            font-size: 24px;
-            border-bottom: 2px solid #000;
-            margin-bottom: 20px;
+        .section {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .article {
+            width: calc(50% - 20px);
             margin-bottom: 20px;
             break-inside: avoid;
-            width: 50%; /* Each article takes up half width */
+            box-sizing: border-box;
         }
         .article-title {
             font-size: 20px;
             font-weight: bold;
+            margin: 10px;
         }
         .article-source {
             font-style: italic;
             display: flex;
             align-items: center;
+            margin: 10px;
         }
         .article-content {
             text-align: justify;
+            margin: 10px;
         }
         .flag-icon {
             margin-right: 5px;
         }
-        @media (max-width: 768px) { /* For mobile devices */
+        @media (max-width: 950px) {
             .article {
-                width: 100%; /* Each article takes up full width */
+                width: 100%;
             }
             .header {
                 flex-direction: column;
                 align-items: center;
             }
             .header a {
-                margin-right: 10px;
+                margin-right: 0;
                 margin-bottom: 10px;
             }
         }
@@ -101,20 +104,18 @@
               <h1>TranslateTribune</h1>
             </div>
             <div class="header-links">
-                <a href="https://github.com/Medusa-ML/TranslateTribune/issues">&#10067;</a>
+                <a href="https://github.com/Medusa-ML/TranslateTribune/">&#10067;</a>
                 <a href="https://medusaintel.co/">&#10084;&#65039;</a>
             </div>
-            <p>"Your Global News Digest"</p>
+            <p>"A Daily Dose of Global Insights,<br> Curated and Translated by AI for You."</p>
             
         </div>
-
-        <div class="section">
-            {{ article_html|safe }}
-        </div>
+        
+        {{ article_html|safe }}
     </div>
   <script>
     const title = document.querySelector('.header h1');
-    const chars = 'āăąçćčδēėęěėęğīįıĳĵķĸĺļľŀłńňņñøōŏőœřŕŗřśŝşšťțţůüűųūŭŵẃẍÿźżžÞþĐđßÆæØøÅåアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンァィゥェォッャュョーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンぁぃぅぇぉっゃゅょーヵヶぁぃぅぇぉゃゅょ';
+    const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțレロワヲンぁぃぅぇぉっゃゅょーヵヶぁぃぅぇぉゃゅょ한국어안녕하세요?세계입니다العرمربالعالم';
 
     setInterval(() => {
       const index = Math.floor(Math.random() * title.textContent.length);

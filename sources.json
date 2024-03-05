@@ -118,5 +118,12 @@
     "url": "https://www.ynet.co.il",
     "tokens": 100000,
     "token_length": 1
+  },
+  {
+  "name": "Republic of Türkiye",
+  "language": "Turkish",
+  "flag": "&#127481;&#127479;",
+  "source": "Hürriyet",
+  "url": "https://www.hurriyet.com.tr"
   }
 ]

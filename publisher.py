@@ -1,4 +1,6 @@
 import json
+import random
+import traceback
 
 from browser import fetch_content
 from llm import fetch_llm_response
@@ -8,6 +10,8 @@ if __name__ == "__main__":
     
     with open('sources.json', 'r') as file:
         data = json.load(file)
+
+    random.shuffle(data)
 
     article_html = '<div class="section">'
 
@@ -28,15 +32,13 @@ if __name__ == "__main__":
             print(f"Source: {source}, URL: {url}")
             print(f"Model: {model}")
             
-            print("--------------------------------------------------")
-            print("---------------PART-1-CURATION--------------------")
-            print("--------------------------------------------------")
+            finder = f"""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to the {name}, or at least an article that seems interesting to learn more about. The article will be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
-            finder = f"""Act as a polyglot international newspaper editor, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to the {name}. The article should be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Here's an example of what I'm looking for in a response: 'Based on the title, an interesting article might be \"Title\"  The URL is https://...'."""
-            print(f"Finder: {finder}")
+Article list:
+                """
 
             print("--------------------------------------------------")
-            print("---------------FETCH--RESULT----------------------")
+            print("---------------ARTICLE-LIST-----------------------")
             print("--------------------------------------------------")
             
             all_links = fetch_content(url,"links",article_title_length) 
@@ -56,9 +58,6 @@ if __name__ == "__main__":
             if best_links is not None:
                 
                 for link in best_links:
-                    print("--------------------------------------------------")
-                    print("-------PART-2-TRANSLATE-AND-SUMMARIZE-------------")
-                    print("--------------------------------------------------")
                     
                     summarizer = f"""Act as a translator and summarizer. Below, I will provide the text of an article in {language}. Please, create a summary of the article's content in English. Additionally, identify and include a few key {language} vocabulary phrases that would be beneficial for a student learning {language}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
 
@@ -76,10 +75,9 @@ if __name__ == "__main__":
 
                         article text:
                         """
-                    print(f"Summarizer: {summarizer}")
                     
                     print("--------------------------------------------------")
-                    print("--------ARTICLE-FETCH-RESULT----------------------")
+                    print("--------FULL-ARTICLE-TEXT-------------------------")
                     print("--------------------------------------------------")
                     
                     article_text = fetch_content(link,"text") 
@@ -104,51 +102,13 @@ if __name__ == "__main__":
             print("--------------------------------------------------")
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
+            traceback.print_exc()
             print("continuing anyway...")
-
-    print("--------------------------------------------------")
-    print("---------------FRONT-PAGE-CREATION----------------")
-    print("--------------------------------------------------")
-    
-    editor="""Act as an online newspaper editor for a respected global news aggregator, take the following drafthtml and make the following changes to it:
-
-    1. Sort the articles so that the most interesting and best articles are on top.
-    2. Make the titles and text formatting consistent.
-    3. Remove any errors, links to homepages, or incomplete articles.
-    4. Remove any articles that seem to cover the same news story and have a similar conclusion.
-
-The response should be formatted exclusively in valid HTML and strictly follow the structure below:
-    ```
-    <div class="section">
-    <div class="article">
-        <div class="article-title"></div>
-        <div class="article-source"><span class="flag-icon"></span><a></a></div>
-        <p class="article-content"></p>
-        <p class="vocabulary"></p>
-    </div>
-    <!-- more "article" divs ... -->
-    </div>
-    ```
-
-The response should be pure valid HTML with no additional text or formatting outside of the specified HTML tags.
-
-Current draft HTML:
-
-"""
-
-    edited_html = fetch_llm_response(
-            article_html, editor, "Claude 2", 150000, 3, "html")  
-
-    if len(edited_html) > 100:
-        print(edited_html[:100])
-        print("...")
-        print(edited_html[-100:])
-    
 
     print("--------------------------------------------------")
     print("---------------HTML-TEMPLATING--------------------")
     print("--------------------------------------------------")
     
-    indexhtml=deploy_website(edited_html)
+    indexhtml=deploy_website(article_html)
     print(indexhtml)
 
