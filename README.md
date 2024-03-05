@@ -43,7 +43,7 @@ To run the scraper and generate an index.html to the console do the following:
 * ```bash build.sh``` to build the docker container
 * ```bash run.sh``` to run the curation and translation job
 
-If you'd like to edit the code note the following structure
+If you'd like to edit the code note the following structure:
 * [```publisher.py```](./publisher.py) is the main loop that controls the job
 * [```browser.py```](./browser.py) is how text is extracted from sites
 * [```llm.py```](./llm.py) handles any LLM connections and formatting
