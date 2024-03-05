@@ -61,7 +61,7 @@ If you're interested in contributing, please check out our contributing guidelin
 
 ## License
 
-TranslateTribune is open-source and available under the MIT License. See the LICENSE file for more details.
+TranslateTribune is open-source and available under the GPLv3 License. See the LICENSE file for more details.
 
 ## Contact
 
