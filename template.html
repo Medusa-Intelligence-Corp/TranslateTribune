@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TranslateTribune - Your Global News Digest</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>TranslateTribune - AI-Powered Global News</title>
+        <meta name="description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+
+        <!-- Standard favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+        <!-- Recommended favicon format -->
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+        <!-- For Android -->
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.translatetribune.com/">
+        <meta property="og:title" content="The Translate Tribune">
+        <meta property="og:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta property="og:image" content="https://www.translatetribune.com/icon.png">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://www.translatetribune.com/">
+        <meta name="twitter:title" content="The Translate Tribune">
+        <meta name="twitter:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta name="twitter:image" content="https://www.translatetribune.com/icon.jpg">
+
+
+        <style>
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
         .container {
             width: 80%;
             margin: auto;
@@ -39,6 +71,10 @@
             line-height: 0px;
             text-align: center;
             white-space: nowrap;
+        }
+        .version {
+            font-size: 10px; 
+            vertical-align: sub;
         }
         .header a {
             text-decoration: none;
@@ -96,43 +132,46 @@
                 margin-bottom: 10px;
             }
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="header-title">
-              <h1>TranslateTribune</h1>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header-title">
+                    <h1>TranslateTribune<span class="version">alpha</span></h1>
+                </div>
+                <div class="header-links">
+                    <a href="https://github.com/Medusa-ML/TranslateTribune/">&#10067;</a>
+                    <a href="https://medusaintel.co/">&#10084;&#65039;</a>
+                </div>
+                <p>"The World's Whisper, Loud and Clear."</p>
+
             </div>
-            <div class="header-links">
-                <a href="https://github.com/Medusa-ML/TranslateTribune/">&#10067;</a>
-                <a href="https://medusaintel.co/">&#10084;&#65039;</a>
+            <div class="section">
+                {{ article_html|safe }}
             </div>
-            <p>"A Daily Dose of Global Insights,<br> Curated and Translated by AI for You."</p>
-            
         </div>
-        <div class="section">
-            {{ article_html|safe }}
-        </div>
-    </div>
-  <script>
-    const title = document.querySelector('.header h1');
-    const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțレロワヲンぁぃぅぇぉっゃゅょーヵヶぁぃぅぇぉゃゅょ한국어안녕하세요?세계입니다العرمربالعالم';
+        <script>
+            const title = document.querySelector('.header h1');
+            // Assuming the text node you want to animate is the first node inside <h1>
+            let textNode = title.childNodes[0];
+            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțﺎﻠﻋﺮﻣﺮﺑﺎﻠﻋﺎﻠﻣабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 
-    setInterval(() => {
-      const index = Math.floor(Math.random() * title.textContent.length);
-      const char = title.textContent.charAt(index);
-      const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
-      title.textContent = title.textContent.substring(0, index) + newChar + title.textContent.substring(index + 1);
+            setInterval(() => {
+                const textContent = textNode.nodeValue;
+                const index = Math.floor(Math.random() * textContent.length);
+                const char = textContent.charAt(index);
+                const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+                textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
 
-      // Change back to the original character after 500ms
-      setTimeout(() => {
-        title.textContent = title.textContent.substring(0, index) + char + title.textContent.substring(index + 1);
-      }, 200);
-    }, 400);
-  </script>
+                // Change back to the original character after 500ms
+                setTimeout(() => {
+                    textNode.nodeValue = textContent.substring(0, index) + char + textContent.substring(index + 1);
+                }, 200);
+            }, 400);
+        </script>
 
-</body>
+    </body>
 </html>
 
 

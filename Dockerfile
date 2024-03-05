@@ -21,7 +21,8 @@ RUN pip3 install --no-cache-dir \
     urlextract \
     validators \
     Jinja2 \
-    anthropic 
+    anthropic \
+    boto3
    
 
 # Copy the rest of your application's code

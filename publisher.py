@@ -22,7 +22,8 @@ if __name__ == "__main__":
             flag = item.get("flag", "N/A")
             source = item.get("source", "N/A")
             url = item.get("url", "N/A")
-            model = item.get("model", "Claude 2")
+            model = item.get("model", "Claude 3 Opus")
+            model_url = item.get("model_url", "https://www.anthropic.com/claude")
             chunk_approx_tokens = item.get("tokens", 150000)
             avg_token_length = item.get("token_length", 3)
             article_title_length = item.get("article_title_length",15)
@@ -65,7 +66,7 @@ Article list:
                     ```
                     <div class="article">
                         <div class="article-title">TITLE IN ENGLISH</div>
-                        <div class="article-source"><span class="flag-icon">{flag}</span><a href="{link}">{source}</a></div>
+                        <div class="article-source"><span class="flag-icon">{flag}</span><a href="{link}">{source}</a>Translation and Summary By <a href={model_url}>{model}</a></div>
                         <p class="article-content">SUMMARY IN ENGLISH (translated by {model})</p>
                         <p class="vocabulary">VOCABULARY</p>
                     </div>

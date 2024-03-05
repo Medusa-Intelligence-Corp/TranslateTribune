@@ -1,10 +1,11 @@
 import validators
 
+import anthropic
+
 from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
 
-from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 
 
 class UnsupportedModelException(Exception):
@@ -54,21 +55,35 @@ def find_html(text):
         return ""
 
 def send_to_anthropic(text_chunk, instructions):
-    anthropic = Anthropic()
+    client = anthropic.Anthropic()
 
-    completion = anthropic.completions.create(
-        model="claude-2.1",
-        max_tokens_to_sample=200000,
-        prompt=f"{HUMAN_PROMPT} {instructions}:\n{text_chunk}{AI_PROMPT}",
+    message = client.messages.create(
+        model="claude-3-opus-20240229",
+        max_tokens=4000,
+        temperature=0,
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"{instructions} {text_chunk}"
+                    }
+                ]
+            }
+        ]
     )
+    
+    #TODO remove this, for debugging purposes right now
+    print(message.content[0].text)
 
-    return completion.completion
+    return message.content[0].text
 
 
 def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token_length, validation=None):
 
-    if model == "Claude 2":
-        chunks = text_to_chunks(text,100000,avg_token_length)
+    if model == "Claude 3 Opus":
+        chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
         response = send_to_anthropic(chunks[0], instructions)
     else:
         raise UnsupportedModelException(model)
