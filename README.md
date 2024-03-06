@@ -73,7 +73,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] add specific sections on business, culture, politics etc..
 - [ ] Decrease date font size.
 - [ ] Avoid foreign acronyms "MIT" translation, prompt engineer this one away.
-- [ ] Privacy policy, contact, etc...
+- [ ] Privacy policy, contact, subscribe
 - [ ] Update this readme with a why (See Whelchels email) add graphs about media concentration. and manufactured consent?!
 - [ ] Upgrade Claude API keys to production
 - [ ] Properly market/share
