@@ -70,6 +70,9 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO
+- [ ] add specific sections on business, culture, politics etc..
+- [ ] Avoid foreign acronyms "MIT" translation, prompt engineer this one away.
+- [ ] Update this readme with a why (See Whelchels email) add graphs about media concentration.
 - [ ] Upgrade Claude API keys to production
 - [ ] Properly market/share
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
