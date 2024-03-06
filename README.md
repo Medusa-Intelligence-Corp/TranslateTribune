@@ -70,7 +70,8 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO
-- [ ] add specific sections on business, culture, politics etc..
+- [ ] add specific sections on business, US News, Jeu de paume ?! :)
+- [ ] Use bs4 to parse titles and prioritize frontpage
 - [ ] Decrease date font size.
 - [ ] list item for key vocabulary
 - [ ] Avoid foreign acronyms "MIT" translation, prompt engineer this one away.
