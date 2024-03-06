@@ -72,7 +72,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO
 - [ ] add specific sections on business, culture, politics etc..
 - [ ] Avoid foreign acronyms "MIT" translation, prompt engineer this one away.
-- [ ] Update this readme with a why (See Whelchels email) add graphs about media concentration.
+- [ ] Update this readme with a why (See Whelchels email) add graphs about media concentration. and manufactured consent?!
 - [ ] Upgrade Claude API keys to production
 - [ ] Properly market/share
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
