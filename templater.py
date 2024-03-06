@@ -1,5 +1,6 @@
 import os
 import uuid
+import datetime
 
 import boto3
 
@@ -18,8 +19,14 @@ def deploy_website(article_html):
     # Load your index.html template
     template = env.get_template('template.html')
 
+
+    # Format the date and time in a "cool" way
+    # Example: "Wednesday, 06 Mar 2024 | 14:05 UTC"
+    current_utc_datetime = datetime.datetime.utcnow()
+    date_string = current_utc_datetime.strftime("%A, %d %b %Y at %H:%M UTC")
+
     # Render the template with your HTML list
-    rendered_html = template.render(article_html=article_html)
+    rendered_html = template.render(article_html=article_html,date_string=date_string)
 
     # Optionally, write the rendered HTML to a new file
     output_path = os.path.join(template_dir, 'index.html')

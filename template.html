@@ -52,6 +52,18 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        .date-banner {
+            background-color: #f4f4f4; /* Specific light grey background */
+            color: #333; /* Dark grey text for contrast */
+            text-align: center; /* Center the date text */
+            padding: 0px 0; /* Minimal padding top and bottom for a short height */
+            font-size: 12px; /* Suitable font size */
+            width: 100%;
+        }
+        #current-date {
+            font-size: 18px;
+            font-weight: normal;
+        }
         .header {
             width: 100%;
             text-align: center;
@@ -139,6 +151,9 @@ body {
         </style>
     </head>
     <body>
+        <div class="date-banner">
+            <p id="current-date">Updated {{ date_string|safe }}</p>
+        </div>
         <div class="container">
             <div class="header">
                 <div class="header-title">
@@ -149,8 +164,8 @@ body {
                     <a href="https://medusaintel.co/">&#10084;&#65039;</a>
                 </div>
                 <p>"The World's Whisper, Loud and Clear."</p>
-
             </div>
+
             <div class="section">
                 {{ article_html|safe }}
             </div>
@@ -159,7 +174,7 @@ body {
             const title = document.querySelector('.header h1');
             // Assuming the text node you want to animate is the first node inside <h1>
             let textNode = title.childNodes[0];
-            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțﺎﻠﻋﺮﻣﺮﺑﺎﻠﻋﺎﻠﻣабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 
             setInterval(() => {
                 const textContent = textNode.nodeValue;

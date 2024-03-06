@@ -82,7 +82,7 @@ def send_to_anthropic(text_chunk, instructions):
 
 def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token_length, validation=None):
 
-    if model == "Claude 3 Opus":
+    if model == "Claude 3":
         chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
         response = send_to_anthropic(chunks[0], instructions)
     else:

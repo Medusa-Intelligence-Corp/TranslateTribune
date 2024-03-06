@@ -21,8 +21,9 @@ if __name__ == "__main__":
             language = item.get("language", "N/A")
             flag = item.get("flag", "N/A")
             source = item.get("source", "N/A")
+            source_wiki = item.get("source_wiki", "N/A")
             url = item.get("url", "N/A")
-            model = item.get("model", "Claude 3 Opus")
+            model = item.get("model", "Claude 3")
             model_url = item.get("model_url", "https://www.anthropic.com/claude")
             chunk_approx_tokens = item.get("tokens", 150000)
             avg_token_length = item.get("token_length", 3)
@@ -33,7 +34,7 @@ if __name__ == "__main__":
             print(f"Source: {source}, URL: {url}")
             print(f"Model: {model}")
             
-            finder = f"""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to the {name}, or at least an article that seems interesting to learn more about. The article will be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+            finder = f"""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {source}, a {language} language newspaper. Identify one article that offers unique insights or perspectives specific to {name}, or at least an article that seems interesting to learn more about. The article will be considered for translation into English. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
                 """
@@ -60,20 +61,21 @@ Article list:
                 
                 for link in best_links:
                     
-                    summarizer = f"""Act as a translator and summarizer. Below, I will provide the text of an article in {language}. Please, create a summary of the article's content in English. Additionally, identify and include a few key {language} vocabulary phrases that would be beneficial for a student learning {language}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
+                    summarizer = f"""Act as a translator and summarizer. Below, I will provide the text of an article in {language}. Please, create a summary of the article's content in English. Additionally, identify and include a few key {language} vocabulary phrases that would be beneficial for a student learning {language}. Please start the summary with "{name.upper()}—" as if you are reporting from that country. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
 
                     return format:             
                     ```
                     <div class="article">
                         <div class="article-title">TITLE IN ENGLISH</div>
                         <div class="article-source">
-                            From <span class="flag-icon">{flag}</span>
+                            Source <span class="flag-icon">{flag}</span>
                             <a href="{link}">{source}</a>
+                            <a href="{source_wiki}">&#8505;&#65039;</a>
                             <span class="translator-credit">
-                            Translation and Summary By <a href={model_url}>{model}</a>
+                            By <a href={model_url}>{model}</a>
                             </span>
                         </div>
-                        <p class="article-content">SUMMARY IN ENGLISH (translated by {model})</p>
+                        <p class="article-content">SUMMARY IN ENGLISH</p>
                         <p class="vocabulary">VOCABULARY</p>
                     </div>
                     ```
