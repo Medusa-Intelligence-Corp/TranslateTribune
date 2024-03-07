@@ -20,7 +20,7 @@
         <!-- For Android -->
         <link rel="manifest" href="/site.webmanifest">
         <meta name="theme-color" content="#ffffff">
-        
+
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://www.translatetribune.com/">
@@ -54,14 +54,12 @@ body {
         }
         .date-banner {
             background-color: #f4f4f4; /* Specific light grey background */
-            color: #333; /* Dark grey text for contrast */
+            color: #C0C0C0; /* Dark grey text for contrast */
             text-align: center; /* Center the date text */
             padding: 0px 0; /* Minimal padding top and bottom for a short height */
-            font-size: 12px; /* Suitable font size */
             width: 100%;
         }
         #current-date {
-            font-size: 18px;
             font-weight: normal;
         }
         .header {
@@ -88,17 +86,8 @@ body {
             font-size: 10px; 
             vertical-align: sub;
         }
-        .header a {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-            margin-right: 20px;
-        }
         .header p {
             font-style: italic;
-        }
-        .header a:hover {
-            text-decoration: underline;
         }
         .section {
             width: 100%;
@@ -134,6 +123,23 @@ body {
         .flag-icon {
             margin-right: 5px;
         }
+            .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      width: 100%; /* Ensure it takes up the full width */
+    }
+    .footer a {
+      flex: 1; /* Allows each link to take equal space */
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
         @media (max-width: 950px) {
             .article {
                 width: 100%;
@@ -159,36 +165,54 @@ body {
                 <div class="header-title">
                     <h1>TranslateTribune<span class="version">alpha</span></h1>
                 </div>
-                <div class="header-links">
-                    <a href="https://github.com/Medusa-ML/TranslateTribune/">&#10067;</a>
-                    <a href="https://medusaintel.co/">&#10084;&#65039;</a>
-                </div>
                 <p>"The World's Whisper, Loud and Clear."</p>
             </div>
 
             <div class="section">
                 {{ article_html|safe }}
             </div>
+            <div class="footer">                                          
+                <a href="https://github.com/Medusa-ML/TranslateTribune/">&#128187; We're Open Source!</a>
+                <a href="https://www.patreon.com/bradflaugher">&#128150; Support us via Patreon</a>
+                <a href="mailto:editor@translatetribune.com">&#9993; Email the Editor</a>
+                <a href="privacy.html">&#128274; Privacy Policy</a>  
+            </div>
         </div>
         <script>
             const title = document.querySelector('.header h1');
-            // Assuming the text node you want to animate is the first node inside <h1>
             let textNode = title.childNodes[0];
             const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 
+            // Track the original text to ensure we can always revert to it
+            const originalText = textNode.nodeValue;
+            // Use an array to track which characters are currently being animated
+            let animatingIndices = [];
+
             setInterval(() => {
                 const textContent = textNode.nodeValue;
-                const index = Math.floor(Math.random() * textContent.length);
+                let index;
+                // Find a character index that is not currently being animated
+                do {
+                    index = Math.floor(Math.random() * textContent.length);
+                } while (animatingIndices.includes(index));
+
+                // Mark this index as being animated
+                animatingIndices.push(index);
+
                 const char = textContent.charAt(index);
                 const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
                 textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
 
                 // Change back to the original character after 500ms
                 setTimeout(() => {
-                    textNode.nodeValue = textContent.substring(0, index) + char + textContent.substring(index + 1);
-                }, 200);
+                    // Use the original text to ensure the correct character is restored
+                    textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
+                    // Remove the index from the animatingIndices array
+                    animatingIndices = animatingIndices.filter(i => i !== index);
+                }, 500);
             }, 400);
         </script>
+
 
     </body>
 </html>

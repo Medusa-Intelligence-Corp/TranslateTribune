@@ -1,3 +1,6 @@
+import re
+import json
+
 import validators
 
 import anthropic
@@ -54,6 +57,20 @@ def find_html(text):
     else:
         return ""
 
+def find_json_list(text):
+    pattern = r'\[.*?\]'
+    matches = re.findall(pattern, text)
+
+    if matches:
+        json_str = matches[0]
+        try:
+            json_list = json.loads(json_str)
+        except Exception:
+            return []
+    else:
+        return []
+
+
 def send_to_anthropic(text_chunk, instructions):
     client = anthropic.Anthropic()
 
@@ -74,9 +91,6 @@ def send_to_anthropic(text_chunk, instructions):
         ]
     )
     
-    #TODO remove this, for debugging purposes right now
-    print(message.content[0].text)
-
     return message.content[0].text
 
 
@@ -94,6 +108,8 @@ def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token
         return find_urls(response)
     elif validation == "html":
         return find_html(response)
+    elif validation == "json_list":
+        return find_json_list(response)
     else:
         return None
 

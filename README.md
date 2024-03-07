@@ -69,18 +69,8 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
-## TODO THURS MAR 7
-- [ ] add specific sections on Business, US News
-- [ ] Fix header animation
-- [ ] Source change to "read more at..."
-- [ ] Use bs4 to parse titles and prioritize frontpage
-- [ ] Decrease date font size.
-- [ ] list item for key vocabulary
-- [ ] Avoid foreign acronyms "MIT" translation, prompt engineer this one away.
-- [ ] Privacy policy, contact, subscribe
-- [ ] Update this readme with a why (See Whelchels email) add graphs about media concentration. and manufactured consent?! remove word scrape :)
-
-## TODO LATER
-- [ ] Upgrade Claude API keys to production
+## TODO 
+- [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
 - [ ] Properly market/share
+- [ ] Add sister sites or new sections for business, US news etc...???
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
