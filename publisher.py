@@ -1,6 +1,7 @@
 import re
 import json
 import traceback
+import random
 
 from jinja2 import Template
 from bs4 import BeautifulSoup
@@ -12,6 +13,8 @@ from templater import deploy_website
 def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):    
     with open(sources_filename, 'r') as file:
         sources_config = json.load(file)
+
+    random.shuffle(sources_config)
 
     article_dict = {}
 
@@ -53,14 +56,15 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             print("continuing anyway...")
     
     title_text=json.dumps(list(article_dict.keys()))
-    title_list = fetch_llm_response(
+    title_dict = fetch_llm_response(
                     title_text, prioritizer_template.render(**locals()),
-                    'Claude 3', 100000, 3, "json_list")
-    
+                    'Claude 3', 100000, 3, "json")
+
     article_html=""
-    for item in title_list:
+    for item in title_dict.get('articles',[]):
         try:
-            article_html+=article_dict.pop(item)
+            print(item)
+            article_html+=article_dict.pop(item.get('title','N/A'))
         except KeyError:
             print("skipping messed up title from LLM")
     for key,value in article_dict.items():
@@ -74,12 +78,14 @@ if __name__ == "__main__":
 Article list:
 """)
 
-    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Additionally, identify and include a few key $language vocabulary phrases that would be beneficial for a student learning {{ language }}. Please start the summary with "{{ name|upper }}—\" as if you are reporting from that country, and finish the summary with "<a href='{{ link }}'>Read the full article in {{ language }}</a>, or <a href='{{ source_wiki }}'>read the English Wikipedia entry for $source</a>.". The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
+    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Additionally, identify and include a few key $language vocabulary phrases that would be beneficial for a student learning {{ language }}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
 
                     return format:             
                     ```
                     <div class="article">
-                        <div class="article-title"><span class="flag-icon">{{ flag }}</span>TITLE IN ENGLISH</div>
+                        <div class="article-title">
+                            <span class="flag-icon">{{ flag }}</span>TITLE IN ENGLISH
+                        </div>
                         <p class="article-content">SUMMARY IN ENGLISH</p>
                         <p class="vocabulary"><ul>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
@@ -87,9 +93,13 @@ Article list:
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                         </ul>
-                        <p class="article-credit">Summary and translation by <a href="{{ model_url }}">{{ model }}</a>. <a href='{{ link }}'>Read the original article</a> in {{ language }}, or <a href='{{ source_wiki }}'>Read more about $source</a>.</p>
                         </p>
-                            </div>
+                        <div class="article-credit">
+                          <a href="{{ model_url }}">Summary by {{ model }}</a>
+                          <a href='{{ link }}'>Full article in {{language}}</a>
+                          <a href='{{ source_wiki }}'>$source (Wikipedia)</a>
+                        </div>
+                    </div>
                     ```
 
                     Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags.
@@ -97,9 +107,25 @@ Article list:
                         article text:
                         """)
                         
-    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please organize the titles below by the order they should appear on the front page, please do not change the article titles and return only valid json as if you were an API.
+    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
 
-    article title json:
+    ```
+    {
+  "articles": [
+    {
+      "title": "ARTICLE TITLE",
+      "position": 1
+    },
+    {
+      "title": "ARTICLE TITLE",
+      "position": 2
+    },
+    ...more articles below
+  ]
+}
+```
+
+    current article titles (in random order):
     """)
     
     publish('sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)

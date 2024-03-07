@@ -10,7 +10,6 @@ from urlextract import URLExtract
 from bs4 import BeautifulSoup
 
 
-
 class UnsupportedModelException(Exception):
     def __init__(self, model, message="Model not supported"):
         self.model = model
@@ -57,20 +56,18 @@ def find_html(text):
     else:
         return ""
 
-def find_json_list(text):
-    pattern = r'\[.*?\]'
-    matches = re.findall(pattern, text)
+def find_json(text):
+    json_match = re.search(r'({.*})', text, re.DOTALL)
 
-    if matches:
-        json_str = matches[0]
+    if json_match:
+        json_str = json_match.group(1)
         try:
-            json_list = json.loads(json_str)
+            return json.loads(json_str)
         except Exception:
             return []
     else:
-        return []
-
-
+        return [] 
+    
 def send_to_anthropic(text_chunk, instructions):
     client = anthropic.Anthropic()
 
@@ -108,8 +105,8 @@ def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token
         return find_urls(response)
     elif validation == "html":
         return find_html(response)
-    elif validation == "json_list":
-        return find_json_list(response)
+    elif validation == "json":
+        return find_json(response)
     else:
         return None
 
