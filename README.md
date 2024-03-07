@@ -58,8 +58,6 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] Fix read more for consistency, make it its own div
-- [ ] Move flag to title area
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
 - [ ] Properly market/share
 - [ ] Add sister sites or new sections for business, US news etc...???
