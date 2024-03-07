@@ -21,18 +21,6 @@ Our process ensures that you get accurate, concise summaries of international ne
 - **Daily Updates:** Fresh news summaries every day, giving you a constant stream of global insights.
 - **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events.
 - **AI-Powered Summaries:** Quick, accurate translations and summaries powered by the latest AI technology.
-- **Easy Access:** All summaries are available on our GitHub page, making it easy to stay informed.
-
-## Sample Articles
-
-Here are a few examples of the types of articles you can expect from TranslateTribune:
-
-- **The Hazardous Paths of an Autonomy Promised Under Pressure** 🇫🇷 *Le Figaro*
-- **The Situation in Northern Gaza Reflects Lack of Clear Goals** 🇮🇱 *Yedioth Ahronoth*
-- **Sudan Red Pepper Powder Found in Imported Food Raises Food Safety Concerns** 🇮🇳 *Liberty Times*
-- **Gulf Cooperation Council Solidarity** 🇸🇦 *Al-Riyadh*
-- **Protesters Throw Firecrackers at Offices of the Attorney General During Demonstration for the Iguala Case** 🇪🇸🇲🇽 *La Jornada*
-- **Russia's War Against Ukraine: Where the Front Line is Running - Day 740** 🇩🇪 *Süddeutsche Zeitung*
 
 ## Getting Started
 
