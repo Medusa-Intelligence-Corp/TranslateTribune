@@ -66,8 +66,7 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] Fix artcile sorting w LLM, test run and publish new site
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
+- [ ] New sections for Economy, Technology, US News
 - [ ] Properly market/share
-- [ ] Add sister sites or new sections for business, US news etc...???
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
