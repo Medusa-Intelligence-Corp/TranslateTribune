@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
 
         <title>TranslateTribune - AI-Powered Global News</title>
         <meta name="description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
@@ -106,40 +109,31 @@ body {
             font-weight: bold;
             margin: 10px;
         }
-        .article-source {
-            font-style: italic;
-            display: flex;
-            align-items: center;
-            margin: 10px;
-            justify-content: space-between;
-        }
-        .translator-credit {
-            margin-left: auto;
-        }
         .article-content {
             text-align: justify;
             margin: 10px;
         }
-        .flag-icon {
-            margin-right: 5px;
+        .article-credit {
+            font-style: italic;
+            margin: 10px;
         }
-            .footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      width: 100%; /* Ensure it takes up the full width */
-    }
-    .footer a {
-      flex: 1; /* Allows each link to take equal space */
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            width: 100%; 
+        }
+        .footer a {
+            flex: 1; 
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 950px) {
             .article {
                 width: 100%;
@@ -211,6 +205,15 @@ body {
                     animatingIndices = animatingIndices.filter(i => i !== index);
                 }, 500);
             }, 400);
+        </script>
+        <script>
+            // This function checks if the page was loaded from the cache
+            window.addEventListener("pageshow", function(event) {
+                if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+                    // The page was loaded from the cache, so reload the page
+                    window.location.reload(true);
+                }
+            });
         </script>
 
 

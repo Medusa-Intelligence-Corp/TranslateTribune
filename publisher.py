@@ -79,13 +79,7 @@ Article list:
                     return format:             
                     ```
                     <div class="article">
-                        <div class="article-title">TITLE IN ENGLISH</div>
-                        <div class="article-source">
-                            <span class="flag-icon">{{ flag }}</span>
-                            <span class="translator-credit">
-                            By <a href="{{ model_url }}">{{ model }}</a>
-                            </span>
-                        </div>
+                        <div class="article-title"><span class="flag-icon">{{ flag }}</span>TITLE IN ENGLISH</div>
                         <p class="article-content">SUMMARY IN ENGLISH</p>
                         <p class="vocabulary"><ul>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
@@ -93,6 +87,7 @@ Article list:
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                         </ul>
+                        <p class="article-credit">Summary and translation by <a href="{{ model_url }}">{{ model }}</a>. <a href='{{ link }}'>Read the original article</a> in {{ language }}, or <a href='{{ source_wiki }}'>Read more about $source</a>.</p>
                         </p>
                             </div>
                     ```
