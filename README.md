@@ -4,13 +4,21 @@ Welcome to the source code for [https://TranslateTribune.com](https://translatet
 
 ## Motivation
 
-In today's interconnected world, understanding global perspectives is more important than ever. However, language barriers often limit our access to diverse viewpoints and news sources. TranslateTribune aims to bridge this gap by using advanced AI technology to select, translate, and summarize news articles from around the world, providing a richer, more nuanced view of global events.
+Access to diverse perspectives is crucial for a comprehensive understanding of global events, yet language barriers and media biases often limit our exposure. TranslateTribune aims to bridge this gap by leveraging advanced AI technology to select, translate, and summarize news articles from around the globe, offering a more nuanced view of international affairs.
+
+Our initiative recognizes that mainstream news, particularly in countries like the US, is frequently influenced by a narrow set of corporations and viewpoints. To truly grasp global complexities, it's essential to explore voices beyond these dominant narratives, especially those from the "global south," which are often overlooked in English-speaking mainstream media.
+
+A key motivation for TranslateTribune is to provide access to original news content in its native language, such as articles from the People's Daily in China, translated to preserve the original context and meaning. This approach ensures that our users can engage with content that might be altered or 'sanitized' for international audiences. We aim to offer translations from various sources worldwide, enabling users to hear directly from local perspectives on important issues, from regional conflicts to economic policies.
+
+TranslateTribune is designed to complement your primary news sources. It serves as a tool for those seeking to broaden their understanding with direct insights from the countries and communities at the heart of global stories. Whether it's gaining insight into Israel's stance on its conflicts or the Communist Party's views on China's economy, TranslateTribune facilitates direct access to these viewpoints, promoting a more informed and diverse global discourse.
+
+TranslateTribune is about removing barriers—linguistic, cultural, and ideological—to help users become more informed global citizens. By providing access to a broader array of news sources, we aim to contribute to a more empathetic and connected world.
 
 ## How It Works
 
-TranslateTribune leverages Claude 3 Opus, Python, Selenium WebDriver via Docker, and Beautiful Soup 4 (bs4) to:
+TranslateTribune leverages State of the art LLMs, Python, Selenium WebDriver via Docker, and Beautiful Soup 4 (bs4) to:
 
-- Scrape foreign language news sites from a wide range of countries.
+- Read foreign language news sites from a wide range of countries.
 - Use AI to pick relevant news articles.
 - Translate and summarize these articles into English.
 
@@ -19,7 +27,7 @@ Our process ensures that you get accurate, concise summaries of international ne
 ## Features
 
 - **Daily Updates:** Fresh news summaries every day, giving you a constant stream of global insights.
-- **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events.
+- **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events. (see [sources.json](./sources.json))
 - **AI-Powered Summaries:** Quick, accurate translations and summaries powered by the latest AI technology.
 
 ## Getting Started
