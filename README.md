@@ -14,21 +14,41 @@ TranslateTribune is designed to complement your primary news sources. It serves 
 
 TranslateTribune is about removing barriers—linguistic, cultural, and ideological—to help users become more informed global citizens. By providing access to a broader array of news sources, we aim to contribute to a more empathetic and connected world.
 
-## How It Works
-
-TranslateTribune leverages State of the art LLMs, Python, Selenium WebDriver via Docker, and Beautiful Soup 4 (bs4) to:
-
-- Read foreign language news sites from a wide range of countries.
-- Use AI to pick relevant news articles.
-- Translate and summarize these articles into English.
-
-Our process ensures that you get accurate, concise summaries of international news, offering insights into how different cultures and countries report on similar events or issues.
-
 ## Features
 
 - **Daily Updates:** Fresh news summaries every day, giving you a constant stream of global insights.
 - **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events. (see [sources.json](./sources.json))
 - **AI-Powered Summaries:** Quick, accurate translations and summaries powered by the latest AI technology.
+
+## Development Principles
+
+At Translate Tribune, we are dedicated to providing our users with a seamless, privacy-respecting experience while delivering accurate and concise summaries of international news. Our development philosophy is centered around several core principles:
+
+### Privacy by Design
+- **No Cookies**: We prioritize user privacy by not using cookies. Our platform operates without tracking users' online activities or preferences.
+- **Minimal JavaScript**: Our site uses only essential JavaScript for basic functionalities, avoiding the "JavaScript Trap". This ensures our site remains user-friendly without compromising on privacy.
+- **No Trackers**: Translate Tribune is free from any tracking mechanisms like web beacons or analytics scripts, reinforcing our commitment to user privacy.
+
+### Security and Reliability
+- **Server Logs**: We collect minimal information through server logs for operational integrity and security. This information is handled with the utmost care, ensuring it does not compromise user privacy.
+- **Data Protection**: Implementing robust security measures, we strive to protect personal information, acknowledging the limitations of internet and electronic storage security.
+
+### Cutting-edge Technology
+- **State-of-the-Art LLMs**: Leveraging the latest in language learning models, we ensure high-quality translations and summaries.
+- **Efficient Tools**: Utilizing Python, Selenium WebDriver via Docker, and Beautiful Soup 4, our process is streamlined for efficiency and accuracy.
+- **No Dependency on Heavy Frameworks**: Our choice to avoid complex JavaScript frameworks and tools like LangChain is intentional, aiming for a lightweight, statically hosted site that respects privacy and ensures portability.
+
+### Open and Accessible
+- **Code Portability**: Our codebase is designed to be easily deployable anywhere, emphasizing simplicity and ease of use.
+- **DevOps Love**: We embrace DevOps practices, ensuring continuous integration and delivery for a seamless development cycle.
+
+### Continuous Improvement
+- **Feedback-Driven**: We are committed to evolving our platform based on user feedback and the latest technological advancements, ensuring Translate Tribune remains at the forefront of news translation and summarization.
+
+By adhering to these principles, Translate Tribune aims to deliver a trustworthy, efficient, and user-centric service. We welcome contributions and feedback from the community to help us stay true to our mission of making international news accessible to everyone.
+
+For any inquiries or suggestions, please contact us at editor@translatetribune.com.
+
 
 ## Getting Started
 
