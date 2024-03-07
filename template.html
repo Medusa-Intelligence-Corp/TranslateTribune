@@ -56,14 +56,21 @@ body {
             justify-content: space-between;
         }
         .date-banner {
-            background-color: #f4f4f4; /* Specific light grey background */
-            color: #C0C0C0; /* Dark grey text for contrast */
-            text-align: center; /* Center the date text */
-            padding: 0px 0; /* Minimal padding top and bottom for a short height */
+            color: #C0C0C0; 
+            text-align: center; 
+            padding: 0px 0;
             width: 100%;
         }
         #current-date {
             font-weight: normal;
+        }
+        .update-link {
+            width: 100%; 
+            align-items: center;
+            text-align: center;
+        }
+        .update-link a {
+            color: red;
         }
         .header {
             width: 100%;
@@ -254,9 +261,9 @@ body {
                     const contentDateUTC = new Date(`${date} ${time} UTC`);
 
                     const now = new Date();
-                    const sixHours = 12 * 60 * 60 * 1000; // 6 hours in milliseconds
+                    const timeDiff = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 
-                    if (now - contentDateUTC > sixHours) {
+                    if (now - contentDateUTC > timeDiff) {
                         document.getElementById('update-link').style.display = 'block';
                     }
                 } else {
