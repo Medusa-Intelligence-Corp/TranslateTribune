@@ -83,8 +83,7 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] debug webapp caching, link to homepage from title
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
-- [ ] New sections for Economy, Technology, US News
 - [ ] Properly market/share
 - [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
+- [ ] Offer New Sections for Economy, Technology, US News

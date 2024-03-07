@@ -77,6 +77,10 @@ body {
             height: 50px;
             overflow: hidden;
         }
+        .header a { 
+            text-decoration: none;
+            color: black;
+        }
         .header h1 {
             font-family: 'Courier New', Courier, monospace;
             font-size: 28px;
@@ -91,6 +95,19 @@ body {
         .header p {
             font-style: italic;
         }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            width: 100%; 
+        }
+        .nav a {
+            flex: 1; 
+            margin: 0 10px;
+        }
+
         .section {
             width: 100%;
             display: flex;
@@ -134,10 +151,6 @@ body {
         .footer a {
             flex: 1; 
             margin: 0 10px;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
         }
         @media (max-width: 950px) {
             .article {
@@ -159,14 +172,23 @@ body {
         <div class="date-banner">
             <p id="current-date">Updated {{ date_string|safe }}</p>
         </div>
+        <div id="update-link" style="display:none;">
+            <a href="javascript:window.location.reload(true)">New content available, click to reload.</a>
+        </div>
         <div class="container">
             <div class="header">
                 <div class="header-title">
-                    <h1>TranslateTribune<span class="version">alpha</span></h1>
+                    <a href="https://translatetribune.com"><h1>TranslateTribune<span class="version">alpha</span></h1></a>
                 </div>
                 <p>"The World's Whisper, Loud and Clear."</p>
             </div>
-
+            <!--
+            <div class="nav">
+            <a href="economy.html">US News</a>
+            <a href="economy.html">Business</a>
+            <a href="technology.html">Technology</a>
+            </div>
+            -->
             <div class="section">
                 {{ article_html|safe }}
             </div>
@@ -220,7 +242,32 @@ body {
                 }
             });
         </script>
+        <script>
+            function checkContentUpdate() {
+                const contentDateString = document.getElementById('current-date').textContent;
+                const contentDatePattern = /Updated (.+) at (.+) UTC/;
+                const matchResult = contentDateString.match(contentDatePattern);
 
+                // Check if the date string matches the expected format
+                if (matchResult) {
+                    const [, date, time] = matchResult;
+                    const contentDateUTC = new Date(`${date} ${time} UTC`);
+
+                    const now = new Date();
+                    const sixHours = 12 * 60 * 60 * 1000; // 6 hours in milliseconds
+
+                    if (now - contentDateUTC > sixHours) {
+                        document.getElementById('update-link').style.display = 'block';
+                    }
+                } else {
+                    console.error('Date format does not match expected pattern.');
+                    // Optionally, handle the error gracefully here, e.g., by displaying a message to the user
+                }
+            }
+
+            checkContentUpdate();
+
+        </script>
 
     </body>
 </html>
