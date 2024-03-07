@@ -71,6 +71,8 @@ Join us in our mission to make global news accessible to everyone, regardless of
 
 ## TODO THURS MAR 7
 - [ ] add specific sections on Business, US News
+- [ ] Fix header animation
+- [ ] Source change to "read more at..."
 - [ ] Use bs4 to parse titles and prioritize frontpage
 - [ ] Decrease date font size.
 - [ ] list item for key vocabulary
