@@ -47,9 +47,6 @@ At Translate Tribune, we are dedicated to providing our users with a seamless, p
 
 By adhering to these principles, Translate Tribune aims to deliver a trustworthy, efficient, and user-centric service. We welcome contributions and feedback from the community to help us stay true to our mission of making international news accessible to everyone.
 
-For any inquiries or suggestions, please contact us at editor@translatetribune.com.
-
-
 ## Getting Started
 
 To explore our project and start reading the summaries, visit our GitHub repository. We welcome feedback and contributions to help expand our coverage and improve our translations.
