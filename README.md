@@ -60,6 +60,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO 
 - [ ] Fix artcile sorting w LLM
 - [ ] Add whelchel note to Readme
+- [ ] Remove LOCATION- starter
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
 - [ ] Properly market/share
 - [ ] Add sister sites or new sections for business, US news etc...???
