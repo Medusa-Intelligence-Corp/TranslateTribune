@@ -53,7 +53,7 @@ TranslateTribune is open-source and available under the GPLv3 License. See the L
 
 ## Contact
 
-For more information, questions, or to get involved, please see [https://medusaintel.co](https://medusaintel.co).
+For more information, questions, or to get involved, please see [https://medusaintel.co](https://medusaintel.co) or email [editor@translatetribune.com](mailto:editor@translatetribune.com).
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
