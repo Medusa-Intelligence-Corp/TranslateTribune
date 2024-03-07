@@ -24,7 +24,7 @@ TranslateTribune is about removing barriers—linguistic, cultural, and ideologi
 
 At Translate Tribune, we are dedicated to providing our users with a seamless, privacy-respecting experience while delivering accurate and concise summaries of international news. Our development philosophy is centered around several core principles:
 
-### Privacy by Design
+### Privacy by Design (see [privacy.html](https://translatetribune.com/privacy.html))
 - **No Cookies**: We prioritize user privacy by not using cookies. Our platform operates without tracking users' online activities or preferences.
 - **Minimal JavaScript**: Our site uses only essential JavaScript for basic functionalities, avoiding the "JavaScript Trap". This ensures our site remains user-friendly without compromising on privacy.
 - **No Trackers**: Translate Tribune is free from any tracking mechanisms like web beacons or analytics scripts, reinforcing our commitment to user privacy.
