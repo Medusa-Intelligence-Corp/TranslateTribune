@@ -18,6 +18,7 @@ RUN apt-get update && \
 RUN pip3 install --no-cache-dir \
     selenium \
     beautifulsoup4 \
+    pytz \
     urlextract \
     validators \
     Jinja2 \

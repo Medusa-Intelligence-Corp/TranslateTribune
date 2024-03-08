@@ -1,6 +1,7 @@
 import os
 import uuid
 import datetime
+import pytz
 
 import boto3
 
@@ -10,20 +11,17 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 def deploy_website(article_html, template_filename, html_filename):
     template_dir = '/usr/src/app'
 
-    # Set up Jinja2 environment
     env = Environment(
         loader=FileSystemLoader(template_dir),
         autoescape=select_autoescape(['html', 'xml'])
     )
 
-    # Load your index.html template
     template = env.get_template(template_filename)
 
-
-    # Format the date and time in a "cool" way
-    # Example: "Wednesday, 06 Mar 2024 | 14:05 UTC"
     current_utc_datetime = datetime.datetime.utcnow()
-    date_string = current_utc_datetime.strftime("%A, %d %b %Y at %H:%M UTC")
+    current_utc_datetime = current_utc_datetime.replace(tzinfo=pytz.utc)
+    eastern_time = current_utc_datetime.astimezone(pytz.timezone('US/Eastern'))
+    date_string = eastern_time.strftime("%A, %d %b %Y at %I:%M %p %Z")
 
     # Render the template with your HTML list
     rendered_html = template.render(article_html=article_html,date_string=date_string)
