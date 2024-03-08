@@ -61,16 +61,11 @@ body {
             padding: 0px 0;
             width: 100%;
         }
+        .date-banner a {
+            color: #C0C0C0; 
+        }
         #current-date {
             font-weight: normal;
-        }
-        .update-link {
-            width: 100%; 
-            align-items: center;
-            text-align: center;
-        }
-        .update-link a {
-            color: red;
         }
         .header {
             width: 100%;
@@ -174,10 +169,7 @@ body {
     </head>
     <body>
         <div class="date-banner">
-            <p id="current-date">Updated {{ date_string|safe }}</p>
-        </div>
-        <div id="update-link" style="display:none;">
-            <a href="javascript:window.location.reload(true)">New content available, click to reload.</a>
+            <p id="current-date">Updated {{ date_string|safe }}, <a href="javascript:window.location.reload(true)">click here to check for updates</a></p>
         </div>
         <div class="container">
             <div class="header">
@@ -237,42 +229,6 @@ body {
                 }, 500);
             }, 400);
         </script>
-        <script>
-            // This function checks if the page was loaded from the cache
-            window.addEventListener("pageshow", function(event) {
-                if (event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-                    // The page was loaded from the cache, so reload the page
-                    window.location.reload(true);
-                }
-            });
-        </script>
-        <script>
-            function checkContentUpdate() {
-                const contentDateString = document.getElementById('current-date').textContent;
-                const contentDatePattern = /Updated (.+) at (.+) UTC/;
-                const matchResult = contentDateString.match(contentDatePattern);
-
-                // Check if the date string matches the expected format
-                if (matchResult) {
-                    const [, date, time] = matchResult;
-                    const contentDateUTC = new Date(`${date} ${time} UTC`);
-
-                    const now = new Date();
-                    const timeDiff = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
-
-                    if (now - contentDateUTC > timeDiff) {
-                        document.getElementById('update-link').style.display = 'block';
-                    }
-                } else {
-                    console.error('Date format does not match expected pattern.');
-                    // Optionally, handle the error gracefully here, e.g., by displaying a message to the user
-                }
-            }
-
-            checkContentUpdate();
-
-        </script>
-
     </body>
 </html>
 
