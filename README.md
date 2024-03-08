@@ -84,6 +84,4 @@ Join us in our mission to make global news accessible to everyone, regardless of
 
 ## TODO 
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
-- [ ] Properly market/share
-- [ ] Solicit donations and no-tracker honor-system subscriptions (via coinbase and patreon)
 - [ ] Offer New Sections for Economy, Technology, US News
