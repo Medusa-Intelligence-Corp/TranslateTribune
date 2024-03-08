@@ -83,5 +83,6 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
+- [ ] Add Bluesky bot to tweet top links after publishing.
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
 - [ ] Offer New Sections for Economy, Technology, US News
