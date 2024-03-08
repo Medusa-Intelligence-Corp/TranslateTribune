@@ -57,15 +57,22 @@ body {
         }
         .date-banner {
             color: #C0C0C0; 
-            text-align: center; 
-            padding: 0px 0;
             width: 100%;
+            padding: 5px 0;
         }
         .date-banner a {
             color: #C0C0C0; 
         }
-        #current-date {
-            font-weight: normal;
+        .current-date {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .current-date a {
+            margin-left: 2px;
+            margin-right: 2px;
+            text-decoration: none;
         }
         .header {
             width: 100%;
@@ -73,11 +80,6 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        .header-title {
-            width: 300px;
-            height: 50px;
-            overflow: hidden;
         }
         .header a { 
             text-decoration: none;
@@ -169,7 +171,10 @@ body {
     </head>
     <body>
         <div class="date-banner">
-            <p id="current-date">Updated {{ date_string|safe }}, <a href="javascript:window.location.reload(true)">click here to check for updates</a></p>
+            <div class="current-date">
+              <a href="javascript:window.location.reload(true)">Updated {{ date_string|safe }}</a>
+              <a href="javascript:window.location.reload(true)">click here to check for updates</a>
+            </div>
         </div>
         <div class="container">
             <div class="header">
