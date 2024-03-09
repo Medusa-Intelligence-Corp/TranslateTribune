@@ -83,6 +83,7 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
+- [ ] Capital V view source
 - [ ] New Sections for Economy (Japan, Singapore, India, Germany, France, Brazil, China), Technology (Japan, S Korea, India, China, France, S. Arabia, Russia), US News (Indonesia, Iran, Russia, China etc...)
 - [ ] Add Bluesky bot to tweet top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
