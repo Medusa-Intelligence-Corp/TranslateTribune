@@ -19,9 +19,9 @@
         "name": "Germany",
         "language": "German",
         "flag": "&#127465;&#127466;",
-        "source": "Süddeutsche Zeitung",
-        "source_wiki": "https://en.wikipedia.org/wiki/S%C3%BCddeutsche_Zeitung",
-        "url": "https://www.sueddeutsche.de"
+        "source": "Frankfurter Allgemeine Zeitung",
+        "source_wiki": "https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung",
+        "url": "https://www.faz.net/aktuell/"
     },
     {
         "name": "Italy",

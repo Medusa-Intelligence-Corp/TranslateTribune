@@ -55,13 +55,16 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .date-banner {
-            color: #C0C0C0; 
-            width: 100%;
+        .info-banner {
+            width: 80%;
+            margin: auto;
             padding: 5px 0;
         }
-        .date-banner a {
-            color: #C0C0C0; 
+        .ai-warning {
+            color: #ca7e6d;
+        }
+        .ai-warning a {
+            color: #ca7e6d;
         }
         .current-date {
             display: flex;
@@ -70,6 +73,7 @@ body {
             align-items: center;
         }
         .current-date a {
+            color: #C0C0C0; 
             margin-left: 2px;
             margin-right: 2px;
             text-decoration: none;
@@ -158,6 +162,9 @@ body {
             margin: 0 10px;
             text-decoration: none;
         }
+        .hidden {
+          display: none;
+        }
         @media (max-width: 950px) {
             .article {
                 width: 100%;
@@ -170,10 +177,9 @@ body {
         </style>
     </head>
     <body>
-        <div class="date-banner">
-            <div class="current-date">
-              <a href="javascript:window.location.reload(true)">Updated on {{ date_string|safe }}.</a>
-              <a href="javascript:window.location.reload(true)">Click here to check for updates.</a>
+        <div class="info-banner">
+            <div class="ai-warning">
+                This is a fully autonomous foreign-language news aggregator; all translations, summaries and news curation are performed by AI. The project operates under the GPLv3 license; View the source code on <a href="https://github.com/Medusa-ML/TranslateTribune" target="_blank">GitHub</a>. To maintain and improve this service, we rely on the support of our users. Please consider making a monthly contribution of $10 via <a href="https://www.patreon.com/bradflaugher" target="_blank">Patreon</a>. We value your privacy and do not use cookies. For more details, please refer to our <a href="privacy.html">privacy policy</a>. Contact the editor at <a href="mailto:editor@translatetribune.com">editor@translatetribune.com</a>. <a href="#" onclick="hideThis(this.parentNode)">Click here to dismiss this message.</a>
             </div>
         </div>
         <div class="container">
@@ -183,13 +189,16 @@ body {
                 </div>
                 <p>"The World's Whisper, Loud and Clear."</p>
             </div>
-            <!--
+
             <div class="nav">
-            <a href="economy.html">US News</a>
-            <a href="economy.html">Business</a>
-            <a href="technology.html">Technology</a>
+              <a href="javascript:window.location.reload(true)">{{ date_string|safe }}</a>
+              <!--
+              <a href="economy.html">US News</a>
+              <a href="economy.html">Business</a>
+              <a href="technology.html">Technology</a>
+              -->
             </div>
-            -->
+
             <div class="section">
                 {{ article_html|safe }}
             </div>
@@ -200,7 +209,21 @@ body {
                 <a href="privacy.html">&#128274; Privacy Policy</a>  
             </div>
         </div>
+  
         <script>
+            function hideThis(element) {
+                element.classList.add('hidden');
+            }
+        
+            function toggleArticleDetails(element) {
+              // Find the next sibling elements of the clicked title and toggle their visibility
+              let sibling = element.nextElementSibling;
+              while (sibling) {
+                sibling.classList.toggle('hidden');
+                sibling = sibling.nextElementSibling;
+              }
+            }
+        
             const title = document.querySelector('.header h1');
             let textNode = title.childNodes[0];
             const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';

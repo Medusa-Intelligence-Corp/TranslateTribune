@@ -83,18 +83,19 @@ Article list:
                     return format:             
                     ```
                     <div class="article">
-                        <div class="article-title">
-                            <span class="flag-icon">{{ flag }}</span>TITLE IN ENGLISH
+                        <div class="article-title" onclick="toggleArticleDetails(this)">
+                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>TITLE IN ENGLISH
                         </div>
-                        <p class="article-content">SUMMARY IN ENGLISH</p>
-                        <p class="vocabulary"><ul>
+                        <p class="article-content hidden">SUMMARY IN ENGLISH</p>
+                        <p class="vocabulary hidden">
+                        <ul class="hidden">
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>                          
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                         </ul>
                         </p>
-                        <div class="article-credit">
+                        <div class="article-credit hidden">
                           <a href="{{ model_url }}">Summary by {{ model }}</a>
                           <a href='{{ link }}'>Full article in {{language}}</a>
                           <a href='{{ source_wiki }}'>$source (Wikipedia)</a>
@@ -102,7 +103,7 @@ Article list:
                     </div>
                     ```
 
-                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags.
+                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags.
 
                         article text:
                         """)
