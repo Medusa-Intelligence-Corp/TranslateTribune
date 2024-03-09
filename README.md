@@ -86,6 +86,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] add back Patreon and FAQ (with alt text) on top again, add it by the date section in plain text
 - [ ] Alt text for all flag emojis
 - [ ] Hide summaries for screen readers use url param if needed.
+- [ ] Double check sources, fix German one.
 - [ ] New Sections for Economy, Technology, US News
 - [ ] Add Bluesky bot to tweet top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
