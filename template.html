@@ -64,8 +64,8 @@ body {
             color: #ca7e6d;
             text-align: justify;
         }
-        .ai-warning a {
-            color: #ca7e6d;
+        .dismiss-warning {
+            cursor: pointer;
         }
         .current-date {
             display: flex;
@@ -108,13 +108,18 @@ body {
             text-align: center;
             padding: 5px;
             width: 100%; 
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
         }
         .nav a {
             flex: 1; 
             margin: 0 10px;
             text-decoration: none;
+            color: black;
         }
-
+        .nav a:hover {
+            color: #303030;
+        }
         .section {
             width: 100%;
             display: flex;
@@ -136,7 +141,7 @@ body {
             text-decoration: none;
         }
         .article-title:hover {
-            color: blue;
+            color: #303030;
         }
         .article-content {
             text-align: justify;
@@ -165,20 +170,21 @@ body {
             flex: 1; 
             margin: 0 10px;
             text-decoration: none;
+            color: black;
         }
         .hidden {
-          display: none;
+            display: none;
         }
         .visually-hidden {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
         @media (max-width: 950px) {
             .article {
@@ -188,13 +194,19 @@ body {
                 flex-direction: column;
                 align-items: center;
             }
+            .nav a:hover {
+                color: black;
+            }
+            .article-title:hover {
+                color: black;
+            }
         }
         </style>
     </head>
     <body>
         <div class="info-banner">
             <div class="ai-warning">
-                TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. The project operates under the GPLv3 license; you may view the source code on <a href="https://github.com/Medusa-ML/TranslateTribune" target="_blank">GitHub</a>. To maintain and improve this service, we rely on the support of our readers. Please consider making a monthly contribution of $10 via <a href="https://www.patreon.com/bradflaugher" target="_blank">Patreon</a>. We are ad-free, we value your privacy and do not use cookies. For more details, please refer to our <a href="privacy.html">privacy policy</a>. You may contact the editor at <a href="mailto:editor@translatetribune.com">editor@translatetribune.com</a>. <a href="#" onclick="hideThis(this.parentNode)">Click here to dismiss this message.</a>
+                <span class="dismiss-warning" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
             </div>
         </div>
         <div class="container">
@@ -205,12 +217,9 @@ body {
                 <p>"The World's Whisper, Loud and Clear."</p>
             </div>
             <div class="nav">
-              <a href="https://translatetribune.com">Front Page</a>
-              <a href="business.html">Business</a>
-              <a href="technology.html">Technology</a>
-            </div>
-            <div class="current-date">
-                {{ date_string|safe }}
+                <a href="https://translatetribune.com">Front Page</a>
+                <a href="business.html">Business</a>
+                <a href="technology.html">Technology</a>
             </div>
             <div class="section">
                 {{ article_html|safe }}            
@@ -222,21 +231,24 @@ body {
                 <a href="privacy.html"><span aria-hidden="true">&#128274;</span> Privacy Policy</a>  
             </div>
         </div>
-  
+        <div class="current-date">
+            Updated {{ date_string|safe }}
+        </div>
+
         <script>
             function hideThis(element) {
                 element.classList.add('hidden');
             }
-        
+
             function toggleArticleDetails(element) {
-              // Find the next sibling elements of the clicked title and toggle their visibility
-              let sibling = element.nextElementSibling;
-              while (sibling) {
-                sibling.classList.toggle('hidden');
-                sibling = sibling.nextElementSibling;
-              }
+                // Find the next sibling elements of the clicked title and toggle their visibility
+                let sibling = element.nextElementSibling;
+                while (sibling) {
+                    sibling.classList.toggle('hidden');
+                    sibling = sibling.nextElementSibling;
+                }
             }
-        
+
             const title = document.querySelector('.dynamic-logo');
             let textNode = title.childNodes[0];
             const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
