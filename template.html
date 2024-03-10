@@ -69,15 +69,12 @@ body {
         }
         .current-date {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-        }
-        .current-date a {
-            color: #C0C0C0; 
-            margin-left: 2px;
-            margin-right: 2px;
-            text-decoration: none;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            color: #d1d1d1;
         }
         .header {
             width: 100%;
@@ -109,7 +106,7 @@ body {
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 5px;
             width: 100%; 
         }
         .nav a {
@@ -191,7 +188,7 @@ body {
     <body>
         <div class="info-banner">
             <div class="ai-warning">
-                This is a fully autonomous foreign-language news aggregator; all translations, summaries and news curation are performed by AI. The project operates under the GPLv3 license; you may view the source code on <a href="https://github.com/Medusa-ML/TranslateTribune" target="_blank">GitHub</a>. To maintain and improve this service, we rely on the support of our users. Please consider making a monthly contribution of $10 via <a href="https://www.patreon.com/bradflaugher" target="_blank">Patreon</a>. We value your privacy and do not use cookies. For more details, please refer to our <a href="privacy.html">privacy policy</a>. Contact the editor at <a href="mailto:editor@translatetribune.com">editor@translatetribune.com</a>. <a href="#" onclick="hideThis(this.parentNode)">Click here to dismiss this message.</a>
+                TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. The project operates under the GPLv3 license; you may view the source code on <a href="https://github.com/Medusa-ML/TranslateTribune" target="_blank">GitHub</a>. To maintain and improve this service, we rely on the support of our readers. Please consider making a monthly contribution of $10 via <a href="https://www.patreon.com/bradflaugher" target="_blank">Patreon</a>. We are ad-free, we value your privacy and do not use cookies. For more details, please refer to our <a href="privacy.html">privacy policy</a>. You may contact the editor at <a href="mailto:editor@translatetribune.com">editor@translatetribune.com</a>. <a href="#" onclick="hideThis(this.parentNode)">Click here to dismiss this message.</a>
             </div>
         </div>
         <div class="container">
@@ -201,16 +198,14 @@ body {
                 </div>
                 <p>"The World's Whisper, Loud and Clear."</p>
             </div>
-
             <div class="nav">
-              <a href="javascript:window.location.reload(true)">{{ date_string|safe }}</a>
-              <!--
-              <a href="economy.html">US News</a>
-              <a href="economy.html">Business</a>
+              <a href="https://translatetribune.com">Front Page</a>
+              <a href="business.html">Business</a>
               <a href="technology.html">Technology</a>
-              -->
             </div>
-
+            <div class="current-date">
+                {{ date_string|safe }}
+            </div>
             <div class="section">
                 {{ article_html|safe }}
             </div>

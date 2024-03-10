@@ -1,0 +1,49 @@
+[
+  {
+    "name": "South Africa",
+    "language": "Afrikaans",
+    "flag": "&#127487;&#127462;",
+    "source": "Beeld",
+    "source_wiki": "https://en.wikipedia.org/wiki/Beeld",
+    "url": "https://www.netwerk24.com/beeld"
+  },
+  {
+    "name": "Japan",
+    "language": "Japanese",
+    "flag": "&#127471;&#127477;",
+    "source": "Nikkei",
+    "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
+    "url": "https://www.nikkei.com",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "Singapore",
+    "language": "Singaporean Mandarin",
+    "flag": "&#127480;&#127468;",
+    "source": "Lianhe Zaobao",
+    "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
+    "url": "https://www.zaobao.com.sg",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "Switzerland",
+    "language": "German",
+    "flag": "&#127464;&#127469;",
+    "source": "Neue Zürcher Zeitung",
+    "source_wiki": "https://en.wikipedia.org/wiki/Neue_Z%C3%BCrcher_Zeitung",
+    "url": "https://www.nzz.ch"
+  },
+  {
+    "name": "Panama",
+    "language": "Spanish",
+    "flag": "&#127477;&#127462;",
+    "source": "La Prensa",
+    "source_wiki": "https://en.wikipedia.org/wiki/La_Prensa_(Panama)",
+    "url": "https://www.prensa.com"
+  }
+]
+

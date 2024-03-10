@@ -1,0 +1,62 @@
+[
+  {
+    "name": "India",
+    "language": "Hindi",
+    "flag": "&#127470;&#127475;",
+    "source": "Gadgets360",
+    "source_wiki": "https://en.wikipedia.org/wiki/Gadgets_360",
+    "url": "https://gadgets.ndtv.com/hindi",
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "China",
+    "language": "Simplified Chinese",
+    "flag": "&#127464;&#127475;",
+    "source": "36Kr",
+    "source_wiki": "https://zh.wikipedia.org/zh-cn/36%E6%B0%AA",
+    "url": "https://www.36kr.com",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "France",
+    "language": "French",
+    "flag": "&#127467;&#127479;",
+    "source": "FrenchWeb",
+    "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
+    "url": "https://www.frenchweb.fr"
+  },
+  {
+    "name": "Saudi Arabia",
+    "language": "Arabic",
+    "flag": "&#127480;&#127462;",
+    "source": "Tech World",
+    "source_wiki": "",
+    "url": "https://www.tech-wd.com/wd",
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "South Korea",
+    "language": "Korean",
+    "flag": "&#127472;&#127479;",
+    "source": "ZDNet Korea",
+    "source_wiki": "https://en.wikipedia.org/wiki/ZDNet",
+    "url": "https://zdnet.co.kr",
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "Israel",
+    "language": "Hebrew",
+    "flag": "&#127470;&#127473;",
+    "source": "Geektime",
+    "source_wiki": "https://he.wikipedia.org/wiki/Geektime",
+    "url": "https://www.geektime.co.il",
+    "tokens": 100000,
+    "token_length": 1
+  }
+]
+

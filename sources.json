@@ -16,14 +16,6 @@
         "url": "https://www.lefigaro.fr"
     },
     {
-        "name": "Germany",
-        "language": "German",
-        "flag": "&#127465;&#127466;",
-        "source": "Frankfurter Allgemeine Zeitung",
-        "source_wiki": "https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung",
-        "url": "https://www.faz.net/aktuell/"
-    },
-    {
         "name": "Italy",
         "language": "Italian",
         "flag": "&#127470;&#127481;",
