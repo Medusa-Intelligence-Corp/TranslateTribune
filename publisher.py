@@ -83,9 +83,9 @@ Article list:
                     return format:             
                     ```
                     <div class="article">
-                        <div class="article-title" onclick="toggleArticleDetails(this)">
+                        <a class="article-title" href="#" onclick="toggleArticleDetails(this)">
                             <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>TITLE IN ENGLISH
-                        </div>
+                        </a>
                         <p class="article-content hidden">SUMMARY IN ENGLISH</p>
                         <p class="vocabulary hidden">
                         <ul class="hidden">
