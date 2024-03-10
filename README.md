@@ -83,8 +83,5 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] Get rid of a link in warning, change to span or div with onlcick
-- [ ] Better date formatting, put it on bottom
-- [ ] black section links?
 - [ ] Add Bluesky bot to tweet top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
