@@ -128,11 +128,15 @@ body {
             box-sizing: border-box;
         }
         .article-title {
+            cursor: pointer;
             font-size: 20px;
             font-weight: bold;
             margin: 10px;
             color: black;
             text-decoration: none;
+        }
+        .article-title:hover {
+            color: blue;
         }
         .article-content {
             text-align: justify;
@@ -209,7 +213,7 @@ body {
                 {{ date_string|safe }}
             </div>
             <div class="section">
-                {{ article_html|safe }}
+                {{ article_html|safe }}            
             </div>
             <div class="footer">                                          
                 <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> We're Open Source!</a>

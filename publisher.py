@@ -73,7 +73,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
 
 if __name__ == "__main__":
-    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights or perspectives specific to $name. The article will be considered for translation into english. If you find there are no suitable articles for translation, please return the link to the most interesting or funny article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights or perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
 """)
@@ -83,18 +83,16 @@ Article list:
                     return format:             
                     ```
                     <div class="article">
-                        <a class="article-title" href="#" onclick="toggleArticleDetails(this)">
+                        <div class="article-title" onclick="toggleArticleDetails(this)">
                             <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>TITLE IN ENGLISH
-                        </a>
+                        </div>
                         <p class="article-content hidden">SUMMARY IN ENGLISH</p>
-                        <p class="vocabulary hidden">
-                        <ul class="hidden">
+                        <ul class="vocabulary hidden">
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>                          
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                           <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
                         </ul>
-                        </p>
                         <div class="article-credit hidden">
                           <a href="{{ model_url }}">Summary by {{ model }}</a>
                           <a href='{{ link }}'>Full article in {{language}}</a>
@@ -131,7 +129,7 @@ Article list:
     
     publish('sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
 
-    finder_template_business = Template("""Act as a polyglot international business and finance newspaper editor who is an ex-Goldman Sachs International Equity Analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights, economy or business perspectives specific to $name. The article will be considered for translation into english. If you find there are no suitable articles for translation, please return the link to the most interesting or funny article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template_business = Template("""Act as a polyglot international business and finance newspaper editor who is an ex-Goldman Sachs International Equity Analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights, economic or business perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
 """)
@@ -139,7 +137,7 @@ Article list:
 
 
 
-    finder_template_technology = Template("""Act as a polyglot international technology newspaper editor who is an ex-Google Software Developer, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers the most interesting perspective on technology from {{ name }}. The article will be considered for translation into english. If you find there are no suitable articles for translation, please return the link to the most interesting or funny article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API. 
+    finder_template_technology = Template("""Act as a polyglot international technology newspaper editor who is an ex-Google Software Developer, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers the most interesting perspective on technology from {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API. 
 
 Article list:
 """)
