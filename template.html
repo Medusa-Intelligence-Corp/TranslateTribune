@@ -47,7 +47,7 @@
         body {
             max-width: 100%;
             overflow-x: hidden;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -88,6 +88,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 12px;
         }
         .header a { 
             text-decoration: none;
@@ -131,6 +132,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            padding-top: 12px;
         }
         .article {
             width: calc(50% - 20px);
@@ -227,7 +229,7 @@
                 <a href="business.html">Business</a>
                 <a href="technology.html">Technology</a>
             </div>
-            <div class="section">
+            <div class="section">            
                 {{ article_html|safe }}            
             </div>
             <div class="footer">                                          
