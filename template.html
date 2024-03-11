@@ -61,27 +61,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .info-banner {
-            width: 80%;
-            margin: auto;
-            padding: 5px 0;
-        }
-        .ai-warning {
-            color: #ca7e6d;
-            text-align: justify;
-        }
-        .dismiss-warning {
-            cursor: pointer;
-        }
-        .current-date {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            color: #d1d1d1;
-        }
         .header {
             width: 100%;
             text-align: center;
@@ -180,6 +159,27 @@
             text-decoration: none;
             color: black;
         }
+        .current-date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            color: #d1d1d1;
+        }
+        .ai-warning {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            color: #d1d1d1;
+        }
+        .dismiss-warning {
+            cursor: pointer;
+        }
         .hidden {
             display: none;
         }
@@ -212,11 +212,6 @@
         </style>
     </head>
     <body>
-        <div class="info-banner">
-            <div class="ai-warning">
-                <span class="dismiss-warning" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
-            </div>
-        </div>
         <div class="container">
             <div class="header">
                 <div class="header-title">
@@ -240,6 +235,9 @@
                 <a href="privacy.html"><span aria-hidden="true">&#128274;</span> Privacy Policy</a>  
             </div>
         </div>
+        <div class="ai-warning">
+                <span class="dismiss-warning" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
+            </div>
         <div class="current-date">
             Updated {{ date_string|safe }}
         </div>
