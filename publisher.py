@@ -67,6 +67,12 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             article_html+=article_dict.pop(item.get('title','N/A'))
         except KeyError:
             print("skipping messed up title from LLM")
+
+    # if the LLM skipped too many articles, add them all in
+    if len(keys(article_dict)) > 3:
+        for key, value in article_dict.items():
+           article_html+=value
+
     completehtml=deploy_website(article_html, template_filename, html_filename)
 
 
