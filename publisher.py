@@ -67,8 +67,6 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             article_html+=article_dict.pop(item.get('title','N/A'))
         except KeyError:
             print("skipping messed up title from LLM")
-    for key,value in article_dict.items():
-        article_html+=value
     completehtml=deploy_website(article_html, template_filename, html_filename)
 
 
@@ -106,7 +104,7 @@ Article list:
                         article text:
                         """)
                         
-    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
+    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please remove any articles that appear to be obvious errors like 'page not found' or something. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
 
     ```
     {

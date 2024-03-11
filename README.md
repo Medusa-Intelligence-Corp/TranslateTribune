@@ -90,5 +90,6 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
+- [ ] Improve templating/scripts for epub summary and games sections.
 - [ ] Add Bluesky bot to tweet top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo
