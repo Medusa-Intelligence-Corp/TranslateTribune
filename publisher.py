@@ -69,7 +69,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             print("skipping messed up title from LLM")
 
     # if the LLM skipped too many articles, add them all in
-    if len(keys(article_dict)) > 3:
+    if len(article_dict.keys()) > 3:
         for key, value in article_dict.items():
            article_html+=value
 
