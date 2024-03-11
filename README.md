@@ -72,6 +72,13 @@ We're always looking for volunteers to help with:
 
 If you're interested in contributing, please check out our contributing guidelines or contact us directly.
 
+## Sister Projects
+
+In addition to this core repository, TranslateTribune uses the following repos to help create our site.
+
+* [https://github.com/Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
+* [https://github.com/predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
+
 ## License
 
 TranslateTribune is open-source and available under the GPLv3 License. See the LICENSE file for more details.
