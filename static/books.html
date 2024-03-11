@@ -214,7 +214,7 @@
     <body>
         <div class="info-banner">
             <div class="ai-warning">
-                <span class="dismiss-warning" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
+                <span class="dismiss-warning hidden" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
             </div>
         </div>
         <div class="container">
@@ -231,7 +231,48 @@
                 <a href="games.html">Games</a>
             </div>
             <div class="section">            
-                {{ article_html|safe }}            
+                book summaries coming soon!
+                
+                
+                <!--
+                <div class="article">
+                 <div class="article-title" onclick="toggleArticleDetails(this)">
+                  <span aria-label="Flag of France" class="flag-icon" role="img">
+                   🇫🇷
+                  </span>
+                  Unseenlabs Raises €85 Million for Satellite-Based Ship Geolocation Solution
+                 </div>
+                 <p class="article-content hidden">
+                  French startup Unseenlabs, which uses nanosatellites to geolocate ships by intercepting their radio frequency signals, announced a record €85 million funding round to accelerate its development. The company plans to launch additional satellites, expand into key international markets, and develop new solutions to strengthen its technological lead. Unseenlabs has launched 11 satellites since 2019 and aims to deploy 10 more by the end of 2025. The satellites can detect ships' unique radio frequency signals even if their automatic identification system (AIS) transponders are turned off, helping to combat illegal fishing, illicit trafficking, and piracy.
+                 </p>
+                 <ul class="vocabulary hidden">
+                  <li>
+                   levée de fonds - fundraising round
+                  </li>
+                  <li>
+                   géolocalisation - geolocation
+                  </li>
+                  <li>
+                   nanosatellite - nanosatellite
+                  </li>
+                  <li>
+                   radiofréquence - radio frequency
+                  </li>
+                 </ul>
+                 <div class="article-credit hidden">
+                  <a href="https://www.anthropic.com/claude">
+                   Summary by Claude 3
+                  </a>
+                  <a href="https://www.frenchweb.fr/serie-a-85-millions-deuros-pour-la-startup-unseenlabs-et-sa-solution-de-geolocalisation-des-navires-depuis-lespace/447230">
+                   Full article in French
+                  </a>
+                  <a href="https://en.wikipedia.org/wiki/FrenchWeb">
+                   FrenchWeb (Wikipedia)
+                  </a>
+                 </div>
+                </div>
+                -->
+                
             </div>
             <div class="footer">                                          
                 <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> We're Open Source!</a>
@@ -241,7 +282,7 @@
             </div>
         </div>
         <div class="current-date">
-            Updated {{ date_string|safe }}
+            Updated Monday, 11 Mar 2024 at 11:00 AM EDT 
         </div>
 
         <script>

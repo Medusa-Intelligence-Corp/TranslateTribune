@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Japan",
+    "language": "Japanese",
+    "flag": "&#127471;&#127477;",
+    "source": "Nikkei",
+    "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
+    "url": "https://www.nikkei.com",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "Singapore",
+    "language": "Singaporean Mandarin",
+    "flag": "&#127480;&#127468;",
+    "source": "Lianhe Zaobao",
+    "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
+    "url": "https://www.zaobao.com.sg",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "Switzerland",
+    "language": "German",
+    "flag": "&#127464;&#127469;",
+    "source": "Neue Zürcher Zeitung",
+    "source_wiki": "https://en.wikipedia.org/wiki/Neue_Z%C3%BCrcher_Zeitung",
+    "url": "https://www.nzz.ch"
+  },
+    {
+    "name": "Switzerland",
+    "language": "French",
+    "flag": "&#127464;&#127469;",
+    "source": "L'Agefi",
+    "source_wiki": "https://fr.wikipedia.org/wiki/L%27Agefi_(Suisse)",
+    "url": "https://agefi.com/"
+  },
+  {
+    "name": "China",
+    "language": "Mandarin",
+    "flag": "&#127464;&#127475;",
+    "source": "IT之家",
+    "source_wiki": "https://zh.wikipedia.org/zh-hans/IT%E4%B9%8B%E5%AE%B6",
+    "url": "http://www.ithome.com/",
+    "article_title_length": 7,
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "France",
+    "language": "French",
+    "flag": "&#127467;&#127479;",
+    "source": "FrenchWeb",
+    "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
+    "url": "https://www.frenchweb.fr"
+  },
+  {
+    "name": "France",
+    "language": "French",
+    "flag": "&#127467;&#127479;",
+    "source": "Les Echos",
+    "source_wiki": "https://en.wikipediwiki/Les_Echos_(France)",
+    "url": "https://www.lesechos.fr/"
+  },
+    {
+        "name": "Saudi Arabia",
+        "language": "Arabic",
+        "flag": "&#127480;&#127462;",
+        "source": "Al Eqtisadiah",
+        "source_wiki": "https://en.wikipedia.org/wiki/Al_Eqtisadiah",
+        "url": "http://www.aleqt.com/",
+        "tokens": 100000,
+        "token_length": 1
+    },
+        {
+        "name": "Brazil",
+        "language": "Portugese",
+        "flag": "&#127463;&#127479;",
+        "source": "Valor Econômico",
+        "source_wiki": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
+        "url": "http://www.valor.com.br/"
+    },
+        {
+        "name": "Chile",
+        "language": "Spanish",
+        "flag": "&#127464;&#127473;",
+        "source": "FayerWayer",
+        "source_wiki": "https://es.wikipedia.org/wiki/Betazeta",
+        "url": "https://www.fayerwayer.com/"
+    },
+  {
+    "name": "Israel",
+    "language": "Hebrew",
+    "flag": "&#127470;&#127473;",
+    "source": "Geektime",
+    "source_wiki": "https://he.wikipedia.org/wiki/Geektime",
+    "url": "https://www.geektime.co.il",
+    "tokens": 100000,
+    "token_length": 1
+  },
+    {
+    "name": "South Korea",
+    "language": "Korean",
+    "flag": "&#127472;&#127479;",
+    "source": "ZDNet Korea",
+    "source_wiki": "https://en.wikipedia.org/wiki/ZDNet",
+    "url": "https://zdnet.co.kr",
+    "tokens": 100000,
+    "token_length": 1
+  },
+  {
+    "name": "India",
+    "language": "Hindi",
+    "flag": "&#127470;&#127475;",
+    "source": "Gadgets360",
+    "source_wiki": "https://en.wikipedia.org/wiki/Gadgets_360",
+    "url": "https://gadgets.ndtv.com/hindi",
+    "tokens": 100000,
+    "token_length": 1
+  }
+]
+
