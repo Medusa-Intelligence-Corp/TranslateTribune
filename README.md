@@ -83,6 +83,8 @@ In addition to this core repository, TranslateTribune uses the following repos t
 
 TranslateTribune is open-source and available under the GPLv3 License. See the LICENSE file for more details.
 
+The mark "TranslateTribune" is a trademark (registered under Code 41: Newspaper Publishing) of [Medusa Intelligence Corporation](https://medusaintel.co).
+
 ## Contact
 
 For more information, questions, or to get involved, please see [https://medusaintel.co](https://medusaintel.co) or email [editor@translatetribune.com](mailto:editor@translatetribune.com).
