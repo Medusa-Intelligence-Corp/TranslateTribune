@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 class UnsupportedModelException(Exception):
     def __init__(self, model, message="Model not supported"):
         self.model = model
+        print(model)
         self.message = message
         super().__init__(self.message)
 
@@ -113,7 +114,7 @@ def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token
     if model == "Claude 3":
         chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
         response = send_to_anthropic(chunks[0], instructions)
-    if model == "GPT-4":
+    elif model == "GPT-4":
         chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
         response = send_to_openai(chunks[0], instructions)
     else:
