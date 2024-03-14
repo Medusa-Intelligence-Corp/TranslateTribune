@@ -31,7 +31,9 @@
         "flag": "&#127463;&#127479;",
         "source": "Folha de S.Paulo",
         "source_wiki": "https://en.wikipedia.org/wiki/Folha_de_S.Paulo",
-        "url": "https://www.folha.uol.com.br"
+        "url": "https://www.folha.uol.com.br",
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4"
     },
     {
         "name": "Taiwan",
@@ -83,6 +85,8 @@
         "source": "Ettela'at",
         "source_wiki": "https://en.wikipedia.org/wiki/Ettela%27at",
         "url": "https://ettelaat.com/",
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4",
         "tokens": 100000,
         "token_length": 1
     },
@@ -104,7 +108,9 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Yedioth_Ahronoth",
         "url": "https://www.ynet.co.il",
         "tokens": 100000,
-        "token_length": 1
+        "token_length": 1,
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4"
     },
     {
         "name": "Türkiye",
@@ -132,7 +138,9 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Taifa_Leo",
         "url": "https://taifaleo.nation.co.ke",
         "tokens": 100000,
-        "token_length": 1
+        "token_length": 1,
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4"
     }
 
 
