@@ -103,7 +103,7 @@ Article list:
                         <div class="article-credit hidden">
                           <a href="{{ model_url }}">Summary by {{ model }}</a>
                           <a href='{{ link }}'>Full article in {{language}}</a>
-                          <a href='{{ source_wiki }}'>$source (Wikipedia)</a>
+                          <a href='{{ source_wiki }}'>{{ source }} (Wikipedia)</a>
                         </div>
                     </div>
                     ```

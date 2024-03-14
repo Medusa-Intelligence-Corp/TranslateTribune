@@ -17,7 +17,7 @@ TranslateTribune is about removing barriers—linguistic, cultural, and ideologi
 ## Features
 
 - **Daily Updates:** Fresh news summaries every day, giving you a constant stream of global insights.
-- **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events. (see [sources.json](./sources.json))
+- **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events. (see [sources.json](./config/sources.json))
 - **AI-Powered Summaries:** Quick, accurate translations and summaries powered by the latest AI technology.
 
 ## Development Principles
@@ -58,10 +58,10 @@ To run the scraper and generate an index.html to the console do the following:
 * ```bash deploy/run.sh``` to run the curation and translation job
 
 If you'd like to edit the code note the following structure:
-* [```publisher.py```](./publisher.py) is the main loop that controls the job
-* [```browser.py```](./browser.py) is how text is extracted from sites
-* [```llm.py```](./llm.py) handles any LLM connections and formatting
-* [```templater.py```](./templater.py) creates the index.html and deploys it to AWS s3
+* [```publisher.py```](./utils/publisher.py) is the main loop that controls the job
+* [```browser.py```](./utils/browser.py) is how text is extracted from sites
+* [```llm.py```](./utils/llm.py) handles any LLM connections and formatting
+* [```templater.py```](./utils/templater.py) creates the index.html and deploys it to AWS s3
 
 ## Contributing
 
