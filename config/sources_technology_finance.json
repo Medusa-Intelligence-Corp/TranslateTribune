@@ -19,6 +19,8 @@
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4",
         "article_title_length": 7,
         "tokens": 100000,
         "token_length": 1
