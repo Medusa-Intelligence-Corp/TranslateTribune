@@ -23,10 +23,11 @@ RUN pip3 install --no-cache-dir \
     validators \
     Jinja2 \
     anthropic \
+    openai \
     boto3
    
 
 # Copy the rest of your application's code
 COPY . .
 
-CMD ["python3","publisher.py"]
+CMD ["python3","utils/publisher.py"]

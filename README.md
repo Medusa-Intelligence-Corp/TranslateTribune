@@ -53,8 +53,9 @@ To explore our project and start reading the summaries, visit our GitHub reposit
 
 To run the scraper and generate an index.html to the console do the following:
 * ```git clone``` this repo
-* ```bash build.sh``` to build the docker container
-* ```bash run.sh``` to run the curation and translation job
+* ```cd``` to the project folder
+* ```bash deploy/build.sh``` to build the docker container
+* ```bash deploy/run.sh``` to run the curation and translation job
 
 If you'd like to edit the code note the following structure:
 * [```publisher.py```](./publisher.py) is the main loop that controls the job
@@ -92,6 +93,4 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] Improve templating/scripts for epub summary and games sections.
 - [ ] Add Bluesky bot to tweet top links after publishing [pythonapi](https://atproto.blue/en/latest/)
-- [ ] Upgrade Claude API keys to production AND/OR add OpenAI GPT-4 Turbo

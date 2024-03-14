@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from browser import fetch_content
 from llm import fetch_llm_response
-from templater import deploy_website
+from templater import deploy_website, deploy_games, deploy_books
 
 def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):    
     with open(sources_filename, 'r') as file:
@@ -77,6 +77,9 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
 
 if __name__ == "__main__":
+    deploy_games()
+    deploy_books()
+
     finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights or perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
@@ -131,10 +134,10 @@ Article list:
     current article titles (in random order):
     """)
     
-    publish('sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
+    publish('config/sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
 
     finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights, technology news, economic or business perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
 """)
-    publish('sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template, prioritizer_template)
+    publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template, prioritizer_template)

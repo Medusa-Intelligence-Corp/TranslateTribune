@@ -9,7 +9,11 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 def deploy_website(article_html, template_filename, html_filename):
-    template_dir = '/usr/src/app'
+    debug = os.environ.get('DEBUG', False)
+    if debug:
+        html_filename = html_filename.replace(".html", "_debug.html")
+
+    template_dir = '/usr/src/app/static/'
 
     env = Environment(
         loader=FileSystemLoader(template_dir),
@@ -60,3 +64,16 @@ def deploy_website(article_html, template_filename, html_filename):
     )
 
     return rendered_html
+    
+def deploy_games(template_filename="template.html", html_filename="games.html"):
+    with open("/usr/src/app/static/games.html", "r") as file:
+        # Read the lines of the file
+        html_lines = file.read()
+    deploy_website(html_lines, template_filename, html_filename)
+    
+    
+def deploy_books(template_filename="template.html", html_filename="books.html"):
+    with open("/usr/src/app/static/books.html", "r") as file:
+        # Read the lines of the file
+        html_lines = file.read()
+    deploy_website(html_lines, template_filename, html_filename)

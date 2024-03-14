@@ -21,7 +21,9 @@
         "flag": "&#127470;&#127481;",
         "source": "La Repubblica",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
-        "url": "https://www.repubblica.it"
+        "url": "https://www.repubblica.it",
+        "model":"GPT-4",
+        "model_url":"https://openai.com/research/gpt-4"
     },
     {
         "name": "Brazil",

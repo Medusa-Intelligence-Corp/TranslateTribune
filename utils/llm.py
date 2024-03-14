@@ -5,6 +5,8 @@ import validators
 
 import anthropic
 
+import openai
+
 from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
@@ -91,11 +93,29 @@ def send_to_anthropic(text_chunk, instructions):
     return message.content[0].text
 
 
+def send_to_openai(text_chunk, instructions):
+    client = openai.OpenAI()
+
+    chat_completion = client.chat.completions.create(
+    model="gpt-4-turbo-preview",
+    messages=[
+            {
+                "role": "user",
+                "content": f"{instructions} {text_chunk}"
+            }
+        ]
+    )
+
+    return chat_completion.choices[0].message.content
+
 def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token_length, validation=None):
 
     if model == "Claude 3":
         chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
         response = send_to_anthropic(chunks[0], instructions)
+    if model == "GPT-4":
+        chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
+        response = send_to_openai(chunks[0], instructions)
     else:
         raise UnsupportedModelException(model)
 
