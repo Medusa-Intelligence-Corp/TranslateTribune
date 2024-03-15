@@ -1,3 +1,4 @@
+import time
 import re
 import json
 import traceback
@@ -48,7 +49,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             
             if best_links is not None:
                 for link in best_links:          
-                    article_text = fetch_content(link,"text") 
+                    article_text = fetch_content(link,"text")
+                    time.sleep(60) #TODO remove this as gpt-4 turbo improves, right now you are rate limited
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
                             model, "html")
@@ -87,18 +89,18 @@ if __name__ == "__main__":
     deploy_games()
     deploy_books()
 
-    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights or perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a story of global importance, it might be particularly funny or interesting local story from a far corner of the globe, or it might offer unique insights or perspectives specific to {{ name }}. Choose stories that are current, relevant, and have a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
 """)
 
-    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Additionally, identify and include a few key $language vocabulary phrases that would be beneficial for a student learning {{ language }}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
+    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader. Additionally, identify and include a few key {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
 
                     return format:             
                     ```
                     <div class="article">
                         <div class="article-title" onclick="toggleArticleDetails(this)">
-                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>TITLE IN ENGLISH
+                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>COMPELLING TITLE IN ENGLISH
                         </div>
                         <p class="article-content hidden">SUMMARY IN ENGLISH</p>
                         <ul class="vocabulary hidden">
@@ -120,7 +122,7 @@ Article list:
                         article text:
                         """)
                         
-    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please remove any articles that appear to be obvious errors like 'page not found' or something. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
+    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please remove any articles that appear to be obvious errors like 'page not found' or something. If there are articles that appear to be duplicates, you may remove all but one of them, keeping the article from the country located farthest away from the USA (you'll know where it's from by the flag). Choose stories that are current, relevant, and have a significant impact on our American readership (We can assume they have an interest in global events). Breaking news, major developments, and events that affect the United States directly should take priority. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
 
     ```
     {
@@ -143,7 +145,7 @@ Article list:
     
     publish('config/sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
 
-    finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the article links and titles provided from {{ source }}, a {{ language }} language newspaper. Identify one article that offers unique insights, technology news, economic or business perspectives specific to {{ name }}. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return the link to the most interesting article in the list, something that an American audience might find humourous or might help win a trivia contest one day. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a technology or finance story of global importance or it might offer unique insights or perspectives specific to the technology or financial news of {{ name }}. Choose stories that are current, relevant, and have a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
 
 Article list:
 """)

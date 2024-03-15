@@ -24,6 +24,23 @@
         "url": "https://www.repubblica.it"
     },
     {
+        "name": "China",
+        "language": "Mandarin",
+        "flag": "&#127464;&#127475;",
+        "source": "People's Daily",
+        "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
+        "url": "http://www.people.com.cn",
+        "article_title_length": 7
+    },
+    {
+        "name": "Israel",
+        "language": "Hebrew",
+        "flag": "&#127470;&#127473;",
+        "source": "Yedioth Ahronoth",
+        "source_wiki": "https://en.wikipedia.org/wiki/Yedioth_Ahronoth",
+        "url": "https://www.ynet.co.il"
+    },
+    {
         "name": "Taiwan",
         "language": "Mandarin",
         "flag": "&#127481;&#127484;",
