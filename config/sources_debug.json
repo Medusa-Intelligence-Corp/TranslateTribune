@@ -1,0 +1,11 @@
+[
+    {
+        "name": "France",
+        "language": "French",
+        "flag": "&#127467;&#127479;",
+        "source": "Le Figaro",
+        "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
+        "url": "https://www.lefigaro.fr",
+        "model": "GPT-4"
+    }
+]

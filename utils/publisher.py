@@ -1,3 +1,4 @@
+import os
 import time
 import re
 import json
@@ -70,14 +71,19 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     'Claude 3', "json")
 
     article_html=""
-    for item in title_dict.get('articles',[]):
-        try:
-            print(item)
-            article_html+=article_dict.pop(item.get('title','N/A'))
-        except KeyError:
-            print("skipping messed up title from LLM")
+    if len(article_dict.keys()) > 2:
+        for item in title_dict.get('articles',[]):
+            try:
+                print(item)
+                article_html+=article_dict.pop(item.get('title','N/A'))
+            except KeyError:
+                print("skipping messed up title from LLM")
+    else:
+        # this is primarily for debug mode, when you're only testing one or two articles
+        for key in list(article_dict.keys()):
+            article_html+=article_dict.pop(key)
 
-    # if the LLM skipped too many articles, add them all in
+    # if the LLM skipped too many articles, add them all in, one day we can remove this
     if len(article_dict.keys()) > 3:
         for key, value in article_dict.items():
            article_html+=value
@@ -89,9 +95,15 @@ if __name__ == "__main__":
     deploy_games()
     deploy_books()
 
-    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a story of global importance, it might be particularly funny or interesting local story from a far corner of the globe, or it might offer unique insights or perspectives specific to {{ name }}. Choose stories that are current, relevant, and have a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template = Template("""Act as a polyglot international newspaper editor who is an ex-CIA analyst, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a story of global importance, it might be particularly funny or interesting local story from a far corner of the globe, or it might offer unique insights or perspectives specific to {{ name }}. Choose a story that is current, relevant, and has a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for our country and for the survival of our newspaper business. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API, adhering to the structure provided below: 
 
-Article list:
+    ```
+    {
+  "best_article":"http://example.com/great-article" 
+    }
+    ```
+
+  full list of links to review:
 """)
 
     summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader. Additionally, identify and include a few key {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
@@ -100,7 +112,9 @@ Article list:
                     ```
                     <div class="article">
                         <div class="article-title" onclick="toggleArticleDetails(this)">
-                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>COMPELLING TITLE IN ENGLISH
+                            <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
+                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
+                            COMPELLING TITLE IN ENGLISH
                         </div>
                         <p class="article-content hidden">SUMMARY IN ENGLISH</p>
                         <ul class="vocabulary hidden">
@@ -117,7 +131,7 @@ Article list:
                     </div>
                     ```
 
-                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags.
+                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags. 
 
                         article text:
                         """)
@@ -143,10 +157,21 @@ Article list:
     current article titles (in random order):
     """)
     
-    publish('config/sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
+    debug = os.environ.get('DEBUG', False)
+    if debug:
+        publish('config/sources_debug.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
+    else:
+        publish('config/sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
 
-    finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a technology or finance story of global importance or it might offer unique insights or perspectives specific to the technology or financial news of {{ name }}. Choose stories that are current, relevant, and have a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API.
+    finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a technology or finance story of global importance or it might offer unique insights or perspectives specific to the technology or financial news of {{ name }}. Choose a story that is current, relevant, and has a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API, adhering to the structure provided below: 
 
-Article list:
+    ```
+    {
+  "best_article":"http://example.com/great-article" 
+    }
+    ```
+
+  full list of links to review:
 """)
-    publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template, prioritizer_template)
+    if not debug:
+        publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template, prioritizer_template)

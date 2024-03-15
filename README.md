@@ -73,5 +73,5 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO 
-- [ ] Check Mexico and S. Korea configs for errors
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
+- [ ] Add Mistral-Large and test costs
