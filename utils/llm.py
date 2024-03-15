@@ -19,21 +19,8 @@ class UnsupportedModelException(Exception):
         self.message = message
         super().__init__(self.message)
 
-
-def text_to_chunks(text, chunk_approx_tokens, avg_token_length):
-
-    chunk_approx_chars = chunk_approx_tokens * avg_token_length
-    chunks = []
-    text_length = len(text)
-    start_index = 0
-
-    while start_index < text_length:
-        end_index = min(start_index + chunk_approx_chars, text_length)
-        chunk = text[start_index:end_index]
-        chunks.append(chunk)
-        start_index = end_index
-
-    return chunks
+def text_to_chunks(text, chunk_size=175000):
+    return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
 
 
 def find_urls(text):
@@ -109,13 +96,13 @@ def send_to_openai(text_chunk, instructions):
 
     return chat_completion.choices[0].message.content
 
-def fetch_llm_response(text, instructions, model, chunk_approx_tokens, avg_token_length, validation=None):
+def fetch_llm_response(text, instructions, model, validation=None):
 
     if model == "Claude 3":
-        chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
+        chunks = text_to_chunks(text)
         response = send_to_anthropic(chunks[0], instructions)
     elif model == "GPT-4":
-        chunks = text_to_chunks(text,chunk_approx_tokens,avg_token_length)
+        chunks = text_to_chunks(text)
         response = send_to_openai(chunks[0], instructions)
     else:
         raise UnsupportedModelException(model)

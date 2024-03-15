@@ -37,15 +37,13 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             model = source_config.get("model", supported_models[0])
             model_url = source_config.get("model_url", model_urls[model])
             
-            chunk_approx_tokens = source_config.get("tokens", 150000)
-            avg_token_length = source_config.get("token_length", 3)
             article_title_length = source_config.get("article_title_length",30)
             
             all_links = fetch_content(url,"links",article_title_length) 
             
             best_links = fetch_llm_response(
                 all_links, finder_template.render(**locals()),
-                model, chunk_approx_tokens, avg_token_length, "url")
+                model, "url")
             print(best_links)
             
             if best_links is not None:
@@ -53,7 +51,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     article_text = fetch_content(link,"text") 
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
-                            model, chunk_approx_tokens, avg_token_length, "html")
+                            model, "html")
                     print(article_summary)
                     soup = BeautifulSoup(article_summary, 'html.parser')
                     article_title = soup.find('div', class_='article-title').text.strip()
@@ -67,7 +65,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
     title_text=json.dumps(list(article_dict.keys()))
     title_dict = fetch_llm_response(
                     title_text, prioritizer_template.render(**locals()),
-                    'Claude 3', 100000, 3, "json")
+                    'Claude 3', "json")
 
     article_html=""
     for item in title_dict.get('articles',[]):
