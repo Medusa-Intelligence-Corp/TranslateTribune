@@ -6,9 +6,7 @@
         "source": "Nikkei",
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
-        "article_title_length": 7,
-        "tokens": 100000,
-        "token_length": 1
+        "article_title_length": 7
     },
     {
         "name": "Singapore",
@@ -17,9 +15,7 @@
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "article_title_length": 7,
-        "tokens": 100000,
-        "token_length": 1
+        "article_title_length": 7
     },
     {
         "name": "Switzerland",
@@ -36,9 +32,7 @@
         "source": "IT之家",
         "source_wiki": "https://zh.wikipedia.org/zh-hans/IT%E4%B9%8B%E5%AE%B6",
         "url": "http://www.ithome.com/",
-        "article_title_length": 7,
-        "tokens": 100000,
-        "token_length": 1
+        "article_title_length": 7
     },
     {
         "name": "France",
@@ -62,9 +56,7 @@
         "flag": "&#127480;&#127462;",
         "source": "Al Eqtisadiah",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Eqtisadiah",
-        "url": "http://www.aleqt.com/",
-        "tokens": 100000,
-        "token_length": 1
+        "url": "http://www.aleqt.com/"
     },
     {
         "name": "Brazil",
@@ -88,8 +80,6 @@
         "flag": "&#127472;&#127479;",
         "source": "ZDNet Korea",
         "source_wiki": "https://en.wikipedia.org/wiki/ZDNet",
-        "url": "https://zdnet.co.kr",
-        "tokens": 100000,
-        "token_length": 1
+        "url": "https://zdnet.co.kr"
     }
 ]
