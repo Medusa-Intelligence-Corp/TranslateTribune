@@ -6,8 +6,6 @@
         "source": "Nikkei",
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
-        "model":"GPT-4",
-        "model_url":"https://openai.com/research/gpt-4",
         "article_title_length": 7,
         "tokens": 100000,
         "token_length": 1
@@ -19,8 +17,6 @@
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "model":"GPT-4",
-        "model_url":"https://openai.com/research/gpt-4",
         "article_title_length": 7,
         "tokens": 100000,
         "token_length": 1
@@ -30,8 +26,6 @@
         "language": "German",
         "flag": "&#127464;&#127469;",
         "source": "Neue Zürcher Zeitung",
-        "model":"GPT-4",
-        "model_url":"https://openai.com/research/gpt-4",
         "source_wiki": "https://en.wikipedia.org/wiki/Neue_Z%C3%BCrcher_Zeitung",
         "url": "https://www.nzz.ch"
     },
@@ -40,8 +34,6 @@
         "language": "French",
         "flag": "&#127464;&#127469;",
         "source": "L'Agefi",
-        "model":"GPT-4",
-        "model_url":"https://openai.com/research/gpt-4",
         "source_wiki": "https://fr.wikipedia.org/wiki/L%27Agefi_(Suisse)",
         "url": "https://agefi.com/"
     },
@@ -105,8 +97,6 @@
         "source": "Geektime",
         "source_wiki": "https://he.wikipedia.org/wiki/Geektime",
         "url": "https://www.geektime.co.il",
-        "model":"GPT-4",
-        "model_url":"https://openai.com/research/gpt-4",
         "tokens": 100000,
         "token_length": 1
     },
