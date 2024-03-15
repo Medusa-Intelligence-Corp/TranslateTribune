@@ -16,6 +16,12 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     random.shuffle(sources_config)
 
+    model_urls={
+            "Claude 3":"https://www.anthropic.com/claude",
+            "GPT-4":"https://openai.com/research/gpt-4"
+            }
+    supported_models=list(model_urls.keys())
+    
     article_dict = {}
 
     for source_config in sources_config:
@@ -26,8 +32,11 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             source = source_config.get("source", "N/A")
             source_wiki = source_config.get("source_wiki", "N/A")
             url = source_config.get("url", "N/A")
-            model = source_config.get("model", "Claude 3")
-            model_url = source_config.get("model_url", "https://www.anthropic.com/claude")
+            
+            random.shuffle(supported_models)
+            model = source_config.get("model", supported_models[0])
+            model_url = source_config.get("model_url", model_urls[model])
+            
             chunk_approx_tokens = source_config.get("tokens", 150000)
             avg_token_length = source_config.get("token_length", 3)
             article_title_length = source_config.get("article_title_length",30)
