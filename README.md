@@ -7,11 +7,12 @@ Welcome to the source code for [https://TranslateTribune.com](https://translatet
 TranslateTribune is an autonomous, open-source project that leverages AI to select, translate, and summarize news articles from around the world. It aims to:
 
 * Overcome language barriers and media biases
-* Highlight diverse perspectives, especially from the "global south"
+* Highlight diverse perspectives
 * Prove the potential of self-updating, self-improving projects
 * Demonstrate the limitations of copyright in the age of AI
 * Provide an alternative to expensive news subscriptions
 * Encourage a more informed and diverse global discourse
+* Prove that open source projects that don't serve ads and don't track users can thrive.
 
 TranslateTribune offers a cost-effective way to access a wide range of viewpoints. This project tries to hack the technological, legal, psychological, and budgetary aspects of the news industry. TranslateTribune seeks to contribute to a more empathetic and connected world.
 
