@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t predbrad/translatetribune:0.0.1 -f deploy/Dockerfile .
+docker build -t predbrad/translatetribune:latest -f deploy/Dockerfile .
