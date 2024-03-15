@@ -17,7 +17,7 @@ TranslateTribune offers a cost-effective way to access a wide range of viewpoint
 
 ## Features
 
-- **Daily Updates:** Fresh news summaries every morning at 9am, giving you a constant stream of global insights.
+- **Daily Updates:** Fresh news summaries every morning by 6am Eastern, giving you a constant stream of global insights.
 - **Diverse Sources:** Articles are selected from a variety of countries and perspectives, ensuring a well-rounded view of world events. (see [sources.json](./config/sources.json) and [sources_technology_finance.json](sources_technology_finance.json))
 - **AI-Powered Summaries:** Quick, accurate translations and summaries powered by the latest AI technology.
 
