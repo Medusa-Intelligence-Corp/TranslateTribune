@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker push predbrad/translatetribune:latest
+docker push ghcr.io/medusa-ml/translatetribune:latest

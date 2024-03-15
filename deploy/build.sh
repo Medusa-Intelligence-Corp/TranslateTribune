@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t predbrad/translatetribune:latest -f deploy/Dockerfile .
+docker build -t ghcr.io/medusa-ml/translatetribune:latest -f deploy/Dockerfile .
