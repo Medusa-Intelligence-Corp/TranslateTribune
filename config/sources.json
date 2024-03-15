@@ -24,14 +24,6 @@
         "url": "https://www.repubblica.it"
     },
     {
-        "name": "Brazil",
-        "language": "Portugese",
-        "flag": "&#127463;&#127479;",
-        "source": "Folha de S.Paulo",
-        "source_wiki": "https://en.wikipedia.org/wiki/Folha_de_S.Paulo",
-        "url": "https://www.folha.uol.com.br"
-    },
-    {
         "name": "Taiwan",
         "language": "Mandarin",
         "flag": "&#127481;&#127484;",
@@ -64,17 +56,6 @@
         "token_length": 1
     },
     {
-        "name": "China",
-        "language": "Mandarin",
-        "flag": "&#127464;&#127475;",
-        "source": "People's Daily",
-        "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
-        "url": "http://www.people.com.cn",
-        "article_title_length": 7,
-        "tokens": 100000,
-        "token_length": 1
-    },
-    {
         "name": "Iran",
         "language": "Persian",
         "flag": "&#127470;&#127479;",
@@ -95,16 +76,6 @@
         "token_length": 1
     },
     {
-        "name": "Israel",
-        "language": "Hebrew",
-        "flag": "&#127470;&#127473;",
-        "source": "Yedioth Ahronoth",
-        "source_wiki": "https://en.wikipedia.org/wiki/Yedioth_Ahronoth",
-        "url": "https://www.ynet.co.il",
-        "tokens": 100000,
-        "token_length": 1
-    },
-    {
         "name": "Türkiye",
         "language": "Turkish",
         "flag": "&#127481;&#127479;",
@@ -121,17 +92,5 @@
         "url": "https://www.kommersant.ru",
         "tokens": 100000,
         "token_length": 1
-    },
-    {
-        "name": "Kenya",
-        "language": "Swahili",
-        "flag": "&#127472;&#127466;",
-        "source": "Taifa Leo",
-        "source_wiki": "https://en.wikipedia.org/wiki/Taifa_Leo",
-        "url": "https://taifaleo.nation.co.ke",
-        "tokens": 100000,
-        "token_length": 1
     }
-
-
 ]
