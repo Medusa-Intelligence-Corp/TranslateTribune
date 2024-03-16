@@ -74,4 +74,4 @@ Join us in our mission to make global news accessible to everyone, regardless of
 
 ## TODO 
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
-- [ ] Add Mistral-Large and test costs
+- [ ] Add Mistral-Large and test costs see [Mistral API](https://console.mistral.ai/)
