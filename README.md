@@ -74,6 +74,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 
 ## TODO (for Brad)
 - [ ] add a better local debug mode one that shares an output folder with docker and publishes there... remove debug pages from s3
+- [ ] Add better logging, logging folder shared with +v and overwritten each run, find good logging pkg
 
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
