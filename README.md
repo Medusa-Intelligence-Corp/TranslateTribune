@@ -75,3 +75,5 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO 
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Add Mistral-Large and test costs see [Mistral API](https://console.mistral.ai/), it should be good for French, German, Spanish and Italian at least.
+- [ ] Test a region filter
+- [ ] Test some new and interesting editions, US news? Local news? Gaming news?! fork and experiment?!
