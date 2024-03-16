@@ -72,6 +72,9 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
+## TODO (for Brad)
+- [ ] add a better local debug mode one that shares an output folder with docker and publishes there... remove debug pages from s3
+
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Add Mistral-Large and test costs see [Mistral API](https://console.mistral.ai/), it should be good for French, German, Spanish and Italian at least.
