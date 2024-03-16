@@ -131,7 +131,7 @@ if __name__ == "__main__":
                     </div>
                     ```
 
-                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags. 
+                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags. If the page link appears to be broken or does not have content to summarize, please respond with the words "BROKEN LINK". 
 
                         article text:
                         """)
