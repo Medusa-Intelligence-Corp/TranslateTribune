@@ -79,6 +79,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Do some prompt engineering, test and improve llm instructions.
+- [ ] [Add g4a as a provider?!](https://github.com/xtekky/gpt4free)
 - [ ] Add Mistral-Large and test costs see [Mistral API](https://console.mistral.ai/), it should be good for French, German, Spanish and Italian at least.
 - [ ] Test a region filter
 - [ ] Test some new and interesting editions, US news? Local news? Gaming news?! fork and experiment?!
