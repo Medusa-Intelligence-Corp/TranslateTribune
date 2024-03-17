@@ -82,6 +82,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Do some prompt engineering, test and improve llm instructions.
+- [ ] Test scraping some harder sites, try some tampermonkey scripts, recreate lire app experience for full text.
 - [ ] Add a new llm provider, notdiamond? try some.
 - [ ] Test a region filter
 - [ ] Test some new and interesting editions, US news? Local news? Gaming news?! fork and experiment?!
