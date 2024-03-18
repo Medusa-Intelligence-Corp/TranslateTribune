@@ -78,6 +78,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] Add a cache or json list of articles already published to prevent dupes (json list of source articles)
 - [ ] [Add g4a as a provider?!](https://github.com/xtekky/gpt4free)
 - [ ] Add Mistral-Large and test costs see [Mistral API](https://console.mistral.ai/), it should be good for French, German, Spanish and Italian at least
+- [ ] Better support page with merch, bitcoin address, patreon, etc... make TT discord channel
 
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
