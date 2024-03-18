@@ -108,15 +108,9 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
-## TODO (for Brad)
-- [ ] Better support page with merch, coinbase, patreon, etc... make TT discord channel
-
 ## TODO (for Tanner)
 - [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
 - [ ] Do some prompt engineering, test and improve llm instructions.
 - [ ] Test scraping some harder sites, try some tampermonkey scripts, recreate lire app experience for full text.
 - [ ] Test a region filter on the front page (flag to region mapping or something)
 - [ ] Test some new and interesting editions, US news? Local news? Gaming news?! fork and experiment?!
-
-## BACKLOG/MAYBE LATER
-- [ ] Try [LiteLLM](https://github.com/BerriAI/litellm)
