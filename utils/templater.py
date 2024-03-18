@@ -26,37 +26,35 @@ def deploy_website(article_html, template_filename, html_filename):
 
     rendered_html = template.render(article_html=article_html,date_string=date_string)
 
-    debug = os.environ.get('DEBUG', False)
-    if debug:
-        output_path = os.path.join('/usr/src/app/debug', html_filename)
-        with open(output_path, 'w') as file:
-            file.write(rendered_html)
-    else:
-        bucket_name = 'translatetribune.com'
-        s3_key=html_filename
-        s3_client = boto3.client('s3')
-        extra_args = {'ContentType': 'text/html'}
-        s3_client.upload_file(output_path, bucket_name, s3_key, ExtraArgs=extra_args)
+    output_path = os.path.join('/usr/src/app/debug', html_filename)
+    with open(output_path, 'w') as file:
+        file.write(rendered_html)
 
-        distribution_id = 'E12FININDDZ0ME'
+    bucket_name = 'translatetribune.com'
+    s3_key=html_filename
+    s3_client = boto3.client('s3')
+    extra_args = {'ContentType': 'text/html'}
+    s3_client.upload_file(output_path, bucket_name, s3_key, ExtraArgs=extra_args)
 
-        paths = [f'/{html_filename}']
+    distribution_id = 'E12FININDDZ0ME'
 
-        client = boto3.client('cloudfront')
+    paths = [f'/{html_filename}']
 
-        response = client.create_invalidation(
-            DistributionId=distribution_id,
-            InvalidationBatch={
-                'Paths': {
-                    'Quantity': len(paths),
-                    'Items': paths
-                },
-                'CallerReference': str(uuid.uuid4()) 
-            }
-        )
+    client = boto3.client('cloudfront')
 
-        return rendered_html
-    
+    response = client.create_invalidation(
+        DistributionId=distribution_id,
+        InvalidationBatch={
+            'Paths': {
+                'Quantity': len(paths),
+                'Items': paths
+            },
+            'CallerReference': str(uuid.uuid4()) 
+        }
+    )
+
+    return rendered_html
+
 def deploy_games(template_filename="template.html", html_filename="games.html"):
     with open("/usr/src/app/static/games.html", "r") as file:
         # Read the lines of the file
