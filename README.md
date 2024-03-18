@@ -53,6 +53,42 @@ If you'd like to edit the code note the following structure:
 * [```llm.py```](./utils/llm.py) handles any LLM connections and formatting
 * [```templater.py```](./utils/templater.py) creates the index.html and deploys it to AWS s3
 
+### Viewing Run Logs
+
+### Accessing Logs in the Docker Volume `tt-logs`
+
+Follow these steps to access the logs stored in the Docker volume named `tt-logs`.
+
+#### 1. Confirm Volume Existence
+
+First, ensure the `tt-logs` volume exists by listing all Docker volumes:
+
+```bash
+docker volume ls
+```
+
+If `tt-logs` appears in the list, you can move on to the next step.
+
+#### 2. Locate the Volume Mount Point
+
+To find out where the `tt-logs` volume is mounted on your host system, inspect the volume:
+
+```bash
+docker volume inspect tt-logs
+```
+
+In the output, locate the `Mountpoint` field. This field indicates the path on the host system where the volume is mounted.
+
+#### 3. View the Logs
+
+With the mount point identified, you can now access the logs. If, for example, the logs are stored in a file named `log.txt` within the volume, and the mount point is `/var/lib/docker/volumes/tt-logs/_data`, you can view the logs using:
+
+```bash
+less /var/lib/docker/volumes/tt-logs/_data/publisher.log
+```
+
+Adjust the command based on the actual log file name and its location within the volume.
+
 ## Sister Projects
 
 In addition to this core repository, TranslateTribune uses the following repos to help create our site.
@@ -73,8 +109,6 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Brad)
-- [ ] Add [Mistral-Large](https://console.mistral.ai/) good for French, German, Spanish and Italian at least
-- [ ] [Add g4a as a provider](https://github.com/xtekky/gpt4free)
 - [ ] Better support page with merch, coinbase, patreon, etc... make TT discord channel
 
 ## TODO (for Tanner)

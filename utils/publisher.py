@@ -1,10 +1,17 @@
 import os
+import logging
+
+#keep this config here, otherwise logging setup is overwritten
+log_path = '/var/log/tt/publisher.log'
+os.makedirs(os.path.dirname(log_path), exist_ok=True)
+logging.basicConfig(filename=log_path, level=logging.INFO,
+                format='%(asctime)s:%(levelname)s:%(message)s')
+
 import time
 import re
 import json
 import traceback
 import random
-import logging
 
 from jinja2 import Template
 from bs4 import BeautifulSoup
@@ -13,12 +20,7 @@ from browser import fetch_content
 from llm import fetch_llm_response
 from templater import deploy_website, deploy_games, deploy_books
 
-def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):    
-    
-    log_path = '/var/log/tt/publisher.log'
-    os.makedirs(os.path.dirname(log_path), exist_ok=True)
-    logging.basicConfig(filename=log_path, level=logging.INFO,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):        
 
     with open(sources_filename, 'r') as file:
         sources_config = json.load(file)
@@ -27,7 +29,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     model_urls={
             "Claude 3":"https://www.anthropic.com/claude",
-            "GPT-4":"https://openai.com/research/gpt-4"
+            "GPT-4":"https://openai.com/research/gpt-4",
+            "Mistral-LG":"https://mistral.ai/news/mistral-large/"
             }
     supported_models=list(model_urls.keys())
     
@@ -51,6 +54,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             all_links = fetch_content(url,"links",article_title_length) 
             
             logging.info(name)
+            logging.info(all_links)
 
             best_links = fetch_llm_response(
                 all_links, finder_template.render(**locals()),
@@ -61,7 +65,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             if best_links is not None:
                 for link in best_links:          
                     article_text = fetch_content(link,"text")
-                    
+                    logging.info(article_text)                    
+
                     logging.info("sleeping...")
                     time.sleep(60) #TODO remove this as gpt-4 turbo improves, right now you are rate limited
                     

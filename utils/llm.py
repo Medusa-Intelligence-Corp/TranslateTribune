@@ -1,3 +1,4 @@
+import os
 import re
 import json
 
@@ -6,6 +7,9 @@ import validators
 import anthropic
 
 import openai
+
+from mistralai.client import MistralClient
+from mistralai.models.chat_completion import ChatMessage
 
 from urlextract import URLExtract
 
@@ -96,6 +100,24 @@ def send_to_openai(text_chunk, instructions):
 
     return chat_completion.choices[0].message.content
 
+
+def send_to_mistral(text_chunk, instructions):
+    client = MistralClient(
+            api_key=os.environ["MISTRAL_API_KEY"]
+            )
+
+    chat_completion = client.chat(
+    model="mistral-large-latest",
+    messages=[ChatMessage(
+            role="user",
+            content=f"{instructions} {text_chunk}"
+            )
+        ]
+    )
+
+    return chat_completion.choices[0].message.content
+
+
 def fetch_llm_response(text, instructions, model, validation=None):
 
     if model == "Claude 3":
@@ -104,6 +126,9 @@ def fetch_llm_response(text, instructions, model, validation=None):
     elif model == "GPT-4":
         chunks = text_to_chunks(text)
         response = send_to_openai(chunks[0], instructions)
+    elif model == "Mistral-LG":
+        chunks = text_to_chunks(text,chunk_size=30000)
+        response = send_to_mistral(chunks[0], instructions)
     else:
         raise UnsupportedModelException(model)
 

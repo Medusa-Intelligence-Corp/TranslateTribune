@@ -6,7 +6,8 @@
         "source": "Nikkei",
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
-        "article_title_length": 7
+        "article_title_length": 7,
+        "model": "Claude 3"
     },
     {
         "name": "Singapore",
@@ -15,7 +16,8 @@
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "article_title_length": 7
+        "article_title_length": 7,
+        "model": "GPT-4"
     },
     {
         "name": "Switzerland",
@@ -23,7 +25,8 @@
         "flag": "&#127464;&#127469;",
         "source": "L'Agefi",
         "source_wiki": "https://fr.wikipedia.org/wiki/L%27Agefi_(Suisse)",
-        "url": "https://agefi.com/"
+        "url": "https://agefi.com/",
+        "model": "Mistral-LG"
     },
     {
         "name": "China",
@@ -32,7 +35,8 @@
         "source": "PingWest",
         "source_wiki": "https://www.linkedin.com/company/pingwest/",
         "url": "https://www.pingwest.com/",
-        "article_title_length": 7
+        "article_title_length": 7,
+        "model": "Claude 3"
     },
     {
         "name": "France",
@@ -40,7 +44,8 @@
         "flag": "&#127467;&#127479;",
         "source": "FrenchWeb",
         "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
-        "url": "https://www.frenchweb.fr"
+        "url": "https://www.frenchweb.fr",
+        "model": "Mistral-LG"
     },
     {
         "name": "Qatar",
@@ -48,7 +53,8 @@
         "flag": "&#127478;&#127462;",
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
-        "url": "https://www.aljazeera.net/"
+        "url": "https://www.aljazeera.net/",
+        "model": "GPT-4"
     },
     {
         "name": "Brazil",
@@ -56,7 +62,8 @@
         "flag": "&#127463;&#127479;",
         "source": "Valor Econômico",
         "source_wiki": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
-        "url": "https://valor.globo.com/"
+        "url": "https://valor.globo.com/",
+        "model": "Mistral-LG"
     },
     {
         "name": "Chile",
@@ -64,7 +71,8 @@
         "flag": "&#127464;&#127473;",
         "source": "FayerWayer",
         "source_wiki": "https://es.wikipedia.org/wiki/Betazeta",
-        "url": "https://www.fayerwayer.com/"
+        "url": "https://www.fayerwayer.com/",
+        "model": "Mistral-LG"
     },
     {
         "name": "South Korea",
@@ -72,6 +80,7 @@
         "flag": "&#127472;&#127479;",
         "source": "The Korea Economic Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/The_Korea_Economic_Daily",
-        "url": "https://www.hankyung.com/"
+        "url": "https://www.hankyung.com/",
+        "model": "GPT-4"
     }
 ]
