@@ -9,9 +9,6 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 def deploy_website(article_html, template_filename, html_filename):
-    debug = os.environ.get('DEBUG', False)
-    if debug:
-        html_filename = html_filename.replace(".html", "_debug.html")
 
     template_dir = '/usr/src/app/static/'
 
@@ -27,43 +24,38 @@ def deploy_website(article_html, template_filename, html_filename):
     eastern_time = current_utc_datetime.astimezone(pytz.timezone('US/Eastern'))
     date_string = eastern_time.strftime("%A, %d %b %Y at %I:%M %p %Z")
 
-    # Render the template with your HTML list
     rendered_html = template.render(article_html=article_html,date_string=date_string)
 
-    # Optionally, write the rendered HTML to a new file
-    output_path = os.path.join(template_dir, html_filename)
-    with open(output_path, 'w') as file:
-        file.write(rendered_html)
-    
-    # deploy to s3
-    bucket_name = 'translatetribune.com'
-    s3_key=html_filename
-    s3_client = boto3.client('s3')
-    extra_args = {'ContentType': 'text/html'}
-    s3_client.upload_file(output_path, bucket_name, s3_key, ExtraArgs=extra_args)
+    debug = os.environ.get('DEBUG', False)
+    if debug:
+        output_path = os.path.join('/usr/src/app/debug', html_filename)
+        with open(output_path, 'w') as file:
+            file.write(rendered_html)
+    else:
+        bucket_name = 'translatetribune.com'
+        s3_key=html_filename
+        s3_client = boto3.client('s3')
+        extra_args = {'ContentType': 'text/html'}
+        s3_client.upload_file(output_path, bucket_name, s3_key, ExtraArgs=extra_args)
 
-    #invalidate cloudfront cache
-    distribution_id = 'E12FININDDZ0ME'
+        distribution_id = 'E12FININDDZ0ME'
 
-    # The path of the object to invalidate, e.g., '/index.html'
-    # To invalidate the entire cache, you can use '/*'
-    paths = [f'/{html_filename}']
+        paths = [f'/{html_filename}']
 
-    client = boto3.client('cloudfront')
+        client = boto3.client('cloudfront')
 
-    # Create an invalidation
-    response = client.create_invalidation(
-        DistributionId=distribution_id,
-        InvalidationBatch={
-            'Paths': {
-                'Quantity': len(paths),
-                'Items': paths
-            },
-            'CallerReference': str(uuid.uuid4())  # Unique value for each invalidation request
-        }
-    )
+        response = client.create_invalidation(
+            DistributionId=distribution_id,
+            InvalidationBatch={
+                'Paths': {
+                    'Quantity': len(paths),
+                    'Items': paths
+                },
+                'CallerReference': str(uuid.uuid4()) 
+            }
+        )
 
-    return rendered_html
+        return rendered_html
     
 def deploy_games(template_filename="template.html", html_filename="games.html"):
     with open("/usr/src/app/static/games.html", "r") as file:

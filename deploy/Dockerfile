@@ -24,6 +24,8 @@ RUN pip3 install --no-cache-dir \
     Jinja2 \
     anthropic \
     openai \
+    mistralai \
+    g4f \
     boto3
    
 

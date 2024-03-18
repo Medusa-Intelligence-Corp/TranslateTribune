@@ -4,6 +4,7 @@ import re
 import json
 import traceback
 import random
+import logging
 
 from jinja2 import Template
 from bs4 import BeautifulSoup
@@ -13,6 +14,12 @@ from llm import fetch_llm_response
 from templater import deploy_website, deploy_games, deploy_books
 
 def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):    
+    
+    log_path = '/var/log/tt/publisher.log'
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    logging.basicConfig(filename=log_path, level=logging.INFO,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
+
     with open(sources_filename, 'r') as file:
         sources_config = json.load(file)
 
@@ -43,27 +50,33 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             
             all_links = fetch_content(url,"links",article_title_length) 
             
+            logging.info(name)
+
             best_links = fetch_llm_response(
                 all_links, finder_template.render(**locals()),
                 model, "url")
-            print(best_links)
+            
+            logging.info(best_links)
             
             if best_links is not None:
                 for link in best_links:          
                     article_text = fetch_content(link,"text")
+                    
+                    logging.info("sleeping...")
                     time.sleep(60) #TODO remove this as gpt-4 turbo improves, right now you are rate limited
+                    
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
                             model, "html")
-                    print(article_summary)
+                    logging.info(article_summary)
+                    
                     soup = BeautifulSoup(article_summary, 'html.parser')
                     article_title = soup.find('div', class_='article-title').text.strip()
                     article_dict[article_title] = article_summary
                     
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
-            print("continuing anyway...")
     
     title_text=json.dumps(list(article_dict.keys()))
     title_dict = fetch_llm_response(
@@ -74,10 +87,10 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
     if len(article_dict.keys()) > 2:
         for item in title_dict.get('articles',[]):
             try:
-                print(item)
+                logging.info(item)
                 article_html+=article_dict.pop(item.get('title','N/A'))
             except KeyError:
-                print("skipping messed up title from LLM")
+                logging.exception("skipping messed up title from LLM")
     else:
         # this is primarily for debug mode, when you're only testing one or two articles
         for key in list(article_dict.keys()):
