@@ -109,9 +109,10 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Tanner)
-- [ ] Add Bluesky bot to share top links after publishing [pythonapi](https://atproto.blue/en/latest/)
-- [ ] Do some prompt engineering, test and improve llm instructions.
-- [ ] Test scraping some harder sites, try some tampermonkey scripts, recreate lire app experience for full text.
-- [ ] Test a region filter on the front page (flag to region mapping or something)
-- [ ] Try [LiteLLM](https://github.com/BerriAI/litellm) or consider adding another LLM to [llm.py](./utils/llm.py).
-- [ ] Test some new and interesting editions, US news? Local news? Gaming news?! fork and experiment?!
+- [ ] Integrate Bluesky bot for sharing top links post-publishing using their [Python API](https://atproto.blue/en/latest/).
+- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions.
+- [ ] Experiment with scraping more complex websites; explore using Tampermonkey scripts, e.g., [Greasy Fork](https://greasyfork.org/en)
+- [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
+- [ ] Evaluate [LiteLLM](https://github.com/BerriAI/litellm) for potential integration, or consider adding an alternative LLM to [llm.py](./utils/llm.py).
+- [ ] Explore and test new content categories for inclusion, such as US news, local news, or gaming news. Consider forking the project to experiment with these ideas.
+
