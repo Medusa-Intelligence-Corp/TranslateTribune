@@ -66,7 +66,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     
                     soup = BeautifulSoup(article_summary, 'html.parser')
                     article_title = soup.find('div', class_='article-title').text.strip()
-                    article = soup.find('article')
+                    article = soup.find('div', class_='article')
                     try:
                         front_page_score = float(article['data-front-page-score'])
                     except (KeyError, ValueError, TypeError):
