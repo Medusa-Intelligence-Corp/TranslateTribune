@@ -110,7 +110,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 
 ## TODO (for Tanner)
 - [ ] Improve scraping and isolation of article text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
-- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py)
+- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py#L116)
 - [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
 - [ ] Integrate Bluesky bot for sharing top links post-publishing using their [Python API](https://atproto.blue/en/latest/).
 - [ ] Evaluate [LiteLLM](https://github.com/BerriAI/litellm) for potential integration, or consider adding an alternative LLM to [llm.py](./utils/llm.py).
