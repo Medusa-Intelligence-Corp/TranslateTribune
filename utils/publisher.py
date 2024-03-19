@@ -35,7 +35,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             "Mistral-LG":"https://mistral.ai/news/mistral-large/",
             "Mistral-MD":"https://docs.mistral.ai/guides/model-selection/",
             "Mistral-SM":"https://docs.mistral.ai/guides/model-selection/",
-            "Open Mixtral":"https://docs.mistral.ai/guides/model-selection/"
+            "Open Mixtral":"https://mistral.ai/news/mixtral-of-experts/"
             }
     supported_models=list(model_urls.keys())
     
