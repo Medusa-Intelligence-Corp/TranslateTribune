@@ -124,10 +124,8 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
 - [ ] Download docker, run the project, be able to get simple output.
-- [ ] Test any sources that don't seem to be producting articles and see if you can deduce what is happening in the logs, see [config](./config).
-- [ ] Improve scraping and isolation of article text, maybe find the div with the most text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
-- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [summarizer.txt](./config/summarizer.txt) and [finder.txt](./config/finder.txt)) also experiment with LLM configs to see which models perform best given the cost... if you'd like to try a new model feel free to add it, just follow the pattern in [llm.py](./utils/llm.py).
-- [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
-- [ ] Integrate Bluesky bot for sharing top links post-publishing using their [Python API](https://atproto.blue/en/latest/).
-- [ ] Explore and test new content categories for inclusion, such as US news, local news, or gaming news. Consider forking the project to experiment with these ideas.
-
+- [ ] In your local run, add some new sources to your config_debug.json and make sure they produce new aeticles... make sure you can see what's happening in the logs, see [config](./config).
+- [ ] Consider improving scraping and isolation of article text, maybe find the div with the most text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
+- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [summarizer.txt](./config/summarizer.txt) and [finder.txt](./config/finder.txt)).
+- [ ] Implement a regional filter on the homepage (Asia, Europe, etc...) see [index.html](./static/index.html).
+- [ ] Add a bluesky bot integration that shares the top story to bluesky using their [Python API](https://atproto.blue/en/latest/).
