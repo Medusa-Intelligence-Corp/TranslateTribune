@@ -57,6 +57,9 @@ def find_html(text):
 
 
 def validate_article_html(html):
+    if "error" in html.upper() or "404" in html:
+        return False
+
     soup = BeautifulSoup(html, 'html.parser')
 
     article_div = soup.find('div', class_='article')

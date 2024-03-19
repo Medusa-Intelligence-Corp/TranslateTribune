@@ -116,35 +116,41 @@ if __name__ == "__main__":
   full list of links to review:
 """)
 
-    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please, create a summary of the article's content in English, make the summary clear and consise, avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader. Additionally, identify and include a few key {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. The response should be formatted exclusively in valid HTML, adhering to the structure provided below:
+    summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please create a summary of the article's content in English, making the summary clear and concise. Avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader.
 
-                    return format:             
-                    ```
-                    <div class="article">
-                        <div class="article-title" onclick="toggleArticleDetails(this)">
-                            <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
-                            <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
-                            COMPELLING TITLE IN ENGLISH
-                        </div>
-                        <p class="article-content hidden">SUMMARY IN ENGLISH</p>
-                        <ul class="vocabulary hidden">
-                          <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
-                          <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>                          
-                          <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
-                          <li>${{ language|upper }}-ENGLISH VOCABULARY WORD</li>
-                        </ul>
-                        <div class="article-credit hidden">
-                          <a href="{{ model_url }}">Summary by {{ model }}</a>
-                          <a href='{{ link }}'>Full article in {{language}}</a>
-                          <a href='{{ source_wiki }}'>{{ source }} (Wikipedia)</a>
-                        </div>
-                    </div>
-                    ```
+Additionally, identify and include a few key {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. Select vocabulary words that are:
+- Relevant to the article's content
+- Potentially challenging for learners
+- Useful in building language skills
 
-                    Please ensure that the summary provides a clear, concise overview of the article's main points, and select vocabulary words that are relevant to the article's content, potentially challenging for learners, and useful in building their language skills. Follow The Economist's style guide for the summary if you can, but use American spelling. The HTML output should strictly follow the provided structure, with no additional text or formatting outside of the specified HTML tags. If the page link appears to be broken or does not have content to summarize, please respond with the words "BROKEN LINK". 
+Format the response exclusively in valid HTML, adhering to this structure:
 
-                        article text:
-                        """)
+```
+<div class="article">
+    <div class="article-title" onclick="toggleArticleDetails(this)">
+        <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
+        <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
+        Title in English goes here.
+    </div>
+    <p class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling. </p>
+    <ul class="vocabulary hidden">
+      <li>{{ language }} word 1 - English translation goes here</li>
+      <li>{{ language }} word 2 - English translation goes here</li>
+      <li>{{ language }} word 3 - English translation goes here</li>
+    </ul>
+    <div class="article-credit hidden">
+      <a href="{{ model_url }}">Summary by {{ model }}</a>
+      <a href='{{ link }}'>Full article in {{language}}</a>
+      <a href='{{ source_wiki }}'>{{ source }} (Wikipedia)</a>
+    </div>
+</div>
+```
+
+If the provided article text appears to be gathered in error or does not have an article to summarize, respond with only the text ```<h1>MISSING ARTICLE</h1>```.
+
+Do not include any additional text or formatting outside of the specified HTML tags.
+
+article text:""")
                         
     prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please remove any articles that appear to be obvious errors like 'page not found' or something. If there are articles that appear to be duplicates, you may remove all but one of them, keeping the article from the country located farthest away from the USA (you'll know where it's from by the flag). Choose stories that are current, relevant, and have a significant impact on our American readership (We can assume they have an interest in global events). Breaking news, major developments, and events that affect the United States directly should take priority. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
 
