@@ -7,7 +7,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
         "article_title_length": 7,
-        "model": "Claude 3"
+        "model": "Open Mixtral"
     },
     {
         "name": "Singapore",
@@ -17,7 +17,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
         "article_title_length": 7,
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     },
     {
         "name": "Switzerland",
@@ -36,7 +36,7 @@
         "source_wiki": "https://www.linkedin.com/company/pingwest/",
         "url": "https://www.pingwest.com/",
         "article_title_length": 7,
-        "model": "Claude 3"
+        "model": "Open Mixtral"
     },
     {
         "name": "France",
@@ -45,7 +45,7 @@
         "source": "FrenchWeb",
         "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
         "url": "https://www.frenchweb.fr",
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     },
     {
         "name": "Qatar",
@@ -54,7 +54,7 @@
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
         "url": "https://www.aljazeera.net/",
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     },
     {
         "name": "Brazil",
@@ -63,7 +63,7 @@
         "source": "Valor Econômico",
         "source_wiki": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
         "url": "https://valor.globo.com/",
-        "model": "Mistral-MD"
+        "model": "Open Mixtral"
     },
     {
         "name": "Chile",
@@ -81,6 +81,6 @@
         "source": "The Korea Economic Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/The_Korea_Economic_Daily",
         "url": "https://www.hankyung.com/",
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     }
 ]
