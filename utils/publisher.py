@@ -77,17 +77,41 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
     
     if len(article_dict.keys()) > 3:
         
-        title_text=json.dumps(list(article_dict.keys()))
-        title_dict = fetch_llm_response(
-                        title_text, prioritizer_template.render(**locals()),
-                        'Open Mixtral', "json")
+        try:
+            title_text=json.dumps(list(article_dict.keys()))
+            title_dict = fetch_llm_response(
+                            title_text, prioritizer_template.render(**locals()),
+                            'GPT-3.5t', "json")
 
-        for item in title_dict.get('articles',[]):
-            try:
-                logging.info(item)
-                article_html+=article_dict.pop(item.get('title','N/A'))
-            except KeyError:
-                logging.exception("skipping messed up title from LLM")
+            for item in title_dict.get('articles',[]):
+                try:
+                    logging.info(item)
+                    article_html+=article_dict.pop(item.get('title','N/A'))
+                except KeyError:
+                    logging.info("skipping messed up title from LLM")
+        except Exception:
+            logging.exception(f"An unexpected error occurred, ignoring: {e}")
+            traceback.print_exc()
+
+    article_html=""
+    
+    if len(article_dict.keys()) > 3:
+        
+        try:
+            title_text=json.dumps(list(article_dict.keys()))
+            title_dict = fetch_llm_response(
+                            title_text, prioritizer_template.render(**locals()),
+                            'Open Mixtral', "json")
+
+            for item in title_dict.get('articles',[]):
+                try:
+                    logging.info(item)
+                    article_html+=article_dict.pop(item.get('title','N/A'))
+                except KeyError:
+                    logging.exception("skipping messed up title from LLM")
+        except Exception:
+            logging.exception(f"An unexpected error occurred, ignoring: {e}")
+            traceback.print_exc()
     else:
         # this is primarily for debug mode, when you're only testing one or two articles
         for key in list(article_dict.keys()):

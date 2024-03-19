@@ -24,7 +24,7 @@
         "source": "La Repubblica",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
         "url": "https://www.repubblica.it",
-        "model": "Open Mixtral"
+        "model": "GPT-3.5t"
     },
     {
         "name": "China",
@@ -34,7 +34,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
         "url": "http://www.people.com.cn",
         "article_title_length": 7,
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     },
     {
         "name": "Israel",
@@ -53,7 +53,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Liberty_Times",
         "url": "https://www.ltn.com.tw",
         "article_title_length": 7,
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     },
     {
         "name": "Ukraine",
@@ -71,7 +71,7 @@
         "source": "JoongAng Ilbo",
         "source_wiki": "https://en.wikipedia.org/wiki/JoongAng_Ilbo",
         "url": "https://www.joongang.co.kr",
-        "model": "Open Mixtral"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Iran",

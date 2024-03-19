@@ -7,7 +7,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
         "article_title_length": 7,
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     },
     {
         "name": "Singapore",
@@ -17,7 +17,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
         "article_title_length": 7,
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     },
     {
         "name": "Switzerland",
@@ -36,7 +36,7 @@
         "source_wiki": "https://www.linkedin.com/company/pingwest/",
         "url": "https://www.pingwest.com/",
         "article_title_length": 7,
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     },
     {
         "name": "France",
@@ -54,7 +54,7 @@
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
         "url": "https://www.aljazeera.net/",
-        "model": "Open Mixtral"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Brazil",
@@ -81,6 +81,6 @@
         "source": "The Korea Economic Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/The_Korea_Economic_Daily",
         "url": "https://www.hankyung.com/",
-        "model": "Open Mixtral"
+        "model": "Claude 2.1"
     }
 ]
