@@ -20,7 +20,7 @@ from browser import fetch_content
 from llm import fetch_llm_response, get_model_url
 from templater import deploy_website, deploy_games, deploy_books
 
-def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):        
+def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template):        
 
     with open(sources_filename, 'r') as file:
         sources_config = json.load(file)
@@ -66,61 +66,22 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     
                     soup = BeautifulSoup(article_summary, 'html.parser')
                     article_title = soup.find('div', class_='article-title').text.strip()
-                    article_dict[article_title] = article_summary
+                    article = soup.find('article')
+                    try:
+                        front_page_score = float(article['data-front-page-score'])
+                    except (KeyError, ValueError, TypeError):
+                        front_page_score = 0.0
+                    article_dict[article_title]["html"] = article_summary
+                    article_dict[article_title]["score"] = front_page_score
                     
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
     
-
+    sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
-    
-    if len(article_dict.keys()) > 3:
-        
-        try:
-            title_text=json.dumps(list(article_dict.keys()))
-            title_dict = fetch_llm_response(
-                            title_text, prioritizer_template.render(**locals()),
-                            'GPT-3.5t', "json")
-
-            for item in title_dict.get('articles',[]):
-                try:
-                    logging.info(item)
-                    article_html+=article_dict.pop(item.get('title','N/A'))
-                except KeyError:
-                    logging.info("skipping messed up title from LLM")
-        except Exception:
-            logging.exception(f"An unexpected error occurred, ignoring: {e}")
-            traceback.print_exc()
-
-    article_html=""
-    
-    if len(article_dict.keys()) > 3:
-        
-        try:
-            title_text=json.dumps(list(article_dict.keys()))
-            title_dict = fetch_llm_response(
-                            title_text, prioritizer_template.render(**locals()),
-                            'Open Mixtral', "json")
-
-            for item in title_dict.get('articles',[]):
-                try:
-                    logging.info(item)
-                    article_html+=article_dict.pop(item.get('title','N/A'))
-                except KeyError:
-                    logging.exception("skipping messed up title from LLM")
-        except Exception:
-            logging.exception(f"An unexpected error occurred, ignoring: {e}")
-            traceback.print_exc()
-    else:
-        # this is primarily for debug mode, when you're only testing one or two articles
-        for key in list(article_dict.keys()):
-            article_html+=article_dict.pop(key)
-
-    # if the LLM skipped too many articles, add them all in, one day we can remove this
-    if len(article_dict.keys()) > 3:
-        for key, value in article_dict.items():
-           article_html+=value
+    for article_title, article_data in sorted_articles:
+        article_html += article_data['html']
 
     completehtml=deploy_website(article_html, template_filename, html_filename)
 
@@ -142,15 +103,24 @@ if __name__ == "__main__":
 
     summarizer_template = Template("""Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please create a summary of the article's content in English, making the summary clear and concise. Avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader.
 
-Additionally, identify and include a few key {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. Select vocabulary words that are:
+Additionally, identify and include no more than three {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. Select vocabulary words that are:
 - Relevant to the article's content
 - Potentially challenging for learners
 - Useful in building language skills
 
+When summarizing and translating the article, please assign a "data-front-page-score" attribute to the <div class="article"> element . This score determines the article's placement on the front page.
+
+The "data-front-page-score" attribute should be set to a value between 1 and 5:
+- 5: Highest importance, displayed at the top of the front page
+- 4: High importance, displayed prominently on the front page
+- 3: Moderate importance, displayed in the middle section of the front page
+- 2: Low importance, displayed in the lower section of the front page
+- 1: Lowest importance, may be displayed at the bottom of the front page or omitted
+
 Format the response exclusively in valid HTML, adhering to this structure:
 
 ```
-<div class="article">
+<div class="article" data-front-page-score="0">
     <div class="article-title" onclick="toggleArticleDetails(this)">
         <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
         <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
@@ -176,32 +146,11 @@ Do not include any additional text or formatting outside of the specified HTML t
 
 article text:""")
                         
-    prioritizer_template = Template("""Act as a newspaper editor working on which titles should appear highest on the front page, please re-order and prioritize the titles below by the order they should appear on the front page. The current order is random and you need to decide which titles will be most appealing and drive the most traffic to the news site, and put those articles on the top. Please remove any articles that appear to be obvious errors like 'page not found' or something. If there are articles that appear to be duplicates, you may remove all but one of them, keeping the article from the country located farthest away from the USA (you'll know where it's from by the flag). Choose stories that are current, relevant, and have a significant impact on our American readership (We can assume they have an interest in global events). Breaking news, major developments, and events that affect the United States directly should take priority. Please do not change the article titles and return only valid json as if you were an API, adhering to the structure provided below: 
-
-    ```
-    {
-  "articles": [
-    {
-      "title": "ARTICLE TITLE",
-      "position": 1
-    },
-    {
-      "title": "ARTICLE TITLE",
-      "position": 2
-    },
-    ...more articles below
-  ]
-}
-```
-
-    current article titles (in random order):
-    """)
-    
     debug = os.environ.get('DEBUG', False)
     if debug:
-        publish('config/sources_debug.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
+        publish('config/sources_debug.json','template.html','index.html',finder_template, summarizer_template)
     else:
-        publish('config/sources.json','template.html','index.html',finder_template, summarizer_template, prioritizer_template)
+        publish('config/sources.json','template.html','index.html',finder_template, summarizer_template)
 
     finder_template_business = Template("""Act as a polyglot international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer, your goal is to pick the best articles to translate to English. Please review the mess of links and titles provided from {{ source }}, a {{ language }} language newspaper. Ignore any bad links to menus and such, find the links to articles and identify one article that will be interesting to an American reader with global concerns, the article might cover a technology or finance story of global importance or it might offer unique insights or perspectives specific to the technology or financial news of {{ name }}. Choose a story that is current, relevant, and has a significant impact on our readership. The article will be considered for translation into English. If you find there are no suitable articles for translation, please return empty json. I am sure there are some bad links and terrible content, but try and ignore that and find us one good link. We are trusting you to find the 'diamond in the rough'. This is important for each issue to translate good stories to keep our readers engaged, so try your best. Check any links you suggest to make sure they aren't links to files like pdfs (we don't want those). Please respond only in valid json as if you were an API, adhering to the structure provided below: 
 
@@ -214,4 +163,4 @@ article text:""")
   full list of links to review:
 """)
     if not debug:
-        publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template, prioritizer_template)
+        publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template_business, summarizer_template)

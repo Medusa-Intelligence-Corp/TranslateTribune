@@ -1,5 +1,14 @@
 [
     {
+        "name": "Mexico",
+        "language": "Spanish",
+        "flag": "&#127474;&#127485;",
+        "source": "La Jornada",
+        "source_wiki": "https://en.wikipedia.org/wiki/La_Jornada",
+        "url": "https://www.jornada.com.mx",
+        "model": "Open Mixtral"
+    },
+    {
         "name": "France",
         "language": "French",
         "flag": "&#127467;&#127479;",
