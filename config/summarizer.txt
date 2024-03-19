@@ -1,0 +1,44 @@
+Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please create a summary of the article's content in English, making the summary clear and concise. Avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader.
+
+Additionally, identify and include no more than three {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. Select vocabulary words that are:
+- Relevant to the article's content
+- Potentially challenging for learners
+- Useful in building language skills
+
+When summarizing and translating the article, please assign a "data-front-page-score" attribute to the <div class="article"> element . This score determines the article's placement on the front page.
+
+The "data-front-page-score" attribute should be set to a value between 1 and 5:
+- 5: Highest importance, displayed at the top of the front page
+- 4: High importance, displayed prominently on the front page
+- 3: Moderate importance, displayed in the middle section of the front page
+- 2: Low importance, displayed in the lower section of the front page
+- 1: Lowest importance, may be displayed at the bottom of the front page or omitted
+
+Format the response exclusively in valid HTML, adhering to this structure:
+
+```
+<div class="article" data-front-page-score="0">
+    <div class="article-title" onclick="toggleArticleDetails(this)">
+        <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
+        <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
+        Title in English goes here.
+    </div>
+    <p class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling. </p>
+    <ul class="vocabulary hidden">
+      <li>{{ language }} word 1 - English translation goes here</li>
+      <li>{{ language }} word 2 - English translation goes here</li>
+      <li>{{ language }} word 3 - English translation goes here</li>
+    </ul>
+    <div class="article-credit hidden">
+      <a href="{{ model_url }}">Summary by {{ model }}</a>
+      <a href='{{ link }}'>Full article in {{language}}</a>
+      <a href='{{ source_wiki }}'>{{ source }} (Wikipedia)</a>
+    </div>
+</div>
+```
+
+If the provided article text appears to be gathered in error or does not have an article to summarize, respond with only the text ```<h1>MISSING ARTICLE</h1>```.
+
+Do not include any additional text or formatting outside of the specified HTML tags.
+
+article text:

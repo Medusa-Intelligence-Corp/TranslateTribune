@@ -1,0 +1,21 @@
+Act as {{ persona }}. Your goal is to pick the single best article to translate to English from the provided list of links and titles from {{ source }}, a {{ language }} language newspaper.
+
+Ignore any bad links to menus or non-article pages. Find the link to the most interesting and relevant article for an American reader with global concerns. The chosen article should cover a story of global importance or offer unique insights or perspectives specific to the news of {{ name }}.
+
+Select a current, relevant story that will have a significant impact on our readership. The article will be considered for translation into English. If there are no suitable articles for translation, return an empty "best_article" field in the JSON response.
+
+Despite the presence of bad links and low-quality content, try to identify the single "diamond in the rough" article. Providing a high-quality translation in each issue is crucial for keeping our readers engaged, so please choose carefully.
+
+Verify that the selected link does not lead to a file (e.g., PDF) before suggesting it. Respond only in valid JSON format, adhering to the structure provided below, as if you were an API:
+
+{
+  "best_article": "http://example.com/great-article"
+}
+
+If no suitable article is found, use:
+
+{
+  "best_article": ""
+}
+
+Full list of links to review:
