@@ -58,6 +58,7 @@ def find_html(text):
 
 def validate_article_html(html):
     if "ERROR" in html.upper() or "MISSING ARTICLE" in html.upper() or "404" in html:
+        logging.info("MISSING ARTICLE")
         return False
 
     soup = BeautifulSoup(html, 'html.parser')

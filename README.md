@@ -87,6 +87,12 @@ With the mount point identified, you can now access the logs. If, for example, t
 less /var/lib/docker/volumes/tt-logs/_data/publisher.log
 ```
 
+you can also ```tail``` the logs while a job is running like 
+
+```bash
+tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
+```
+
 Adjust the command based on the actual log file name and its location within the volume.
 
 ## Sister Projects
