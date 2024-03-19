@@ -32,7 +32,7 @@ At Translate Tribune, we are dedicated to providing our users with a seamless, p
 - **No Trackers**: Translate Tribune is free from any tracking mechanisms like web beacons or analytics scripts, reinforcing our commitment to user privacy.
 
 ### Lean and Smart
-- **State-of-the-Art LLMs**: Leveraging the latest in language learning models, we ensure high-quality translations and summaries.
+- **State-of-the-Art LLMs**: Leveraging the latest in language learning models, we ensure high-quality translations and summaries. We have a preference for open models but test large froniter models that are both open and closed, see [llm.py](./utils/llm.py) for more details.
 - **Efficient Tools**: Utilizing Python, Selenium WebDriver via Docker, and Beautiful Soup 4, our process is streamlined for efficiency and accuracy.
 - **No Dependency on Heavy Frameworks**: Our choice to avoid complex JavaScript frameworks and tools like LangChain is intentional, aiming for a lightweight, statically hosted site that respects privacy and ensures portability.
 - **Code Portability**: Our codebase is designed to be easily deployable anywhere, we are heavy users of Docker and we love container Linux.
