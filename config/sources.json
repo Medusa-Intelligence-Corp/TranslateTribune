@@ -6,7 +6,7 @@
         "source": "La Jornada",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Jornada",
         "url": "https://www.jornada.com.mx",
-        "model": "Mistral-LG"
+        "model": "Open Mixtral"
     },
     {
         "name": "France",
@@ -15,7 +15,7 @@
         "source": "Le Figaro",
         "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
         "url": "https://www.lefigaro.fr",
-        "model": "Mistral-LG"
+        "model": "Mistral-MD"
     },
     {
         "name": "Italy",
@@ -24,7 +24,7 @@
         "source": "La Repubblica",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
         "url": "https://www.repubblica.it",
-        "model": "Mistral-LG"
+        "model": "Mistral-SM"
     },
     {
         "name": "China",
@@ -53,7 +53,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Liberty_Times",
         "url": "https://www.ltn.com.tw",
         "article_title_length": 7,
-        "model": "GPT-4"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Ukraine",
@@ -62,7 +62,7 @@
         "source": "Ukrayinska Pravda",
         "source_wiki": "https://en.wikipedia.org/wiki/Ukrainska_Pravda",
         "url": "https://www.pravda.com.ua",
-        "model": "Mistral-LG"
+        "model": "Mistral-MD"
     },
     {
         "name": "South Korea",
@@ -71,7 +71,7 @@
         "source": "JoongAng Ilbo",
         "source_wiki": "https://en.wikipedia.org/wiki/JoongAng_Ilbo",
         "url": "https://www.joongang.co.kr",
-        "model": "Claude 3"
+        "model": "Claude 2.1"
     },
     {
         "name": "Iran",
@@ -107,6 +107,6 @@
         "source": "Kommersant",
         "source_wiki": "https://en.wikipedia.org/wiki/Kommersant",
         "url": "https://www.kommersant.ru",
-        "model": "Mistral-LG"
+        "model": "GPT-3.5t"
     }
 ]

@@ -112,10 +112,8 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] Setup your own OpenAI and/or MistralAI keys (Skip Claude for now)
 - [ ] Download docker, run the project, be able to get simple output.
 - [ ] Improve scraping and isolation of article text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
-- [ ] Test [GPT-3.5 Turbo](https://platform.openai.com/docs/models/gpt-3-5-turbo), [Mistral-small or medium](https://docs.mistral.ai/platform/pricing/)
-- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py#L116)).
+- [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py#L116)) also experiment with LLM configs to see which models perform best given the cost... if you'd like to try a new model feel free to add it, just follow the pattern in [llm.py](./utils/llm.py).
 - [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
 - [ ] Integrate Bluesky bot for sharing top links post-publishing using their [Python API](https://atproto.blue/en/latest/).
-- [ ] Evaluate [LiteLLM](https://github.com/BerriAI/litellm) for potential integration, or consider adding an alternative LLM to [llm.py](./utils/llm.py).
 - [ ] Explore and test new content categories for inclusion, such as US news, local news, or gaming news. Consider forking the project to experiment with these ideas.
 

@@ -62,11 +62,11 @@ def find_json(text):
     else:
         return [] 
     
-def send_to_anthropic(text_chunk, instructions):
+def send_to_anthropic(text_chunk, instructions, model_id="claude-3-opus-20240229"):
     client = anthropic.Anthropic()
 
     message = client.messages.create(
-        model="claude-3-opus-20240229",
+        model=model_id,
         max_tokens=4000,
         temperature=0,
         messages=[
@@ -85,11 +85,11 @@ def send_to_anthropic(text_chunk, instructions):
     return message.content[0].text
 
 
-def send_to_openai(text_chunk, instructions):
+def send_to_openai(text_chunk, instructions, model_id="gpt-4-turbo-preview"):
     client = openai.OpenAI()
 
     chat_completion = client.chat.completions.create(
-    model="gpt-4-turbo-preview",
+    model=model_id,
     messages=[
             {
                 "role": "user",
@@ -101,13 +101,13 @@ def send_to_openai(text_chunk, instructions):
     return chat_completion.choices[0].message.content
 
 
-def send_to_mistral(text_chunk, instructions):
+def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
     client = MistralClient(
             api_key=os.environ["MISTRAL_API_KEY"]
             )
 
     chat_completion = client.chat(
-    model="mistral-large-latest",
+    model=model_id,
     messages=[ChatMessage(
             role="user",
             content=f"{instructions} {text_chunk}"
@@ -121,14 +121,29 @@ def send_to_mistral(text_chunk, instructions):
 def fetch_llm_response(text, instructions, model, validation=None):
 
     if model == "Claude 3":
-        chunks = text_to_chunks(text)
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
         response = send_to_anthropic(chunks[0], instructions)
+    elif model == "Claude 2.1":
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response = send_to_anthropic(chunks[0], instructions,'claude-2.1')
     elif model == "GPT-4":
-        chunks = text_to_chunks(text)
-        response = send_to_openai(chunks[0], instructions)
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response = send_to_openai(chunks[0],instructions)
+    elif model == "GPT-3.5t":
+        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+        response = send_to_openai(chunks[0],instructions,'gpt-3.5-turbo')
     elif model == "Mistral-LG":
-        chunks = text_to_chunks(text,chunk_size=30000)
+        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions)
+    elif model == "Mistral-MD":
+        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+        response = send_to_mistral(chunks[0], instructions,'mistral-medium-latest')
+    elif model == "Mistral-SM":
+        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+        response = send_to_mistral(chunks[0], instructions,'mistral-small-latest')
+    elif model == "Open Mixtral":
+        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+        response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     else:
         raise UnsupportedModelException(model)
 

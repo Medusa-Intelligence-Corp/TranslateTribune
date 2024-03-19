@@ -6,6 +6,6 @@
         "source": "Le Figaro",
         "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
         "url": "https://www.lefigaro.fr",
-        "model": "Mistral-LG"
+        "model": "Open Mixtral"
     }
 ]

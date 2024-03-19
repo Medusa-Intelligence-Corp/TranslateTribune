@@ -17,7 +17,7 @@
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
         "article_title_length": 7,
-        "model": "GPT-4"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Switzerland",
@@ -26,7 +26,7 @@
         "source": "L'Agefi",
         "source_wiki": "https://fr.wikipedia.org/wiki/L%27Agefi_(Suisse)",
         "url": "https://agefi.com/",
-        "model": "Mistral-LG"
+        "model": "Open Mixtral"
     },
     {
         "name": "China",
@@ -45,7 +45,7 @@
         "source": "FrenchWeb",
         "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
         "url": "https://www.frenchweb.fr",
-        "model": "Mistral-LG"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Qatar",
@@ -54,7 +54,7 @@
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
         "url": "https://www.aljazeera.net/",
-        "model": "GPT-4"
+        "model": "GPT-3.5t"
     },
     {
         "name": "Brazil",
@@ -63,7 +63,7 @@
         "source": "Valor Econômico",
         "source_wiki": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
         "url": "https://valor.globo.com/",
-        "model": "Mistral-LG"
+        "model": "Mistral-MD"
     },
     {
         "name": "Chile",
@@ -72,7 +72,7 @@
         "source": "FayerWayer",
         "source_wiki": "https://es.wikipedia.org/wiki/Betazeta",
         "url": "https://www.fayerwayer.com/",
-        "model": "Mistral-LG"
+        "model": "Open Mixtral"
     },
     {
         "name": "South Korea",
@@ -81,6 +81,6 @@
         "source": "The Korea Economic Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/The_Korea_Economic_Daily",
         "url": "https://www.hankyung.com/",
-        "model": "GPT-4"
+        "model": "GPT-3.5t"
     }
 ]

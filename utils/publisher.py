@@ -29,8 +29,13 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     model_urls={
             "Claude 3":"https://www.anthropic.com/claude",
+            "Claude 2.1":"https://www.anthropic.com/news/claude-2-1",
             "GPT-4":"https://openai.com/research/gpt-4",
-            "Mistral-LG":"https://mistral.ai/news/mistral-large/"
+            "GPT-3.5t":"https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates",
+            "Mistral-LG":"https://mistral.ai/news/mistral-large/",
+            "Mistral-MD":"https://docs.mistral.ai/guides/model-selection/",
+            "Mistral-SM":"https://docs.mistral.ai/guides/model-selection/",
+            "Open Mixtral":"https://docs.mistral.ai/guides/model-selection/"
             }
     supported_models=list(model_urls.keys())
     
@@ -86,7 +91,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
     title_text=json.dumps(list(article_dict.keys()))
     title_dict = fetch_llm_response(
                     title_text, prioritizer_template.render(**locals()),
-                    'Claude 3', "json")
+                    'GPT-4', "json")
 
     article_html=""
     if len(article_dict.keys()) > 2:
