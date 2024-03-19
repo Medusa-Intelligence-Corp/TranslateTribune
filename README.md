@@ -95,6 +95,13 @@ tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
 
 Adjust the command based on the actual log file name and its location within the volume.
 
+## Tracking Costs
+
+See the following:
+* <$1/day [Mistral Usage](https://platform.openai.com/usage)
+* <$1/day [OpenAI Usage](https://console.mistral.ai/usage/)
+* Free for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
+
 ## Sister Projects
 
 In addition to this core repository, TranslateTribune uses the following repos to help create our site.
