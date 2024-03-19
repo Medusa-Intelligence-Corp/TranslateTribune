@@ -124,7 +124,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
 - [ ] Download docker, run the project, be able to get simple output.
-- [ ] In your local run, add some new sources to your config_debug.json and make sure they produce new aeticles... make sure you can see what's happening in the logs, see [config](./config).
+- [ ] In your local run, add some new sources to your sources_debug.json and make sure they produce new articles. Also make sure you can see what's happening in the logs, see [config](./config).
 - [ ] Consider improving scraping and isolation of article text, maybe find the div with the most text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
 - [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [summarizer.txt](./config/summarizer.txt) and [finder.txt](./config/finder.txt)).
 - [ ] Implement a regional filter on the homepage (Asia, Europe, etc...) see [index.html](./static/index.html).
