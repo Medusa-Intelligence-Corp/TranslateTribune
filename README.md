@@ -81,7 +81,7 @@ In the output, locate the `Mountpoint` field. This field indicates the path on t
 
 #### 3. View the Logs
 
-With the mount point identified, you can now access the logs. If, for example, the logs are stored in a file named `log.txt` within the volume, and the mount point is `/var/lib/docker/volumes/tt-logs/_data`, you can view the logs using:
+With the mount point identified, you can now access the logs. If, for example, the logs are stored in a file named `publisher.log` within the volume, and the mount point is `/var/lib/docker/volumes/tt-logs/_data`, you can view the logs using:
 
 ```bash
 less /var/lib/docker/volumes/tt-logs/_data/publisher.log
