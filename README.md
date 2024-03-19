@@ -109,9 +109,10 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Tanner)
-- [ ] Setup your own OpenAI, Claude or MistralAI keys.
+- [ ] Setup your own OpenAI and/or MistralAI keys (Skip Claude for now)
 - [ ] Download docker, run the project, be able to get simple output.
 - [ ] Improve scraping and isolation of article text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
+- [ ] Test [GPT-3.5 Turbo](https://platform.openai.com/docs/models/gpt-3-5-turbo), [Mistral-small or medium](https://docs.mistral.ai/platform/pricing/)
 - [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py#L116)).
 - [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
 - [ ] Integrate Bluesky bot for sharing top links post-publishing using their [Python API](https://atproto.blue/en/latest/).
