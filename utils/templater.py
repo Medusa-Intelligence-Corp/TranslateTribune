@@ -31,7 +31,9 @@ def deploy_website(article_html, template_filename, html_filename):
         file.write(rendered_html)
 
     debug = os.environ.get('DEBUG', False)
-    if not debug:
+    if debug:
+        return rendered_html
+    else:
 
         bucket_name = 'translatetribune.com'
         s3_key=html_filename
