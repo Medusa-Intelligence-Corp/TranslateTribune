@@ -17,7 +17,7 @@ from jinja2 import Template
 from bs4 import BeautifulSoup
 
 from browser import fetch_content
-from llm import fetch_llm_response
+from llm import fetch_llm_response, get_model_url
 from templater import deploy_website, deploy_games, deploy_books
 
 def publish(sources_filename, template_filename, html_filename, finder_template, summarizer_template, prioritizer_template):        
@@ -27,18 +27,6 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     random.shuffle(sources_config)
 
-    model_urls={
-            "Claude 3":"https://www.anthropic.com/claude",
-            "Claude 2.1":"https://www.anthropic.com/news/claude-2-1",
-            "GPT-4":"https://openai.com/research/gpt-4",
-            "GPT-3.5t":"https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates",
-            "Mistral-LG":"https://mistral.ai/news/mistral-large/",
-            "Mistral-MD":"https://docs.mistral.ai/guides/model-selection/",
-            "Mistral-SM":"https://docs.mistral.ai/guides/model-selection/",
-            "Open Mixtral":"https://mistral.ai/news/mixtral-of-experts/"
-            }
-    supported_models=list(model_urls.keys())
-    
     article_dict = {}
 
     for source_config in sources_config:
@@ -50,9 +38,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             source_wiki = source_config.get("source_wiki", "N/A")
             url = source_config.get("url", "N/A")
             
-            random.shuffle(supported_models)
-            model = source_config.get("model", supported_models[0])
-            model_url = source_config.get("model_url", model_urls[model])
+            model = source_config.get("model", "Open Mixtral")
+            model_url = source_config.get("model_url", get_model_url(model))
             
             article_title_length = source_config.get("article_title_length",30)
             
@@ -72,12 +59,9 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     article_text = fetch_content(link,"text")
                     logging.info(article_text)                    
 
-                    logging.info("sleeping...")
-                    time.sleep(60) #TODO remove this as gpt-4 turbo improves, right now you are rate limited
-                    
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
-                            model, "html")
+                            model, "html-article")
                     logging.info(article_summary)
                     
                     soup = BeautifulSoup(article_summary, 'html.parser')
@@ -88,13 +72,16 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
     
-    title_text=json.dumps(list(article_dict.keys()))
-    title_dict = fetch_llm_response(
-                    title_text, prioritizer_template.render(**locals()),
-                    'GPT-4', "json")
 
     article_html=""
-    if len(article_dict.keys()) > 2:
+    
+    if len(article_dict.keys()) > 3:
+        
+        title_text=json.dumps(list(article_dict.keys()))
+        title_dict = fetch_llm_response(
+                        title_text, prioritizer_template.render(**locals()),
+                        'Open Mixtral', "json")
+
         for item in title_dict.get('articles',[]):
             try:
                 logging.info(item)

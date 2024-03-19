@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import logging
 
 import validators
 
@@ -15,13 +16,17 @@ from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
 
+model_urls={
+    "Claude 3":"https://www.anthropic.com/claude",
+    "Claude 2.1":"https://www.anthropic.com/news/claude-2-1",
+    "GPT-4":"https://openai.com/research/gpt-4",
+    "GPT-3.5t":"https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates",
+    "Mistral-LG":"https://mistral.ai/news/mistral-large/",
+    "Mistral-MD":"https://docs.mistral.ai/guides/model-selection/",
+    "Mistral-SM":"https://docs.mistral.ai/guides/model-selection/",
+    "Open Mixtral":"https://mistral.ai/news/mixtral-of-experts/"
+    }
 
-class UnsupportedModelException(Exception):
-    def __init__(self, model, message="Model not supported"):
-        self.model = model
-        print(model)
-        self.message = message
-        super().__init__(self.message)
 
 def text_to_chunks(text, chunk_size=175000):
     return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
@@ -50,6 +55,40 @@ def find_html(text):
     else:
         return ""
 
+
+def validate_article_html(html):
+    soup = BeautifulSoup(html, 'html.parser')
+
+    article_div = soup.find('div', class_='article')
+    if not article_div:
+        return False
+
+    article_title_div = article_div.find('div', class_='article-title', onclick="toggleArticleDetails(this)")
+    if not article_title_div:
+        return False
+
+    flag_icon_span = article_title_div.find('span', class_='flag-icon')
+    if not flag_icon_span:
+        return False
+
+    article_content_p = article_div.find('p', class_='article-content hidden')
+    if not article_content_p:
+        return False
+
+    vocabulary_ul = article_div.find('ul', class_='vocabulary hidden')
+    if not vocabulary_ul:
+        return False
+
+    article_credit_div = article_div.find('div', class_='article-credit hidden')
+    if not article_credit_div:
+        return False
+
+    if not article_credit_div.find('a'):
+        return False
+
+    return True
+
+
 def find_json(text):
     json_match = re.search(r'({.*})', text, re.DOTALL)
 
@@ -75,7 +114,7 @@ def send_to_anthropic(text_chunk, instructions, model_id="claude-3-opus-20240229
                 "content": [
                     {
                         "type": "text",
-                        "text": f"{instructions} {text_chunk}"
+                        "text": f"{instructions}\n\n{text_chunk}"
                     }
                 ]
             }
@@ -93,7 +132,7 @@ def send_to_openai(text_chunk, instructions, model_id="gpt-4-turbo-preview"):
     messages=[
             {
                 "role": "user",
-                "content": f"{instructions} {text_chunk}"
+                "content": f"{instructions}\n\n{text_chunk}"
             }
         ]
     )
@@ -110,7 +149,7 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
     model=model_id,
     messages=[ChatMessage(
             role="user",
-            content=f"{instructions} {text_chunk}"
+            content=f"{instructions}\n\n{text_chunk}"
             )
         ]
     )
@@ -145,7 +184,9 @@ def fetch_llm_response(text, instructions, model, validation=None):
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     else:
-        raise UnsupportedModelException(model)
+        return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
+
+    logging.info(response)
 
     if validation is None:
         return response
@@ -153,8 +194,17 @@ def fetch_llm_response(text, instructions, model, validation=None):
         return find_urls(response)
     elif validation == "html":
         return find_html(response)
+    elif validation == "html-article":
+        html = find_html(response)
+        if validate_article_html(html):
+            return html
+        else:
+            return None
     elif validation == "json":
         return find_json(response)
     else:
         return None
 
+
+def get_model_url(model):
+    return model_urls.get(model,"https://github.com/Hannibal046/Awesome-LLM")
