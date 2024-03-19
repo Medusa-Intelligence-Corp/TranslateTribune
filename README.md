@@ -109,8 +109,9 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Tanner)
-- [ ] Setup your own OpenAI and/or MistralAI keys (Skip Claude for now)
+- [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
 - [ ] Download docker, run the project, be able to get simple output.
+- [ ] Test any sources that don't seem to be producting articles and see if you can deduce what is happening in the logs, see [config](./config).
 - [ ] Improve scraping and isolation of article text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
 - [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [publisher.py](./utils/publisher.py#L116)) also experiment with LLM configs to see which models perform best given the cost... if you'd like to try a new model feel free to add it, just follow the pattern in [llm.py](./utils/llm.py).
 - [ ] Implement a regional filter on the homepage, possibly using a flag-to-region mapping approach.
