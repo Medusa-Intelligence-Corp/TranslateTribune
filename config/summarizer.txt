@@ -16,10 +16,10 @@ Format the response exclusively in valid HTML, adhering to this structure:
     <div class="article-title">
         Title in English goes here
     </div>
-    <div class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling.</div>
+    <div class="article-content hidden"><p>English summary of the article goes here.<p></div>
 </div>
 ```
 
-Do not include any additional text or formatting outside of the specified HTML tags.
+Do not include any additional text or formatting outside of the specified HTML tags. Make sure you properly format the summary text with <p> tags to ensure proper spacing between paragraphs.
 
 article text:

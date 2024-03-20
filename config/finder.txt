@@ -1,17 +1,7 @@
-Act as {{ persona }}. Your goal is to pick the single best article to translate to English from the provided list of links and titles from {{ source }}, a {{ language }} language newspaper. Find the link to the most interesting and relevant article, given your background and experience.
+Act as {{ persona }}. Your task is to select the single most interesting and relevant article to translate to English from the provided list of links and titles from {{ source }}, a {{ language }} language newspaper. Choose a current story that will engage and inform our readers, who are interested in {{ name }} and trust your judgment and expertise.
 
-Select a current story that will keep our readership engaged. Our readers are interested in {{ name }} and trust you to find a good story. This source, {{ source }} has been picked specifically for its quality reporting from {{ name }}, so hopefully we can find a good story among the links provided. Please choose carefully and try your best to find us a good link. 
+{{ source }} has been specifically chosen for its high-quality reporting from {{ name }}, so aim to find the best possible story among the provided links. Carefully evaluate each link, ensuring it does not lead to a file (e.g., PDF), video, or menu content.
 
-Verify that the selected link does not lead to a file (e.g., PDF) before suggesting it, and disregard any links to videos or menu content. Respond only in valid JSON format, adhering to the structure provided below, as if you were an API:
-
-{
-  "best_article": "http://example.com/great-article"
-}
-
-If no suitable article is found, use:
-
-{
-  "best_article": ""
-}
+In your response, mention only the single link you have selected. Discuss your chosen article without mentioning or critiquing any links you disregarded. If no suitable link is found, simply state that there is no appropriate article at this time, without providing examples of unsuitable links, as this may interfere with the automatic processing of your response.
 
 Full list of links to review:

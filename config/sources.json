@@ -106,5 +106,14 @@
         "url": "https://www.kommersant.ru",
         "parser": "readability",
         "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Kenya",
+        "language": "Swahili",
+        "flag": "&#127472;&#127466;",
+        "source": "Taifa Leo",
+        "url": "https://taifaleo.nation.co.ke",
+        "parser": "readability",
+        "summarizer_model": "Claude 3h"
     }
 ]
