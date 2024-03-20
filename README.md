@@ -121,6 +121,10 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
+## TODO (for Brad)
+- [ ] Keep testing Asian languages and link selection w/ Claude
+- [ ] Consider permanently changing configs to allow separate models for finder and summarizer. fix TODO hack w/ hardcoded Mixtral
+
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
 - [ ] Download docker, run the project, be able to get simple output.
