@@ -6,7 +6,7 @@
         "source": "La Jornada",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Jornada",
         "url": "https://www.jornada.com.mx",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "France",
@@ -15,7 +15,7 @@
         "source": "Le Figaro",
         "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
         "url": "https://www.lefigaro.fr",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Italy",
@@ -24,7 +24,8 @@
         "source": "La Repubblica",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
         "url": "https://www.repubblica.it",
-        "model": "Open Mixtral"
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "China",
@@ -33,7 +34,8 @@
         "source": "People's Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
         "url": "http://www.people.com.cn",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Israel",
@@ -42,7 +44,7 @@
         "source": "Yedioth Ahronoth",
         "source_wiki": "https://en.wikipedia.org/wiki/Yedioth_Ahronoth",
         "url": "https://www.ynet.co.il",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Taiwan",
@@ -51,7 +53,8 @@
         "source": "Liberty Times",
         "source_wiki": "https://en.wikipedia.org/wiki/Liberty_Times",
         "url": "https://www.ltn.com.tw",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Ukraine",
@@ -60,7 +63,7 @@
         "source": "Ukrayinska Pravda",
         "source_wiki": "https://en.wikipedia.org/wiki/Ukrainska_Pravda",
         "url": "https://www.pravda.com.ua",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "South Korea",
@@ -69,7 +72,8 @@
         "source": "JoongAng Ilbo",
         "source_wiki": "https://en.wikipedia.org/wiki/JoongAng_Ilbo",
         "url": "https://www.joongang.co.kr",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Iran",
@@ -78,7 +82,7 @@
         "source": "Ettela'at",
         "source_wiki": "https://en.wikipedia.org/wiki/Ettela%27at",
         "url": "https://ettelaat.com/",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Saudi Arabia",
@@ -87,7 +91,8 @@
         "source": "Al-Riyadh",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Riyadh_(newspaper)",
         "url": "https://www.alriyadh.com/",
-        "model": "Open Mixtral"
+        "parser": "goose",
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Türkiye",
@@ -96,7 +101,7 @@
         "source": "Hürriyet",
         "source_wiki": "https://en.wikipedia.org/wiki/H%C3%BCrriyet",
         "url": "https://www.hurriyet.com.tr",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Russia",
@@ -105,6 +110,6 @@
         "source": "Kommersant",
         "source_wiki": "https://en.wikipedia.org/wiki/Kommersant",
         "url": "https://www.kommersant.ru",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     }
 ]

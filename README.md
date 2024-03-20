@@ -99,8 +99,8 @@ Adjust the command based on the actual log file name and its location within the
 
 See the following:
 * <$1/day [Mistral Usage](https://platform.openai.com/usage)
-* <$1/day [OpenAI Usage](https://console.mistral.ai/usage/)
-* Free for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
+* Evaluating (for Free) for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
+* Not using currently [OpenAI Usage](https://console.mistral.ai/usage/)
 
 ## Sister Projects
 
@@ -122,9 +122,7 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Brad)
-- [ ] Test summarizing Asian languages with Claude 3 Haiku
-- [ ] change configs to allow separate models for finder and summarizer. fix TODO hack w/ hardcoded Mixtral, Make Mixtral the default for everything unless explicitly overwritten
-- [ ] Improve article text extraction, use [readability](https://github.com/mozilla/readability) 
+- [ ] Fix article finder
 
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)

@@ -17,7 +17,8 @@ from urlextract import URLExtract
 from bs4 import BeautifulSoup
 
 model_urls={
-    "Claude 3":"https://www.anthropic.com/claude",
+    "Claude 3o":"https://www.anthropic.com/claude",
+    "Claude 3h":"https://www.anthropic.com/claude",
     "Claude 2.1":"https://www.anthropic.com/news/claude-2-1",
     "GPT-4":"https://openai.com/research/gpt-4",
     "GPT-3.5t":"https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates",
@@ -163,9 +164,12 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
 
 def fetch_llm_response(text, instructions, model, validation=None):
 
-    if model == "Claude 3":
+    if model == "Claude 3o":
         chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
         response = send_to_anthropic(chunks[0], instructions)
+    elif model == "Claude 3h":
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
     elif model == "Claude 2.1":
         chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
         response = send_to_anthropic(chunks[0], instructions,'claude-2.1')

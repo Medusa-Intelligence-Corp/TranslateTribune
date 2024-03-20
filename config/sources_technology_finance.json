@@ -6,16 +6,17 @@
         "source": "Nikkei",
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
-        "model": "Claude 2.1"
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Singapore",
-        "language": "Singaporean Mandarin",
+        "language": "Mandarin",
         "flag": "&#127480;&#127468;",
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Switzerland",
@@ -24,7 +25,7 @@
         "source": "L'Agefi",
         "source_wiki": "https://fr.wikipedia.org/wiki/L%27Agefi_(Suisse)",
         "url": "https://agefi.com/",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "China",
@@ -33,7 +34,8 @@
         "source": "PingWest",
         "source_wiki": "https://www.linkedin.com/company/pingwest/",
         "url": "https://www.pingwest.com/",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "France",
@@ -42,7 +44,7 @@
         "source": "FrenchWeb",
         "source_wiki": "https://en.wikipedia.org/wiki/FrenchWeb",
         "url": "https://www.frenchweb.fr",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Qatar",
@@ -51,7 +53,8 @@
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
         "url": "https://www.aljazeera.net/",
-        "model": "Open Mixtral"
+        "parser": "goose",
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Brazil",
@@ -60,7 +63,7 @@
         "source": "Valor Econômico",
         "source_wiki": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
         "url": "https://valor.globo.com/",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "Chile",
@@ -69,7 +72,7 @@
         "source": "FayerWayer",
         "source_wiki": "https://es.wikipedia.org/wiki/Betazeta",
         "url": "https://www.fayerwayer.com/",
-        "model": "Open Mixtral"
+        "summarizer_model": "Open Mixtral"
     },
     {
         "name": "South Korea",
@@ -78,6 +81,7 @@
         "source": "The Korea Economic Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/The_Korea_Economic_Daily",
         "url": "https://www.hankyung.com/",
-        "model": "Claude 2.1"
+        "parser": "goose",
+        "summarizer_model": "Claude 3h"
     }
 ]

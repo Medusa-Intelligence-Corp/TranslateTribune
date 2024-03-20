@@ -37,33 +37,30 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             source = source_config.get("source", "N/A")
             source_wiki = source_config.get("source_wiki", "N/A")
             url = source_config.get("url", "N/A")
-            
-            model = source_config.get("model", "Open Mixtral")
+            url = source_config.get("parser", "text")
+            finder_model = source_config.get("finder_model", "Open Mixtral")
+            summarizer_model = source_config.get("summarizer_model", "Open Mixtral")
             model_url = source_config.get("model_url", get_model_url(model))
             
-            article_title_length = source_config.get("article_title_length",30)
-            
-            all_links = fetch_content(url,"links",article_title_length) 
+            all_links = fetch_content(url,"links",language) 
             
             logging.info(name)
             logging.info(all_links)
 
-            #TODO Open Mixtral overrides the model value, probably best
-            # to change the config definition to read summarizer_model or something
             best_links = fetch_llm_response(
                 all_links, finder_template.render(**locals()),
-                'Open Mixtral', "url")
+                finder_model, "url")
             
             logging.info(best_links)
             
             if best_links is not None:
                 for link in best_links:          
-                    article_text = fetch_content(link,"text")
+                    article_text = fetch_content(link, parser, language)
                     logging.info(article_text)                    
 
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
-                            model, "html-article")
+                            summarizer_model, "html-article")
                     logging.info(article_summary)
                     
                     soup = BeautifulSoup(article_summary, 'html.parser')

@@ -21,12 +21,19 @@ RUN pip3 install --no-cache-dir \
     pytz \
     urlextract \
     validators \
+    goose3[all] \
     Jinja2 \
     anthropic \
     openai \
     mistralai \
     boto3
-   
+
+# Install the latest LTS nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
+    apt-get install -y nodejs
+
+# Install readability
+RUN npm install @mozilla/readability
 
 # Copy the rest of your application's code
 COPY . .
