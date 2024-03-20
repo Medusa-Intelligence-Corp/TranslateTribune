@@ -98,9 +98,9 @@ Adjust the command based on the actual log file name and its location within the
 ## Tracking Costs
 
 See the following:
-* <$1/day [Mistral Usage](https://platform.openai.com/usage)
-* Evaluating (for Free) for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
-* Not using currently [OpenAI Usage](https://console.mistral.ai/usage/)
+* $<1 per day [Mistral Usage](https://console.mistral.ai/usage/)
+* Using a little (mostly Claude 3 haiku) and evaluating for free for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
+* Not using currently, GPT-3.5t is worse than Open Mixtral and GPT-4t is too expensive compared to Claude 3 haiku [OpenAI Usage](https://platform.openai.com/usage)
 
 ## Sister Projects
 
