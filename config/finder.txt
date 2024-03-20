@@ -1,10 +1,8 @@
-Act as {{ persona }}. Your goal is to pick the single best article to translate to English from the provided list of links and titles from {{ source }}, a {{ language }} language newspaper.
+Act as {{ persona }}. Your goal is to pick the single best article to translate to English from the provided list of links and titles from {{ source }}, a {{ language }} language newspaper. Find the link to the most interesting and relevant article, given your background and experience.
 
-Ignore any bad links to menus or non-article pages. Find the link to the most interesting and relevant article, given your background and experience.
+Select a current story that will keep our readership engaged. Our readers are interested in {{ name }} and trust you to find a good story. This source, {{ source }} has been picked specifically for its quality reporting from {{ name }}, so hopefully we can find a good story among the links provided. Please choose carefully and try your best to find us a good link. 
 
-Select a current story that will keep our readership engaged. Our readers are interested in {{ name }} and trust you to find a good story. This source, {{ source }} has been picked specifically for its quality reporting from {{ name }}, so hopefully we can find a good story among the links provided.Please choose carefully and try your best to find us a good link. 
-
-The links below were crudely scraped from the {{ source }} website, they might include links to menus, privacy policies or login/logout pages, ignore those please! Verify that the selected link does not lead to a file (e.g., PDF) before suggesting it. Respond only in valid JSON format, adhering to the structure provided below, as if you were an API:
+Verify that the selected link does not lead to a file (e.g., PDF) before suggesting it, and disregard any links to videos or menu content. Respond only in valid JSON format, adhering to the structure provided below, as if you were an API:
 
 {
   "best_article": "http://example.com/great-article"

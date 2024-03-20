@@ -4,7 +4,6 @@
         "language": "Spanish",
         "flag": "&#127474;&#127485;",
         "source": "La Jornada",
-        "source_wiki": "https://en.wikipedia.org/wiki/La_Jornada",
         "url": "https://www.jornada.com.mx",
         "summarizer_model": "Open Mixtral"
     },
@@ -13,7 +12,6 @@
         "language": "French",
         "flag": "&#127467;&#127479;",
         "source": "Le Figaro",
-        "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
         "url": "https://www.lefigaro.fr",
         "summarizer_model": "Open Mixtral"
     },
@@ -22,7 +20,6 @@
         "language": "Italian",
         "flag": "&#127470;&#127481;",
         "source": "La Repubblica",
-        "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
         "url": "https://www.repubblica.it",
         "parser": "readability",
         "summarizer_model": "Open Mixtral"
@@ -32,7 +29,6 @@
         "language": "Mandarin",
         "flag": "&#127464;&#127475;",
         "source": "People's Daily",
-        "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
         "url": "http://www.people.com.cn",
         "parser": "goose",
         "summarizer_model": "Claude 3h"
@@ -42,7 +38,6 @@
         "language": "Hebrew",
         "flag": "&#127470;&#127473;",
         "source": "Yedioth Ahronoth",
-        "source_wiki": "https://en.wikipedia.org/wiki/Yedioth_Ahronoth",
         "url": "https://www.ynet.co.il",
         "summarizer_model": "Open Mixtral"
     },
@@ -51,7 +46,6 @@
         "language": "Mandarin",
         "flag": "&#127481;&#127484;",
         "source": "Liberty Times",
-        "source_wiki": "https://en.wikipedia.org/wiki/Liberty_Times",
         "url": "https://www.ltn.com.tw",
         "parser": "goose",
         "summarizer_model": "Claude 3h"
@@ -61,7 +55,6 @@
         "language": "Ukranian",
         "flag": "&#127482;&#127462;",
         "source": "Ukrayinska Pravda",
-        "source_wiki": "https://en.wikipedia.org/wiki/Ukrainska_Pravda",
         "url": "https://www.pravda.com.ua",
         "summarizer_model": "Open Mixtral"
     },
@@ -70,7 +63,6 @@
         "language": "Korean",
         "flag": "&#127472;&#127479;",
         "source": "JoongAng Ilbo",
-        "source_wiki": "https://en.wikipedia.org/wiki/JoongAng_Ilbo",
         "url": "https://www.joongang.co.kr",
         "parser": "goose",
         "summarizer_model": "Claude 3h"
@@ -80,7 +72,6 @@
         "language": "Persian",
         "flag": "&#127470;&#127479;",
         "source": "Ettela'at",
-        "source_wiki": "https://en.wikipedia.org/wiki/Ettela%27at",
         "url": "https://ettelaat.com/",
         "summarizer_model": "Open Mixtral"
     },
@@ -89,7 +80,6 @@
         "language": "Arabic",
         "flag": "&#127480;&#127462;",
         "source": "Al-Riyadh",
-        "source_wiki": "https://en.wikipedia.org/wiki/Al_Riyadh_(newspaper)",
         "url": "https://www.alriyadh.com/",
         "parser": "goose",
         "summarizer_model": "Open Mixtral"
@@ -99,7 +89,6 @@
         "language": "Turkish",
         "flag": "&#127481;&#127479;",
         "source": "Hürriyet",
-        "source_wiki": "https://en.wikipedia.org/wiki/H%C3%BCrriyet",
         "url": "https://www.hurriyet.com.tr",
         "summarizer_model": "Open Mixtral"
     },
@@ -108,7 +97,6 @@
         "language": "Russian",
         "flag": "&#127479;&#127482;",
         "source": "Kommersant",
-        "source_wiki": "https://en.wikipedia.org/wiki/Kommersant",
         "url": "https://www.kommersant.ru",
         "summarizer_model": "Open Mixtral"
     }

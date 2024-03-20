@@ -4,17 +4,17 @@
         "language": "Spanish",
         "flag": "&#127474;&#127485;",
         "source": "La Jornada",
-        "source_wiki": "https://en.wikipedia.org/wiki/La_Jornada",
         "url": "https://www.jornada.com.mx",
-        "model": "Open Mixtral"
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
     },
     {
-        "name": "France",
-        "language": "French",
-        "flag": "&#127467;&#127479;",
-        "source": "Le Figaro",
-        "source_wiki": "https://en.wikipedia.org/wiki/Le_Figaro",
-        "url": "https://www.lefigaro.fr",
-        "model": "Open Mixtral"
+        "name": "Taiwan",
+        "language": "Mandarin",
+        "flag": "&#127481;&#127484;",
+        "source": "Liberty Times",
+        "url": "https://www.ltn.com.tw",
+        "parser": "readability",
+        "summarizer_model": "Claude 3h"
     }
 ]

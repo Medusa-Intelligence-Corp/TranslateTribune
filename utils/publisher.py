@@ -35,12 +35,11 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             language = source_config.get("language", "N/A")
             flag = source_config.get("flag", "N/A")
             source = source_config.get("source", "N/A")
-            source_wiki = source_config.get("source_wiki", "N/A")
             url = source_config.get("url", "N/A")
-            url = source_config.get("parser", "text")
+            parser = source_config.get("parser", "text")
             finder_model = source_config.get("finder_model", "Open Mixtral")
             summarizer_model = source_config.get("summarizer_model", "Open Mixtral")
-            model_url = source_config.get("model_url", get_model_url(model))
+            model_url = get_model_url(summarizer_model)
             
             all_links = fetch_content(url,"links",language) 
             

@@ -14,6 +14,10 @@ RUN apt-get update && \
     unzip \
     xvfb
 
+# Install the latest LTS nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
+    apt-get install -y nodejs
+
 # Install Python dependencies
 RUN pip3 install --no-cache-dir \
     selenium \
@@ -22,18 +26,13 @@ RUN pip3 install --no-cache-dir \
     urlextract \
     validators \
     goose3[all] \
+    readabilipy \
     Jinja2 \
     anthropic \
     openai \
     mistralai \
     boto3
 
-# Install the latest LTS nodejs
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
-    apt-get install -y nodejs
-
-# Install readability
-RUN npm install @mozilla/readability
 
 # Copy the rest of your application's code
 COPY . .

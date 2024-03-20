@@ -1,5 +1,7 @@
 import time
 
+from readabilipy import simple_json_from_html_string
+
 from goose3 import Goose
 from goose3.text import StopWordsArabic, StopWordsKorean, StopWordsChinese
 
@@ -48,10 +50,8 @@ def fetch_content(url, mode, language):
     elif mode=="body":
         text = driver.execute_script("return document.body.outerHTML")
     elif mode=="readability":
-        with open("/usr/src/app/node_modules/@mozilla/readability/Readability.js", "r") as file:
-            readability_js = file.read()
-        driver.execute_script(readability_js)
-        text = driver.execute_script("return new Readability(document).parse().content;") 
+        article = simple_json_from_html_string(driver.page_source, use_readability=True)
+        text = article["title"] + "\n\n" + article["plain_content"]
     elif mode=="goose":
         if language == "Mandarin":
             g = Goose({'stopwords_class': StopWordsChinese})
@@ -63,14 +63,24 @@ def fetch_content(url, mode, language):
             g = Goose()
 
         article = g.extract(raw_html=driver.page_source)
-        text = article.title + "\n\n" article.cleaned_text 
+        text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
-        #TODO update this to use new n longest links algo
-        text = driver.execute_script(f"""
-            return Array.from(document.querySelectorAll('a'))
-                .filter(link => link.textContent.trim().length > 30)
-                .map(link => `"${{link.textContent.trim()}}","${{link.href}}"`)
-                .join('\\n');
+        #This selects all 'a' tags, keeps track of their order in the document
+        #Then gives the 50 longest links (combined length of url and text)
+        #The assumption is that article titles are optimized for SEO
+        #and an article name is longer than a command like "Sign Out" or 
+        #some other garbage link we don't want to see
+        text = driver.execute_script("""
+          const links = Array.from(document.querySelectorAll('a'));
+          const csvLines = links.map((link, index) => `${index + 1},"${link.textContent.trim()}","${link.href}"`);
+          const sortedLines = csvLines.sort((a, b) => b.length - a.length);
+          const topTenLines = sortedLines.slice(0, 50);
+          const reorderedLines = topTenLines.sort((a, b) => {
+            const indexA = parseInt(a.split(',')[0]);
+            const indexB = parseInt(b.split(',')[0]);
+            return indexA - indexB;
+          });
+          return reorderedLines.join('\\n');
         """)
     else:
         raise UnsupportedModeException(mode)

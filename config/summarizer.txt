@@ -21,19 +21,14 @@ Format the response exclusively in valid HTML, adhering to this structure:
     <div class="article-title" onclick="toggleArticleDetails(this)">
         <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
         <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
-        Title in English goes here.
+        Title in English goes here
     </div>
-    <p class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling. </p>
+    <p class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling, and ending with <a href='{{ link }}'>Read more from {{ source }} in {{language}}</a>.</p>
     <ul class="vocabulary hidden">
       <li>{{ language }} word 1 - English translation goes here</li>
       <li>{{ language }} word 2 - English translation goes here</li>
       <li>{{ language }} word 3 - English translation goes here</li>
     </ul>
-    <div class="article-credit hidden">
-      <a href="{{ model_url }}">Summary by {{ model }}</a>
-      <a href='{{ link }}'>Full article in {{language}}</a>
-      <a href='{{ source_wiki }}'>{{ source }} (Wikipedia)</a>
-    </div>
 </div>
 ```
 
