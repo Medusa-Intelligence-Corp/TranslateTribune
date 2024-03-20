@@ -132,4 +132,5 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] Consider improving scraping and isolation of article text, maybe find the div with the most text, try and scrape in 'reader mode' or use greasemonkey scripts to improve things e.g., [Greasy Fork](https://greasyfork.org/en)
 - [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [summarizer.txt](./config/summarizer.txt) and [finder.txt](./config/finder.txt)).
 - [ ] Implement a regional filter on the homepage (Asia, Europe, etc...) see [index.html](./static/index.html).
+- [ ] Add Google Gemini models and add them as an option in [llm.py](./utils/llm.py). Test and see if they can beat the current defaults given the cost  
 - [ ] Add a bluesky bot integration that shares the top story to bluesky using their [Python API](https://atproto.blue/en/latest/).
