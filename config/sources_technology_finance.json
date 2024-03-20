@@ -133,6 +133,15 @@
         "url": "https://www.sweclockers.com/",
         "parser": "readability",
         "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Ukraine",
+        "language": "Ukrainian",
+        "flag": "&#127482;&#127462;",
+        "source": "ITC.ua",
+        "url": "https://itc.ua/",
+        "parser": "readability",
+        "summarizer_model": "Claude 3h"
     }
 ]
 
