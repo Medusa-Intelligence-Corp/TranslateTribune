@@ -81,6 +81,15 @@
         "summarizer_model": "Claude 3h"
     },
     {
+        "name": "Qatar",
+        "language": "Arabic",
+        "flag": "&#127478;&#127462;",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.net/",
+        "parser": "goose",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
         "name": "Saudi Arabia",
         "language": "Arabic",
         "flag": "&#127480;&#127462;",
@@ -106,6 +115,15 @@
         "url": "https://www.kommersant.ru",
         "parser": "readability",
         "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Singapore",
+        "language": "Mandarin",
+        "flag": "&#127480;&#127468;",
+        "source": "Lianhe Zaobao",
+        "url": "https://www.zaobao.com.sg",
+        "parser": "readability",
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Kenya",

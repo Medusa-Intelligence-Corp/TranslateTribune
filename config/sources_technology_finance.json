@@ -9,15 +9,6 @@
         "summarizer_model": "Claude 3h"
     },
     {
-        "name": "Singapore",
-        "language": "Mandarin",
-        "flag": "&#127480;&#127468;",
-        "source": "Lianhe Zaobao",
-        "url": "https://www.zaobao.com.sg",
-        "parser": "readability",
-        "summarizer_model": "Claude 3h"
-    },
-    {
         "name": "Switzerland",
         "language": "French",
         "flag": "&#127464;&#127469;",
@@ -45,17 +36,8 @@
         "summarizer_model": "Open Mixtral"
     },
     {
-        "name": "Qatar",
-        "language": "Arabic",
-        "flag": "&#127478;&#127462;",
-        "source": "Al Jazeera",
-        "url": "https://www.aljazeera.net/",
-        "parser": "goose",
-        "summarizer_model": "Open Mixtral"
-    },
-    {
         "name": "Brazil",
-        "language": "Portugese",
+        "language": "Portuguese",
         "flag": "&#127463;&#127479;",
         "source": "Valor Econômico",
         "url": "https://valor.globo.com/",
@@ -79,5 +61,78 @@
         "url": "https://www.hankyung.com/",
         "parser": "goose",
         "summarizer_model": "Claude 3h"
+    },
+    {
+        "name": "Germany",
+        "language": "German",
+        "flag": "&#127465;&#127466;",
+        "source": "Gründerszene",
+        "url": "https://www.gruenderszene.de/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Russia",
+        "language": "Russian",
+        "flag": "&#127479;&#127482;",
+        "source": "vc.ru",
+        "url": "https://vc.ru/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Mexico",
+        "language": "Spanish",
+        "flag": "&#127474;&#127485;",
+        "source": "Xataka México",
+        "url": "https://www.xataka.com.mx/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Spain",
+        "language": "Spanish",
+        "flag": "&#127466;&#127480;",
+        "source": "3DJuegos",
+        "url": "https://www.3djuegos.com/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Italy",
+        "language": "Italian",
+        "flag": "&#127470;&#127481;",
+        "source": "Multiplayer.it",
+        "url": "https://multiplayer.it/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Poland",
+        "language": "Polish",
+        "flag": "&#127477;&#127473;",
+        "source": "GRYOnline.pl",
+        "url": "https://www.gry-online.pl/",
+        "parser": "goose",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Netherlands",
+        "language": "Dutch",
+        "flag": "&#127475;&#127473;",
+        "source": "Tweakers",
+        "url": "https://tweakers.net/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
+    },
+    {
+        "name": "Sweden",
+        "language": "Swedish",
+        "flag": "&#127480;&#127466;",
+        "source": "SweClockers",
+        "url": "https://www.sweclockers.com/",
+        "parser": "readability",
+        "summarizer_model": "Open Mixtral"
     }
 ]
+
