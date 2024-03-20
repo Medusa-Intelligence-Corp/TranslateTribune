@@ -1,10 +1,5 @@
 Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please create a summary of the article's content in English, making the summary clear and concise. Avoid using any foreign acronyms that might be confusing to an American reader. Rewrite the title in English so it will be compelling to an American reader.
 
-Additionally, identify and include no more than three {{ language }} vocabulary phrases that would be beneficial for a student learning {{ language }}. Select vocabulary words that are:
-- Relevant to the article's content
-- Potentially challenging for learners
-- Useful in building language skills
-
 When summarizing and translating the article, please assign a "data-front-page-score" attribute to the <div class="article"> element . This score determines the article's placement on the front page.
 
 The "data-front-page-score" attribute should be set to a value between 1 and 5:
@@ -22,11 +17,6 @@ Format the response exclusively in valid HTML, adhering to this structure:
         Title in English goes here
     </div>
     <div class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling.</div>
-    <ul class="vocabulary hidden">
-      <li>{{ language }} word 1 - English translation goes here</li>
-      <li>{{ language }} word 2 - English translation goes here</li>
-      <li>{{ language }} word 3 - English translation goes here</li>
-    </ul>
 </div>
 ```
 
