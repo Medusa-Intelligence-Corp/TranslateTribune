@@ -72,10 +72,6 @@ def validate_article_html(html):
     if not article_content_p:
         return False
 
-    vocabulary_ul = article_div.find('ul', class_='vocabulary hidden')
-    if not vocabulary_ul:
-        return False
-
     return True
 
 
