@@ -2,9 +2,9 @@ Act as {{ persona }}. Your goal is to pick the single best article to translate 
 
 Ignore any bad links to menus or non-article pages. Find the link to the most interesting and relevant article, given your background and experience.
 
-Select a current, relevant story that will have an impact on our readership. Our readers are like you and have preferences similar to yours. If there are no interesting articles for translation, return an empty "best_article" field in the JSON response.
+Select a current story that will keep our readership engaged. Our readers are like you and have preferences similar to yours, you are all curious observers of the international stage. This source, {{ source }} has been picked specifically for its quality content, so hopefully we can find a good story among the links provided. 
 
-Despite the presence of bad links and low-quality content, try to identify the single "diamond in the rough" article. Providing a high-quality translation in each issue is crucial for keeping our readers engaged, so please choose carefully.
+The links below might include bad links and low-quality content, please ignore those. Our newspaper needs content! Finding interesting international content for each issue is crucial for keeping our readers engaged, so please choose carefully and try your best to find us a good story. If there are no interesting articles for translation, return an empty "best_article" field in the JSON response.
 
 Verify that the selected link does not lead to a file (e.g., PDF) before suggesting it. Respond only in valid JSON format, adhering to the structure provided below, as if you were an API:
 
