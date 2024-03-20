@@ -57,6 +57,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                 best_links[:1]
 
                 for link in best_links:          
+                    if link.endswith('.'):
+                        link = link[:-1]
                     article_text = fetch_content(link, parser, language)
 
                     article_summary = fetch_llm_response(

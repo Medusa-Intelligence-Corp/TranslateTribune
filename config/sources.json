@@ -32,7 +32,7 @@
         "flag": "&#127464;&#127475;",
         "source": "People's Daily",
         "url": "http://www.people.com.cn",
-        "parser": "goose",
+        "parser": "text",
         "summarizer_model": "Claude 3h"
     },
     {
@@ -50,7 +50,7 @@
         "flag": "&#127481;&#127484;",
         "source": "Liberty Times",
         "url": "https://www.ltn.com.tw",
-        "parser": "goose",
+        "parser": "text",
         "summarizer_model": "Claude 3h"
     },
     {

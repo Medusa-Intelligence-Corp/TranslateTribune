@@ -182,6 +182,7 @@ def fetch_llm_response(text, instructions, model, validation=None):
     if validation is None:
         return response
     elif validation == "url":
+        logging.info(response)
         return find_urls(response)
     elif validation == "html":
         return find_html(response)
