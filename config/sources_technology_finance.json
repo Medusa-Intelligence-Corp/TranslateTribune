@@ -54,7 +54,7 @@
         "source": "Al Jazeera",
         "source_wiki": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
         "url": "https://www.aljazeera.net/",
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     },
     {
         "name": "Brazil",

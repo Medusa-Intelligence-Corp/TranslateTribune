@@ -24,7 +24,7 @@
         "source": "La Repubblica",
         "source_wiki": "https://en.wikipedia.org/wiki/La_Repubblica",
         "url": "https://www.repubblica.it",
-        "model": "GPT-3.5t"
+        "model": "Open Mixtral"
     },
     {
         "name": "China",
@@ -71,7 +71,7 @@
         "source": "JoongAng Ilbo",
         "source_wiki": "https://en.wikipedia.org/wiki/JoongAng_Ilbo",
         "url": "https://www.joongang.co.kr",
-        "model": "GPT-3.5t"
+        "model": "Claude 2.1"
     },
     {
         "name": "Iran",
