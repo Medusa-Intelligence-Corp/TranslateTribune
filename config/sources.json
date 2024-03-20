@@ -42,7 +42,7 @@
         "source": "Yedioth Ahronoth",
         "url": "https://www.ynet.co.il",
         "parser": "readability",
-        "summarizer_model": "Open Mixtral"
+        "summarizer_model": "Claude 3h"
     },
     {
         "name": "Taiwan",

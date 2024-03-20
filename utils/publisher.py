@@ -45,7 +45,6 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             all_links = fetch_content(url,"links",language) 
             
             logging.info(name)
-            logging.info(all_links)
 
             best_links = fetch_llm_response(
                 all_links, finder_template.render(**locals()),
@@ -54,14 +53,15 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             logging.info(best_links)
             
             if best_links is not None:
+                #we are only expecting one link, slice the list to just select the first item
+                best_links[:1]
+
                 for link in best_links:          
                     article_text = fetch_content(link, parser, language)
-                    logging.info(article_text)                    
 
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
                             summarizer_model, "html-article")
-                    logging.info(article_summary)
                     
                     # Save the title
                     soup = BeautifulSoup(article_summary, 'html.parser')
@@ -99,6 +99,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     article_dict[article_title]["html"] = article_summary
                     article_dict[article_title]["score"] = front_page_score
                     
+                    logging.info(article_summary)
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()

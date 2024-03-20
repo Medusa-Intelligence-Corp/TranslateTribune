@@ -58,10 +58,6 @@ def find_html(text):
 
 
 def validate_article_html(html):
-    if "ERROR" in html.upper() or "MISSING ARTICLE" in html.upper() or "404" in html:
-        logging.info("MISSING ARTICLE")
-        return False
-
     soup = BeautifulSoup(html, 'html.parser')
 
     article_div = soup.find('div', class_='article')
@@ -183,8 +179,6 @@ def fetch_llm_response(text, instructions, model, validation=None):
     else:
         return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
 
-    logging.info(response)
-
     if validation is None:
         return response
     elif validation == "url":
@@ -196,6 +190,7 @@ def fetch_llm_response(text, instructions, model, validation=None):
         if validate_article_html(html):
             return html
         else:
+            logging.info("bad formatting from LLM")
             return None
     elif validation == "json":
         return find_json(response)

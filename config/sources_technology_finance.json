@@ -14,7 +14,7 @@
         "flag": "&#127480;&#127468;",
         "source": "Lianhe Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "parser": "goose",
+        "parser": "readability",
         "summarizer_model": "Claude 3h"
     },
     {
