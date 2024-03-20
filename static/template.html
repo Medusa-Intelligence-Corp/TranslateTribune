@@ -170,9 +170,6 @@
             width: 100%;
             color: #d1d1d1;
         }
-        .dismiss-warning {
-            cursor: pointer;
-        }
         .hidden {
             display: none;
         }
@@ -229,17 +226,13 @@
             </div>
         </div>
         <div class="ai-warning">
-                <span class="dismiss-warning" onclick="hideThis(this.parentNode)">TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI. (click to dismiss)</span>
-            </div>
+                TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI.
+        </div>
         <div class="current-date">
             Updated {{ date_string|safe }}
         </div>
 
         <script>
-            function hideThis(element) {
-                element.classList.add('hidden');
-            }
-
             function toggleArticleDetails(element) {
                 // Find the next sibling elements of the clicked title and toggle their visibility
                 let sibling = element.nextElementSibling;
