@@ -59,9 +59,11 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                     article_text = fetch_content(link,"text")
                     logging.info(article_text)                    
 
+                    #TODO Open Mixtral overrides the model value, probably best
+                    # to change the config definition to read summarizer_model or something
                     article_summary = fetch_llm_response(
                             article_text, summarizer_template.render(**locals()),
-                            model, "html-article")
+                            "Open Mixtral", "html-article")
                     logging.info(article_summary)
                     
                     soup = BeautifulSoup(article_summary, 'html.parser')

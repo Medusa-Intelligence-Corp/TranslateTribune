@@ -33,7 +33,6 @@
         "source": "People's Daily",
         "source_wiki": "https://en.wikipedia.org/wiki/People%27s_Daily",
         "url": "http://www.people.com.cn",
-        "article_title_length": 7,
         "model": "Claude 2.1"
     },
     {
@@ -52,7 +51,6 @@
         "source": "Liberty Times",
         "source_wiki": "https://en.wikipedia.org/wiki/Liberty_Times",
         "url": "https://www.ltn.com.tw",
-        "article_title_length": 7,
         "model": "Claude 2.1"
     },
     {

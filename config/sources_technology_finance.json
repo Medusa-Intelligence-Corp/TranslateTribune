@@ -6,7 +6,6 @@
         "source": "Nikkei",
         "source_wiki": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
         "url": "https://www.nikkei.com",
-        "article_title_length": 7,
         "model": "Claude 2.1"
     },
     {
@@ -16,7 +15,6 @@
         "source": "Lianhe Zaobao",
         "source_wiki": "https://en.wikipedia.org/wiki/Lianhe_Zaobao",
         "url": "https://www.zaobao.com.sg",
-        "article_title_length": 7,
         "model": "Claude 2.1"
     },
     {
@@ -35,7 +33,6 @@
         "source": "PingWest",
         "source_wiki": "https://www.linkedin.com/company/pingwest/",
         "url": "https://www.pingwest.com/",
-        "article_title_length": 7,
         "model": "Claude 2.1"
     },
     {
