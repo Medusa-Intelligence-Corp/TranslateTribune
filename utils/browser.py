@@ -64,6 +64,8 @@ def fetch_content(url, mode, language):
 
         article = g.extract(raw_html=driver.page_source)
         text = article.title + "\n\n" + article.cleaned_text 
+        if (len(text) < 2000):
+            text = None
     elif mode=="links":
         #This selects all 'a' tags, keeps track of their order in the document
         #Then gives the 50 longest links (combined length of url and text)
@@ -82,6 +84,8 @@ def fetch_content(url, mode, language):
           });
           return reorderedLines.join('\\n');
         """)
+        if (len(text) < 2000):
+            text = None
     else:
         raise UnsupportedModeException(mode)
     

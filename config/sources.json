@@ -5,6 +5,7 @@
         "flag": "&#127474;&#127485;",
         "source": "La Jornada",
         "url": "https://www.jornada.com.mx",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -13,6 +14,7 @@
         "flag": "&#127467;&#127479;",
         "source": "Le Figaro",
         "url": "https://www.lefigaro.fr",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -39,6 +41,7 @@
         "flag": "&#127470;&#127473;",
         "source": "Yedioth Ahronoth",
         "url": "https://www.ynet.co.il",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -56,6 +59,7 @@
         "flag": "&#127482;&#127462;",
         "source": "Ukrayinska Pravda",
         "url": "https://www.pravda.com.ua",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -73,6 +77,7 @@
         "flag": "&#127470;&#127479;",
         "source": "Ettela'at",
         "url": "https://ettelaat.com/",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -90,6 +95,7 @@
         "flag": "&#127481;&#127479;",
         "source": "Hürriyet",
         "url": "https://www.hurriyet.com.tr",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -98,6 +104,7 @@
         "flag": "&#127479;&#127482;",
         "source": "Kommersant",
         "url": "https://www.kommersant.ru",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     }
 ]

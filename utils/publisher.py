@@ -12,6 +12,7 @@ import re
 import json
 import traceback
 import random
+import html
 
 from jinja2 import Template
 from bs4 import BeautifulSoup
@@ -62,8 +63,33 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
                             summarizer_model, "html-article")
                     logging.info(article_summary)
                     
+                    # Save the title
                     soup = BeautifulSoup(article_summary, 'html.parser')
-                    article_title = soup.find('div', class_='article-title').text.strip()
+                    title_div = soup.find('div', class_='article-title')
+                    article_title=title_div.text.strip()
+                   
+                    if title_div:
+                        flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {name}'})
+                        flag_span.string = html.unescape(flag)
+                        title_div.insert(0, flag_span)
+                        title_div.insert(1, ' ')
+
+                    content_div = soup.find('div', class_='article-content')
+
+                    if content_div:
+                        link = soup.new_tag('a', href=link)
+                        link.string = f'Read more from {source} (in {language}).'
+                        content_div.append(' ')
+                        content_div.append(link)
+
+                    title_div = soup.find('div', class_='article-title')
+
+                    if title_div:
+                        title_div['onclick'] = 'toggleArticleDetails(this)'
+                                        
+                    article_summary = str(soup)
+
+                    # Get the front page score
                     article = soup.find('div', class_='article')
                     try:
                         front_page_score = float(article['data-front-page-score'])

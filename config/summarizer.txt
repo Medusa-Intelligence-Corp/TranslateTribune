@@ -18,12 +18,10 @@ Format the response exclusively in valid HTML, adhering to this structure:
 
 ```
 <div class="article" data-front-page-score="0">
-    <div class="article-title" onclick="toggleArticleDetails(this)">
-        <!-- DO NOT CHANGE THE FLAG BELOW, IT MUST DISPLAY THE FLAG OF {{ name|upper }} -->
-        <span class="flag-icon" role="img" aria-label="Flag of {{ name }}">{{ flag }}</span>
+    <div class="article-title">
         Title in English goes here
     </div>
-    <p class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling, and ending with <a href='{{ link }}'>Read more from {{ source }} in {{language}}</a>.</p>
+    <div class="article-content hidden">English summary of the article goes here, following The Economist's style guide but using American spelling.</div>
     <ul class="vocabulary hidden">
       <li>{{ language }} word 1 - English translation goes here</li>
       <li>{{ language }} word 2 - English translation goes here</li>
@@ -31,8 +29,6 @@ Format the response exclusively in valid HTML, adhering to this structure:
     </ul>
 </div>
 ```
-
-If the provided article text appears to be gathered in error or does not have an article to summarize, respond with only the text ```<h1>MISSING ARTICLE</h1>```.
 
 Do not include any additional text or formatting outside of the specified HTML tags.
 

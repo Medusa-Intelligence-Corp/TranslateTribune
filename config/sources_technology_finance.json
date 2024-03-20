@@ -5,6 +5,7 @@
         "flag": "&#127471;&#127477;",
         "source": "Nikkei",
         "url": "https://www.nikkei.com",
+        "parser": "readability",
         "summarizer_model": "Claude 3h"
     },
     {
@@ -22,6 +23,7 @@
         "flag": "&#127464;&#127469;",
         "source": "L'Agefi",
         "url": "https://agefi.com/",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -39,6 +41,7 @@
         "flag": "&#127467;&#127479;",
         "source": "FrenchWeb",
         "url": "https://www.frenchweb.fr",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -56,6 +59,7 @@
         "flag": "&#127463;&#127479;",
         "source": "Valor Econômico",
         "url": "https://valor.globo.com/",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -64,6 +68,7 @@
         "flag": "&#127464;&#127473;",
         "source": "FayerWayer",
         "url": "https://www.fayerwayer.com/",
+        "parser": "readability",
         "summarizer_model": "Open Mixtral"
     },
     {

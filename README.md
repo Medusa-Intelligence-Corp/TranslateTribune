@@ -121,8 +121,6 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
-## TODO (for Brad)
-- [ ] Fix article finder
 
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)

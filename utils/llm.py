@@ -68,27 +68,16 @@ def validate_article_html(html):
     if not article_div:
         return False
 
-    article_title_div = article_div.find('div', class_='article-title', onclick="toggleArticleDetails(this)")
+    article_title_div = article_div.find('div', class_='article-title')
     if not article_title_div:
         return False
 
-    flag_icon_span = article_title_div.find('span', class_='flag-icon')
-    if not flag_icon_span:
-        return False
-
-    article_content_p = article_div.find('p', class_='article-content hidden')
+    article_content_p = article_div.find('div', class_='article-content hidden')
     if not article_content_p:
         return False
 
     vocabulary_ul = article_div.find('ul', class_='vocabulary hidden')
     if not vocabulary_ul:
-        return False
-
-    article_credit_div = article_div.find('div', class_='article-credit hidden')
-    if not article_credit_div:
-        return False
-
-    if not article_credit_div.find('a'):
         return False
 
     return True
