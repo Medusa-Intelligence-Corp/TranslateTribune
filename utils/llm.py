@@ -16,18 +16,6 @@ from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
 
-model_urls={
-    "Claude 3o":"https://www.anthropic.com/claude",
-    "Claude 3h":"https://www.anthropic.com/claude",
-    "Claude 2.1":"https://www.anthropic.com/news/claude-2-1",
-    "GPT-4":"https://openai.com/research/gpt-4",
-    "GPT-3.5t":"https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates",
-    "Mistral-LG":"https://mistral.ai/news/mistral-large/",
-    "Mistral-MD":"https://docs.mistral.ai/guides/model-selection/",
-    "Mistral-SM":"https://docs.mistral.ai/guides/model-selection/",
-    "Open Mixtral":"https://mistral.ai/news/mixtral-of-experts/"
-    }
-
 
 def text_to_chunks(text, chunk_size=175000):
     return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
@@ -193,7 +181,3 @@ def fetch_llm_response(text, instructions, model, validation=None):
         return find_json(response)
     else:
         return None
-
-
-def get_model_url(model):
-    return model_urls.get(model,"https://github.com/Hannibal046/Awesome-LLM")

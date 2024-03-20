@@ -18,7 +18,7 @@ from jinja2 import Template
 from bs4 import BeautifulSoup
 
 from browser import fetch_content
-from llm import fetch_llm_response, get_model_url
+from llm import fetch_llm_response
 from templater import deploy_website, deploy_games, deploy_books
 
 def publish(sources_filename, template_filename, html_filename, finder_template, persona, summarizer_template):        
@@ -40,7 +40,6 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             parser = source_config.get("parser", "text")
             finder_model = source_config.get("finder_model", "Open Mixtral")
             summarizer_model = source_config.get("summarizer_model", "Open Mixtral")
-            model_url = get_model_url(summarizer_model)
             
             all_links = fetch_content(url,"links",language) 
             
