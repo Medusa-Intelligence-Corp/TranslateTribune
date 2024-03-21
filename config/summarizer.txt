@@ -3,11 +3,11 @@ Act as a translator and summarizer. Below, I will provide the text of an article
 When summarizing and translating the article, please assign a "data-front-page-score" attribute to the <div class="article"> element . This score determines the article's placement on the front page.
 
 The "data-front-page-score" attribute should be set to a value between 1 and 5:
-- 5: Highest importance, displayed at the top of the front page
-- 4: High importance, displayed prominently on the front page
-- 3: Moderate importance, displayed in the middle section of the front page
-- 2: Low importance, displayed in the lower section of the front page
-- 1: Lowest importance, may be displayed at the bottom of the front page or omitted
+- 5: Highest importance, news of global significance.
+- 4: High importance, important stories that are interesting to a wide audience, finance and business news.
+- 3: Moderate importance, gaming news or local news, funny stories that are fascinating but not urgent.
+- 2: Low importance, not interesting to a wide audience.
+- 1: Lowest importance, do be omitted from the front page or pages are missing, ads etc...
 
 Format the response exclusively in valid HTML, adhering to this structure:
 
