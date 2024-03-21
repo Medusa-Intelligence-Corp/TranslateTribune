@@ -104,7 +104,7 @@ This project utilizes various AI APIs (see [llm.py](./utils/llm.py)), each with 
 1. **Mistral AI** ([Usage Dashboard](https://console.mistral.ai/usage/))
    - Current cost: Less than $1 per day
    - Mistral (particularly Open Mixtral 8x7) provides powerful AI capabilities at an affordable price point.
-   - Primarily used for European languages (Spanish, Portuguese, Dutch, Swedish, German, French, Ukrainian and Russian). See [sources.json](./config/sources.json) for details.
+   - Primarily used for European languages (Spanish, Portuguese, Dutch, Swedish, German, French, Polish, Ukrainian and Russian). See [sources.json](./config/sources.json) for details.
 
 2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs))
    - Current cost: Free (evaluation phase), if we were paying it'd be under $1 per day
