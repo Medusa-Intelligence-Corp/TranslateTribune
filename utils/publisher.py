@@ -92,10 +92,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
                     # Get the front page score
                     article = soup.find('div', class_='article')
-                    try:
-                        front_page_score = float(article['data-front-page-score'])
-                    except (KeyError, ValueError, TypeError):
-                        front_page_score = 0.0
+                    front_page_score = float(article['data-front-page-score'])
+                    
                     article_dict[article_title] = {}
                     article_dict[article_title]["html"] = article_summary
                     article_dict[article_title]["score"] = front_page_score
@@ -108,7 +106,8 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
     sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
     for article_title, article_data in sorted_articles:
-        article_html += article_data['html']
+        if article_data['score'] > 2:
+            article_html += article_data['html']
 
     complete_html = deploy_website(article_html, template_filename, html_filename)
     logging.info(complete_html)

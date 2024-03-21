@@ -48,7 +48,9 @@ def find_html(text):
 def validate_article_html(html):
     soup = BeautifulSoup(html, 'html.parser')
 
-    article_div = soup.find('div', class_='article')
+    article_div = soup.find('div', class_='article', \
+            attrs=lambda attrs: 'data-front-page-score' in attrs and 0 <= \
+            int(attrs['data-front-page-score']) <= 5)
     if not article_div:
         return False
 
