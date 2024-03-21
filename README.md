@@ -95,12 +95,27 @@ tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
 
 Adjust the command based on the actual log file name and its location within the volume.
 
-## Tracking Costs
+Here's an improved version of the API costs section for your GitHub repo:
 
-See the following:
-* $<1 per day [Mistral Usage](https://console.mistral.ai/usage/)
-* Using a little (mostly Claude 3 haiku) and evaluating for free for now [Anthropic Usage](https://console.anthropic.com/settings/logs)
-* Not using currently, GPT-3.5t is worse than Open Mixtral and GPT-4t is too expensive compared to Claude 3 haiku [OpenAI Usage](https://platform.openai.com/usage)
+## API Costs
+
+This project utilizes various AI APIs, each with different pricing models. Here's a breakdown of the current costs and usage:
+
+1. **Mistral AI** ([Usage Dashboard](https://console.mistral.ai/usage/))
+   - Current cost: Less than $1 per day
+   - Mistral (particularly Open Mixtral 8x7) provides powerful AI capabilities at an affordable price point.
+
+2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs))
+   - Current cost: Free (evaluation phase), if we were paying it'd be under $1 per day
+   - Primarily using Claude 3 (haiku) for its strong performance.
+   - Waiting on Anthropic's sales team to get me a contract, I'm probably low on their list given my teensy usage.
+
+3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage))
+   - Current cost: $0 (not actively using)
+   - GPT-3.5 turbo underperforms compared to Mistral's open model, which is also cheaper.
+   - GPT-4 provides OK results but is significantly more expensive than Claude 3 (haiku), which is fantastic.
+
+We continuously monitor and evaluate the cost-effectiveness and performance of each API to optimize our spending while delivering high-quality results. As the project evolves, we may adjust our usage based on the specific requirements and budget constraints.
 
 ## Sister Projects
 
