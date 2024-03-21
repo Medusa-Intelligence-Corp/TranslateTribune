@@ -51,54 +51,55 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             
             logging.info(best_links)
             
-            if best_links is not None:
-                #we are only expecting one link, slice the list to just select the first item
-                best_links[:1]
+            #we are only expecting one link, slice the list to just select the first item
+            link = best_links[0]
+            #sometimes the llm shares the link like "here's the link https://example.com/article."
+            #periods are valid at the end of links, but this almost never happens in practice
+            #so we remove the period here
+            if link.endswith('.'):
+                link = link[:-1]
 
-                for link in best_links:          
-                    if link.endswith('.'):
-                        link = link[:-1]
-                    article_text = fetch_content(link, parser, language)
+            article_text = fetch_content(link, parser, language)
 
-                    article_summary = fetch_llm_response(
-                            article_text, summarizer_template.render(**locals()),
-                            summarizer_model, "html-article")
-                    
-                    # Save the title
-                    soup = BeautifulSoup(article_summary, 'html.parser')
-                    title_div = soup.find('div', class_='article-title')
-                    article_title=title_div.text.strip()
-                   
-                    if title_div:
-                        flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {name}'})
-                        flag_span.string = html.unescape(flag)
-                        title_div.insert(0, flag_span)
-                        title_div.insert(1, ' ')
+            article_summary = fetch_llm_response(
+                    article_text, summarizer_template.render(**locals()),
+                    summarizer_model, "html-article")
+            
+            # Save the title
+            soup = BeautifulSoup(article_summary, 'html.parser')
+            title_div = soup.find('div', class_='article-title')
+            article_title=title_div.text.strip()
+           
+            if title_div:
+                flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {name}'})
+                flag_span.string = html.unescape(flag)
+                title_div.insert(0, flag_span)
+                title_div.insert(1, ' ')
 
-                    content_div = soup.find('div', class_='article-content')
+            content_div = soup.find('div', class_='article-content')
 
-                    if content_div:
-                        link = soup.new_tag('a', href=link)
-                        link.string = f'Read more from {source} (in {language}).'
-                        content_div.append(' ')
-                        content_div.append(link)
+            if content_div:
+                link = soup.new_tag('a', href=link)
+                link.string = f'Read more from {source} (in {language}).'
+                content_div.append(' ')
+                content_div.append(link)
 
-                    title_div = soup.find('div', class_='article-title')
+            title_div = soup.find('div', class_='article-title')
 
-                    if title_div:
-                        title_div['onclick'] = 'toggleArticleDetails(this)'
-                                        
-                    article_summary = str(soup)
+            if title_div:
+                title_div['onclick'] = 'toggleArticleDetails(this)'
+                                
+            article_summary = str(soup)
 
-                    # Get the front page score
-                    article = soup.find('div', class_='article')
-                    front_page_score = float(article['data-front-page-score'])
-                    
-                    article_dict[article_title] = {}
-                    article_dict[article_title]["html"] = article_summary
-                    article_dict[article_title]["score"] = front_page_score
-                    
-                    logging.info(article_summary)
+            # Get the front page score
+            article = soup.find('div', class_='article')
+            front_page_score = float(article['data-front-page-score'])
+            
+            article_dict[article_title] = {}
+            article_dict[article_title]["html"] = article_summary
+            article_dict[article_title]["score"] = front_page_score
+            
+            logging.info(article_summary)
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
