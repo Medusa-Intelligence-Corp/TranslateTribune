@@ -97,18 +97,20 @@ Adjust the command based on the actual log file name and its location within the
 
 Here's an improved version of the API costs section for your GitHub repo:
 
-## API Costs
+## LLM API Costs
 
-This project utilizes various AI APIs, each with different pricing models. Here's a breakdown of the current costs and usage:
+This project utilizes various AI APIs (see [llm.py](./utils/llm.py)), each with different pricing models. Here's a breakdown of the current costs and usage:
 
 1. **Mistral AI** ([Usage Dashboard](https://console.mistral.ai/usage/))
    - Current cost: Less than $1 per day
    - Mistral (particularly Open Mixtral 8x7) provides powerful AI capabilities at an affordable price point.
+   - Primarily used for European languages (Spanish, Portugese, Dutch, Swedish, German, French, Ukranian, Russian). See [sources.json](./config/sources.json) for details.
 
 2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs))
    - Current cost: Free (evaluation phase), if we were paying it'd be under $1 per day
    - Primarily using Claude 3 (haiku) for its strong performance.
    - Waiting on Anthropic's sales team to get me a contract, I'm probably low on their list given my teensy usage.
+   - Primarily used for Asian, African and Middle-Eastern Languages (Mandarin, Korean, Japanese, Arabic, Persian, Turkish, Hebrew, Swahili). See [sources.json](./config/sources.json) for details.
 
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage))
    - Current cost: $0 (not actively using)
