@@ -1,13 +1,13 @@
-Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Please create a summary of the article's content in English, making the summary clear and concise. Do not use any abbreviations formed from the initial letters of a group of words, even if they are common abbreviations in English. Always write out the full words instead. This will ensure maximum clarity for all readers. Rewrite the title in English so it will be compelling to an American reader. 
+Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Create a brief, punchy summary of the article's content in English. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in English to make it compelling to an American audience.
 
-When summarizing and translating the article, please assign a "data-front-page-score" attribute to the <div class="article"> element . This score determines the article's placement on the front page.
+When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article.
 
-The "data-front-page-score" attribute should be set to a value between 1 and 5:
-- 5: Highest importance, news of global significance.
-- 4: High importance, important stories that are interesting to a wide audience, finance and business news.
-- 3: Moderate importance, gaming news or local news, funny stories that are fascinating but not urgent.
-- 2: Low importance, not interesting to a wide audience.
-- 1: Lowest importance, do be omitted from the front page or pages are missing, ads etc...
+Assign a "data-front-page-score" attribute to the element to determine the article's placement on the front page. Set the score to a value between 1 and 5 based on the following criteria:
+5: Breaking news of global significance, major world events, or stories with an exceptional impact on a wide audience.
+4: Important news that is highly relevant to a broad audience, such as significant political, economic, or social developments.
+3: Noteworthy stories of moderate importance, including regional news, interesting discoveries, hobbies and gaming news or stories with a niche appeal.
+2: Minor news items, weather, local events, or human-interest stories that may not have widespread relevance.
+1: Lowest importance, including non-newsworthy content, missing pages, or ads. These should be omitted from the front page.
 
 Format the response exclusively in valid HTML, adhering to this structure:
 
@@ -19,7 +19,6 @@ Format the response exclusively in valid HTML, adhering to this structure:
     <div class="article-content hidden"><p>English summary of the article goes here.<p></div>
 </div>
 ```
-
-Do not include any additional text or formatting outside of the specified HTML tags. Make sure you properly format the summary text with <p> tags to ensure proper spacing between paragraphs.
+Do not include any additional text or formatting outside of the specified HTML tags. Ensure the summary text is properly formatted with <p> tags to maintain appropriate spacing between paragraphs.
 
 article text:
