@@ -137,7 +137,6 @@ For more information, questions, or to get involved, please see [https://medusai
 
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
-
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
 - [ ] Download docker, run the project, be able to get simple output.
@@ -146,3 +145,7 @@ Join us in our mission to make global news accessible to everyone, regardless of
 - [ ] Implement a regional filter on the homepage (Asia, Europe, etc...) see [index.html](./static/index.html).
 - [ ] Add Google Gemini models and add them as an option in [llm.py](./utils/llm.py). Test and see if they can beat the current defaults given the cost  
 - [ ] Add a bluesky bot integration that shares the top story to bluesky using their [Python API](https://atproto.blue/en/latest/).
+
+## BRAD'S WISHLIST
+- [ ] ($120/language) Add foreign language editions (that serve the site in Chinese let's say and scrape US and other sources), recruit 'editors' to manage sources and be daily readers/testers.
+- [ ] ($360/yr) Setup .onion serving on Vultr server via [EOTK](https://github.com/alecmuffett/eotk) see [guide here](https://shen.hong.io/making-websites-on-tor-using-eotk/).
