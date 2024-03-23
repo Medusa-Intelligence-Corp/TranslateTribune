@@ -39,8 +39,6 @@ At Translate Tribune, we are dedicated to providing our users with a seamless, p
 
 ## Getting Started
 
-To explore our project and start reading the summaries, visit our GitHub repository. We welcome feedback and contributions to help expand our coverage and improve our translations.
-
 To run the scraper and generate an index.html to the console do the following:
 * ```git clone``` this repo
 * ```cd``` to the project folder
