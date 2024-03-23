@@ -39,11 +39,12 @@ At Translate Tribune, we are dedicated to providing our users with a seamless, p
 
 ## Getting Started
 
-To run the scraper and generate an index.html to the console do the following:
+To run the scraper and generate the html for the site do the following:
 * ```git clone``` this repo
 * ```cd``` to the project folder
 * ```bash deploy/build.sh``` to build the docker container
 * ```bash deploy/run.sh``` to run the curation and translation job
+* output will appear in the ```debug``` folder, if you run with AWS credentials you can push to S3 as well.
 
 If you'd like to edit the code note the following structure:
 * [```publisher.py```](./utils/publisher.py) is the main loop that controls the job
