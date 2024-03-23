@@ -5,12 +5,6 @@ When summarizing and translating the article, highlight the key points and any i
 Assign a "data-front-page-score" attribute to the element to determine the article's placement on the front page. Set the score to a value between 1 and 5 based on the following criteria:
 
 5: Breaking news of global significance, major world events, or stories with an exceptional impact on a wide audience.
-<<<<<<< HEAD
-4: Important news that is relevant to a broad audience, such as significant political, financial or business news.
-3: Noteworthy stories of moderate importance, including interesting discoveries, video game, gadget news or stories.
-2: Minor news items, weather, local events, or human-interest stories.
-1: Lowest importance, including non-newsworthy content, missing pages, or ads. These should be omitted from the front page.
-=======
 Examples:
 - Outbreak of a new global pandemic
 - Major international conflicts or acts of terrorism
@@ -51,7 +45,6 @@ Examples:
 - Any content that is clearly not a news article or informative piece
 
 If you encounter an article that does not clearly fit into one of these categories, consider its overall importance, relevance, and potential impact on the audience when assigning a score. 
->>>>>>> f1001d1 (scoring guide)
 
 Format the response exclusively in valid HTML, adhering to this structure:
 
