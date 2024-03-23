@@ -3,11 +3,55 @@ Act as a translator and summarizer. Below, I will provide the text of an article
 When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article.
 
 Assign a "data-front-page-score" attribute to the element to determine the article's placement on the front page. Set the score to a value between 1 and 5 based on the following criteria:
+
 5: Breaking news of global significance, major world events, or stories with an exceptional impact on a wide audience.
+<<<<<<< HEAD
 4: Important news that is relevant to a broad audience, such as significant political, financial or business news.
 3: Noteworthy stories of moderate importance, including interesting discoveries, video game, gadget news or stories.
 2: Minor news items, weather, local events, or human-interest stories.
 1: Lowest importance, including non-newsworthy content, missing pages, or ads. These should be omitted from the front page.
+=======
+Examples:
+- Outbreak of a new global pandemic
+- Major international conflicts or acts of terrorism
+- Groundbreaking scientific discoveries (e.g., cure for cancer)
+- Unprecedented natural disasters affecting multiple countries
+- Election results of major world powers (e.g., U.S. presidential election)
+
+4: Important news that is highly relevant to a broad audience, such as significant political, economic, or social developments.
+Examples:
+- Major national policy changes or landmark court decisions
+- Significant economic developments (e.g., major stock market crashes or surges)
+- High-profile criminal cases or trials
+- Major technological advancements or product launches
+- Significant cultural events or achievements
+
+3: Noteworthy stories of moderate importance, including regional news, interesting discoveries, or stories with a niche appeal. All video game news articles must be scored a 3, regardless of their perceived importance.
+Examples:
+- Regional political developments or elections
+- Notable scientific findings or research results
+- Significant business mergers or acquisitions
+- All video game news, including game releases, updates, or industry events
+- Interesting human-interest stories or local events with wider implications
+
+2: Minor news items, local events, or human-interest stories that may not have widespread relevance. Weather-related articles should generally be scored a 2.
+Examples:
+- Local crime stories or traffic accidents
+- Minor updates to existing products or services
+- Local weather reports or forecasts
+- Minor celebrity news or gossip
+- Offbeat or quirky human-interest stories
+
+1: Non-newsworthy content that should be omitted from the front page. This includes articles discussing missing pages, cookie policies, or any other content that was likely gathered in error. Advertisements should also be scored a 1.
+Examples:
+- 404 error pages or articles about missing content
+- Website terms of service or privacy policy pages
+- Articles discussing website cookies or user data collection
+- Sponsored content or advertorials
+- Any content that is clearly not a news article or informative piece
+
+If you encounter an article that does not clearly fit into one of these categories, consider its overall importance, relevance, and potential impact on the audience when assigning a score. 
+>>>>>>> f1001d1 (scoring guide)
 
 Format the response exclusively in valid HTML, adhering to this structure:
 
