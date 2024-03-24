@@ -41,7 +41,7 @@
 ## Development Principles 🛠️
 
 - **🔒 Privacy by Design**: TranslateTribune prioritizes user privacy by eschewing cookies, minimizing JavaScript, and eliminating trackers. Our commitment to privacy is outlined in our [privacy policy](https://translatetribune.com/privacy.html).
-- **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully Dockerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere, including .onion sites.
+- **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully Dockerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere.
 - **🛡️ Secure and Resilient**: We collect no user data and keep no logs. Our static architecture makes the site resilient and adaptable to a variety of hosting environments worldwide.
 
 ## Getting Started 🏁
@@ -70,12 +70,12 @@
 ## LLM API Costs 💸 and Info
 TranslateTribune uses various AI APIs with different pricing models:
 1. Mistral AI ([Usage Dashboard](https://console.mistral.ai/usage/)): ~$0.18/day, primarily for European languages (see [sources.json](./config/sources.json))
-2. Anthropic ([Usage Logs](https://console.anthropic.com/settings/logs)): Free evaluation phase, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
+2. Anthropic ([Usage Logs](https://console.anthropic.com/settings/logs)): <$1/day, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## Sister Projects 👯‍♀️
 - 📚 To create [books.html](http://translatetribune.com/books.html) we use [Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
-- 🎮 To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross), and have more free and open source games coming soon!
+- 🎮 To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
 
 ## License and Trademark 📜
 TranslateTribune is free (as in speech) and open source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
