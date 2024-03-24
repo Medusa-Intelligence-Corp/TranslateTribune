@@ -1,12 +1,12 @@
 <h1 align="center">
         <img src="./static/icon.png" alt="Translate Tribune">
- TranslateTribune
+        <br>
+        <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
     <p align="center">
-        <p align="center">Free and open-source project that leverages LLMs (Open Mixtral and Claude 3 Haiku) to curate, translate, and summarize news articles from diverse countries.
+        <p align="center">A free and open-source project that leverages LLMs (Open Mixtral and Claude 3 Haiku) to curate, translate, and summarize news articles from diverse countries. Read our Daily English edition at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
         <br>
     </p>
-<h4 align="center"><a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a></h4>
 <h4 align="center">
     <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
         <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
