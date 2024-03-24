@@ -74,15 +74,11 @@ TranslateTribune uses various AI APIs with different pricing models:
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## Sister Projects 👯‍♀️
-- [https://github.com/Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
-- [https://github.com/predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
+- To create [books.html](http://translatetribune.com/books.html) we use ([Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
+- To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
 
 ## License and Trademark 📜
 TranslateTribune is open-source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
-
-## Get Involved 🤝
-- Discord: [https://discord.gg/bEPkfhbwE4](https://discord.gg/bEPkfhbwE4)
-- Email: [editor@translatetribune.com](mailto:editor@translatetribune.com)
 
 ## Project Wishlist
 
