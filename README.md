@@ -17,6 +17,9 @@
     <a href="https://discord.gg/bEPkfhbwE4">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
     </a>
+    <a href="https://github.com/Medusa-ML/TranslateTribune/tree/main?tab=readme-ov-file#project-wishlist-and--required-%EF%B8%8F">
+    <img alt="Project Wishlist" src="https://img.shields.io/badge/%F0%9F%92%B0_Project_Wishlist-blue">
+    </a>
 </h4>
 
 ## Mission 🎯
@@ -81,15 +84,11 @@ TranslateTribune is open-source under the [GPLv3 License](./LICENSE). The name "
 - Email: [editor@translatetribune.com](mailto:editor@translatetribune.com)
 
 ## Project Wishlist (and $ required) 🧞‍♂️
-- [ ] Foreign Language Editions ($120/language)
-- [ ] .onion Service Setup ($360/yr) using [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite)
-- [ ] Stable Diffusion Generated Images ($1000+/yr) using [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate)
 
-## TODO (for Tanner) 📝
-- [ ] Setup MistralAI keys
-- [ ] Run the project locally, add new sources to [```sources_debug.json```](./config/sources_debug.json)
-- [ ] Refine LLM instructions in [```summarizer.txt```](./config/summarizer.txt) and [```finder.txt```](./config/finder.txt)
-- [ ] Implement regional filter on homepage ([```index.html```](./static/index.html))
-- [ ] Add Google Gemini models to [```llm.py```](./utils/llm.py)
-- [ ] Develop a Bluesky bot to share the top story(ies) from each edition (see [BlueSky Python SDK](https://atproto.blue/en/latest/))
+The project is currently fully funded. However, if we raise more money we can add the following features:
 
+- [ ] **Foreign Language Editions** ($120/language)
+- [ ] **.onion Service Setup** ($360/yr) using [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite)
+- [ ] **Stable Diffusion Generated Images** ($1000+/yr) using [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate)
+
+To donate, support us on [Patreon @ $10/month](https://www.patreon.com/bradflaugher) or for larger donations please [make a donation via Coinbase](https://commerce.coinbase.com/checkout/ea43ea82-2708-4562-966b-bf30800ec592).
