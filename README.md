@@ -149,4 +149,4 @@ Join us in our mission to make global news accessible to everyone, regardless of
 ## BRAD'S WISHLIST
 - [ ] ($120/language) Add foreign language editions (that serve the site in Chinese let's say and scrape US and other sources), recruit 'editors' to manage sources and be daily readers/testers.
 - [ ] ($360/yr) Setup .onion serving on Vultr server via [EOTK](https://github.com/alecmuffett/eotk) see [guide here](https://shen.hong.io/making-websites-on-tor-using-eotk/). Could also try this with [torwebsite container](https://github.com/3xploitGuy/torwebsite) which might be better given the small deployment size.
-- [ ] ($1000+/yr) Add Stable Diffusion Generated images with (Stable Diffusion API)[https://platform.stability.ai/docs/api-reference#tag/Generate]
+- [ ] ($1000+/yr) Add Stable Diffusion Generated images with [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate)
