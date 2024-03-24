@@ -4,7 +4,7 @@
         <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
     <p align="center">
-        <p align="center">A free and open-source project that leverages LLMs (Open Mixtral and Claude 3 Haiku) to curate, translate, and summarize news articles from diverse countries. Read our Daily English edition at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
+        <p align="center">A free and open-source project that leverages LLMs (<a href="https://mistral.ai/news/mixtral-of-experts/" target="_blank">Open Mixtral</a> and <a href="https://www.anthropic.com/news/claude-3-family" target="_blank">Claude 3 Haiku</a>) to curate, translate, and summarize news articles from diverse countries. Read our daily English edition at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
         <br>
     </p>
 <h4 align="center">
@@ -17,8 +17,8 @@
     <a href="https://discord.gg/bEPkfhbwE4">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
     </a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/tree/main?tab=readme-ov-file#project-wishlist-and--required-%EF%B8%8F">
-    <img alt="Project Wishlist" src="https://img.shields.io/badge/%F0%9F%92%B0_Project_Wishlist-blue">
+    <a href="https://github.com/Medusa-ML/TranslateTribune/tree/main?tab=readme-ov-file#project-wishlist">
+    <img alt="Project Wishlist" src="https://img.shields.io/badge/%F0%9F%92%B0_Project_Wishlist-purple">
     </a>
 </h4>
 
@@ -67,10 +67,11 @@
     tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
     ```
 
-## LLM API Costs 💸
+## LLM API Costs 💸 and Info
 TranslateTribune uses various AI APIs with different pricing models:
 1. Mistral AI ([Usage Dashboard](https://console.mistral.ai/usage/)): ~$0.18/day, primarily for European languages (see [sources.json](./config/sources.json))
 2. Anthropic ([Usage Logs](https://console.anthropic.com/settings/logs)): Free evaluation phase, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
+3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## Sister Projects 👯‍♀️
 - [https://github.com/Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
@@ -83,12 +84,20 @@ TranslateTribune is open-source under the [GPLv3 License](./LICENSE). The name "
 - Discord: [https://discord.gg/bEPkfhbwE4](https://discord.gg/bEPkfhbwE4)
 - Email: [editor@translatetribune.com](mailto:editor@translatetribune.com)
 
-## Project Wishlist (and $ required) 🧞‍♂️
+## Project Wishlist
 
-The project is currently fully funded. However, if we raise more money we can add the following features:
+We are grateful for the full funding of our project. However, with additional support, we can enhance the project with the following features:
 
-- [ ] **Foreign Language Editions** ($120/language)
-- [ ] **.onion Service Setup** ($360/yr) using [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite)
-- [ ] **Stable Diffusion Generated Images** ($1000+/yr) using [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate)
+- [ ] **Foreign Language Editions** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages.
+- [ ] **.onion Service Setup** ($360 per year) - Enhance privacy and security by setting up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite).
+- [ ] **Stable Diffusion Generated Images** ($1000+ per year) - Integrate AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate) to enhance the visual appeal of our project.
 
-To donate, support us on [Patreon @ $10/month](https://www.patreon.com/bradflaugher) or for larger donations please [make a donation via Coinbase](https://commerce.coinbase.com/checkout/ea43ea82-2708-4562-966b-bf30800ec592).
+If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
+
+1. **Patreon**: Become a patron and pledge a monthly donation of $10 or more on [our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
+
+2. **Coinbase**: For larger one-time donations, please consider [making a donation via Coinbase](https://commerce.coinbase.com/checkout/ea43ea82-2708-4562-966b-bf30800ec592). Your generous contribution will significantly accelerate the development of new features.
+
+Every donation, no matter the size, makes a difference and brings us closer to our goals. We appreciate your support and dedication to our project. Together, we can make a meaningful impact.
+
+Thank you for considering supporting us!
