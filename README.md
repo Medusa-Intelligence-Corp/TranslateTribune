@@ -2,17 +2,17 @@
 
 Welcome to the source code for [https://TranslateTribune.com](https://translatetribune.com), a project dedicated to breaking down language barriers and providing a daily dose of global insights. Our mission is to curate and translate news from a broad array of countries, both friendly and hostile to the US, making international news accessible to English-speaking audiences.
 
-## Motivation
+## Motivation 🌍✨
 
-TranslateTribune is an autonomous, open-source project that leverages AI to select, translate, and summarize news articles from around the world. It aims to:
+**TranslateTribune** is an autonomous, open-source project that leverages AI to select, translate, and summarize news articles from around the world. It aims to:
 
-* Overcome language barriers and media biases
-* Highlight diverse perspectives
-* Prove the potential of self-updating, self-improving projects
-* Demonstrate the limitations of copyright in the age of AI
-* Provide an alternative to expensive news subscriptions
-* Encourage a more informed and diverse global discourse
-* Prove that open source projects that don't serve ads and don't track users can thrive
+- 🚀 Overcome language barriers and media biases
+- 🌈 Highlight diverse perspectives
+- 🔄 Prove the potential of self-updating, self-improving projects
+- ⚖️ Demonstrate the limitations of copyright in the age of AI
+- 💡 Provide an alternative to expensive news subscriptions
+- 🗣️ Encourage a more informed and diverse global discourse
+- 🌟 Prove that open source projects that don't serve ads and don't track users can thrive
 
 TranslateTribune offers a cost-effective way to access a wide range of viewpoints. This project tries to hack the technological, legal, psychological, and budgetary aspects of the news industry. TranslateTribune seeks to contribute to a more empathetic and connected world.
 
@@ -37,64 +37,55 @@ At Translate Tribune, we are dedicated to providing our users with a seamless, p
 - **No Dependency on Heavy Frameworks**: Our choice to avoid complex JavaScript frameworks and tools like LangChain is intentional, aiming for a lightweight, statically hosted site that respects privacy and ensures portability.
 - **Code Portability**: Our codebase is designed to be easily deployable anywhere, we are heavy users of Docker and we love container Linux.
 
-## Getting Started
+## Getting Started 🚀
 
-To run the scraper and generate the html for the site do the following:
-* ```git clone``` this repo
-* ```cd``` to the project folder
-* ```bash deploy/build.sh``` to build the docker container
-* ```bash deploy/run.sh``` to run the curation and translation job
-* output will appear in the ```debug``` folder, if you run with AWS credentials you can push to S3 as well.
+To get TranslateTribune up and running, follow these steps to run the scraper and generate the HTML for the site:
 
-If you'd like to edit the code note the following structure:
-* [```publisher.py```](./utils/publisher.py) is the main loop that controls the job
-* [```browser.py```](./utils/browser.py) is how text is extracted from sites
-* [```llm.py```](./utils/llm.py) handles any LLM connections and formatting
-* [```templater.py```](./utils/templater.py) creates the index.html and deploys it to AWS s3
+1. 📥 Clone this repository:
+   ```
+   git clone <repository-url>
+   ```
+2. 📂 Navigate to the project folder:
+   ```
+   cd <project-folder-name>
+   ```
+3. 🏗️ Build the Docker container:
+   ```
+   bash deploy/build.sh
+   ```
+4. 🌐 Run the curation and translation job:
+   ```
+   bash deploy/run.sh
+   ```
+5. 📁 Output will appear in the ```debug``` folder. If you run with AWS credentials, you can also push to S3.
+
+### Code Structure 🛠️
+
+If you're interested in editing the code, here's a brief overview of the project structure:
+
+- [```publisher.py```](./utils/publisher.py): The main loop that controls the job.
+- [```browser.py```](./utils/browser.py): Responsible for extracting text from sites.
+- [```llm.py```](./utils/llm.py): Handles any Large Language Model (LLM) connections and formatting.
+- [```templater.py```](./utils/templater.py): Creates the ```index.html``` and deploys it to AWS S3.
 
 ### Viewing Run Logs
 
-### Accessing Logs in the Docker Volume `tt-logs`
+#### Accessing Logs in Docker Volume ```tt-logs```
 
-Follow these steps to access the logs stored in the Docker volume named `tt-logs`.
+Quickly access logs stored in the ```tt-logs``` Docker volume:
 
-#### 1. Confirm Volume Existence
+1. **Check Volume**: Verify ```tt-logs``` exists with ```docker volume ls```.
+2. **Find Mount Point**: Use ```docker volume inspect tt-logs``` to find the volume's mount point in the ```Mountpoint``` field.
+3. **Access Logs**: Navigate to the mount point and use ```less``` or ```tail -f``` to view ```publisher.log``` (or your specific log file).
 
-First, ensure the `tt-logs` volume exists by listing all Docker volumes:
-
-```bash
-docker volume ls
-```
-
-If `tt-logs` appears in the list, you can move on to the next step.
-
-#### 2. Locate the Volume Mount Point
-
-To find out where the `tt-logs` volume is mounted on your host system, inspect the volume:
-
-```bash
-docker volume inspect tt-logs
-```
-
-In the output, locate the `Mountpoint` field. This field indicates the path on the host system where the volume is mounted.
-
-#### 3. View the Logs
-
-With the mount point identified, you can now access the logs. If, for example, the logs are stored in a file named `publisher.log` within the volume, and the mount point is `/var/lib/docker/volumes/tt-logs/_data`, you can view the logs using:
-
+Example to view logs:
 ```bash
 less /var/lib/docker/volumes/tt-logs/_data/publisher.log
 ```
-
-you can also ```tail``` the logs while a job is running like 
-
+Or, to follow logs in real-time:
 ```bash
 tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
 ```
-
-Adjust the command based on the actual log file name and its location within the volume.
-
-Here's an improved version of the API costs section for your GitHub repo:
 
 ## LLM API Costs
 
@@ -125,17 +116,20 @@ In addition to this core repository, TranslateTribune uses the following repos t
 * [https://github.com/Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
 * [https://github.com/predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
 
-## License
+## License 📜
 
-TranslateTribune is open-source and available under the GPLv3 License. See the LICENSE file for more details.
+**TranslateTribune** is proudly open-source and is distributed under the **GPLv3 License**. For more information, please refer to the [LICENSE](./LICENSE) file in this repository.
 
-The mark "TranslateTribune" is a trademark (registered under Code 41: Newspaper Publishing) of [Medusa Intelligence Corporation](https://medusaintel.co).
+Additionally, the name "TranslateTribune" is a registered trademark under Code 41: Newspaper Publishing, owned by [Medusa Intelligence Corporation](https://medusaintel.co). 🛡️
 
-## Contributing and Contacting Us
+## Get Involved 🤝
 
-For more information, questions, or to get involved, please see [https://medusaintel.co](https://medusaintel.co) or email [editor@translatetribune.com](mailto:editor@translatetribune.com).
+Interested in contributing or have questions? We'd love to hear from you! Here's how you can reach out or get involved:
 
-Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
+- **Website**: To join or discord see the hompeage for [Medusa Intelligence Corporation](https://medusaintel.co).
+- **Email**: Send your inquiries or thoughts to [editor@translatetribune.com](mailto:editor@translatetribune.com).
+
+Join our mission to break down language barriers and make global news accessible to all. Together, we can foster a deeper understanding of our world. 🌐
 
 ## TODO (for Tanner)
 - [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now).
