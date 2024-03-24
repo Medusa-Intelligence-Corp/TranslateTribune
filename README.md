@@ -12,7 +12,7 @@ TranslateTribune is an autonomous, open-source project that leverages AI to sele
 * Demonstrate the limitations of copyright in the age of AI
 * Provide an alternative to expensive news subscriptions
 * Encourage a more informed and diverse global discourse
-* Prove that open source projects that don't serve ads and don't track users can thrive.
+* Prove that open source projects that don't serve ads and don't track users can thrive
 
 TranslateTribune offers a cost-effective way to access a wide range of viewpoints. This project tries to hack the technological, legal, psychological, and budgetary aspects of the news industry. TranslateTribune seeks to contribute to a more empathetic and connected world.
 
@@ -138,15 +138,15 @@ For more information, questions, or to get involved, please see [https://medusai
 Join us in our mission to make global news accessible to everyone, regardless of language barriers. Together, we can gain a deeper understanding of the world around us.
 
 ## TODO (for Tanner)
-- [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now)
+- [ ] Setup your own MistralAI keys (Skip Anthropic and OpenAI for now).
 - [ ] Download docker, run the project, be able to get simple output.
 - [ ] In your local run, add some new sources to your sources_debug.json and make sure they produce new articles. Also make sure you can see what's happening in the logs, see [config](./config).
 - [ ] Conduct prompt engineering: experiment, refine, and enhance LLM instructions (see [summarizer.txt](./config/summarizer.txt) and [finder.txt](./config/finder.txt)).
 - [ ] Implement a regional filter on the homepage (Asia, Europe, etc...) see [index.html](./static/index.html).
-- [ ] Add Google Gemini models and add them as an option in [llm.py](./utils/llm.py). Test and see if they can beat the current defaults given the cost  
+- [ ] Add Google Gemini models and add them as an option in [llm.py](./utils/llm.py). Test and see if they can beat the current defaults given the cost.
 - [ ] Add a bluesky bot integration that shares the top story to bluesky using their [Python API](https://atproto.blue/en/latest/).
 
 ## BRAD'S WISHLIST
 - [ ] ($120/language) Add foreign language editions (that serve the site in Chinese let's say and scrape US and other sources), recruit 'editors' to manage sources and be daily readers/testers.
 - [ ] ($360/yr) Setup .onion serving on Vultr server via [EOTK](https://github.com/alecmuffett/eotk) see [guide here](https://shen.hong.io/making-websites-on-tor-using-eotk/). Could also try this with [torwebsite container](https://github.com/3xploitGuy/torwebsite) which might be better given the small deployment size.
-- [ ] ($1000+/yr) Add Stable Diffusion Generated images with [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate)
+- [ ] ($1000+/yr) Add Stable Diffusion Generated images with [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate).
