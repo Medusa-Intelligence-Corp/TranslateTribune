@@ -84,9 +84,11 @@ TranslateTribune is free (as in speech) and open source under the [GPLv3 License
 
 Our project is fully funded for its current functionality 🙌. However, with additional support, we can enhance the project with the following features:
 
-- [ ] **🌍🌎🌏 Foreign Language Editions 🇪🇸🇫🇷🇩🇪🇮🇹🇵🇹🇷🇺🇯🇵🇰🇷🇨🇳🇺🇦** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages. Each language will need funding for API calls, hosting and DDoS protection and an editor to manage sources and be a daily reader and possibly moderator.
-- [ ] **🕵️‍♂️ .onion Service Setup** ($360 per year) - Enhance privacy and security by setting up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite).
-- [ ] **🖼️ Stable Diffusion Generated Images** ($1000+ per year) - Integrate AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate) to enhance the visual appeal of our project.
+
+- [ ] **🇨🇳🇪🇸🇫🇷🇩🇪🇮🇹🇯🇵🇰🇷🇵🇹🇷🇺🇺🇦 Publish TT in More Languages To Reach a Global Audience** ($120 per language) - Expand our project's reach by translating it into various languages. Each language requires funding for API calls, hosting, DDoS protection, and an editor to read daily and moderate sources as needed.
+- [ ]🕵️‍♂️ Improve Privacy and Security with .onion Service ($360 per year) - Set up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite) to enhance the privacy and security of our project.
+- [ ] 🖼️ Enhance Visuals with AI-Generated Images ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the Stable Diffusion API.
+
 If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
 
 1. **Patreon**: Become a patron and pledge a monthly donation of $10 or more on [our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
