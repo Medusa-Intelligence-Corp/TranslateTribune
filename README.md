@@ -74,17 +74,17 @@ TranslateTribune uses various AI APIs with different pricing models:
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## Sister Projects 👯‍♀️
-- To create [books.html](http://translatetribune.com/books.html) we use ([Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
-- To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
+- 📚 To create [books.html](http://translatetribune.com/books.html) we use [Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
+- 🎮 To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross), and have more free and open source games coming soon!
 
 ## License and Trademark 📜
-TranslateTribune is open-source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
+TranslateTribune is free (as in speech) and open source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
 
 ## Project Wishlist
 
 We are grateful for the full funding of our project. However, with additional support, we can enhance the project with the following features:
 
-- [ ] **Foreign Language Editions** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages.
+- [ ] **Foreign Language Editions** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages. Each language will need funding for API calls, hosting and DDoS protection and an editor to manage sources and be a daily reader and possibly moderator.
 - [ ] **.onion Service Setup** ($360 per year) - Enhance privacy and security by setting up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite).
 - [ ] **Stable Diffusion Generated Images** ($1000+ per year) - Integrate AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate) to enhance the visual appeal of our project.
 
