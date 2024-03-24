@@ -69,8 +69,8 @@
 
 ## LLM API Costs 💸 and Info
 TranslateTribune uses various AI APIs with different pricing models:
-1. Mistral AI ([Usage Dashboard](https://console.mistral.ai/usage/)): ~$0.18/day, primarily for European languages (see [sources.json](./config/sources.json))
-2. Anthropic ([Usage Logs](https://console.anthropic.com/settings/logs)): <$1/day, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
+1. **Mistral AI** ([Usage Dashboard](https://console.mistral.ai/usage/)): ~$0.18/day, primarily for European languages (see [sources.json](./config/sources.json))
+2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs)): <$1/day, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## Sister Projects 👯‍♀️
