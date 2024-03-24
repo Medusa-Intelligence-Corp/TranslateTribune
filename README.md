@@ -87,7 +87,7 @@ Our project is fully funded for its current functionality 🙌. However, with ad
 
 - [ ] **🇨🇳🇪🇸🇫🇷🇩🇪🇮🇹🇯🇵🇰🇷🇵🇹🇷🇺🇺🇦 Publish TT in More Languages To Reach a Global Audience** ($120 per language) - Expand our project's reach by translating it into various languages. Each language requires funding for API calls, hosting, DDoS protection, and an editor to read daily and moderate sources as needed.
 - [ ] **🕵️‍♂️ Improve Privacy and Security with .onion Service** ($360 per year) - Set up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite) to enhance the privacy and security of our project.
-- [ ] **🖼️ Enhance Visuals with AI-Generated Images** ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the Stable Diffusion API.
+- [ ] **🖼️ Enhance Visuals with AI-Generated Images** ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/getting-started).
 
 If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
 
