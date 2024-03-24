@@ -1,5 +1,5 @@
 <h1 align="center">
-        <img src="./static/favicon-32x32.png" alt="Translate Tribune">
+        <img src="./static/icon.png" alt="Translate Tribune">
  TranslateTribune
     </h1>
     <p align="center">
@@ -10,7 +10,6 @@
 <h4 align="center">
     <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
         <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
-
     </a>
     <a href="https://github.com/Medusa-ML/TranslateTribune/actions/workflows/build-and-push.yml" target="_blank">
         <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Medusa-ML/TranslateTribune/build-and-push.yml">
