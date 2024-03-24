@@ -82,12 +82,11 @@ TranslateTribune is free (as in speech) and open source under the [GPLv3 License
 
 ## Project Wishlist
 
-We are grateful for the full funding of our project. However, with additional support, we can enhance the project with the following features:
+Our project is fully funded for its current functionality 🙌. However, with additional support, we can enhance the project with the following features:
 
-- [ ] **Foreign Language Editions** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages. Each language will need funding for API calls, hosting and DDoS protection and an editor to manage sources and be a daily reader and possibly moderator.
-- [ ] **.onion Service Setup** ($360 per year) - Enhance privacy and security by setting up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite).
-- [ ] **Stable Diffusion Generated Images** ($1000+ per year) - Integrate AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate) to enhance the visual appeal of our project.
-
+- [ ] **🌍🌎🌏 Foreign Language Editions 🇪🇸🇫🇷🇩🇪🇮🇹🇵🇹🇷🇺🇯🇵🇰🇷🇨🇳** ($120 per language) - Make our project accessible to a wider audience by translating it into multiple languages. Each language will need funding for API calls, hosting and DDoS protection and an editor to manage sources and be a daily reader and possibly moderator.
+- [ ] **🕵️‍♂️ .onion Service Setup** ($360 per year) - Enhance privacy and security by setting up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite).
+- [ ] **🖼️ Stable Diffusion Generated Images** ($1000+ per year) - Integrate AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/api-reference#tag/Generate) to enhance the visual appeal of our project.
 If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
 
 1. **Patreon**: Become a patron and pledge a monthly donation of $10 or more on [our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
