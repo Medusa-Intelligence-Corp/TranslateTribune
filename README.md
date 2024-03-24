@@ -17,7 +17,7 @@
     <a href="https://discord.gg/bEPkfhbwE4">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
     </a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/tree/main?tab=readme-ov-file#project-wishlist">
+    <a href="#project-wishlist">
     <img alt="Project Wishlist" src="https://img.shields.io/badge/%F0%9F%92%B0_Project_Wishlist-purple">
     </a>
 </h4>
