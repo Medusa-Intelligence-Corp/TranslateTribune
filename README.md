@@ -1,6 +1,24 @@
-# TranslateTribune: Breaking Language Barriers in Global News 🌍📰
+<h1 align="center">
+        <img src="./static/favicon-32x32.png" alt="Translate Tribune">
+ TranslateTribune
+    </h1>
+    <p align="center">
+        <p align="center">Free and open-source project that leverages LLMs (Open Mixtral and Claude 3 Haiku) to curate, translate, and summarize news articles from diverse countries.
+        <br>
+    </p>
+<h4 align="center"><a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a></h4>
+<h4 align="center">
+    <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
+        <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
 
-TranslateTribune ([https://TranslateTribune.com](https://translatetribune.com)) is an open-source project that leverages AI to curate, translate, and summarize news articles from diverse countries, making international news accessible to English-speaking audiences. 🤖🗞️
+    </a>
+    <a href="https://github.com/Medusa-ML/TranslateTribune/actions/workflows/build-and-push.yml" target="_blank">
+        <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Medusa-ML/TranslateTribune/build-and-push.yml">
+    </a>
+    <a href="https://discord.gg/bEPkfhbwE4">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
+    </a>
+</h4>
 
 ## Mission 🎯
 
@@ -56,7 +74,7 @@ TranslateTribune uses various AI APIs with different pricing models:
 - [https://github.com/Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
 - [https://github.com/predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
 
-## License 📜
+## License and Trademark 📜
 TranslateTribune is open-source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
 
 ## Get Involved 🤝
