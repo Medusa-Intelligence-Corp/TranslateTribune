@@ -1,4 +1,4 @@
-Act as a translator and summarizer. Below, I will provide the text of an article in {{ language }}. Create a brief, punchy summary of the article's content in English. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in English to make it compelling to an American audience.
+Act as a translator and summarizer. Below, I will provide the text of an article in {{ source_language }}. Create a brief, punchy summary of the article's content in {{ publishing_language }}. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in English to make it compelling to an American audience.
 
 When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article.
 
@@ -51,9 +51,9 @@ Format the response exclusively in valid HTML, adhering to this structure:
 ```
 <div class="article" data-front-page-score="0">
     <div class="article-title">
-        Title in English goes here
+        Title in {{ publishing_language }} goes here
     </div>
-    <div class="article-content hidden"><p>English summary of the article goes here.<p></div>
+    <div class="article-content hidden"><p>{{ publishing_language }} summary of the article goes here.<p></div>
 </div>
 ```
 Do not include any additional text or formatting outside of the specified HTML tags. Ensure the summary text is properly formatted with <p> tags to maintain appropriate spacing between paragraphs.

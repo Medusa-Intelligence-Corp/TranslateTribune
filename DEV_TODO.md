@@ -1,20 +1,13 @@
-### Quick
-- [ ] Add templated translate to {{ to_language }} to summary.txt instructions, differentiate to and from language in code.
-- [ ] Add env Variable with to_language
-- [ ] Exclude all sources where language = to_language
-- [ ] Add Timezone variable lookup that depends on to_language, format
-- [ ] Rename games.html to nonogram.html
-- [ ] Create huge translated pages, translate privacy.html games.html and howto.html to each language
+# BRAD
+- [ ] Add ENV variable with publishing_language and use it to run publisher.py __main__
 - [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash).
-
-
-### Brad Admin Work
-- [ ] Further simplify and translate README, use Github as FAQ
-- [ ] add BTC wallet especially for this project, [use cold storage wallet js thing.](https://github.com/Overtorment/cli-cold-wallet)
 - [ ] Talk about scihub, wikipedia, z library, news minimalist, blinkist
+- [ ] add BTC wallet especially for this project, [use cold storage wallet js thing.](https://github.com/Overtorment/cli-cold-wallet)
+- [ ] Further simplify and translate README.
+- [ ] Create huge translated pages, translate privacy.html and howto.html to each language
+- [ ] Remove old s3 stuff, games.html, books.html etc...
 
-
-## TODO (for Tanner) 📝
+## TANNER
 - [ ] Setup MistralAI keys
 - [ ] Run the project locally, add new sources to [```sources_debug.json```](./config/sources_debug.json)
 - [ ] Refine LLM instructions in [```summarizer.txt```](./config/summarizer.txt) and [```finder.txt```](./config/finder.txt)
@@ -22,7 +15,7 @@
 - [ ] Add Google Gemini models to [```llm.py```](./utils/llm.py)
 - [ ] Develop a Bluesky bot to share the top story(ies) from each edition (see [BlueSky Python SDK](https://atproto.blue/en/latest/))
 
-# Languages
+# Languages (in config order, as an FYI) 
 
 English
 Chinese

@@ -7,8 +7,8 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
 
-        <title>TranslateTribune - AI-Powered Global News</title>
-        <meta name="description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <title>TranslateTribune - {{ motto }}</title>
+        <meta name="description" content="{{ motto }}">
 
         <!-- Standard favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -27,8 +27,8 @@
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://translatetribune.com/">
-        <meta property="og:title" content="The Translate Tribune">
-        <meta property="og:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta property="og:title" content="Translate Tribune">
+        <meta property="og:description" content="{{ motto }}">
         <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
@@ -36,8 +36,8 @@
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://translatetribune.com/">
-        <meta name="twitter:title" content="The Translate Tribune">
-        <meta name="twitter:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta name="twitter:title" content="Translate Tribune">
+        <meta name="twitter:description" content="{{ motto }}">
         <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
 
 
@@ -86,7 +86,7 @@
             font-size: 10px; 
             vertical-align: sub;
         }
-        .header p {
+        .motto {
             font-style: italic;
         }
         .nav {
@@ -209,28 +209,28 @@
                 <div class="header-title">
                     <a href="javascript:window.location.reload(true)"><h1 aria-label="TranslateTribune Beta"><span class="visually-hidden">TranslateTribune</span><span class="dynamic-logo" aria-hidden="true">TranslateTribune</span><span class="version">beta</span></h1></a>
                 </div>
-                <p>"The World's Whisper, Loud and Clear."</p>
+                <div class="motto">"{{ motto }}"</p>
             </div>
             <div class="nav">
-                <a href="{{ shortcode }}.html">World News</a>
-                <a href="{{ shortcode }}-ft.html">Finance & Technology</a>
-                <a href="games.html">Games</a>
+                <a href="{{ shortcode }}.html">{{ world_news }}</a>
+                <a href="{{ shortcode }}-ft.html">{{ finance_technology }}</a>
+                <a href="picross.html">{{ couch_picross }}</a>
             </div>
             <div class="section">            
                 {{ article_html|safe }}            
             </div>
             <div class="footer">                                          
-                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> We're Open Source!</a>
-                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> Support us via Patreon</a>
-                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> Email the Editor</a>
-                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> Privacy Policy</a>  
+                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> {{ open_source }}</a>
+                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> {{ support_us }}</a>
+                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> {{ email_editor }}</a>
+                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> {{ privacy_policy }}</a>  
             </div>
         </div>
         <div class="ai-warning">
-                TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI.
+            {{ ai_warning }}
         </div>
         <div class="current-date">
-            Updated {{ date_string|safe }}
+            {{ date_string|safe }}
         </div>
 
         <script>

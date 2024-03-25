@@ -21,7 +21,9 @@ from browser import fetch_content
 from llm import fetch_llm_response
 from templater import deploy_website, deploy_games
 
-def publish(sources_filename, template_filename, html_filename, finder_template, persona, summarizer_template):        
+def publish(sources_filename, template_filename, html_filename, **kwargs):        
+
+    locals().update(**kwargs)
 
     with open(sources_filename, 'r') as file:
         sources_config = json.load(file)
@@ -32,15 +34,15 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     for source_config in sources_config:
         try:
-            name = source_config.get("name", "N/A")
-            language = source_config.get("language", "N/A")
-            flag = source_config.get("flag", "N/A")
-            source = source_config.get("source", "N/A")
-            url = source_config.get("url", "N/A")
-            parser = source_config.get("parser", "text")
-            finder_model = source_config.get("finder_model", "Open Mixtral")
-            summarizer_model = source_config.get("summarizer_model", "Open Mixtral")
-            
+            locals().update(source_config)
+            parser = parser or "text"
+            finder_model = finder_model or "Open Mixtral"
+            summarizer_model = summarizer_model or "Open Mixtral"
+
+            #as a rule, we don't publish same-language summaries
+            if source_language == publishing_language:
+                continue
+
             all_links = fetch_content(url,"links",language) 
             
             logging.info(name)
@@ -110,7 +112,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
         if article_data['score'] > 2:
             article_html += article_data['html']
 
-    complete_html = deploy_website(article_html, template_filename, html_filename)
+    complete_html = deploy_website(article_html, template_filename, html_filename, **locals())
     logging.info(complete_html)
 
 
@@ -130,10 +132,6 @@ def get_language_config(language):
 
 
 def deploy_language(publishing_language):
-    # TODO template this and translate it. 
-    # TODO change the name to 'en-gm.html' both in deployment and in template.html
-    deploy_games()
-
     lang_config = get_language_config(publishing_language)
 
     locals().update(lang_config)
@@ -144,13 +142,19 @@ def deploy_language(publishing_language):
     debug = os.environ.get('DEBUG', False)
     config_file = 'config/sources_debug.json' if debug else 'config/sources.json'
    
-    #TODO add the templated text to this, pass it through to publishing
-    publish(config_file, 'template.html', f'{shortName}.html', finder_template, persona, summarizer_template)
+    publish(config_file,\
+            'template.html',\
+            f'{publishing_language_short}.html',\
+            **locals())
 
     # Create the finance and technology page
     if not debug:
-        #TODO add the templated text to this, pass it through to publishing
-        publish('config/sources_technology_finance.json','template.html',f'{shortName}-ft.html',finder_template, tech_persona, summarizer_template)
+        persona = finance_technology_persona
+        publish('config/sources_finance_technology.json',\
+                'template.html',\
+                f'{publishing_language_short}-ft.html',\
+                **locals())
 
 if __name__ == "__main__":
-    deploy_language()
+    #TODO get which language to publish from an ENV variable
+    deploy_language("English")

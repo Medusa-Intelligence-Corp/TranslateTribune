@@ -8,7 +8,9 @@ import boto3
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
-def deploy_website(article_html, template_filename, html_filename):
+def deploy_website(article_html, template_filename, html_filename, **kwargs):
+
+    locals().update(**kwargs)           
 
     template_dir = '/usr/src/app/static/'
 
@@ -21,8 +23,8 @@ def deploy_website(article_html, template_filename, html_filename):
 
     current_utc_datetime = datetime.datetime.utcnow()
     current_utc_datetime = current_utc_datetime.replace(tzinfo=pytz.utc)
-    eastern_time = current_utc_datetime.astimezone(pytz.timezone('US/Eastern'))
-    date_string = eastern_time.strftime("%A, %d %b %Y at %I:%M %p %Z")
+    eastern_time = current_utc_datetime.astimezone(pytz.timezone(publishing_timezone))
+    date_string = eastern_time.strftime("%Y-%m-%d %H:%M %Z")
 
     rendered_html = template.render(article_html=article_html,date_string=date_string)
 
