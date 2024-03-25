@@ -45,44 +45,16 @@
 - **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully Dockerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere.
 - **🛡️ Secure and Resilient**: We collect no user data and keep no logs. Our static architecture makes the site resilient and adaptable to a variety of hosting environments worldwide.
 
-## Getting Started 🏁
-
-See [DEV_GUIDE.md](./DEV_GUIDE.md)
-
-1. Clone the repository
-2. Navigate to the project folder
-3. Build the Docker container: ```bash deploy/build.sh```
-4. Run the curation and translation job: ```bash deploy/run.sh``` which uses the following:
-    - [```publisher.py```](./utils/publisher.py): Main job control loop
-    - [```sources.json```](./config/sources.json): Source site configuration
-    - [```browser.py```](./utils/browser.py): Extracts text from sites
-    - [```finder.txt```](./config/finder.txt): Prompt for finding articles to translate
-    - [```summarizer.txt```](./config/summarizer.txt): Prompt for summarizing and ranking articles
-    - [```llm.py```](./utils/llm.py): Handles LLM connections and formatting
-    - [```templater.py```](./utils/templater.py): Creates ```index.html``` and deploys to AWS S3
-5. Output appears in the ```debug``` folder (can also push to S3 with AWS credentials)
-    Access logs in the ```tt-logs``` Docker volume:
-    ```bash
-    less /var/lib/docker/volumes/tt-logs/_data/publisher.log
-    ```
-    Or, follow logs in real-time:
-    ```bash
-    tail -f /var/lib/docker/volumes/tt-logs/_data/publisher.log
-    ```
-
-## LLM API Costs 💸 and Info
-TranslateTribune uses various AI APIs with different pricing models:
-1. **Mistral AI** ([Usage Dashboard](https://console.mistral.ai/usage/)): ~$0.18/day, primarily for European languages (see [sources.json](./config/sources.json))
-2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs)): <$1/day, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
-3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
 ## License and Trademark 📜
+
 TranslateTribune is free (as in speech) and open source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
 
 ## Project Wishlist
 
 Our project is fully funded for its current functionality 🙌. However, with additional support, we can enhance the project with the following features:
 
+- [ ] **🇨🇳🇪🇸🇫🇷🇩🇪🇮🇹🇯🇵🇰🇷🇵🇹🇷🇺🇺🇦 Publish TT in More Languages To Reach a Global Audience** ($120 per language) - Expand our project's reach by translating it into various languages. Each language requires funding for API calls, hosting, DDoS protection, and an editor to read daily and moderate sources as needed.
 - [ ] **🕵️‍♂️ Improve Privacy and Security with .onion Service** ($360 per year) - Set up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite) to enhance the privacy and security of our project.
 - [ ] **🖼️ Enhance Visuals with AI-Generated Images** ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/getting-started).
 
