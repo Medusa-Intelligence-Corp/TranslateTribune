@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 
 from browser import fetch_content
 from llm import fetch_llm_response
-from templater import deploy_website, deploy_games, deploy_books
+from templater import deploy_website, deploy_games
 
 def publish(sources_filename, template_filename, html_filename, finder_template, persona, summarizer_template):        
 
@@ -119,22 +119,38 @@ def load_template(file_path):
         return Template(file.read())
 
 
-if __name__ == "__main__":
+def get_language_config(language):
+    with open('config/languages.json', 'r') as file:
+        lang_configs = json.load(file)
+    
+    for item in lang_configs:
+        if item.get("name") == language:
+            return item
+    return None
+
+
+def deploy_language(publishing_language):
+    # TODO template this and translate it. 
+    # TODO change the name to 'en-gm.html' both in deployment and in template.html
     deploy_games()
-    deploy_books()
+
+    lang_config = get_language_config(publishing_language)
+
+    locals().update(lang_config)
 
     finder_template = load_template('config/finder.txt')
     summarizer_template = load_template('config/summarizer.txt')
-
-    # Create the homepage
-    persona = "an international newspaper editor who is an ex-CIA analyst"    
     
     debug = os.environ.get('DEBUG', False)
     config_file = 'config/sources_debug.json' if debug else 'config/sources.json'
-    
-    publish(config_file, 'template.html', 'index.html', finder_template, persona, summarizer_template)
+   
+    #TODO add the templated text to this, pass it through to publishing
+    publish(config_file, 'template.html', f'{shortName}.html', finder_template, persona, summarizer_template)
 
     # Create the finance and technology page
     if not debug:
-        tech_persona= "an international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer"
-        publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template, tech_persona, summarizer_template)
+        #TODO add the templated text to this, pass it through to publishing
+        publish('config/sources_technology_finance.json','template.html',f'{shortName}-ft.html',finder_template, tech_persona, summarizer_template)
+
+if __name__ == "__main__":
+    deploy_language()

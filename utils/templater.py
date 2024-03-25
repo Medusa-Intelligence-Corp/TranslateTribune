@@ -65,10 +65,3 @@ def deploy_games(template_filename="template.html", html_filename="games.html"):
         # Read the lines of the file
         html_lines = file.read()
     deploy_website(html_lines, template_filename, html_filename)
-    
-    
-def deploy_books(template_filename="template.html", html_filename="books.html"):
-    with open("/usr/src/app/static/books.html", "r") as file:
-        # Read the lines of the file
-        html_lines = file.read()
-    deploy_website(html_lines, template_filename, html_filename)
