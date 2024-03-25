@@ -91,7 +91,7 @@ Our project is fully funded for its current functionality 🙌. However, with ad
 
 If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
 
-1. **Patreon**: Become a patron and [pledge a monthly donation of $10 per month via our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
+1. **Patreon**: Become a patron and [pledge a monthly donation of $10 via our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
 
 2. **Coinbase**: For larger one-time donations, please consider [making a donation via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Your generous contribution will significantly accelerate the development of new features.
 
