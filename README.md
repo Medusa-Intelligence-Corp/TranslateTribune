@@ -37,6 +37,7 @@
 - 📅 Daily updates by 6am Eastern
 - 🌍 Diverse sources from various countries and perspectives (see [sources.json](./config/sources.json) and [sources_technology_finance.json](sources_technology_finance.json))
 - 🧠 AI-powered translations and summaries
+- 🔒 Private by Design: no cookies, minimial JavaScript, and no trackers. [Read our full privacy policy here.](https://translatetribune.com/privacy.html).
 
 ## Development Principles 🛠️
 
@@ -45,6 +46,8 @@
 - **🛡️ Secure and Resilient**: We collect no user data and keep no logs. Our static architecture makes the site resilient and adaptable to a variety of hosting environments worldwide.
 
 ## Getting Started 🏁
+
+See [DEV_GUIDE.md](./DEV_GUIDE.md)
 
 1. Clone the repository
 2. Navigate to the project folder
@@ -73,10 +76,6 @@ TranslateTribune uses various AI APIs with different pricing models:
 2. **Anthropic** ([Usage Logs](https://console.anthropic.com/settings/logs)): <$1/day, primarily for Asian, African, and Middle-Eastern languages (see [sources.json](./config/sources.json))
 3. **OpenAI** ([Usage Dashboard](https://platform.openai.com/usage)): Implemented and tested but not using currently.
 
-## Sister Projects 👯‍♀️
-- 📚 To create [books.html](http://translatetribune.com/books.html) we use [Medusa-ML/Epub-Summarizer](https://github.com/Medusa-ML/Epub-Summarizer)
-- 🎮 To create [games.html](http://translatetribune.com/games.html) we use [predbrad/Couch-Picross](https://github.com/predbrad/Couch-Picross)
-
 ## License and Trademark 📜
 TranslateTribune is free (as in speech) and open source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
 
@@ -84,8 +83,6 @@ TranslateTribune is free (as in speech) and open source under the [GPLv3 License
 
 Our project is fully funded for its current functionality 🙌. However, with additional support, we can enhance the project with the following features:
 
-
-- [ ] **🇨🇳🇪🇸🇫🇷🇩🇪🇮🇹🇯🇵🇰🇷🇵🇹🇷🇺🇺🇦 Publish TT in More Languages To Reach a Global Audience** ($120 per language) - Expand our project's reach by translating it into various languages. Each language requires funding for API calls, hosting, DDoS protection, and an editor to read daily and moderate sources as needed.
 - [ ] **🕵️‍♂️ Improve Privacy and Security with .onion Service** ($360 per year) - Set up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite) to enhance the privacy and security of our project.
 - [ ] **🖼️ Enhance Visuals with AI-Generated Images** ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/getting-started).
 
