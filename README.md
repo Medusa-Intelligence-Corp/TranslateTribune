@@ -17,8 +17,8 @@
     <a href="https://discord.gg/bEPkfhbwE4">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
     </a>
-    <a href="#project-wishlist">
-    <img alt="Project Wishlist" src="https://img.shields.io/badge/%F0%9F%92%B0_Project_Wishlist-purple">
+    <a href="#support-us">
+    <img alt="Support Us" src="https://img.shields.io/badge/%F0%9F%92%B0_Support_Us-purple">
     </a>
 </h4>
 
@@ -50,20 +50,15 @@
 
 TranslateTribune is free (as in speech) and open source under the [GPLv3 License](./LICENSE). The name "TranslateTribune" is a registered trademark owned by [Medusa Intelligence Corporation](https://medusaintel.co).
 
-## Project Wishlist
-
-Our project is fully funded for its current functionality 🙌. However, with additional support, we can enhance the project with the following features:
-
-- [ ] **🇨🇳🇪🇸🇫🇷🇩🇪🇮🇹🇯🇵🇰🇷🇵🇹🇷🇺🇺🇦 Publish TT in More Languages To Reach a Global Audience** ($120 per language) - Expand our project's reach by translating it into various languages. Each language requires funding for API calls, hosting, DDoS protection, and an editor to read daily and moderate sources as needed.
-- [ ] **🕵️‍♂️ Improve Privacy and Security with .onion Service** ($360 per year) - Set up an .onion service using either [EOTK](https://github.com/alecmuffett/eotk) ([guide](https://shen.hong.io/making-websites-on-tor-using-eotk/)) or [torwebsite container](https://github.com/3xploitGuy/torwebsite) to enhance the privacy and security of our project.
-- [ ] **🖼️ Enhance Visuals with AI-Generated Images** ($1000+ per year) - Elevate the visual appeal of our project by integrating AI-generated images using the [Stable Diffusion API](https://platform.stability.ai/docs/getting-started).
-
-If you believe in our project and would like to contribute to its growth, you can support us through the following methods:
+## Support Us
 
 1. **Patreon**: Become a patron and [pledge a monthly donation of $10 via our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
 
 2. **Coinbase**: For larger one-time donations, please consider [making a donation via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Your generous contribution will significantly accelerate the development of new features.
 
+3. **Directly with BTC**: use the BTC address ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo```.
+
+<img src="./static/BTC.png" alt="BTC Address">
+
 Every donation, no matter the size, makes a difference and brings us closer to our goals. We appreciate your support and dedication to our project. Together, we can make a meaningful impact.
 
-Thank you for considering supporting us!

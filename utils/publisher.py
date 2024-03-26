@@ -162,6 +162,14 @@ def deploy_language(publishing_language):
                 "persona_ft")
 
 if __name__ == "__main__":
-    #TODO get which language to publish from an ENV variable
-    deploy_language("English")
-    deploy_language("Spanish")
+    debug = os.environ.get('DEBUG', False)
+    
+    if debug:
+        deploy_language("English")
+        deploy_language("Spanish")
+    else:
+        with open('config/languages.json', 'r') as file:
+            lang_configs = json.load(file)
+        
+        for language in lang_configs:
+            deploy_language(language)
