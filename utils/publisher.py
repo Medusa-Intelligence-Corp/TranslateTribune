@@ -157,7 +157,6 @@ def deploy_language(publishing_language):
                 lang_config,\
                 finder_template,\
                 summarizer_template,\
-                summarizer_template,\
                 f'{lang_config["publishing_language_short"]}-ft.html',\
                 "persona_ft")
 
@@ -171,5 +170,5 @@ if __name__ == "__main__":
         with open('config/languages.json', 'r') as file:
             lang_configs = json.load(file)
         
-        for language in lang_configs:
-            deploy_language(language)
+        for lang_config in lang_configs:
+            deploy_language(lang_config["publishing_language"])

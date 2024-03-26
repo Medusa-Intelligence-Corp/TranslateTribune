@@ -1,7 +1,9 @@
 # BRAD
-- [ ] Upload new index, privacy, logic_games, howto and invalidate old ones
+- [ ] Upload new index.html
+- [ ] invalidate cache
 - [ ] Remove old s3 stuff, games.html, books.html etc...
-- [ ] Double check BTC deposit works, seed the wallet
+- [ ] invalidate cache
+- [ ] PR to main 
 
 ## TANNER
 - [ ] Setup MistralAI keys
