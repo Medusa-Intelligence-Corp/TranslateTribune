@@ -6,6 +6,7 @@
         "source": "The Economist",
         "source_url": "https://www.economist.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -15,6 +16,7 @@
         "source": "The Verge",
         "source_url": "https://www.theverge.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -24,6 +26,7 @@
         "source": "Nikkei",
         "source_url": "https://www.nikkei.com",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Claude 3h"
     },
     {
@@ -33,6 +36,7 @@
         "source": "L'Agefi",
         "source_url": "https://agefi.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -42,6 +46,7 @@
         "source": "PingWest",
         "source_url": "https://www.pingwest.com/",
         "source_parser": "goose",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Claude 3h"
     },
     {
@@ -51,6 +56,7 @@
         "source": "FrenchWeb",
         "source_url": "https://www.frenchweb.fr",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -60,6 +66,7 @@
         "source": "Valor Econômico",
         "source_url": "https://valor.globo.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
