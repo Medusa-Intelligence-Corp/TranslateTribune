@@ -21,12 +21,8 @@ from browser import fetch_content
 from llm import fetch_llm_response
 from templater import deploy_website, deploy_games
 
-def publish(sources_filename, template_filename, html_filename, **kwargs):        
-
-    locals().update(**kwargs)
-
-    with open(sources_filename, 'r') as file:
-        sources_config = json.load(file)
+def publish(sources_config, lang_config, finder_template, \
+        summarizer_template, html_filename, persona_type="persona"):        
 
     random.shuffle(sources_config)
 
@@ -34,22 +30,21 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
 
     for source_config in sources_config:
         try:
-            locals().update(source_config)
-            parser = parser or "text"
-            finder_model = finder_model or "Open Mixtral"
-            summarizer_model = summarizer_model or "Open Mixtral"
-
             #as a rule, we don't publish same-language summaries
-            if source_language == publishing_language:
+            if source_config["source_language"] == lang_config["publishing_language"]:
                 continue
 
-            all_links = fetch_content(url,"links",publishing_language) 
+            all_links = fetch_content(source_config["source_url"],\
+                    "links",\
+                    lang_config["publishing_language"]) 
             
-            logging.info(name)
+            logging.info(source_config["source"])
 
             best_links = fetch_llm_response(
-                all_links, finder_template.render(**locals()),
-                finder_model, "url")
+                all_links,\
+                finder_template.render(**locals()),\
+                source_config["finder_model"],\
+                "url")
             
             logging.info(best_links)
             
@@ -61,11 +56,15 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
             if link.endswith('.'):
                 link = link[:-1]
 
-            article_text = fetch_content(link, parser, publishing_language)
+            article_text = fetch_content(link,\
+                    source_config["source_parser"],\
+                    lang_config["publishing_language"])
 
             article_summary = fetch_llm_response(
-                    article_text, summarizer_template.render(**locals()),
-                    summarizer_model, "html-article")
+                    article_text,\
+                    summarizer_template.render(**locals()),\
+                    source_config["summarizer_model"],\
+                    "html-article")
             
             # Save the title
             soup = BeautifulSoup(article_summary, 'html.parser')
@@ -73,8 +72,9 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
             article_title=title_div.text.strip()
            
             if title_div:
-                flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {source_country}'})
-                flag_span.string = html.unescape(source_flag)
+                flag_span = soup.new_tag('span',\
+                        attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
+                flag_span.string = html.unescape(source_config["source_flag"])
                 title_div.insert(0, flag_span)
                 title_div.insert(1, ' ')
 
@@ -82,7 +82,8 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
 
             if content_div:
                 link = soup.new_tag('a', href=link)
-                link.string = f'Read more from {source} (in {source_language}).'
+                link.string = \
+                        f'Read more from {source_config["source"]} (in {source_config["source_language"]}).'
                 content_div.append(' ')
                 content_div.append(link)
 
@@ -112,7 +113,7 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
         if article_data['score'] > 2:
             article_html += article_data['html']
 
-    complete_html = deploy_website(article_html, template_filename, html_filename, **locals())
+    complete_html = deploy_website(article_html,html_filename,lang_config)
     logging.info(complete_html)
 
 
@@ -131,48 +132,37 @@ def get_language_config(language):
     return None
 
 
+def get_sources_config(filename):
+    with open(filename, 'r') as file:
+        sources_config = json.load(file)
+    return sources_config
+
 def deploy_language(publishing_language):
     lang_config = get_language_config(publishing_language)
     
-    locals().update(lang_config)
-
-    local_vars = locals()
-    for var_name, var_value in local_vars.items():
-        print(f"{var_name}: {var_value}")
-    # Convert to string if needed
-    publishing_language_short = str(publishing_language_short)
-
-    # Remove leading/trailing whitespace
-    publishing_language_short = publishing_language_short.strip()
-
-    # Check for invalid characters
-    if '/' in publishing_language_short or ':' in publishing_language_short or '?' in publishing_language_short:
-        # Handle the case when invalid characters are present
-        # You can replace them, remove them, or raise an error
-        publishing_language_short = publishing_language_short.replace('/', '_').replace(':', '_').replace('?', '_')
-
-
-
-
     finder_template = load_template('config/finder.txt')
     summarizer_template = load_template('config/summarizer.txt')
     
     debug = os.environ.get('DEBUG', False)
-    config_file = 'config/sources_debug.json' if debug else 'config/sources.json'
-   
-    publish(config_file,\
-            'template.html',\
-            f'{str(publishing_language_short)}.html',\
-            **locals())
+    sources_filename = 'config/sources_debug.json' if debug else 'config/sources.json'
+    
+    publish(get_sources_config(sources_filename),\
+            lang_config,\
+            finder_template,\
+            summarizer_template,\
+            f'{lang_config["publishing_language_short"]}.html')
 
     # Create the finance and technology page
     if not debug:
-        persona = finance_technology_persona
-        publish('config/sources_finance_technology.json',\
-                'template.html',\
-                f'{publishing_language_short}-ft.html',\
-                **locals())
+        publish(get_sources_config('config/sources_finance_technology.json'),\
+                lang_config,\
+                finder_template,\
+                summarizer_template,\
+                summarizer_template,\
+                f'{lang_config["publishing_language_short"]}-ft.html',\
+                "persona_ft")
 
 if __name__ == "__main__":
     #TODO get which language to publish from an ENV variable
     deploy_language("English")
+    deploy_language("Spanish")

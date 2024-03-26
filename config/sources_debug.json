@@ -6,6 +6,7 @@
         "source": "USA Today",
         "source_url": "https://www.usatoday.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -15,6 +16,7 @@
         "source": "La Jornada",
         "source_url": "https://www.jornada.com.mx",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     }
 ]

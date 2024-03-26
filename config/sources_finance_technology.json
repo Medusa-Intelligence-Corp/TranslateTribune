@@ -69,6 +69,7 @@
         "source": "FayerWayer",
         "source_url": "https://www.fayerwayer.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -78,6 +79,7 @@
         "source": "The Korea Economic Daily",
         "source_url": "https://www.hankyung.com/",
         "source_parser": "goose",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Claude 3h"
     },
     {
@@ -87,6 +89,7 @@
         "source": "Gründerszene",
         "source_url": "https://www.gruenderszene.de/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -96,6 +99,7 @@
         "source": "vc.ru",
         "source_url": "https://vc.ru/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -105,6 +109,7 @@
         "source": "Xataka México",
         "source_url": "https://www.xataka.com.mx/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -114,6 +119,7 @@
         "source": "3DJuegos",
         "source_url": "https://www.3djuegos.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -123,6 +129,7 @@
         "source": "Multiplayer.it",
         "source_url": "https://multiplayer.it/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -132,6 +139,7 @@
         "source": "GRYOnline.pl",
         "source_url": "https://www.gry-online.pl/",
         "source_parser": "goose",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -141,6 +149,7 @@
         "source": "Tweakers",
         "source_url": "https://tweakers.net/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -150,6 +159,7 @@
         "source": "SweClockers",
         "source_url": "https://www.sweclockers.com/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
     },
     {
@@ -159,6 +169,7 @@
         "source": "ITC.ua",
         "source_url": "https://itc.ua/",
         "source_parser": "readability",
+        "finder_model": "Open Mixtral",
         "summarizer_model": "Claude 3h"
     }
 ]

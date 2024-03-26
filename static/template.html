@@ -7,8 +7,8 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
 
-        <title>TranslateTribune - {{ motto }}</title>
-        <meta name="description" content="{{ motto }}">
+        <title>TranslateTribune - {{ lang_config['motto'] }}</title>
+        <meta name="description" content="{{ lang_config['motto'] }}">
 
         <!-- Standard favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -28,7 +28,7 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://translatetribune.com/">
         <meta property="og:title" content="Translate Tribune">
-        <meta property="og:description" content="{{ motto }}">
+        <meta property="og:description" content="{{ lang_config['motto'] }}">
         <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
@@ -37,7 +37,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://translatetribune.com/">
         <meta name="twitter:title" content="Translate Tribune">
-        <meta name="twitter:description" content="{{ motto }}">
+        <meta name="twitter:description" content="{{ lang_config['motto'] }}">
         <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
 
 
@@ -210,25 +210,25 @@
                       </h1>
                   </a>
                 </div>  
-                <div class="motto">"{{ motto }}"</p>
+                <div class="motto">"{{ lang_config['motto'] }}"</p>
             </div>
             <div class="nav">
-                <a href="{{ shortcode }}.html">{{ world_news }}</a>
-                <a href="{{ shortcode }}-ft.html">{{ finance_technology }}</a>
-                <a href="logic_puzzle.html">{{ logic_puzzles }}</a>
+                <a href="{{ lang_config['publishing_language_short' }}.html">{{ lang_config['world_news'] }}</a>
+                <a href="{{ lang-config['publishing_language_short'] }}-ft.html">{{ lang_config['finance_technology'] }}</a>
+                <a href="logic_puzzle.html">{{ lang_config['logic_puzzles'] }}</a>
             </div>
             <div class="section">            
                 {{ article_html|safe }}            
             </div>
             <div class="footer">                                          
-                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> {{ open_source }}</a>
-                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> {{ support_us }}</a>
-                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> {{ email_editor }}</a>
-                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> {{ privacy_policy }}</a>  
+                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> {{ lang_config['open_source'] }}</a>
+                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> {{ lang_config['support_us'] }}</a>
+                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> {{ lang_config['email_editor'] }}</a>
+                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> {{ lang_config['privacy_policy'] }}</a>  
             </div>
         </div>
         <div class="ai-warning">
-            {{ ai_warning }}
+            {{ lang_config['ai_warning'] }}
         </div>
         <div class="current-date">
             {{ date_string|safe }}
