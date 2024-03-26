@@ -1,4 +1,5 @@
 # BRAD
+- [ ] rename couch picross to logic puzzles or something
 - [ ] Add model override for Asian languages override or model or default
 - [ ] Add ENV variable with publishing_language and use it to run publisher.py __main__
 - [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash).
