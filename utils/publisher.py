@@ -82,8 +82,7 @@ def publish(sources_config, lang_config, finder_template, \
 
             if content_div:
                 link = soup.new_tag('a', href=link)
-                link.string = \
-                        f'Read more from {source_config["source"]} (in {source_config["source_language"]}).'
+                link.string = source_config["source"]
                 content_div.append(' ')
                 content_div.append(link)
 
