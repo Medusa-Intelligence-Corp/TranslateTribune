@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang_config['publishing_language_short'] }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
 
-        <title>TranslateTribune - AI-Powered Global News</title>
-        <meta name="description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <title>TranslateTribune - {{ lang_config['motto'] }}</title>
+        <meta name="description" content="{{ lang_config['motto'] }}">
 
         <!-- Standard favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -27,8 +27,8 @@
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://translatetribune.com/">
-        <meta property="og:title" content="The Translate Tribune">
-        <meta property="og:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta property="og:title" content="Translate Tribune">
+        <meta property="og:description" content="{{ lang_config['motto'] }}">
         <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
@@ -36,8 +36,8 @@
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://translatetribune.com/">
-        <meta name="twitter:title" content="The Translate Tribune">
-        <meta name="twitter:description" content="A Daily Dose of Global Insights, Curated and Translated by AI for You.">
+        <meta name="twitter:title" content="Translate Tribune">
+        <meta name="twitter:description" content="{{ lang_config['motto'] }}">
         <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
 
 
@@ -82,11 +82,7 @@
             text-align: center;
             white-space: nowrap;
         }
-        .version {
-            font-size: 10px; 
-            vertical-align: sub;
-        }
-        .header p {
+        .motto {
             font-style: italic;
         }
         .nav {
@@ -207,31 +203,35 @@
         <div class="container">
             <div class="header">
                 <div class="header-title">
-                    <a href="javascript:window.location.reload(true)"><h1 aria-label="TranslateTribune Beta"><span class="visually-hidden">TranslateTribune</span><span class="dynamic-logo" aria-hidden="true">TranslateTribune</span><span class="version">beta</span></h1></a>
-                </div>
-                <p>"The World's Whisper, Loud and Clear."</p>
+                  <a href="javascript:window.location.reload(true)">
+                      <h1 aria-label="TranslateTribune Beta">
+                          <span class="visually-hidden">TranslateTribune</span>
+                          <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
+                      </h1>
+                  </a>
+                </div>  
+                <div class="motto">"{{ lang_config['motto'] }}"</div>
             </div>
             <div class="nav">
-                <a href="https://translatetribune.com">World News</a>
-                <a href="finance-and-technology.html">Finance & Technology</a>
-                <a href="books.html">Book Summaries</a>
-                <a href="games.html">Games</a>
+                <a href="{{ lang_config['publishing_language_short'] }}.html">{{ lang_config['world_news'] }}</a>
+                <a href="{{ lang_config['publishing_language_short'] }}-ft.html">{{ lang_config['finance_technology'] }}</a>
+                <a href="logic_puzzle.html">{{ lang_config['logic_puzzles'] }}</a>
             </div>
             <div class="section">            
                 {{ article_html|safe }}            
             </div>
             <div class="footer">                                          
-                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> We're Open Source!</a>
-                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> Support us via Patreon</a>
-                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> Email the Editor</a>
-                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> Privacy Policy</a>  
+                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> {{ lang_config['open_source'] }}</a>
+                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> {{ lang_config['support_us'] }}</a>
+                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> {{ lang_config['email_editor'] }}</a>
+                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> {{ lang_config['privacy_policy'] }}</a>  
             </div>
         </div>
         <div class="ai-warning">
-                TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI.
+            {{ lang_config['ai_warning'] }}
         </div>
         <div class="current-date">
-            Updated {{ date_string|safe }}
+            {{ date_string|safe }}
         </div>
 
         <script>
@@ -276,41 +276,6 @@
                     animatingIndices = animatingIndices.filter(i => i !== index);
                 }, 500);
             }, 400);
-
-            // Function to parse the date from the div
-            function parseDate(dateString) {
-                try {
-                    const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: 'numeric', timeZoneName: 'short' };
-                    return new Date(dateString.replace('Updated ', ''));
-                } catch (error) {
-                    console.error('Error parsing date:', error);
-                    return null;
-                }
-            }
-
-            // Function to check if the page needs to be refreshed
-            function checkRefresh() {
-                const currentDateElement = document.getElementById('currentDate');
-                const currentDateString = currentDateElement.textContent;
-                const currentDate = parseDate(currentDateString);
-
-                if (currentDate === null) {
-                    // If parsing fails, refresh every minute
-                    location.reload(true);
-                    return;
-                }
-
-                const now = new Date();
-                const timeDiff = now.getTime() - currentDate.getTime();
-                const hoursDiff = timeDiff / (1000 * 3600); // Convert milliseconds to hours
-
-                if (hoursDiff > 12) {
-                    location.reload(true); // Force refresh from the server
-                }
-            }
-
-            // Check for refresh every minute
-            setInterval(checkRefresh, 60000);
         </script>
     </body>
 </html>

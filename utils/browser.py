@@ -53,7 +53,7 @@ def fetch_content(url, mode, language):
         article = simple_json_from_html_string(driver.page_source, use_readability=True)
         text = article["title"] + "\n\n" + article["plain_content"]
     elif mode=="goose":
-        if language == "Mandarin":
+        if language == "Chinese":
             g = Goose({'stopwords_class': StopWordsChinese})
         elif language == "Arabic":
             g = Goose({'stopwords_class': StopWordsArabic})

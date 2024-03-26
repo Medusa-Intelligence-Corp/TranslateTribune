@@ -14,17 +14,20 @@ import traceback
 import random
 import html
 
+from cachetools import LRUCache, TTLCache
+
+article_cache = LRUCache(maxsize=100)
+link_cache = TTLCache(maxsize=100, ttl=3600)
+
 from jinja2 import Template
 from bs4 import BeautifulSoup
 
 from browser import fetch_content
 from llm import fetch_llm_response
-from templater import deploy_website, deploy_games, deploy_books
+from templater import deploy_website, deploy_games
 
-def publish(sources_filename, template_filename, html_filename, finder_template, persona, summarizer_template):        
-
-    with open(sources_filename, 'r') as file:
-        sources_config = json.load(file)
+def publish(sources_config, lang_config, finder_template, \
+        summarizer_template, html_filename, persona_type="persona"):        
 
     random.shuffle(sources_config)
 
@@ -32,22 +35,25 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
     for source_config in sources_config:
         try:
-            name = source_config.get("name", "N/A")
-            language = source_config.get("language", "N/A")
-            flag = source_config.get("flag", "N/A")
-            source = source_config.get("source", "N/A")
-            url = source_config.get("url", "N/A")
-            parser = source_config.get("parser", "text")
-            finder_model = source_config.get("finder_model", "Open Mixtral")
-            summarizer_model = source_config.get("summarizer_model", "Open Mixtral")
-            
-            all_links = fetch_content(url,"links",language) 
-            
-            logging.info(name)
+            #as a rule, we don't publish same-language summaries
+            if source_config["source_language"] == lang_config["publishing_language"]:
+                continue
+
+            try:
+                all_links = link_cache[source_config["source_url"]]
+            except KeyError:
+                all_links = fetch_content(source_config["source_url"],\
+                        "links",\
+                        source_config["source_language"]) 
+                link_cache[source_config["source_url"]] = all_links
+
+            logging.info(source_config["source"])
 
             best_links = fetch_llm_response(
-                all_links, finder_template.render(**locals()),
-                finder_model, "url")
+                all_links,\
+                finder_template.render(**locals()),\
+                source_config["finder_model"],\
+                "url")
             
             logging.info(best_links)
             
@@ -59,11 +65,22 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             if link.endswith('.'):
                 link = link[:-1]
 
-            article_text = fetch_content(link, parser, language)
+            #When iterating over many languages, the link selector often picks the same article
+            #regardless of the persona given, so to not get our IP address blocked, it's nice of 
+            #us to do some caching
+            try:
+                article_text = article_cache[link]
+            except KeyError:
+                article_text = fetch_content(link,\
+                        source_config["source_parser"],\
+                        lang_config["publishing_language"])
+                article_cache[link] = article_text
 
             article_summary = fetch_llm_response(
-                    article_text, summarizer_template.render(**locals()),
-                    summarizer_model, "html-article")
+                    article_text,\
+                    summarizer_template.render(**locals()),\
+                    source_config["summarizer_model"],\
+                    "html-article")
             
             # Save the title
             soup = BeautifulSoup(article_summary, 'html.parser')
@@ -71,8 +88,9 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
             article_title=title_div.text.strip()
            
             if title_div:
-                flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {name}'})
-                flag_span.string = html.unescape(flag)
+                flag_span = soup.new_tag('span',\
+                        attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
+                flag_span.string = html.unescape(source_config["source_flag"])
                 title_div.insert(0, flag_span)
                 title_div.insert(1, ' ')
 
@@ -80,7 +98,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
 
             if content_div:
                 link = soup.new_tag('a', href=link)
-                link.string = f'Read more from {source} (in {language}).'
+                link.string = source_config["source"]
                 content_div.append(' ')
                 content_div.append(link)
 
@@ -110,7 +128,7 @@ def publish(sources_filename, template_filename, html_filename, finder_template,
         if article_data['score'] > 2:
             article_html += article_data['html']
 
-    complete_html = deploy_website(article_html, template_filename, html_filename)
+    complete_html = deploy_website(article_html,html_filename,lang_config)
     logging.info(complete_html)
 
 
@@ -119,22 +137,54 @@ def load_template(file_path):
         return Template(file.read())
 
 
-if __name__ == "__main__":
-    deploy_games()
-    deploy_books()
+def get_language_config(language):
+    with open('config/languages.json', 'r') as file:
+        lang_configs = json.load(file)
+    
+    for item in lang_configs:
+        if item.get("publishing_language") == language:
+            return item
+    return None
 
+
+def get_sources_config(filename):
+    with open(filename, 'r') as file:
+        sources_config = json.load(file)
+    return sources_config
+
+def deploy_language(publishing_language):
+    lang_config = get_language_config(publishing_language)
+    
     finder_template = load_template('config/finder.txt')
     summarizer_template = load_template('config/summarizer.txt')
-
-    # Create the homepage
-    persona = "an international newspaper editor who is an ex-CIA analyst"    
     
     debug = os.environ.get('DEBUG', False)
-    config_file = 'config/sources_debug.json' if debug else 'config/sources.json'
+    sources_filename = 'config/sources_debug.json' if debug else 'config/sources.json'
     
-    publish(config_file, 'template.html', 'index.html', finder_template, persona, summarizer_template)
+    publish(get_sources_config(sources_filename),\
+            lang_config,\
+            finder_template,\
+            summarizer_template,\
+            f'{lang_config["publishing_language_short"]}.html')
 
     # Create the finance and technology page
     if not debug:
-        tech_persona= "an international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer"
-        publish('config/sources_technology_finance.json','template.html','finance-and-technology.html',finder_template, tech_persona, summarizer_template)
+        publish(get_sources_config('config/sources_finance_technology.json'),\
+                lang_config,\
+                finder_template,\
+                summarizer_template,\
+                f'{lang_config["publishing_language_short"]}-ft.html',\
+                "persona_ft")
+
+if __name__ == "__main__":
+    debug = os.environ.get('DEBUG', False)
+    
+    if debug:
+        deploy_language("English")
+        deploy_language("Spanish")
+    else:
+        with open('config/languages.json', 'r') as file:
+            lang_configs = json.load(file)
+        
+        for lang_config in lang_configs:
+            deploy_language(lang_config["publishing_language"])
