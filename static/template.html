@@ -82,10 +82,6 @@
             text-align: center;
             white-space: nowrap;
         }
-        .version {
-            font-size: 10px; 
-            vertical-align: sub;
-        }
         .motto {
             font-style: italic;
         }
@@ -207,8 +203,13 @@
         <div class="container">
             <div class="header">
                 <div class="header-title">
-                    <a href="javascript:window.location.reload(true)"><h1 aria-label="TranslateTribune Beta"><span class="visually-hidden">TranslateTribune</span><span class="dynamic-logo" aria-hidden="true">TranslateTribune</span><span class="version">beta</span></h1></a>
-                </div>
+                  <a href="javascript:window.location.reload(true)">
+                      <h1 aria-label="TranslateTribune Beta">
+                          <span class="visually-hidden">TranslateTribune</span>
+                          <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
+                      </h1>
+                  </a>
+                </div>  
                 <div class="motto">"{{ motto }}"</p>
             </div>
             <div class="nav">
@@ -275,41 +276,6 @@
                     animatingIndices = animatingIndices.filter(i => i !== index);
                 }, 500);
             }, 400);
-
-            // Function to parse the date from the div
-            function parseDate(dateString) {
-                try {
-                    const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: 'numeric', timeZoneName: 'short' };
-                    return new Date(dateString.replace('Updated ', ''));
-                } catch (error) {
-                    console.error('Error parsing date:', error);
-                    return null;
-                }
-            }
-
-            // Function to check if the page needs to be refreshed
-            function checkRefresh() {
-                const currentDateElement = document.getElementById('currentDate');
-                const currentDateString = currentDateElement.textContent;
-                const currentDate = parseDate(currentDateString);
-
-                if (currentDate === null) {
-                    // If parsing fails, refresh every minute
-                    location.reload(true);
-                    return;
-                }
-
-                const now = new Date();
-                const timeDiff = now.getTime() - currentDate.getTime();
-                const hoursDiff = timeDiff / (1000 * 3600); // Convert milliseconds to hours
-
-                if (hoursDiff > 12) {
-                    location.reload(true); // Force refresh from the server
-                }
-            }
-
-            // Check for refresh every minute
-            setInterval(checkRefresh, 60000);
         </script>
     </body>
 </html>

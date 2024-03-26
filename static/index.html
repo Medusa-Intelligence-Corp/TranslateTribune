@@ -4,30 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translate Tribune</title>
+        <title>TranslateTribune</title>
+        
+        <!-- Standard favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+        <!-- Recommended favicon format -->
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+        <!-- For Android -->
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://translatetribune.com/">
+        <meta property="og:title" content="Translate Tribune">
+        <meta property="og:description" content="{{ motto }}">
+        <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://translatetribune.com/">
+        <meta name="twitter:title" content="Translate Tribune">
+        <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
+        <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          margin: 0;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .header-title a { 
+            text-decoration: none;
+            color: black;
+        }
+        .header-title h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 28px;
+            line-height: 0px;
+            text-align: center;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          text-align: center;
+        }
+
+        li {
+          display: inline-block;
+          padding: 10px 20px;
+        }
+        </style>
 </head>
 <body>
-    <h1>Select Your Language</h1>
-    <ul>
-        <li><a href="en.html">English</a></li>
-        <li><a href="zh.html">中文</a></li>
-        <li><a href="es.html">Español</a></li>
-        <li><a href="ar.html">العربية</a></li>
-        <li><a href="fr.html">Français</a></li>
-        <li><a href="ru.html">Русский</a></li>
-        <li><a href="pt.html">Português</a></li>
-        <li><a href="de.html">Deutsch</a></li>
-        <li><a href="ja.html">日本語</a></li>
-        <li><a href="tr.html">Türkçe</a></li>
-        <li><a href="ko.html">한국어</a></li>
-        <li><a href="it.html">Italiano</a></li>
-        <li><a href="nl.html">Nederlands</a></li>
-        <li><a href="fa.html">فارسی</a></li>
-        <li><a href="uk.html">Українська</a></li>
-        <li><a href="sv.html">Svenska</a></li>
-        <li><a href="he.html">עברית</a></li>
-        <li><a href="hu.html">Magyar</a></li>
-        <li><a href="sw.html">Kiswahili</a></li>
-    </ul>
+    <div class="container">
+      <div class="header-title">
+        <a href="javascript:window.location.reload(true)">
+            <h1 aria-label="TranslateTribune Beta">
+                <span class="visually-hidden">TranslateTribune</span>
+                <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
+            </h1>
+        </a>
+      </div>
+
+      <ul>
+          <li><a href="en.html">English</a></li>
+          <li><a href="zh.html">中文</a></li>
+          <li><a href="es.html">Español</a></li>
+          <li><a href="ar.html">العربية</a></li>
+          <li><a href="fr.html">Français</a></li>
+          <li><a href="ru.html">Русский</a></li>
+          <li><a href="pt.html">Português</a></li>
+          <li><a href="de.html">Deutsch</a></li>
+          <li><a href="ja.html">日本語</a></li>
+          <li><a href="tr.html">Türkçe</a></li>
+          <li><a href="ko.html">한국어</a></li>
+          <li><a href="it.html">Italiano</a></li>
+          <li><a href="nl.html">Nederlands</a></li>
+          <li><a href="fa.html">فارسی</a></li>
+          <li><a href="uk.html">Українська</a></li>
+          <li><a href="sv.html">Svenska</a></li>
+          <li><a href="he.html">עברית</a></li>
+          <li><a href="hu.html">Magyar</a></li>
+          <li><a href="sw.html">Kiswahili</a></li>
+      </ul>
+    </div>
+    <script>
+    const title = document.querySelector('.dynamic-logo');
+    let textNode = title.childNodes[0];
+    const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+
+    // Track the original text to ensure we can always revert to it
+    const originalText = textNode.nodeValue;
+    // Use an array to track which characters are currently being animated
+    let animatingIndices = [];
+
+    setInterval(() => {
+        const textContent = textNode.nodeValue;
+        let index;
+        // Find a character index that is not currently being animated
+        do {
+            index = Math.floor(Math.random() * textContent.length);
+        } while (animatingIndices.includes(index));
+
+        // Mark this index as being animated
+        animatingIndices.push(index);
+
+        const char = textContent.charAt(index);
+        const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+        textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+
+        // Change back to the original character after 500ms
+        setTimeout(() => {
+            // Use the original text to ensure the correct character is restored
+            textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
+            // Remove the index from the animatingIndices array
+            animatingIndices = animatingIndices.filter(i => i !== index);
+        }, 500);
+    }, 400);
+</script>
 </body>
 </html>
 

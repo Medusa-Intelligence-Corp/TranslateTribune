@@ -43,7 +43,7 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
             if source_language == publishing_language:
                 continue
 
-            all_links = fetch_content(url,"links",language) 
+            all_links = fetch_content(url,"links",publishing_language) 
             
             logging.info(name)
 
@@ -61,7 +61,7 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
             if link.endswith('.'):
                 link = link[:-1]
 
-            article_text = fetch_content(link, parser, language)
+            article_text = fetch_content(link, parser, publishing_language)
 
             article_summary = fetch_llm_response(
                     article_text, summarizer_template.render(**locals()),
@@ -73,8 +73,8 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
             article_title=title_div.text.strip()
            
             if title_div:
-                flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {name}'})
-                flag_span.string = html.unescape(flag)
+                flag_span = soup.new_tag('span', attrs={'role': 'img', 'aria-label': f'Flag of {source_country}'})
+                flag_span.string = html.unescape(source_flag)
                 title_div.insert(0, flag_span)
                 title_div.insert(1, ' ')
 
@@ -82,7 +82,7 @@ def publish(sources_filename, template_filename, html_filename, **kwargs):
 
             if content_div:
                 link = soup.new_tag('a', href=link)
-                link.string = f'Read more from {source} (in {language}).'
+                link.string = f'Read more from {source} (in {source_language}).'
                 content_div.append(' ')
                 content_div.append(link)
 

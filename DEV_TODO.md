@@ -1,8 +1,6 @@
 # BRAD
-- [ ] Add model override for Asian languages override or model or default
-- [ ] Add ENV variable with publishing_language and use it to run publisher.py __main__
-- [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash).
-- [ ] Talk about scihub, wikipedia, z library, news minimalist, blinkist
+- [ ] Fix template.html styling
+- [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash). Add ENV variable with publishing_language and use it to run publisher.py __main__.
 - [ ] add BTC wallet especially for this project, [use cold storage wallet js thing.](https://github.com/Overtorment/cli-cold-wallet)
 - [ ] Further simplify and translate README.
 - [ ] Create huge translated pages, translate privacy.html and howto.html to each language
