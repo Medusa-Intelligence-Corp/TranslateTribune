@@ -24,20 +24,20 @@
 <h4 align="center">
     <a href="#English">
         English
-    </a>
-    <a href="#">
+    </a>|
+    <a href="#中文">
         中文
-    </a>
-    <a href="#">
+    </a>|
+    <a href="#español">
         Español
-    </a>
-    <a href="#">
+    </a>|
+    <a href="#ﺎﻠﻋﺮﺒﻳﺓ">
         العربية
-    </a>
-    <a href="#">
+    </a>|
+    <a href="#français">
         Français
-    </a>
-    <a href="#">
+    </a>|
+    <a href="#русский">
         Русский
     </a>
 </h4>
