@@ -126,15 +126,33 @@ def get_language_config(language):
         lang_configs = json.load(file)
     
     for item in lang_configs:
-        if item.get("name") == language:
+        if item.get("publishing_language") == language:
             return item
     return None
 
 
 def deploy_language(publishing_language):
     lang_config = get_language_config(publishing_language)
-
+    
     locals().update(lang_config)
+
+    local_vars = locals()
+    for var_name, var_value in local_vars.items():
+        print(f"{var_name}: {var_value}")
+    # Convert to string if needed
+    publishing_language_short = str(publishing_language_short)
+
+    # Remove leading/trailing whitespace
+    publishing_language_short = publishing_language_short.strip()
+
+    # Check for invalid characters
+    if '/' in publishing_language_short or ':' in publishing_language_short or '?' in publishing_language_short:
+        # Handle the case when invalid characters are present
+        # You can replace them, remove them, or raise an error
+        publishing_language_short = publishing_language_short.replace('/', '_').replace(':', '_').replace('?', '_')
+
+
+
 
     finder_template = load_template('config/finder.txt')
     summarizer_template = load_template('config/summarizer.txt')
@@ -144,7 +162,7 @@ def deploy_language(publishing_language):
    
     publish(config_file,\
             'template.html',\
-            f'{publishing_language_short}.html',\
+            f'{str(publishing_language_short)}.html',\
             **locals())
 
     # Create the finance and technology page

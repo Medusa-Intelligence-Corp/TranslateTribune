@@ -1,4 +1,5 @@
 # BRAD
+- [ ] Fix locals(), pass around a big dict instead.
 - [ ] Fix template.html styling
 - [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash). Add ENV variable with publishing_language and use it to run publisher.py __main__.
 - [ ] add BTC wallet especially for this project, [use cold storage wallet js thing.](https://github.com/Overtorment/cli-cold-wallet)
