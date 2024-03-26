@@ -1,10 +1,9 @@
 # BRAD
-- [ ] Fix template.html styling
-- [ ] setup jobs for each language. Make the runner time-aware and select edition based on time (in bash). Add ENV variable with publishing_language and use it to run publisher.py __main__.
-- [ ] add BTC wallet especially for this project, [use cold storage wallet js thing.](https://github.com/Overtorment/cli-cold-wallet)
 - [ ] Further simplify and translate README.
 - [ ] Create huge translated pages, translate privacy.html and howto.html to each language
+- [ ] Upload new privacy policy, logic_games, howto
 - [ ] Remove old s3 stuff, games.html, books.html etc...
+
 
 ## TANNER
 - [ ] Setup MistralAI keys

@@ -4,7 +4,7 @@
         <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
     <p align="center">
-        <p align="center">A free and open-source project that leverages LLMs (<a href="https://mistral.ai/news/mixtral-of-experts/" target="_blank">Open Mixtral</a> and <a href="https://www.anthropic.com/news/claude-3-family" target="_blank">Claude 3 Haiku</a>) to curate, translate, and summarize news articles from diverse countries. Read our daily English edition at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
+        <p align="center">A free and open-source project that leverages LLMs (<a href="https://mistral.ai/news/mixtral-of-experts/" target="_blank">Open Mixtral</a> and <a href="https://www.anthropic.com/news/claude-3-family" target="_blank">Claude 3 Haiku</a>) to curate, translate, and summarize news articles from diverse countries. Read our daily edition in 19 languages at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
         <br>
     </p>
 <h4 align="center">
