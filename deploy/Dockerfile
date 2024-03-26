@@ -23,6 +23,7 @@ RUN pip3 install --no-cache-dir \
     selenium \
     beautifulsoup4 \
     pytz \
+    cachetools \
     urlextract \
     validators \
     goose3[all] \

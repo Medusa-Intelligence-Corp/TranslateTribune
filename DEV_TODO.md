@@ -1,10 +1,3 @@
-# BRAD
-- [ ] Upload new index.html
-- [ ] invalidate cache
-- [ ] Remove old s3 stuff, games.html, books.html etc...
-- [ ] invalidate cache
-- [ ] PR to main 
-
 ## TANNER
 - [ ] Setup MistralAI keys
 - [ ] Run the project locally, add new sources to [```sources_debug.json```](./config/sources_debug.json)

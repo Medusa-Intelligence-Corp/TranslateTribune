@@ -14,6 +14,11 @@ import traceback
 import random
 import html
 
+from cachetools import LRUCache, TTLCache
+
+article_cache = LRUCache(maxsize=100)
+link_cache = TTLCache(maxsize=100, ttl=3600)
+
 from jinja2 import Template
 from bs4 import BeautifulSoup
 
@@ -34,10 +39,14 @@ def publish(sources_config, lang_config, finder_template, \
             if source_config["source_language"] == lang_config["publishing_language"]:
                 continue
 
-            all_links = fetch_content(source_config["source_url"],\
-                    "links",\
-                    lang_config["publishing_language"]) 
-            
+            try:
+                all_links = link_cache[source_config["source_url"]]
+            except KeyError:
+                all_links = fetch_content(source_config["source_url"],\
+                        "links",\
+                        source_config["source_language"]) 
+                link_cache[source_config["source_url"]] = all_links
+
             logging.info(source_config["source"])
 
             best_links = fetch_llm_response(
@@ -56,9 +65,16 @@ def publish(sources_config, lang_config, finder_template, \
             if link.endswith('.'):
                 link = link[:-1]
 
-            article_text = fetch_content(link,\
-                    source_config["source_parser"],\
-                    lang_config["publishing_language"])
+            #When iterating over many languages, the link selector often picks the same article
+            #regardless of the persona given, so to not get our IP address blocked, it's nice of 
+            #us to do some caching
+            try:
+                article_text = article_cache[link]
+            except KeyError:
+                article_text = fetch_content(link,\
+                        source_config["source_parser"],\
+                        lang_config["publishing_language"])
+                article_cache[link] = article_text
 
             article_summary = fetch_llm_response(
                     article_text,\
