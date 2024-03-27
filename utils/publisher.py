@@ -174,7 +174,7 @@ def deploy_language(publishing_language):
                 finder_template,\
                 summarizer_template,\
                 f'{lang_config["publishing_language_short"]}-ft.html',\
-                "persona_ft")
+                "finance_technology_persona")
 
 if __name__ == "__main__":
     debug = os.environ.get('DEBUG', False)
