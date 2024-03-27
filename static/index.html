@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translate Tribune</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Translate Tribune</title>
         <title>TranslateTribune</title>
-        
+
         <!-- Standard favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
@@ -34,23 +34,18 @@
         <meta name="twitter:title" content="Translate Tribune">
         <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
         <style>
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-          margin: 0;
-        }
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
         .container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        .header-title a { 
-            text-decoration: none;
-            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .header-title h1 {
             font-family: 'Courier New', Courier, monospace;
@@ -72,84 +67,240 @@
             border: 0;
         }
         ul {
-          list-style-type: none;
-          padding: 0;
-          text-align: center;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
         }
 
         li {
-          display: inline-block;
-          padding: 10px 20px;
+            display: inline-block;
+            padding: 10px 20px;
         }
         </style>
-</head>
-<body>
-    <div class="container">
-      <div class="header-title">
-        <a href="javascript:window.location.reload(true)">
-            <h1 aria-label="TranslateTribune Beta">
-                <span class="visually-hidden">TranslateTribune</span>
-                <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
-            </h1>
-        </a>
-      </div>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header-title">
+                <h1 aria-label="TranslateTribune Beta">
+                    <span class="visually-hidden">TranslateTribune</span>
+                    <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
+                </h1>
+            </div>
+            <div id="language-message" aria-label="Select your preferred language"></div>
+            <ul>
+                <li><a href="en.html">English</a></li>
+                <li><a href="zh.html">中文</a></li>
+                <li><a href="es.html">Español</a></li>
+                <li><a href="ar.html">العربية</a></li>
+                <li><a href="fr.html">Français</a></li>
+                <li><a href="ru.html">Русский</a></li>
+                <li><a href="pt.html">Português</a></li>
+                <li><a href="de.html">Deutsch</a></li>
+                <li><a href="ja.html">日本語</a></li>
+                <li><a href="tr.html">Türkçe</a></li>
+                <li><a href="ko.html">한국어</a></li>
+                <li><a href="it.html">Italiano</a></li>
+                <li><a href="nl.html">Nederlands</a></li>
+                <li><a href="fa.html">فارسی</a></li>
+                <li><a href="uk.html">Українська</a></li>
+                <li><a href="sv.html">Svenska</a></li>
+                <li><a href="he.html">עברית</a></li>
+                <li><a href="hu.html">Magyar</a></li>
+                <li><a href="sw.html">Kiswahili</a></li>
+            </ul>
+            <div id="description-message" aria-label="TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI"></div>
+        </div>
+        <script>
+            const languageData = [
+                {
+                    code: 'en',
+                    languageMessage: 'Select your preferred language',
+                    languageAriaLabel: 'Select your preferred language',
+                    descriptionMessage: 'TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI',
+                    descriptionAriaLabel: 'TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI'
+                },
+                {
+                    code: 'zh',
+                    languageMessage: '选择您喜欢的语言',
+                    languageAriaLabel: '选择您喜欢的语言',
+                    descriptionMessage: 'TranslateTribune是一个完全自主的外语新闻聚合器；所有翻译、摘要和文章策展都由AI完成',
+                    descriptionAriaLabel: 'TranslateTribune是一个完全自主的外语新闻聚合器；所有翻译、摘要和文章策展都由AI完成'
+                },
+                {
+                    code: 'es',
+                    languageMessage: 'Seleccione su idioma preferido',
+                    languageAriaLabel: 'Seleccione su idioma preferido',
+                    descriptionMessage: 'TranslateTribune es un agregador de noticias en idiomas extranjeros totalmente autónomo; todas las traducciones, resúmenes y curaciones de artículos son realizadas por IA',
+                    descriptionAriaLabel: 'TranslateTribune es un agregador de noticias en idiomas extranjeros totalmente autónomo; todas las traducciones, resúmenes y curaciones de artículos son realizadas por IA'
+                },
+                {
+                    code: 'ar',
+                    languageMessage: 'اختر لغتك المفضلة',
+                    languageAriaLabel: 'اختر لغتك المفضلة',
+                    descriptionMessage: 'TranslateTribune هو مجمع أخبار باللغات الأجنبية مستقل تمامًا ؛ يتم إجراء جميع الترجمات والملخصات واستيراد المقالات بواسطة الذكاء الاصطناعي',
+                    descriptionAriaLabel: 'TranslateTribune هو مجمع أخبار باللغات الأجنبية مستقل تمامًا ؛ يتم إجراء جميع الترجمات والملخصات واستيراد المقالات بواسطة الذكاء الاصطناعي'
+                },
+                {
+                    code: 'fr',
+                    languageMessage: 'Sélectionnez votre langue préférée',
+                    languageAriaLabel: 'Sélectionnez votre langue préférée',
+                    descriptionMessage: "TranslateTribune est un agrégateur d'actualités en langues étrangères entièrement autonome ; toutes les traductions, résumés et sélections d'articles sont effectués par l'IA",
+                    descriptionAriaLabel: "TranslateTribune est un agrégateur d'actualités en langues étrangères entièrement autonome ; toutes les traductions, résumés et sélections d'articles sont effectués par l'IA"
+                },
+                {
+                    code: 'ru',
+                    languageMessage: 'Выберите предпочитаемый язык',
+                    languageAriaLabel: 'Выберите предпочитаемый язык',
+                    descriptionMessage: 'TranslateTribune — полностью автономный агрегатор новостей на иностранных языках; все переводы, резюме и подбор статей выполняются с помощью ИИ',
+                    descriptionAriaLabel: 'TranslateTribune — полностью автономный агрегатор новостей на иностранных языках; все переводы, резюме и подбор статей выполняются с помощью ИИ'
+                },
+                {
+                    code: 'pt',
+                    languageMessage: 'Selecione seu idioma preferido',
+                    languageAriaLabel: 'Selecione seu idioma preferido',
+                    descriptionMessage: 'TranslateTribune é um agregador de notícias em línguas estrangeiras totalmente autônomo; todas as traduções, resumos e curadoria de artigos são realizados por IA',
+                    descriptionAriaLabel: 'TranslateTribune é um agregador de notícias em línguas estrangeiras totalmente autônomo; todas as traduções, resumos e curadoria de artigos são realizados por IA'
+                },
+                {
+                    code: 'de',
+                    languageMessage: 'Wählen Sie Ihre bevorzugte Sprache',
+                    languageAriaLabel: 'Wählen Sie Ihre bevorzugte Sprache',
+                    descriptionMessage: 'TranslateTribune ist ein vollständig autonomer Aggregator für fremdsprachige Nachrichten; alle Übersetzungen, Zusammenfassungen und die Auswahl der Artikel erfolgen durch KI',
+                    descriptionAriaLabel: 'TranslateTribune ist ein vollständig autonomer Aggregator für fremdsprachige Nachrichten; alle Übersetzungen, Zusammenfassungen und die Auswahl der Artikel erfolgen durch KI'
+                },
+                {
+                    code: 'ja',
+                    languageMessage: '希望の言語を選択してください',
+                    languageAriaLabel: '希望の言語を選択してください',
+                    descriptionMessage: 'TranslateTribuneは完全自律型の外国語ニュースアグリゲーターです。すべての翻訳、要約、記事のキュレーションはAIによって行われます',
+                    descriptionAriaLabel: 'TranslateTribuneは完全自律型の外国語ニュースアグリゲーターです。すべての翻訳、要約、記事のキュレーションはAIによって行われます'
+                },
+                {
+                    code: 'tr',
+                    languageMessage: 'Tercih ettiğiniz dili seçin',
+                    languageAriaLabel: 'Tercih ettiğiniz dili seçin',
+                    descriptionMessage: 'TranslateTribune, tamamen otonom bir yabancı dil haber toplayıcısıdır; tüm çeviriler, özetler ve makale küratörlüğü AI tarafından gerçekleştirilir',
+                    descriptionAriaLabel: 'TranslateTribune, tamamen otonom bir yabancı dil haber toplayıcısıdır; tüm çeviriler, özetler ve makale küratörlüğü AI tarafından gerçekleştirilir'
+                },
+                {
+                    code: 'ko',
+                    languageMessage: '선호하는 언어를 선택하세요',
+                    languageAriaLabel: '선호하는 언어를 선택하세요',
+                    descriptionMessage: 'TranslateTribune은 완전히 자율적인 외국어 뉴스 애그리게이터입니다. 모든 번역, 요약 및 기사 큐레이션은 AI에 의해 수행됩니다',
+                    descriptionAriaLabel: 'TranslateTribune은 완전히 자율적인 외국어 뉴스 애그리게이터입니다. 모든 번역, 요약 및 기사 큐레이션은 AI에 의해 수행됩니다'
+                },
+                {
+                    code: 'it',
+                    languageMessage: 'Seleziona la tua lingua preferita',
+                    languageAriaLabel: 'Seleziona la tua lingua preferita',
+                    descriptionMessage: 'TranslateTribune è un aggregatore di notizie in lingue straniere completamente autonomo; tutte le traduzioni, i riassunti e la cura degli articoli sono eseguiti dall\'AI',
+                    descriptionAriaLabel: 'TranslateTribune è un aggregatore di notizie in lingue straniere completamente autonomo; tutte le traduzioni, i riassunti e la cura degli articoli sono eseguiti dall\'AI'
+                },
+                {
+                    code: 'nl',
+                    languageMessage: 'Selecteer uw voorkeurstaal',
+                    languageAriaLabel: 'Selecteer uw voorkeurstaal',
+                    descriptionMessage: 'TranslateTribune is een volledig autonome aggregator van nieuws in vreemde talen; alle vertalingen, samenvattingen en curatie van artikelen worden uitgevoerd door AI',
+                    descriptionAriaLabel: 'TranslateTribune is een volledig autonome aggregator van nieuws in vreemde talen; alle vertalingen, samenvattingen en curatie van artikelen worden uitgevoerd door AI'
+                },
+                {
+                    code: 'fa',
+                    languageMessage: 'زبان مورد نظر خود را انتخاب کنید',
+                    languageAriaLabel: 'زبان مورد نظر خود را انتخاب کنید',
+                    descriptionMessage: 'TranslateTribune یک تجمیع کننده خبری خودکار به زبان های خارجی است. تمام ترجمه ها، خلاصه ها و انتخاب مقالات توسط هوش مصنوعی انجام می شود',
+                    descriptionAriaLabel: 'TranslateTribune یک تجمیع کننده خبری خودکار به زبان های خارجی است. تمام ترجمه ها، خلاصه ها و انتخاب مقالات توسط هوش مصنوعی انجام می شود'
+                },
+                {
+                    code: 'uk',
+                    languageMessage: 'Виберіть бажану мову',
+                    languageAriaLabel: 'Виберіть бажану мову',
+                    descriptionMessage: 'TranslateTribune — це повністю автономний агрегатор новин іноземними мовами; усі переклади, анотації та підбір статей виконуються за допомогою ШІ',
+                    descriptionAriaLabel: 'TranslateTribune — це повністю автономний агрегатор новин іноземними мовами; усі переклади, анотації та підбір статей виконуються за допомогою ШІ'
+                },
+                {
+                    code: 'sv',
+                    languageMessage: 'Välj ditt föredragna språk',
+                    languageAriaLabel: 'Välj ditt föredragna språk',
+                    descriptionMessage: 'TranslateTribune är en helt autonom nyhetsaggregator för främmande språk; alla översättningar, sammanfattningar och artikelurval utförs av AI',
+                    descriptionAriaLabel: 'TranslateTribune är en helt autonom nyhetsaggregator för främmande språk; alla översättningar, sammanfattningar och artikelurval utförs av AI'
+                },
+                {
+                    code: 'he',
+                    languageMessage: 'בחר את השפה המועדפת עליך',
+                    languageAriaLabel: 'בחר את השפה המועדפת עליך',
+                    descriptionMessage: 'TranslateTribune הוא אגרגטור חדשות אוטונומי לחלוטין בשפות זרות; כל התרגומים, התקצירים והקראטוריון של המאמרים מבוצעים על ידי בינה מלאכותית',
+                    descriptionAriaLabel: 'TranslateTribune הוא אגרגטור חדשות אוטונומי לחלוטין בשפות זרות; כל התרגומים, התקצירים והקראטוריון של המאמרים מבוצעים על ידי בינה מלאכותית'
+                },
+                {
+                    code: 'hu',
+                    languageMessage: 'Válassza ki a kívánt nyelvet',
+                    languageAriaLabel: 'Válassza ki a kívánt nyelvet',
+                    descriptionMessage: 'A TranslateTribune egy teljesen autonóm idegen nyelvű hírgyűjtő; az összes fordítást, összefoglalót és cikk-kurátori feladatot AI végzi',
+                    descriptionAriaLabel: 'A TranslateTribune egy teljesen autonóm idegen nyelvű hírgyűjtő; az összes fordítást, összefoglalót és cikk-kurátori feladatot AI végzi'
+                },
+                {
+                    code: 'sw',
+                    languageMessage: 'Chagua lugha unayopendelea',
+                    languageAriaLabel: 'Chagua lugha unayopendelea',
+                    descriptionMessage: 'TranslateTribune ni mkusanyiko wa habari za lugha za kigeni unaojitegemea kikamilifu; tafsiri zote, muhtasari na uteuzi wa makala unafanywa na AI',
+                    descriptionAriaLabel: 'TranslateTribune ni mkusanyiko wa habari za lugha za kigeni unaojitegemea kikamilifu; tafsiri zote, muhtasari na uteuzi wa makala unafanywa na AI'
+                }
+            ];
 
-      <ul>
-          <li><a href="en.html">English</a></li>
-          <li><a href="zh.html">中文</a></li>
-          <li><a href="es.html">Español</a></li>
-          <li><a href="ar.html">العربية</a></li>
-          <li><a href="fr.html">Français</a></li>
-          <li><a href="ru.html">Русский</a></li>
-          <li><a href="pt.html">Português</a></li>
-          <li><a href="de.html">Deutsch</a></li>
-          <li><a href="ja.html">日本語</a></li>
-          <li><a href="tr.html">Türkçe</a></li>
-          <li><a href="ko.html">한국어</a></li>
-          <li><a href="it.html">Italiano</a></li>
-          <li><a href="nl.html">Nederlands</a></li>
-          <li><a href="fa.html">فارسی</a></li>
-          <li><a href="uk.html">Українська</a></li>
-          <li><a href="sv.html">Svenska</a></li>
-          <li><a href="he.html">עברית</a></li>
-          <li><a href="hu.html">Magyar</a></li>
-          <li><a href="sw.html">Kiswahili</a></li>
-      </ul>
-    </div>
-    <script>
-    const title = document.querySelector('.dynamic-logo');
-    let textNode = title.childNodes[0];
-    const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+            let currentIndex = 0;
+            const languageMessageElement = document.getElementById('language-message');
+            const descriptionMessageElement = document.getElementById('description-message');
 
-    // Track the original text to ensure we can always revert to it
-    const originalText = textNode.nodeValue;
-    // Use an array to track which characters are currently being animated
-    let animatingIndices = [];
+            function displayNextLanguage() {
+                const { code, languageMessage, languageAriaLabel, descriptionMessage, descriptionAriaLabel } = languageData[currentIndex];
 
-    setInterval(() => {
-        const textContent = textNode.nodeValue;
-        let index;
-        // Find a character index that is not currently being animated
-        do {
-            index = Math.floor(Math.random() * textContent.length);
-        } while (animatingIndices.includes(index));
+                languageMessageElement.textContent = languageMessage;
+                languageMessageElement.lang = code;
+                languageMessageElement.setAttribute('aria-label', languageAriaLabel);
 
-        // Mark this index as being animated
-        animatingIndices.push(index);
+                descriptionMessageElement.textContent = descriptionMessage;
+                descriptionMessageElement.lang = code;
+                descriptionMessageElement.setAttribute('aria-label', descriptionAriaLabel);
 
-        const char = textContent.charAt(index);
-        const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
-        textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+                currentIndex = (currentIndex + 1) % languageData.length;
+            }
 
-        // Change back to the original character after 500ms
-        setTimeout(() => {
-            // Use the original text to ensure the correct character is restored
-            textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
-            // Remove the index from the animatingIndices array
-            animatingIndices = animatingIndices.filter(i => i !== index);
-        }, 500);
-    }, 400);
-</script>
-</body>
+            displayNextLanguage();
+            setInterval(displayNextLanguage, 4500);
+
+            const title = document.querySelector('.dynamic-logo');
+            let textNode = title.childNodes[0];
+            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+
+            // Track the original text to ensure we can always revert to it
+            const originalText = textNode.nodeValue;
+            // Use an array to track which characters are currently being animated
+            let animatingIndices = [];
+
+            setInterval(() => {
+                const textContent = textNode.nodeValue;
+                let index;
+                // Find a character index that is not currently being animated
+                do {
+                    index = Math.floor(Math.random() * textContent.length);
+                } while (animatingIndices.includes(index));
+
+                // Mark this index as being animated
+                animatingIndices.push(index);
+
+                const char = textContent.charAt(index);
+                const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+                textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+
+                // Change back to the original character after 500ms
+                setTimeout(() => {
+                    // Use the original text to ensure the correct character is restored
+                    textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
+                    // Remove the index from the animatingIndices array
+                    animatingIndices = animatingIndices.filter(i => i !== index);
+                }, 500);
+            }, 400);
+        </script>
+    </body>
 </html>
 
