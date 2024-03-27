@@ -51,9 +51,9 @@ Format the response exclusively in valid HTML, adhering to this structure:
 ```
 <div class="article" data-front-page-score="0">
     <div class="article-title">
-        Title in {{ lang_config["publishing_language"] }} goes here
+        Title, rewritten in {{ lang_config["publishing_language"] }} goes here
     </div>
-    <div class="article-content hidden"><p>Summary of article in {{ lang_config["publishing_language"] }} goes here.<p></div>
+    <div class="article-content hidden"><p>Summary of article, written in {{ lang_config["publishing_language"] }} goes here.<p></div>
 </div>
 ```
 Do not include any additional text or formatting outside of the specified HTML tags. Ensure the summary text is properly formatted with <p> tags to maintain appropriate spacing between paragraphs.
