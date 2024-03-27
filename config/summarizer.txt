@@ -1,4 +1,4 @@
-Act as a translator and summarizer. Below, I will provide the text of an article in {{ source_config["source_language"] }}. Create a brief, punchy summary of the article's content in {{ lang_config["publishing_language"] }}. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in English to make it compelling to an American audience.
+Act as a translator and summarizer. Below, I will provide the text of an article in {{ source_config["source_language"] }}. Create a brief, punchy summary of the article's content in {{ lang_config["publishing_language"] }}. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in {{ lang_config["publishing_language"] }} to make it compelling to {{ lang_config["publishing_language"] }} speakers.
 
 When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article.
 
@@ -36,24 +36,24 @@ Examples:
 - Minor celebrity news or gossip
 - Offbeat or quirky human-interest stories
 
-1: Non-newsworthy content that should be omitted from the front page. This includes articles discussing missing pages, cookie policies, or any other content that was likely gathered in error. Advertisements should also be scored a 1.
+1: Content that should be omitted from the newspaper (this happens often, be on the lookout for articles gathered in error). This includes articles discussing missing pages, cookie policies, or any other content that was likely gathered in error. Advertisements should also be scored a 1.
 Examples:
 - 404 error pages or articles about missing content
 - Website terms of service or privacy policy pages
-- Articles discussing website cookies or user data collection
+- Pages discussing website cookies, privacy policies or user data collection
 - Sponsored content or advertorials
 - Any content that is clearly not a news article or informative piece
 
-If you encounter an article that does not clearly fit into one of these categories, consider its overall importance, relevance, and potential impact on the audience when assigning a score. 
+If you encounter an article that does not clearly fit into one of these categories, consider its overall importance, relevance, and potential impact on the audience when assigning a score. Ensure you filter out bad content by giving it a score of 1 when you see it.
 
 Format the response exclusively in valid HTML, adhering to this structure:
 
 ```
 <div class="article" data-front-page-score="0">
     <div class="article-title">
-        Title in {{ lang_config["publishing_language"] }} goes here
+        Title, rewritten in {{ lang_config["publishing_language"] }} goes here
     </div>
-    <div class="article-content hidden"><p>{{ lang_config["publishing_language"] }} summary of the article goes here.<p></div>
+    <div class="article-content hidden"><p>Summary of article, written in {{ lang_config["publishing_language"] }} goes here.<p></div>
 </div>
 ```
 Do not include any additional text or formatting outside of the specified HTML tags. Ensure the summary text is properly formatted with <p> tags to maintain appropriate spacing between paragraphs.
