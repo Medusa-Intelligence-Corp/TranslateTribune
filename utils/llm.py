@@ -20,8 +20,6 @@ from urlextract import URLExtract
 from bs4 import BeautifulSoup
 
 
-
-
 def text_to_chunks(text, chunk_size=175000):
     return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
 
@@ -51,11 +49,29 @@ def find_html(text):
 
 
 def validate_article_html(html):
+    max_size = 10000
+    if len(html) > max_size:
+        return False
+
     soup = BeautifulSoup(html, 'html.parser')
 
-    article_div = soup.find('div', class_='article', \
-            attrs=lambda attrs: 'data-front-page-score' in attrs and 0 <= \
-            int(attrs['data-front-page-score']) <= 5)
+    if soup.find('script'):
+        return False
+
+    allowed_tags = ['div', 'p', 'ul', 'ol', 'li']
+    allowed_attributes = ['class', 'id', 'alt', 'data-front-page-score']
+
+    # Sanitize HTML tags and attributes
+    for tag in soup.find_all():
+        if tag.name not in allowed_tags:
+            tag.decompose()
+        for attr in list(tag.attrs.keys()):
+            if attr not in allowed_attributes:
+                del tag[attr]
+
+    article_div = soup.find('div', class_='article',\
+            attrs=lambda attrs: 'data-front-page-score'\
+            in attrs and 0 <= int(attrs['data-front-page-score']) <= 5)
     if not article_div:
         return False
 
@@ -69,7 +85,6 @@ def validate_article_html(html):
 
     return True
 
-
 def find_json(text):
     json_match = re.search(r'({.*})', text, re.DOTALL)
 
@@ -81,7 +96,8 @@ def find_json(text):
             return []
     else:
         return [] 
-    
+
+
 def send_to_anthropic(text_chunk, instructions, model_id="claude-3-opus-20240229"):
     client = anthropic.Anthropic()
 
@@ -137,6 +153,7 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
 
     return chat_completion.choices[0].message.content
 
+
 def send_to_notdiamond(text_chunk, instructions):
     context = NDContext(text_chunk)
     query = NDQuery(instructions)
@@ -155,8 +172,7 @@ def send_to_notdiamond(text_chunk, instructions):
     logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
     logging.info(f"LLM called: {provider.model}")  
     
-    return result.content
-        
+    return result.content        
 
 
 def fetch_llm_response(text, instructions, model, validation=None):
