@@ -9,12 +9,17 @@ import anthropic
 
 import openai
 
+from notdiamond.llms.llm import NDLLM
+from notdiamond.prompts.prompt import NDPromptTemplate, NDContext, NDQuery
+
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 
 from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
+
+
 
 
 def text_to_chunks(text, chunk_size=175000):
@@ -132,6 +137,27 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
 
     return chat_completion.choices[0].message.content
 
+def send_to_notdiamond(text_chunk, instructions):
+    context = NDContext(text_chunk)
+    query = NDQuery(instructions)
+
+    prompt_template = NDPromptTemplate("{query}\n\n{context}", 
+                       partial_variables={"context":context, "query": query})
+
+    #TODO add new models here, Google, Mixtral 8x7 and Claude 3 Haiku when supported
+    llm_providers = ['openai/gpt-3.5-turbo',  'anthropic/claude-2.1', 
+                     'mistral/mistral-small-latest']
+
+    nd_llm = NDLLM(llm_providers=llm_providers)
+
+    result, session_id, provider = nd_llm.invoke(prompt_template=prompt_template)
+
+    logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
+    logging.info(f"LLM called: {provider.model}")  
+    
+    return result.content
+        
+
 
 def fetch_llm_response(text, instructions, model, validation=None):
 
@@ -162,6 +188,9 @@ def fetch_llm_response(text, instructions, model, validation=None):
     elif model == "Open Mixtral":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
+    elif model == "Not Diamond":
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions))) #NOTE this could be bigger for ND, they truncate extra data.
+        response = send_to_notdiamond(chunks[0], instructions)
     else:
         return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
 
