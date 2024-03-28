@@ -33,6 +33,7 @@ RUN pip3 install --no-cache-dir \
     anthropic \
     openai \
     mistralai \
+    notdiamond \
     boto3
 
 

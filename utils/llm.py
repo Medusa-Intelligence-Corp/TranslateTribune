@@ -9,12 +9,17 @@ import anthropic
 
 import openai
 
+from notdiamond.llms.llm import NDLLM
+from notdiamond.prompts.prompt import NDPromptTemplate
+
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 
 from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
+
+
 
 
 def text_to_chunks(text, chunk_size=175000):
@@ -132,6 +137,33 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
 
     return chat_completion.choices[0].message.content
 
+def send_to_notdiamond(text_chunk, instructions):
+    # Define your prompt, context and query
+    context = NDContext(text_chunk) # Additional context
+    query = NDQuery(instructions) # The specific query written by an end-user
+
+    # Define the prompt template to combine prompt and query into a single string
+    prompt_template = NDPromptTemplate("{query}\n\n{context}", 
+                                    partial_variables={"context":context, "query": query})
+
+    # Define the available LLMs you'd like to route between
+    llm_providers = ['openai/gpt-3.5-turbo', 'openai/gpt-4','openai/gpt-4-1106-preview', 'openai/gpt-4-turbo-preview', 
+                    'anthropic/claude-2.1', 'anthropic/claude-3-sonnet-20240229', 'anthropic/claude-3-opus-20240229', 
+                    'mistral/mistral-small-latest', 'mistral/mistral-medium-latest', 'mistral/mistral-large-latest']
+
+    # Create the NDLLM object -> like a 'meta-LLM' combining all of the specified models
+    nd_llm = NDLLM(llm_providers=llm_providers)
+
+    # After fuzzy hashing the inputs, the best LLM is determined by the ND API and the LLM is called client-side
+    result, session_id, provider = nd_llm.invoke(prompt_template=prompt_template)
+
+
+    print("ND session ID: ", session_id)  # A unique ID of the invoke. Important for personalizing ND to your use-case
+    print("LLM called: ", provider.model)  # The LLM routed to
+    print("LLM output: ", result.content)  # The LLM response
+    return result.content
+        
+
 
 def fetch_llm_response(text, instructions, model, validation=None):
 
@@ -162,6 +194,9 @@ def fetch_llm_response(text, instructions, model, validation=None):
     elif model == "Open Mixtral":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
+    elif model == "Not Diamond":
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions))) # TODO: check context size limitations
+        response = send_to_notdiamond(chunks[0], instructions)
     else:
         return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
 
