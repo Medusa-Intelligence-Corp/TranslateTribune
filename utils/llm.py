@@ -10,7 +10,7 @@ import anthropic
 import openai
 
 from notdiamond.llms.llm import NDLLM
-from notdiamond.prompts.prompt import NDPromptTemplate
+from notdiamond.prompts.prompt import NDPromptTemplate, NDContext, NDQuery
 
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
@@ -138,29 +138,23 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
     return chat_completion.choices[0].message.content
 
 def send_to_notdiamond(text_chunk, instructions):
-    # Define your prompt, context and query
-    context = NDContext(text_chunk) # Additional context
-    query = NDQuery(instructions) # The specific query written by an end-user
+    context = NDContext(text_chunk)
+    query = NDQuery(instructions)
 
-    # Define the prompt template to combine prompt and query into a single string
     prompt_template = NDPromptTemplate("{query}\n\n{context}", 
-                                    partial_variables={"context":context, "query": query})
+                       partial_variables={"context":context, "query": query})
 
-    # Define the available LLMs you'd like to route between
-    llm_providers = ['openai/gpt-3.5-turbo', 'openai/gpt-4','openai/gpt-4-1106-preview', 'openai/gpt-4-turbo-preview', 
-                    'anthropic/claude-2.1', 'anthropic/claude-3-sonnet-20240229', 'anthropic/claude-3-opus-20240229', 
-                    'mistral/mistral-small-latest', 'mistral/mistral-medium-latest', 'mistral/mistral-large-latest']
+    #TODO add new models here, Google, Mixtral 8x7 and Claude 3 Haiku when supported
+    llm_providers = ['openai/gpt-3.5-turbo',  'anthropic/claude-2.1', 
+                     'mistral/mistral-small-latest']
 
-    # Create the NDLLM object -> like a 'meta-LLM' combining all of the specified models
     nd_llm = NDLLM(llm_providers=llm_providers)
 
-    # After fuzzy hashing the inputs, the best LLM is determined by the ND API and the LLM is called client-side
     result, session_id, provider = nd_llm.invoke(prompt_template=prompt_template)
 
-
-    print("ND session ID: ", session_id)  # A unique ID of the invoke. Important for personalizing ND to your use-case
-    print("LLM called: ", provider.model)  # The LLM routed to
-    print("LLM output: ", result.content)  # The LLM response
+    logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
+    logging.info(f"LLM called: {provider.model}")  
+    
     return result.content
         
 
@@ -195,7 +189,7 @@ def fetch_llm_response(text, instructions, model, validation=None):
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Not Diamond":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions))) # TODO: check context size limitations
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions))) #NOTE this could be bigger for ND, they truncate extra data.
         response = send_to_notdiamond(chunks[0], instructions)
     else:
         return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
