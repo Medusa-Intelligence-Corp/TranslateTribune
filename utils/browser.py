@@ -1,5 +1,7 @@
 import time
 
+import requests
+
 from readabilipy import simple_json_from_html_string
 
 from goose3 import Goose
@@ -18,6 +20,13 @@ class UnsupportedModeException(Exception):
     """Exception raised for unsupported modes."""
     def __init__(self, mode, message="Mode not supported"):
         self.mode = mode
+        self.message = message
+        super().__init__(self.message)
+
+
+class BadPageException(Exception):
+    """Exception raised for bad html codes."""
+    def __init__(self, message="url returned bad html code"):
         self.message = message
         super().__init__(self.message)
 
@@ -42,6 +51,13 @@ def fetch_content(url, mode, language):
 
     time.sleep(5)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+
+    current_url = driver.current_url
+    response = requests.get(current_url)
+    status_code = response.status_code
+
+    if status_code != 200:
+        raise BadPageException(f"Bad status code: {status_code}")
 
     if mode=="text":
         text = driver.execute_script("return document.body.innerText")
