@@ -22,6 +22,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
 RUN pip3 install --no-cache-dir \
     selenium \
     beautifulsoup4 \
+    requests \
     pytz \
     cachetools \
     urlextract \

@@ -4,7 +4,7 @@
         "source_language": "English",
         "source_flag": "&#127482;&#127480;",
         "source": "USA Today",
-        "source_url": "https://www.usatoday.com/",
+        "source_url": "https://www.gry-online.pl/newsroom/bethesda-o-tes-6-nape%C5%82nia-nas-rado%C5%9Bci%C4%85-ekscytacja-i-o/z228b2d",
         "source_parser": "readability",
         "finder_model": "Open Mixtral",
         "summarizer_model": "Open Mixtral"
