@@ -4,7 +4,7 @@
         <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
     <p align="center">
-        <p align="center">A free and open-source project that leverages AI (see [```llm.py```](./utils/llm.py)) to curate, translate, and summarize foreign-language news articles from diverse countries. Read our daily edition in 19 languages at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
+        <p align="center">A free and open-source project that leverages AI (see <a href="./DEV_GUIDE.md#llm.py">DEV_GUIDE.md</a>) to curate, translate, and summarize foreign-language news articles from diverse countries. Read our daily edition in 19 languages at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>.
         <br>
     </p>
 <h4 align="center">
