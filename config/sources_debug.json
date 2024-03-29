@@ -16,7 +16,7 @@
         "source": "La Jornada",
         "source_url": "https://www.jornada.com.mx",
         "source_parser": "readability",
-        "finder_model": "Not Diamond",
-        "summarizer_model": "Not Diamond"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     }
 ]

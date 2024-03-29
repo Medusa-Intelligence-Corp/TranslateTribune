@@ -6,8 +6,8 @@
         "source": "USA Today",
         "source_url": "https://www.usatoday.com/",
         "source_parser": "readability",
-	"finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+	"finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "United Kingdom",
@@ -16,8 +16,8 @@
         "source": "BBC News",
         "source_url": "https://www.bbc.com/",
         "source_parser": "readability", 
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Mexico",
@@ -26,8 +26,8 @@
         "source": "La Jornada",
         "source_url": "https://www.jornada.com.mx",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "France",
@@ -36,8 +36,8 @@
         "source": "Le Figaro",
         "source_url": "https://www.lefigaro.fr",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Italy",
@@ -46,8 +46,8 @@
         "source": "La Repubblica",
         "source_url": "https://www.repubblica.it",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "China",
@@ -56,8 +56,8 @@
         "source": "People's Daily",
         "source_url": "http://www.people.com.cn",
         "source_parser": "text",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Israel",
@@ -66,8 +66,8 @@
         "source": "Yedioth Ahronoth",
         "source_url": "https://www.ynet.co.il",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Taiwan",
@@ -76,8 +76,8 @@
         "source": "Liberty Times",
         "source_url": "https://www.ltn.com.tw",
         "source_parser": "text",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Ukraine",
@@ -86,8 +86,8 @@
         "source": "Ukrayinska Pravda",
         "source_url": "https://www.pravda.com.ua",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "South Korea",
@@ -96,8 +96,8 @@
         "source": "JoongAng Ilbo",
         "source_url": "https://www.joongang.co.kr",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Iran",
@@ -106,8 +106,8 @@
         "source": "Ettela'at",
         "source_url": "https://ettelaat.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Qatar",
@@ -116,8 +116,8 @@
         "source": "Al Jazeera",
         "source_url": "https://www.aljazeera.net/",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Saudi Arabia",
@@ -126,8 +126,8 @@
         "source": "Al-Riyadh",
         "source_url": "https://www.alriyadh.com/",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Türkiye",
@@ -136,8 +136,8 @@
         "source": "Hürriyet",
         "source_url": "https://www.hurriyet.com.tr",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Russia",
@@ -146,8 +146,8 @@
         "source": "Kommersant",
         "source_url": "https://www.kommersant.ru",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Singapore",
@@ -156,8 +156,8 @@
         "source": "Lianhe Zaobao",
         "source_url": "https://www.zaobao.com.sg",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     },
     {
         "source_country": "Kenya",
@@ -166,7 +166,7 @@
         "source": "Taifa Leo",
         "source_url": "https://taifaleo.nation.co.ke",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     }
 ]

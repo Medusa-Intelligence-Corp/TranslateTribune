@@ -6,8 +6,8 @@
         "source": "The Economist",
         "source_url": "https://www.economist.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "United States",
@@ -16,8 +16,8 @@
         "source": "The Verge",
         "source_url": "https://www.theverge.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Japan",
@@ -26,8 +26,8 @@
         "source": "Nikkei",
         "source_url": "https://www.nikkei.com",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Switzerland",
@@ -36,8 +36,8 @@
         "source": "L'Agefi",
         "source_url": "https://agefi.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "China",
@@ -46,8 +46,8 @@
         "source": "PingWest",
         "source_url": "https://www.pingwest.com/",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "France",
@@ -56,8 +56,8 @@
         "source": "FrenchWeb",
         "source_url": "https://www.frenchweb.fr",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Brazil",
@@ -66,8 +66,8 @@
         "source": "Valor Econômico",
         "source_url": "https://valor.globo.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Chile",
@@ -76,8 +76,8 @@
         "source": "FayerWayer",
         "source_url": "https://www.fayerwayer.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "South Korea",
@@ -86,8 +86,8 @@
         "source": "The Korea Economic Daily",
         "source_url": "https://www.hankyung.com/",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Germany",
@@ -96,8 +96,8 @@
         "source": "Gründerszene",
         "source_url": "https://www.gruenderszene.de/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Russia",
@@ -106,8 +106,8 @@
         "source": "vc.ru",
         "source_url": "https://vc.ru/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Mexico",
@@ -116,8 +116,8 @@
         "source": "Xataka México",
         "source_url": "https://www.xataka.com.mx/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Spain",
@@ -126,8 +126,8 @@
         "source": "3DJuegos",
         "source_url": "https://www.3djuegos.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Italy",
@@ -136,8 +136,8 @@
         "source": "Multiplayer.it",
         "source_url": "https://multiplayer.it/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Poland",
@@ -146,8 +146,8 @@
         "source": "GRYOnline.pl",
         "source_url": "https://www.gry-online.pl/",
         "source_parser": "goose",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Netherlands",
@@ -156,8 +156,8 @@
         "source": "Tweakers",
         "source_url": "https://tweakers.net/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Sweden",
@@ -166,8 +166,8 @@
         "source": "SweClockers",
         "source_url": "https://www.sweclockers.com/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Open Mixtral"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     },
     {
         "source_country": "Ukraine",
@@ -176,8 +176,8 @@
         "source": "ITC.ua",
         "source_url": "https://itc.ua/",
         "source_parser": "readability",
-        "finder_model": "Open Mixtral",
-        "summarizer_model": "Claude 3h"
+        "finder_model": "Not Diamond",
+        "summarizer_model": "Not Diamond"
     }
 ]
 
