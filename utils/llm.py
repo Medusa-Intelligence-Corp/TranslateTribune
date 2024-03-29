@@ -2,6 +2,7 @@ import os
 import re
 import json
 import logging
+import random
 
 import validators
 
@@ -18,6 +19,22 @@ from mistralai.models.chat_completion import ChatMessage
 from urlextract import URLExtract
 
 from bs4 import BeautifulSoup
+
+
+class UnsupportedModelException(Exception):
+    """Exception raised for unsupported models."""
+    def __init__(self, model, message="Model not supported"):
+        self.mode = mode
+        self.message = message
+        super().__init__(self.message)
+
+
+class UnsupportedValidationException(Exception):
+    """Exception raised for unsupported validation."""
+    def __init__(self, validation, message="Validation type not supported"):
+        self.validation = validation
+        self.message = message
+        super().__init__(self.message)
 
 
 def text_to_chunks(text, chunk_size=175000):
@@ -161,9 +178,10 @@ def send_to_notdiamond(text_chunk, instructions):
     prompt_template = NDPromptTemplate("{query}\n\n{context}", 
                        partial_variables={"context":context, "query": query})
 
-    #TODO add new models here, Google, Mixtral 8x7 and Claude 3 Haiku when supported
-    llm_providers = ['openai/gpt-3.5-turbo',  'anthropic/claude-2.1', 
-                     'mistral/mistral-small-latest']
+    #TODO add new models here:
+    # Claude 3 Haiku (when supported)
+    llm_providers = ['openai/gpt-3.5-turbo', 'togetherai/Mistral-7B-Instruct-v0.2',
+                     'togetherai/Mixtral-8x7B-Instruct-v0.1','cohere/command']
 
     nd_llm = NDLLM(llm_providers=llm_providers)
 
@@ -172,59 +190,51 @@ def send_to_notdiamond(text_chunk, instructions):
     logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
     logging.info(f"LLM called: {provider.model}")  
     
-    return result.content        
+    return result.content, provider.model        
 
 
 def fetch_llm_response(text, instructions, model, validation=None):
 
-    if model == "Claude 3o":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response = send_to_anthropic(chunks[0], instructions)
-    elif model == "Claude 3h":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
-    elif model == "Claude 2.1":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response = send_to_anthropic(chunks[0], instructions,'claude-2.1')
-    elif model == "GPT-4":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response = send_to_openai(chunks[0],instructions)
+    if model == "Claude 3h":
+        try:
+            chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+            response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
+        except Exception:
+            chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+            response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
+            model = "Open Mixtral"
     elif model == "GPT-3.5t":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_openai(chunks[0],instructions,'gpt-3.5-turbo')
-    elif model == "Mistral-LG":
-        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-        response = send_to_mistral(chunks[0], instructions)
-    elif model == "Mistral-MD":
-        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-        response = send_to_mistral(chunks[0], instructions,'mistral-medium-latest')
-    elif model == "Mistral-SM":
-        chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-        response = send_to_mistral(chunks[0], instructions,'mistral-small-latest')
     elif model == "Open Mixtral":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Not Diamond":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions))) #NOTE this could be bigger for ND, they truncate extra data.
-        response = send_to_notdiamond(chunks[0], instructions)
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response, model = send_to_notdiamond(chunks[0], instructions)
+    elif model == "Random":
+        models = ["Claude 3h","GPT-3.5t","Open Mixtral"]
+        model = random.choice(models)
+        return fetch_llm_response(text, instructions, model, validation)
     else:
-        return fetch_llm_response(text, instructions, "Open Mixtral", validation) 
+        raise UnsupportedModelException(model)
+        
 
     if validation is None:
-        return response
+        return response, model
     elif validation == "url":
         logging.info(response)
-        return find_urls(response)
+        return find_urls(response), model
     elif validation == "html":
-        return find_html(response)
+        return find_html(response), model
     elif validation == "html-article":
         html = find_html(response)
         if validate_article_html(html):
-            return html
+            return html, model
         else:
             logging.info("bad formatting from LLM")
-            return None
+            return None, model
     elif validation == "json":
-        return find_json(response)
+        return find_json(response), model
     else:
-        return None
+        raise UnsupportedValidationException(validation)
