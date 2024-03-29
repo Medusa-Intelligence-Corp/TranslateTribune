@@ -49,7 +49,7 @@ def publish(sources_config, lang_config, finder_template, \
 
             logging.info(source_config["source"])
 
-            best_links = fetch_llm_response(
+            best_links, finder_model = fetch_llm_response(
                 all_links,\
                 finder_template.render(**locals()),\
                 source_config["finder_model"],\
@@ -76,12 +76,18 @@ def publish(sources_config, lang_config, finder_template, \
                         lang_config["publishing_language"])
                 article_cache[link] = article_text
 
-            article_summary = fetch_llm_response(
+            article_summary, summarizer_model = fetch_llm_response(
                     article_text,\
                     summarizer_template.render(**locals()),\
                     source_config["summarizer_model"],\
                     "html-article")
             
+            
+            # Add HTML comment with model information for debugging
+            article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
+                                  <!-- Summarizer Model: {summarizer_model} -->  
+                                  {article_summary}"""
+
             # Save the title
             soup = BeautifulSoup(article_summary, 'html.parser')
             title_div = soup.find('div', class_='article-title')
