@@ -18,5 +18,15 @@
         "source_parser": "readability",
         "finder_model": "Random",
         "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Türkiye",
+        "source_language": "Turkish",
+        "source_flag": "&#127481;&#127479;",
+        "source": "Hürriyet",
+        "source_url": "https://www.hurriyet.com.tr/dunya/macron-ve-lulanin-fotograflari-sosyal-medyayi-sallad%C4%B1-uluslararasi-diplomasi-degil-romantik-bir-kacamak-42436247",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
     }
 ]
