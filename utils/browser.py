@@ -1,6 +1,10 @@
 import time
+import logging
 
 import requests
+
+from urllib import robotparser
+from urllib.parse import urlparse
 
 from readabilipy import simple_json_from_html_string
 
@@ -25,7 +29,7 @@ class UnsupportedModeException(Exception):
 
 
 class BadPageException(Exception):
-    """Exception raised for bad html codes."""
+    """Exception raised for bad html codes or bot blocking."""
     def __init__(self, message="url returned bad html code"):
         self.message = message
         super().__init__(self.message)
@@ -45,19 +49,36 @@ def setup_driver():
 
 
 def fetch_content(url, mode, language):
+    headers = {
+        "User-Agent": "TranslateTribune/1.0 (https://translatetribune.com)"
+    }
+
+    parsed_url = urlparse(url)
+    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+    robots_url = f"{base_url}/robots.txt"
+    rp = robotparser.RobotFileParser()
+    rp.set_url(robots_url)
+
+    try:
+        rp.read()
+    except requests.exceptions.RequestException:
+        logging.info(f"Could not fetch robots.txt from {base_url}")
+
+    if not rp.can_fetch("TranslateTribune", url):
+        logging.info(f"Permission issue for {robots_url}, contact them.")
+
     driver = setup_driver()
+    
+    response = requests.get(url, headers=headers, timeout=10)
+    status_code = response.status_code
+
+    if status_code != 200:
+        raise BadPageException(f"Bad status code: {status_code}")
     
     driver.get(url)
 
     time.sleep(5)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-
-    current_url = driver.current_url
-    response = requests.get(current_url)
-    status_code = response.status_code
-
-    if status_code != 200:
-        raise BadPageException(f"Bad status code: {status_code}")
 
     if mode=="text":
         text = driver.execute_script("return document.body.innerText")
