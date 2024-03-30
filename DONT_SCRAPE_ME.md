@@ -18,7 +18,7 @@ The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as fo
 
 # Is Translate Tribune social media?
 
-It is an open-source project where anyone can contribute sources.... But read more read below and decide.
+It is an open-source project where anyone can contribute sources. Compare the posts below and decide for yourself:
 
 ## The Economist LinkedIn Post
 
