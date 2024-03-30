@@ -20,8 +20,6 @@ The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as fo
 
 It is an open-source project where anyone can contribute sources. Compare the posts below and decide for yourself:
 
-## The Economist LinkedIn Post
-
 Here's a linkedin post referencing an article in the Economist:
 
 ```
@@ -41,9 +39,8 @@ In a historic year of global elections, when generative AI is developing so quic
 
 Special thanks to support and advice from Eric Horvitz, Vickie Wang 王宇平, Whitney Hudson, Weishung L., Christopher White, Jonathan Larson and many others.
 ```
-## The Economist TranslateTribune Post
 
-Note it's in Spanish, **our posts are always both translated and summarized**.
+Here's a TranslateTribune referencing an article in the Economist. Note it's in Spanish. **Our posts are always both translated and summarized**.
 
 ```
 🇬🇧 Inteligencia artificial transformará la salud
