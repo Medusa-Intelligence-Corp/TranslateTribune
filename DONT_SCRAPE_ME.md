@@ -2,7 +2,7 @@
 
 TranslateTribune is a news aggregator that translates and summarizes web content, which we believe falls under fair use. 🙏 We strive to comply with the law and respect publishers' requests not to scrape their content. Our summaries are similar to social media posts about articles but in different languages. 🌍 We always link to our sources and never post full articles. 🔗
 
-Our scraper respectfully checks robots.txt preferences, avoids using hacks to bypass paywalls (e.g., we don't use [bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean)), identifies itself as "TranslateTribune", and uses caching to minimize bandwidth usage. 🤖 You will typically see under 5 visits from our scraper per day. 📅
+Our scraper respectfully checks robots.txt preferences, avoids using hacks to bypass paywalls (e.g., we don't use [bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean)), identifies itself as "TranslateTribune", and uses caching to minimize bandwidth usage. On a huge news day you might see under 5 visits from our scraper per day, if any. We only publish one article per source country per day and have many sources (see [sources.json](./config/sources.json) and [sources_finance_technology.json](./config/sources_finance_technology.json)).
 
 We reference your site for every article we summarize and post, and probably drive traffic to your site (check your logs for ```referer="translatetribune.com"```). 📈 If you really don't want us to share one of your articles per language per day, then just ask us, but considering we are only stealing top stories we can probably find other sources easily and help them out. 🤝 Either way we're happy to talk to you and help you out, but we are unwilling and unable to pay to license your content. 💸
 
@@ -18,7 +18,7 @@ The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as fo
 
 # Is Translate Tribune social media?
 
-Read below and decide.
+It is an open-source project where anyone can contribute sources.... But read more read below and decide.
 
 ## The Economist LinkedIn Post
 
