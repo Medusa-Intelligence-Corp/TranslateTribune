@@ -20,7 +20,7 @@ The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as fo
 
 It is an open-source project where anyone can contribute sources. Compare the posts below and decide for yourself:
 
-Here's a linkedin post referencing an article in the Economist:
+Here's a LinkedIn post referencing an article in the Economist:
 
 ```
 🚨 Hot off the presses 🚨
