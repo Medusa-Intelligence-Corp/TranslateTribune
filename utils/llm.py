@@ -190,7 +190,9 @@ def send_to_notdiamond(text_chunk, instructions):
     logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
     logging.info(f"LLM called: {provider.model}")  
     
-    return result.content, provider.model        
+    model_description = f'ND-{provider.model}'
+
+    return result.content, model_description        
 
 
 def fetch_llm_response(text, instructions, model, validation=None):
@@ -210,10 +212,14 @@ def fetch_llm_response(text, instructions, model, validation=None):
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Not Diamond":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response, model = send_to_notdiamond(chunks[0], instructions)
+        try:
+            chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+            response, model = send_to_notdiamond(chunks[0], instructions)
+        except Exception:
+            chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
+            response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Random":
-        models = ["Claude 3h","GPT-3.5t","Open Mixtral"]
+        models = ["Claude 3h", "GPT-3.5t", "Open Mixtral", "Not Diamond"]
         model = random.choice(models)
         return fetch_llm_response(text, instructions, model, validation)
     else:
