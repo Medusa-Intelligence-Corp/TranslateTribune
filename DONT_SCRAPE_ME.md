@@ -6,11 +6,21 @@ Our scraper respectfully checks robots.txt preferences, avoids using hacks to by
 
 We reference your site for every article we summarize and post, and probably drive traffic to your site (check your logs for ```referer="translatetribune.com"```). 📈 If you really don't want us to share one of your articles per language per day, then just ask us, but considering we are only stealing top stories we can probably find other sources easily and help them out. 🤝 Either way we're happy to talk to you and help you out, but we are unwilling and unable to pay to license your content. 💸
 
-## Is Translate Tribune social media?
+## TranslateTribune Scraper Workflow 🛠️
+
+The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as follows:
+
+1. Sets custom User-Agent header to identify as "TranslateTribune/1.0" 🆔
+2. Fetches robots.txt from domain and checks permission to access target URL 🤖
+3. Uses Selenium with headless Chrome to load full page 🌐
+4. Extracts page content for further processing 📜
+5. Caches scraped result temporarily (few hours) 🗃️
+
+# Is Translate Tribune social media?
 
 Read below and decide.
 
-### The Economist LinkedIn Post
+## The Economist LinkedIn Post
 
 Here's a linkedin post referencing an article in the Economist:
 
@@ -31,7 +41,7 @@ In a historic year of global elections, when generative AI is developing so quic
 
 Special thanks to support and advice from Eric Horvitz, Vickie Wang 王宇平, Whitney Hudson, Weishung L., Christopher White, Jonathan Larson and many others.
 ```
-### The Economist TranslateTribune Post
+## The Economist TranslateTribune Post
 
 Note it's in Spanish, **our posts are always both translated and summarized**.
 
@@ -42,16 +52,6 @@ Priscilla Chan y Mark Zuckerberg de Chan Zuckerberg Initiative se proponen errad
 The Economist (https://www.economist.com/technology-quarterly/2024/03/27/ais-will-make-health-care-safer-and-better)
 ```
 
-## TranslateTribune Scraper Workflow 🛠️
-
-The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as follows:
-
-1. Sets custom User-Agent header to identify as "TranslateTribune/1.0" 🆔
-2. Fetches robots.txt from domain and checks permission to access target URL 🤖
-3. Uses Selenium with headless Chrome to load full page 🌐
-4. Extracts page content for further processing 📜
-5. Caches scraped result temporarily (few hours) 🗃️
-
 # Protecting Your News Site from Web Scraping 🛡️
 
 To make it harder for scrapers to bypass your paywall and access articles, consider these best practices:
@@ -60,7 +60,7 @@ To make it harder for scrapers to bypass your paywall and access articles, consi
 - Require user login and authentication for full articles 🔑
 - Detect and block suspicious activity (e.g., abnormally fast page views from an IP) 🚨
 - Serve article text and media via JavaScript to prevent access by disabling JS 🚫
-    - The paywalls of [nytimes.com](https://www.nytimes.com) never work [if you are browsing without JavaScript](https://medium.com/@askadork/one-neat-trick-to-bypass-nytimes-paywall-turn-off-javascript-b0bfeed7726e), making them totally ineffective against web scraping, they seem to be relying on their legalese in their [robots.txt](https://www.nytimes.com/robots.txt), even though they also publish their entire website for free on the [```.onion```](https://open.nytimes.com/https-open-nytimes-com-the-new-york-times-as-a-tor-onion-service-e0d0b67b7482) protocol so I guess if you visit that way you can use all of their articles in your bot for free? What a mess. 🤦‍♂️ This is one for the courts to figure out, but there's a better way...
+    - The [nytimes.com](https://www.nytimes.com) paywall will never work [if you are browsing without JavaScript](https://medium.com/@askadork/one-neat-trick-to-bypass-nytimes-paywall-turn-off-javascript-b0bfeed7726e), making it totally ineffective against web scraping, they seem to be relying on their legalese in their [robots.txt](https://www.nytimes.com/robots.txt), even though they also publish their entire website for free on the [```.onion```](https://open.nytimes.com/https-open-nytimes-com-the-new-york-times-as-a-tor-onion-service-e0d0b67b7482) protocol
     - The [wsj.com](https://www.wsj.com) has a very effective paywall that is difficult to circumvent, good job guys 👍
     - No matter what you do, if you are popular enough your paywall will probably be circumvented by a project like [bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean), but it's still worth trying to do it 'right' to make life harder for cheap bots (written by bad developers) to get your data if you don't want them to 💪
 
