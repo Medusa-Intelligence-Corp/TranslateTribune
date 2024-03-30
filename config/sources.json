@@ -6,7 +6,7 @@
         "source": "USA Today",
         "source_url": "https://www.usatoday.com/",
         "source_parser": "readability",
-	"finder_model": "Random",
+        "finder_model": "Random",
         "summarizer_model": "Random"
     },
     {
@@ -165,6 +165,176 @@
         "source_flag": "&#127472;&#127466;",
         "source": "Taifa Leo",
         "source_url": "https://taifaleo.nation.co.ke",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "United States",
+        "source_language": "English",
+        "source_flag": "&#127482;&#127480;",
+        "source": "The New York Times",
+        "source_url": "https://www.nytimes.com/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "United Kingdom",
+        "source_language": "English",
+        "source_flag": "&#127468;&#127463;",
+        "source": "The Guardian",
+        "source_url": "https://www.theguardian.com/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Mexico",
+        "source_language": "Spanish",
+        "source_flag": "&#127474;&#127485;",
+        "source": "El Universal",
+        "source_url": "https://www.eluniversal.com.mx/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "France",
+        "source_language": "French",
+        "source_flag": "&#127467;&#127479;",
+        "source": "Le Monde",
+        "source_url": "https://www.lemonde.fr/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Italy",
+        "source_language": "Italian",
+        "source_flag": "&#127470;&#127481;",
+        "source": "Corriere della Sera",
+        "source_url": "https://www.corriere.it/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "China",
+        "source_language": "Chinese",
+        "source_flag": "&#127464;&#127475;",
+        "source": "Xinhua News Agency",
+        "source_url": "http://www.xinhuanet.com/",
+        "source_parser": "text",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Israel",
+        "source_language": "Hebrew",
+        "source_flag": "&#127470;&#127473;",
+        "source": "Haaretz",
+        "source_url": "https://www.haaretz.co.il/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Taiwan",
+        "source_language": "Chinese",
+        "source_flag": "&#127481;&#127484;",
+        "source": "Apple Daily",
+        "source_url": "https://tw.appledaily.com/",
+        "source_parser": "text",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Ukraine",
+        "source_language": "Ukrainian",
+        "source_flag": "&#127482;&#127462;",
+        "source": "Segodnya",
+        "source_url": "https://www.segodnya.ua/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "South Korea",
+        "source_language": "Korean",
+        "source_flag": "&#127472;&#127479;",
+        "source": "The Chosun Ilbo",
+        "source_url": "https://www.chosun.com/",
+        "source_parser": "goose",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Iran",
+        "source_language": "Farsi",
+        "source_flag": "&#127470;&#127479;",
+        "source": "Hamshahri",
+        "source_url": "https://www.hamshahrionline.ir/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Qatar",
+        "source_language": "Arabic",
+        "source_flag": "&#127478;&#127462;",
+        "source": "Al-Sharq",
+        "source_url": "https://al-sharq.com/",
+        "source_parser": "goose",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Saudi Arabia",
+        "source_language": "Arabic",
+        "source_flag": "&#127480;&#127462;",
+        "source": "Okaz",
+        "source_url": "https://www.okaz.com.sa/",
+        "source_parser": "goose",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Türkiye",
+        "source_language": "Turkish",
+        "source_flag": "&#127481;&#127479;",
+        "source": "Sabah",
+        "source_url": "https://www.sabah.com.tr/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Russia",
+        "source_language": "Russian",
+        "source_flag": "&#127479;&#127482;",
+        "source": "Izvestia",
+        "source_url": "https://iz.ru/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Singapore",
+        "source_language": "Chinese",
+        "source_flag": "&#127480;&#127468;",
+        "source": "Shin Min Daily News",
+        "source_url": "https://www.shinmin.sg/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
+        "source_country": "Kenya",
+        "source_language": "Swahili",
+        "source_flag": "&#127472;&#127466;",
+        "source": "Nipashe",
+        "source_url": "https://www.ippmedia.com/sw/nipashe",
         "source_parser": "readability",
         "finder_model": "Random",
         "summarizer_model": "Random"

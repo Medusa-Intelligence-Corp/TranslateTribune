@@ -4,6 +4,42 @@ TranslateTribune is a news aggregator that translates and summarizes web content
 
 Our scraper follows robots.txt preferences, avoids using hacks to bypass paywalls (e.g., we don't use [bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean)), identifies itself as "TranslateTribune", and uses caching to minimize bandwidth usage. You will typically see only a handful of visits from us per day.
 
+## Is it social media?
+
+Read below and decide.
+
+### The Economist LinkedIn Post
+
+Here's a linkedin post referencing an article in the Economist:
+
+```
+🚨 Hot off the presses 🚨
+
+Thrilled to share our latest piece in The Economist where Madeleine Daepp and I delve into the urgent challenges and implications of generative AI in disinformation campaigns. 🌐✍️
+Based on our fieldwork in Taiwan during their January presidential election, we provide a firsthand look at how
+
+(a) generative AI fuels generative propaganda, which is a bigger problem than deepfakes,
+(b) generative propaganda is following the flow of online attention to short-form video on platforms like #TikTok (and monitoring narratives on these platforms is hard),
+(c) it comes in waves, particularly when people are searching for real-time news on these platforms about political events as they are occurring.
+
+In a historic year of global elections, when generative AI is developing so quickly, it is critical that governments, tech companies, and civil society work together to develop countermeasures to AI-powered disinformation.
+
+🔗 Full article: https://lnkd.in/gubDiC8d
+#Disinformation #GenerativeAI #Deepfakes #DigitalIntegrity #PublicPolicy #ElectionSecurity
+
+Special thanks to support and advice from Eric Horvitz, Vickie Wang 王宇平, Whitney Hudson, Weishung L., Christopher White, Jonathan Larson and many others.
+```
+### The Economist TranslateTribune Post
+
+Note it's in Spanish, **our posts are always both translated and summarized**.
+
+```
+🇬🇧 Inteligencia artificial transformará la salud
+
+Priscilla Chan y Mark Zuckerberg de Chan Zuckerberg Initiative se proponen erradicar enfermedades con la ayuda de la inteligencia artificial, con un enfoque tecnológico destacado desde 2020. La ambiciosa meta de prevenir, curar o controlar todas las enfermedades parece cada vez más alcanzable con la IA.
+The Economist (https://www.economist.com/technology-quarterly/2024/03/27/ais-will-make-health-care-safer-and-better)
+```
+
 ## TranslateTribune Scraper Workflow
 
 The [TranslateTribune scraper code (browser.py)](./utils/browser.py) works as follows:
