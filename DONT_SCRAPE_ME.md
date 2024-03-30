@@ -68,7 +68,7 @@ To make it harder for scrapers to bypass your paywall and access articles, consi
     - The [wsj.com](https://www.wsj.com) has a very effective paywall that is difficult to circumvent, good job guys 👍
     - No matter what you do, if you are popular enough your paywall will probably be circumvented by a project like [bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean), but it's still worth trying to do it 'right' to make life harder for cheap bots (written by bad developers) to get your data if you don't want them to 💪
 
-# 2. Monitor and Block Suspicious Traffic 🚫
+## 2. Monitor and Block Suspicious Traffic 🚫
 - Log and monitor page views to detect anomalous scraping behavior 📊
 - Block IPs and user agents with suspicious access patterns ⛔
 - Limit the rate at which a client can access pages ⏰
