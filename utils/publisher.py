@@ -31,12 +31,17 @@ def publish(sources_config, lang_config, finder_template, \
 
     random.shuffle(sources_config)
 
+    source_countries_published = []
     article_dict = {}
 
     for source_config in sources_config:
         try:
             #as a rule, we don't publish same-language summaries
             if source_config["source_language"] == lang_config["publishing_language"]:
+                continue
+
+            #we also only publish from one source country per day
+            if source_config["source_country"] in source_countries_published:
                 continue
 
             try:
@@ -119,11 +124,16 @@ def publish(sources_config, lang_config, finder_template, \
             article = soup.find('div', class_='article')
             front_page_score = float(article['data-front-page-score'])
             
-            article_dict[article_title] = {}
-            article_dict[article_title]["html"] = article_summary
-            article_dict[article_title]["score"] = front_page_score
-            
-            logging.info(article_summary)
+            if front_page_score > 2:
+                article_dict[article_title] = {}
+                article_dict[article_title]["html"] = article_summary
+                article_dict[article_title]["score"] = front_page_score
+                
+                source_countries_published.append(source_config["source_country"])
+                        
+                logging.info(article_summary)
+            else:
+                logging.info("Skipping low-scoring article")
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
@@ -131,8 +141,7 @@ def publish(sources_config, lang_config, finder_template, \
     sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
     for article_title, article_data in sorted_articles:
-        if article_data['score'] > 2:
-            article_html += article_data['html']
+        article_html += article_data['html']
 
     complete_html = deploy_website(article_html,html_filename,lang_config)
     logging.info(complete_html)

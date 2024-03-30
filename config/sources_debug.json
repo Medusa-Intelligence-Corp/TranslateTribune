@@ -20,6 +20,16 @@
         "summarizer_model": "Random"
     },
     {
+        "source_country": "United States",
+        "source_language": "English",
+        "source_flag": "&#127482;&#127480;",
+        "source": "The New York Times",
+        "source_url": "https://www.nytimes.com/",
+        "source_parser": "readability",
+        "finder_model": "Random",
+        "summarizer_model": "Random"
+    },
+    {
         "source_country": "Türkiye",
         "source_language": "Turkish",
         "source_flag": "&#127481;&#127479;",
