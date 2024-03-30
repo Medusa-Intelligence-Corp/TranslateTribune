@@ -5,6 +5,8 @@ import pytz
 
 import boto3
 
+from bs4 import BeautifulSoup
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
@@ -25,7 +27,11 @@ def deploy_website(article_html, html_filename, lang_config):
     eastern_time = current_utc_datetime.astimezone(pytz.timezone(lang_config["publishing_timezone"]))
     date_string = eastern_time.strftime("%Y-%m-%d %H:%M %Z")
 
-    rendered_html = template.render(article_html=article_html,date_string=date_string,lang_config=lang_config)
+    rendered_html = template.render(article_html=article_html,\
+            date_string=date_string,\
+            lang_config=lang_config)
+
+    rendered_html = BeautifulSoup(rendered_html, 'html.parser').prettify()
 
     output_path = os.path.join('/usr/src/app/debug', html_filename)
     with open(output_path, 'w') as file:
