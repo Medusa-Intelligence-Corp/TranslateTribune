@@ -17,8 +17,8 @@ from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 
 from urlextract import URLExtract
-
 from bs4 import BeautifulSoup
+from langdetect import detect
 
 
 class UnsupportedModelException(Exception):
@@ -44,7 +44,12 @@ def text_to_chunks(text, chunk_size=175000):
 def find_urls(text):
     extractor = URLExtract()
     potential_urls = extractor.find_urls(text, check_dns=True)
-    valid_urls = [url for url in potential_urls if validators.url(url)]
+    valid_urls = []
+    for url in potential_urls:
+        if url.endswith('.'):
+            url = url[:-1]
+        if validators.url(url):
+            valid_urls.append(url)
     return valid_urls
 
 
@@ -65,7 +70,7 @@ def find_html(text):
         return ""
 
 
-def validate_article_html(html):
+def validate_article_html(html, language_code, min_article_score):
     max_size = 10000
     if len(html) > max_size:
         return False
@@ -88,7 +93,7 @@ def validate_article_html(html):
 
     article_div = soup.find('div', class_='article',\
             attrs=lambda attrs: 'data-front-page-score'\
-            in attrs and 0 <= int(attrs['data-front-page-score']) <= 5)
+            in attrs and min_article_score <= int(attrs['data-front-page-score']) <= 5)
     if not article_div:
         return False
 
@@ -96,11 +101,21 @@ def validate_article_html(html):
     if not article_title_div:
         return False
 
-    article_content_p = article_div.find('div', class_='article-content hidden')
-    if not article_content_p:
+    article_content = article_div.find('div', class_='article-content hidden')
+    if not article_content:
+        return False
+
+    content_text = article_content.text.strip()
+    llm_output_language = detect(content_text)
+    logging.info(f"detected output language {llm_output_language}")
+    if language_code not in llm_output_language:
+        logging.info(f"Wrong Language from LLM. \
+                Expected {language_code}\
+                got {llm_output_language} from {summarizer_model}")
         return False
 
     return True
+
 
 def find_json(text):
     json_match = re.search(r'({.*})', text, re.DOTALL)
@@ -195,7 +210,7 @@ def send_to_notdiamond(text_chunk, instructions):
     return result.content, model_description        
 
 
-def fetch_llm_response(text, instructions, model, validation=None):
+def fetch_llm_response(text, instructions, model, validation=None, language_filter=None, min_article_score=None):
 
     if model == "Claude 3h":
         try:
@@ -221,11 +236,10 @@ def fetch_llm_response(text, instructions, model, validation=None):
     elif model == "Random":
         models = ["Claude 3h", "GPT-3.5t", "Open Mixtral", "Not Diamond"]
         model = random.choice(models)
-        return fetch_llm_response(text, instructions, model, validation)
+        return fetch_llm_response(text, instructions, model, validation, language_filter, min_article_score)
     else:
         raise UnsupportedModelException(model)
         
-
     if validation is None:
         return response, model
     elif validation == "url":
@@ -235,7 +249,7 @@ def fetch_llm_response(text, instructions, model, validation=None):
         return find_html(response), model
     elif validation == "html-article":
         html = find_html(response)
-        if validate_article_html(html):
+        if validate_article_html(html, language_filter, min_article_score):
             return html, model
         else:
             logging.info("bad formatting from LLM")
