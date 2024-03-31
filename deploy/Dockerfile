@@ -27,6 +27,7 @@ RUN pip3 install --no-cache-dir \
     cachetools \
     urlextract \
     validators \
+    langdetect \
     goose3[all] \
     readabilipy \
     Jinja2 \

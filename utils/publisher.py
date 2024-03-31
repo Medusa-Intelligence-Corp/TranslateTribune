@@ -14,6 +14,8 @@ import traceback
 import random
 import html
 
+from langdetect import detect
+
 from cachetools import LRUCache, TTLCache
 
 article_cache = LRUCache(maxsize=100)
@@ -106,6 +108,14 @@ def publish(sources_config, lang_config, finder_template, \
                 title_div.insert(1, ' ')
 
             content_div = soup.find('div', class_='article-content')
+
+            #check that the content is written in the right language
+            content_text = content_div.text.strip()
+            llm_output_language = detect(content_text)
+            logging.info(f"detected output language {llm_output_language}")
+            if lang_config["publishing_language_short"] not in llm_output_language:
+                logging.info(f"""Wrong Language from LLM. Expected {lang_config['publishing_language_short']} got {llm_output_language} from {summarizer_model}""")
+                continue
 
             if content_div:
                 link = soup.new_tag('a', href=link)
