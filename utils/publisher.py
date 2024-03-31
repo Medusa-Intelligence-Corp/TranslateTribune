@@ -14,8 +14,6 @@ import traceback
 import random
 import html
 
-from langdetect import detect
-
 from cachetools import LRUCache, TTLCache
 
 article_cache = LRUCache(maxsize=100)
@@ -27,6 +25,47 @@ from bs4 import BeautifulSoup
 from browser import fetch_content
 from llm import fetch_llm_response
 from templater import deploy_website, deploy_games
+
+
+def add_required_html(article_summary, article_url, finder_model, summarizer_model, source_config):
+        # Add HTML comment with model information for debugging
+        article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
+                              <!-- Summarizer Model: {summarizer_model} -->  
+                              {article_summary}"""
+
+        # Save the title
+        soup = BeautifulSoup(article_summary, 'html.parser')
+        title_div = soup.find('div', class_='article-title')
+        article_title=title_div.text.strip()
+       
+        if title_div:
+            flag_span = soup.new_tag('span',\
+                    attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
+            flag_span.string = html.unescape(source_config["source_flag"])
+            title_div.insert(0, flag_span)
+            title_div.insert(1, ' ')
+
+        content_div = soup.find('div', class_='article-content')
+
+        if content_div:
+            link = soup.new_tag('a', href=article_url)
+            link.string = source_config["source"]
+            content_div.append(' ')
+            content_div.append(link)
+
+        title_div = soup.find('div', class_='article-title')
+
+        if title_div:
+            title_div['onclick'] = 'toggleArticleDetails(this)'
+                            
+        article_summary = str(soup)
+
+        # Get the front page score
+        article = soup.find('div', class_='article')
+        front_page_score = float(article['data-front-page-score'])
+
+        return article_title, article_summary, front_page_score
+        
 
 def publish(sources_config, lang_config, finder_template, \
         summarizer_template, html_filename, persona_type="persona"):        
@@ -46,6 +85,8 @@ def publish(sources_config, lang_config, finder_template, \
             if source_config["source_country"] in source_countries_published:
                 continue
 
+            logging.info(source_config["source"])
+
             try:
                 all_links = link_cache[source_config["source_url"]]
             except KeyError:
@@ -54,27 +95,14 @@ def publish(sources_config, lang_config, finder_template, \
                         source_config["source_language"]) 
                 link_cache[source_config["source_url"]] = all_links
 
-            logging.info(source_config["source"])
-
             best_links, finder_model = fetch_llm_response(
                 all_links,\
                 finder_template.render(**locals()),\
                 source_config["finder_model"],\
                 "url")
-            
             logging.info(best_links)
-            
-            #we are only expecting one link, slice the list to just select the first item
             link = best_links[0]
-            #sometimes the llm shares the link like "here's the link https://example.com/article."
-            #periods are valid at the end of links, but this almost never happens in practice
-            #so we remove the period here
-            if link.endswith('.'):
-                link = link[:-1]
 
-            #When iterating over many languages, the link selector often picks the same article
-            #regardless of the persona given, so to not get our IP address blocked, it's nice of 
-            #us to do some caching
             try:
                 article_text = article_cache[link]
             except KeyError:
@@ -87,63 +115,23 @@ def publish(sources_config, lang_config, finder_template, \
                     article_text,\
                     summarizer_template.render(**locals()),\
                     source_config["summarizer_model"],\
-                    "html-article")
+                    "html-article",\
+                    lang_config["publishing_language_short"],\
+                    3)
             
+            article_title, article_summary, front_page_score = add_required_html(\
+                                                                article_summary,\
+                                                                link,\
+                                                                finder_model,\
+                                                                summarizer_model,\
+                                                                source_config)
             
-            # Add HTML comment with model information for debugging
-            article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
-                                  <!-- Summarizer Model: {summarizer_model} -->  
-                                  {article_summary}"""
-
-            # Save the title
-            soup = BeautifulSoup(article_summary, 'html.parser')
-            title_div = soup.find('div', class_='article-title')
-            article_title=title_div.text.strip()
-           
-            if title_div:
-                flag_span = soup.new_tag('span',\
-                        attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
-                flag_span.string = html.unescape(source_config["source_flag"])
-                title_div.insert(0, flag_span)
-                title_div.insert(1, ' ')
-
-            content_div = soup.find('div', class_='article-content')
-
-            #check that the content is written in the right language
-            content_text = content_div.text.strip()
-            llm_output_language = detect(content_text)
-            logging.info(f"detected output language {llm_output_language}")
-            if lang_config["publishing_language_short"] not in llm_output_language:
-                logging.info(f"""Wrong Language from LLM. Expected {lang_config['publishing_language_short']} got {llm_output_language} from {summarizer_model}""")
-                continue
-
-            if content_div:
-                link = soup.new_tag('a', href=link)
-                link.string = source_config["source"]
-                content_div.append(' ')
-                content_div.append(link)
-
-            title_div = soup.find('div', class_='article-title')
-
-            if title_div:
-                title_div['onclick'] = 'toggleArticleDetails(this)'
-                                
-            article_summary = str(soup)
-
-            # Get the front page score
-            article = soup.find('div', class_='article')
-            front_page_score = float(article['data-front-page-score'])
+            article_dict[article_title] = {}
+            article_dict[article_title]["html"] = article_summary
+            article_dict[article_title]["score"] = front_page_score
+            source_countries_published.append(source_config["source_country"])
+            logging.info(article_summary)
             
-            if front_page_score > 2:
-                article_dict[article_title] = {}
-                article_dict[article_title]["html"] = article_summary
-                article_dict[article_title]["score"] = front_page_score
-                
-                source_countries_published.append(source_config["source_country"])
-                        
-                logging.info(article_summary)
-            else:
-                logging.info("Skipping low-scoring article")
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
@@ -205,7 +193,7 @@ if __name__ == "__main__":
     debug = os.environ.get('DEBUG', False)
     
     if debug:
-        deploy_language("English")
+        deploy_language("Chinese")
         deploy_language("Spanish")
     else:
         with open('config/languages.json', 'r') as file:
