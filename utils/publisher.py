@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 
 from browser import fetch_content
 from llm import fetch_llm_response
-from templater import deploy_website, deploy_games
+from templater import deploy_website
 
 
 def add_required_html(article_summary, article_url, finder_model, summarizer_model, source_config):
