@@ -274,31 +274,34 @@ body {
 
             // Track the original text to ensure we can always revert to it
             const originalText = textNode.nodeValue;
+
             // Use an array to track which characters are currently being animated
             let animatingIndices = [];
 
             setInterval(() => {
-                const textContent = textNode.nodeValue;
-                let index;
-                // Find a character index that is not currently being animated
-                do {
-                    index = Math.floor(Math.random() * textContent.length);
-                } while (animatingIndices.includes(index));
+              const textContent = textNode.nodeValue;
+              let index;
 
-                // Mark this index as being animated
-                animatingIndices.push(index);
+              // Find a character index that is not currently being animated and is a letter
+              do {
+                index = Math.floor(Math.random() * textContent.length);
+              } while (animatingIndices.includes(index) || !/[a-zA-Z]/.test(textContent.charAt(index)));
 
-                const char = textContent.charAt(index);
-                const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
-                textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+              // Mark this index as being animated
+              animatingIndices.push(index);
 
-                // Change back to the original character after 500ms
-                setTimeout(() => {
-                    // Use the original text to ensure the correct character is restored
-                    textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
-                    // Remove the index from the animatingIndices array
-                    animatingIndices = animatingIndices.filter(i => i !== index);
-                }, 500);
+              const char = textContent.charAt(index);
+              const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+              textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+
+              // Change back to the original character after 500ms
+              setTimeout(() => {
+                // Use the original text to ensure the correct character is restored
+                textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
+
+                // Remove the index from the animatingIndices array
+                animatingIndices = animatingIndices.filter(i => i !== index);
+              }, 500);
             }, 400);
         </script>
     </body>
