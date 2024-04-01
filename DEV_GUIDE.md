@@ -10,7 +10,7 @@
     - [```finder.txt```](./config/finder.txt): Prompt for finding articles to translate
     - [```summarizer.txt```](./config/summarizer.txt): Prompt for summarizing and ranking articles
     - [```llm.py```](./utils/llm.py): Handles LLM connections and formatting
-    - [```templater.py```](./utils/templater.py): Creates ```index.html``` and deploys to AWS S3
+    - [```templater.py```](./utils/templater.py): Creates html and deploys to AWS S3
 5. Output appears in the ```debug``` folder (can also push to S3 with AWS credentials)
     Access logs in the ```tt-logs``` Docker volume (**NOTE:** this directory might be different on your machine, run ```docker volume inspect tt-logs``` to confirm):
     ```bash
