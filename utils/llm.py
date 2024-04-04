@@ -213,13 +213,8 @@ def send_to_notdiamond(text_chunk, instructions):
 def fetch_llm_response(text, instructions, model, validation=None, language_filter=None, min_article_score=None):
 
     if model == "Claude 3h":
-        try:
-            chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-            response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
-        except Exception:
-            chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-            response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
-            model = "Open Mixtral"
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
     elif model == "GPT-3.5t":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_openai(chunks[0],instructions,'gpt-3.5-turbo')
@@ -234,7 +229,8 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
             chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
             response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Random":
-        models = ["Claude 3h", "GPT-3.5t", "Open Mixtral", "Not Diamond"]
+        #Claude 3h is in here twice on puprose :)
+        models = ["Claude 3h", "Claude 3h", "Open Mixtral", "Not Diamond"]
         model = random.choice(models)
         return fetch_llm_response(text, instructions, model, validation, language_filter, min_article_score)
     else:
