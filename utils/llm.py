@@ -193,10 +193,11 @@ def send_to_notdiamond(text_chunk, instructions):
     prompt_template = NDPromptTemplate("{query}\n\n{context}", 
                        partial_variables={"context":context, "query": query})
 
-    #TODO add new models here:
-    # Claude 3 Haiku (when supported)
-    llm_providers = ['openai/gpt-3.5-turbo', 'togetherai/Mistral-7B-Instruct-v0.2',
-                     'togetherai/Mixtral-8x7B-Instruct-v0.1','cohere/command']
+    llm_providers = ['openai/gpt-3.5-turbo',
+                     'anthropic/claude-3-haiku-20240307',
+                     'togetherai/Mistral-7B-Instruct-v0.2',
+                     'togetherai/Mixtral-8x7B-Instruct-v0.1',
+                     'cohere/command']
 
     nd_llm = NDLLM(llm_providers=llm_providers)
 
@@ -222,15 +223,10 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
     elif model == "Not Diamond":
-        try:
-            chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-            response, model = send_to_notdiamond(chunks[0], instructions)
-        except Exception:
-            chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-            response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
+        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
+        response, model = send_to_notdiamond(chunks[0], instructions)
     elif model == "Random":
-        #Claude 3h is in here twice on puprose :)
-        models = ["Claude 3h", "Claude 3h", "Open Mixtral", "Not Diamond"]
+        models = ["Claude 3h", "Not Diamond"]
         model = random.choice(models)
         return fetch_llm_response(text, instructions, model, validation, language_filter, min_article_score)
     else:
