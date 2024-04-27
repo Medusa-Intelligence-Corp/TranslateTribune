@@ -32,7 +32,7 @@ def upload_and_invalidate(file_path, file_name, content_type):
     )
 
 
-def deploy_website(article_html, html_filename, article_rss, rss_filename, lang_config):
+def deploy_website(article_html, html_filename, article_rss, rss_filename, lang_config, section_key):
 
     template_dir = '/usr/src/app/static/'
 

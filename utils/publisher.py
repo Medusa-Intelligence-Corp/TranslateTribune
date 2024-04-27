@@ -9,6 +9,7 @@ logging.basicConfig(filename=log_path, level=logging.INFO,
 
 import time
 import datetime
+import uuid
 import re
 import json
 import traceback
@@ -79,7 +80,7 @@ def simplify_html(html):
 
 
 def publish(sources_config, lang_config, finder_template, \
-        summarizer_template, html_filename, rss_filename, persona_type="persona"):        
+        summarizer_template, html_filename, rss_filename, section_key, persona_type="persona"):        
 
     random.shuffle(sources_config)
 
@@ -156,6 +157,7 @@ def publish(sources_config, lang_config, finder_template, \
     <item>
       <title>{article_title}</title>
       <link>https://translatetribune.com/{html_filename}</link>
+      <guid isPermaLink="false">{str(uuid.uuid4())}</guid>
       <description>
         <![CDATA[
           {simplify_html(article_data['html'])}    
@@ -167,7 +169,7 @@ def publish(sources_config, lang_config, finder_template, \
 
     complete_html = deploy_website(article_html, html_filename,\
                                    article_rss, rss_filename,\
-                                   lang_config)
+                                   lang_config, section_key)
     logging.info(complete_html)
 
 
@@ -205,7 +207,8 @@ def deploy_language(publishing_language):
             finder_template,\
             summarizer_template,\
             f'{lang_config["publishing_language_short"]}.html',\
-            f'{lang_config["publishing_language_short"]}.xml')
+            f'{lang_config["publishing_language_short"]}.xml',\
+            "world_news")
 
     # Create the finance and technology page
     if not debug:
@@ -215,6 +218,7 @@ def deploy_language(publishing_language):
                 summarizer_template,\
                 f'{lang_config["publishing_language_short"]}-ft.html',\
                 f'{lang_config["publishing_language_short"]}-ft.xml',\
+                "finance_technology",\
                 "finance_technology_persona")
 
 if __name__ == "__main__":
