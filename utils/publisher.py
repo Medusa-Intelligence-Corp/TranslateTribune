@@ -8,6 +8,7 @@ logging.basicConfig(filename=log_path, level=logging.INFO,
                 format='%(asctime)s:%(levelname)s:%(message)s')
 
 import time
+import datetime
 import re
 import json
 import traceback
@@ -19,6 +20,7 @@ from cachetools import LRUCache, TTLCache
 article_cache = LRUCache(maxsize=100)
 link_cache = TTLCache(maxsize=100, ttl=3600)
 
+import bleach
 from jinja2 import Template
 from bs4 import BeautifulSoup
 
@@ -65,10 +67,19 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
         front_page_score = float(article['data-front-page-score'])
 
         return article_title, article_summary, front_page_score
-        
+ 
+
+def simplify_html(html):
+    allowed_tags = ['div', 'span', 'p', 'a']
+    allowed_attributes = {'a': ['href']}
+
+    cleaned_html = bleach.clean(html, tags=allowed_tags, attributes=allowed_attributes, strip=True)
+
+    return cleaned_html
+
 
 def publish(sources_config, lang_config, finder_template, \
-        summarizer_template, html_filename, persona_type="persona"):        
+        summarizer_template, html_filename, rss_filename, persona_type="persona"):        
 
     random.shuffle(sources_config)
 
@@ -138,10 +149,25 @@ def publish(sources_config, lang_config, finder_template, \
     
     sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
+    article_rss=""
     for article_title, article_data in sorted_articles:
         article_html += article_data['html']
+        article_rss += f"""
+    <item>
+      <title>{article_title}</title>
+      <link>https://translatetribune.com/{html_filename}</link>
+      <description>
+        <![CDATA[
+          {simplify_html(article_data['html'])}    
+        ]]>
+      </description>
+      <pubDate>{datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</pubDate>
+    </item>
+        """
 
-    complete_html = deploy_website(article_html,html_filename,lang_config)
+    complete_html = deploy_website(article_html, html_filename,\
+                                   article_rss, rss_filename,\
+                                   lang_config)
     logging.info(complete_html)
 
 
@@ -178,7 +204,8 @@ def deploy_language(publishing_language):
             lang_config,\
             finder_template,\
             summarizer_template,\
-            f'{lang_config["publishing_language_short"]}.html')
+            f'{lang_config["publishing_language_short"]}.html',\
+            f'{lang_config["publishing_language_short"]}.xml')
 
     # Create the finance and technology page
     if not debug:
@@ -187,6 +214,7 @@ def deploy_language(publishing_language):
                 finder_template,\
                 summarizer_template,\
                 f'{lang_config["publishing_language_short"]}-ft.html',\
+                f'{lang_config["publishing_language_short"]}-ft.xml',\
                 "finance_technology_persona")
 
 if __name__ == "__main__":
@@ -194,7 +222,7 @@ if __name__ == "__main__":
     
     if debug:
         deploy_language("Chinese")
-        deploy_language("Spanish")
+        deploy_language("English")
     else:
         with open('config/languages.json', 'r') as file:
             lang_configs = json.load(file)

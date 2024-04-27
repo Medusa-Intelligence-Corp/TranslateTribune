@@ -6,8 +6,8 @@
         "source": "The Economist",
         "source_url": "https://www.economist.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "United States",
@@ -16,8 +16,8 @@
         "source": "The Verge",
         "source_url": "https://www.theverge.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Japan",
@@ -26,8 +26,8 @@
         "source": "Nikkei",
         "source_url": "https://www.nikkei.com",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Switzerland",
@@ -36,8 +36,8 @@
         "source": "L'Agefi",
         "source_url": "https://agefi.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "China",
@@ -46,8 +46,8 @@
         "source": "PingWest",
         "source_url": "https://www.pingwest.com/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "France",
@@ -56,8 +56,8 @@
         "source": "FrenchWeb",
         "source_url": "https://www.frenchweb.fr",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Brazil",
@@ -66,8 +66,8 @@
         "source": "Valor Econômico",
         "source_url": "https://valor.globo.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Chile",
@@ -76,8 +76,8 @@
         "source": "FayerWayer",
         "source_url": "https://www.fayerwayer.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "South Korea",
@@ -86,8 +86,8 @@
         "source": "The Korea Economic Daily",
         "source_url": "https://www.hankyung.com/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Germany",
@@ -96,8 +96,8 @@
         "source": "Gründerszene",
         "source_url": "https://www.gruenderszene.de/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Russia",
@@ -106,8 +106,8 @@
         "source": "vc.ru",
         "source_url": "https://vc.ru/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Mexico",
@@ -116,8 +116,8 @@
         "source": "Xataka México",
         "source_url": "https://www.xataka.com.mx/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Spain",
@@ -126,8 +126,8 @@
         "source": "3DJuegos",
         "source_url": "https://www.3djuegos.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Italy",
@@ -136,8 +136,8 @@
         "source": "Multiplayer.it",
         "source_url": "https://multiplayer.it/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Poland",
@@ -146,8 +146,8 @@
         "source": "Spidersweb",
         "source_url": "https://spidersweb.pl/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Netherlands",
@@ -156,8 +156,8 @@
         "source": "Tweakers",
         "source_url": "https://tweakers.net/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Sweden",
@@ -166,8 +166,8 @@
         "source": "SweClockers",
         "source_url": "https://www.sweclockers.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Ukraine",
@@ -176,8 +176,8 @@
         "source": "ITC.ua",
         "source_url": "https://itc.ua/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "United Kingdom",
@@ -186,8 +186,8 @@
         "source": "TechCrunch UK",
         "source_url": "https://techcrunch.com/uk/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "United States",
@@ -196,8 +196,8 @@
         "source": "Wired",
         "source_url": "https://www.wired.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Japan",
@@ -206,8 +206,8 @@
         "source": "TechCrunch Japan",
         "source_url": "https://jp.techcrunch.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Switzerland",
@@ -216,8 +216,8 @@
         "source": "ICTjournal",
         "source_url": "https://www.ictjournal.ch/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "China",
@@ -226,8 +226,8 @@
         "source": "36Kr",
         "source_url": "https://36kr.com/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "France",
@@ -236,8 +236,8 @@
         "source": "Les Echos Entrepreneurs",
         "source_url": "https://business.lesechos.fr/entrepreneurs/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Brazil",
@@ -246,8 +246,8 @@
         "source": "Startupi",
         "source_url": "https://startupi.com.br/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Chile",
@@ -256,8 +256,8 @@
         "source": "Chocale",
         "source_url": "https://www.chocale.cl/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "South Korea",
@@ -266,8 +266,8 @@
         "source": "Platum",
         "source_url": "https://platum.kr/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Germany",
@@ -276,8 +276,8 @@
         "source": "t3n",
         "source_url": "https://t3n.de/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Russia",
@@ -286,8 +286,8 @@
         "source": "Rusbase",
         "source_url": "https://rb.ru/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Mexico",
@@ -296,8 +296,8 @@
         "source": "Entrepreneur en Español",
         "source_url": "https://www.entrepreneur.com/es",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Spain",
@@ -306,8 +306,8 @@
         "source": "Xataka",
         "source_url": "https://www.xataka.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Italy",
@@ -316,8 +316,8 @@
         "source": "Wired Italia",
         "source_url": "https://www.wired.it/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Poland",
@@ -326,8 +326,8 @@
         "source": "Antyweb",
         "source_url": "https://antyweb.pl/",
         "source_parser": "goose",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Netherlands",
@@ -336,8 +336,8 @@
         "source": "Emerce",
         "source_url": "https://www.emerce.nl/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Sweden",
@@ -346,8 +346,8 @@
         "source": "Breakit",
         "source_url": "https://www.breakit.se/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Ukraine",
@@ -356,8 +356,8 @@
         "source": "AIN.UA",
         "source_url": "https://ain.ua/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     }
 ]
 

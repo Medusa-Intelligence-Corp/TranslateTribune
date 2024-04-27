@@ -6,8 +6,8 @@
         "source": "USA Today",
         "source_url": "https://www.usatoday.com/",
         "source_parser": "readability",
-        "finder_model": "Not Diamond",
-        "summarizer_model": "Not Diamond"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "Mexico",
@@ -16,8 +16,8 @@
         "source": "La Jornada",
         "source_url": "https://www.jornada.com.mx",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     },
     {
         "source_country": "United States",
@@ -26,17 +26,7 @@
         "source": "The New York Times",
         "source_url": "https://www.nytimes.com/",
         "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
-    },
-    {
-        "source_country": "Türkiye",
-        "source_language": "Turkish",
-        "source_flag": "&#127481;&#127479;",
-        "source": "Hürriyet",
-        "source_url": "https://www.hurriyet.com.tr/dunya/macron-ve-lulanin-fotograflari-sosyal-medyayi-sallad%C4%B1-uluslararasi-diplomasi-degil-romantik-bir-kacamak-42436247",
-        "source_parser": "readability",
-        "finder_model": "Random",
-        "summarizer_model": "Random"
+        "finder_model": "Claude 3h",
+        "summarizer_model": "Claude 3h"
     }
 ]
