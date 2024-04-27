@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TranslateTribune - {{ lang_config[section_key] }}</title>
     <link>https://translatetribune.com/{{ html_filename }}</link>
+    <atom:link href="https://translatetribune.com/{{ rss_filename }}" rel="self" type="application/rss+xml"/>
     <description>{{ lang_config["motto"] }}</description>
     {{ article_rss|safe }}
   </channel>
