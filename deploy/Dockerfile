@@ -31,10 +31,10 @@ RUN pip3 install --no-cache-dir \
     goose3[all] \
     readabilipy \
     Jinja2 \
+    bleach \
     anthropic \
     openai \
     mistralai \
-    notdiamond \
     boto3
 
 

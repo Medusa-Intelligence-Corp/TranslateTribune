@@ -26,7 +26,7 @@
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://translatetribune.com/">
+        <meta property="og:url" content="https://translatetribune.com/{{ html_filename }}">
         <meta property="og:title" content="Translate Tribune">
         <meta property="og:description" content="{{ lang_config['motto'] }}">
         <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
@@ -35,11 +35,13 @@
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://translatetribune.com/">
+        <meta name="twitter:url" content="https://translatetribune.com/{{ html_filename }}">
         <meta name="twitter:title" content="Translate Tribune">
         <meta name="twitter:description" content="{{ lang_config['motto'] }}">
         <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
 
+        <!-- RSS -->
+        <link rel="alternate" type="application/rss+xml" title="Translate Tribune {{ lang_config['publishing_language'] }} RSS Feed" href="https://translatetribune.com/{{ rss_filename }}">
 
         <style>
         html {

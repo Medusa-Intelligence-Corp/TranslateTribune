@@ -10,9 +10,6 @@ import anthropic
 
 import openai
 
-from notdiamond.llms.llm import NDLLM
-from notdiamond.prompts.prompt import NDPromptTemplate, NDContext, NDQuery
-
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 
@@ -24,7 +21,7 @@ from langdetect import detect
 class UnsupportedModelException(Exception):
     """Exception raised for unsupported models."""
     def __init__(self, model, message="Model not supported"):
-        self.mode = mode
+        self.model = model
         self.message = message
         super().__init__(self.message)
 
@@ -70,7 +67,7 @@ def find_html(text):
         return ""
 
 
-def validate_article_html(html, language_code, min_article_score):
+def validate_article_html(html, language_code, min_article_score, model):
     max_size = 10000
     if len(html) > max_size:
         return False
@@ -111,7 +108,7 @@ def validate_article_html(html, language_code, min_article_score):
     if language_code not in llm_output_language:
         logging.info(f"Wrong Language from LLM. \
                 Expected {language_code}\
-                got {llm_output_language} from {summarizer_model}")
+                got {llm_output_language} from {model}")
         return False
 
     return True
@@ -186,31 +183,6 @@ def send_to_mistral(text_chunk, instructions, model_id="mistral-large-latest"):
     return chat_completion.choices[0].message.content
 
 
-def send_to_notdiamond(text_chunk, instructions):
-    context = NDContext(text_chunk)
-    query = NDQuery(instructions)
-
-    prompt_template = NDPromptTemplate("{query}\n\n{context}", 
-                       partial_variables={"context":context, "query": query})
-
-    llm_providers = ['openai/gpt-3.5-turbo',
-                     'anthropic/claude-3-haiku-20240307',
-                     'togetherai/Mistral-7B-Instruct-v0.2',
-                     'togetherai/Mixtral-8x7B-Instruct-v0.1',
-                     'cohere/command']
-
-    nd_llm = NDLLM(llm_providers=llm_providers)
-
-    result, session_id, provider = nd_llm.invoke(prompt_template=prompt_template)
-
-    logging.info(f"ND session ID: {session_id}")  # Important for personalizing ND to your use-case
-    logging.info(f"LLM called: {provider.model}")  
-    
-    model_description = f'ND-{provider.model}'
-
-    return result.content, model_description        
-
-
 def fetch_llm_response(text, instructions, model, validation=None, language_filter=None, min_article_score=None):
 
     if model == "Claude 3h":
@@ -222,11 +194,8 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
     elif model == "Open Mixtral":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
-    elif model == "Not Diamond":
-        chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
-        response, model = send_to_notdiamond(chunks[0], instructions)
     elif model == "Random":
-        models = ["Claude 3h", "Not Diamond"]
+        models = ["Claude 3h", "GPT-3.5t", "Open Mixtral"]
         model = random.choice(models)
         return fetch_llm_response(text, instructions, model, validation, language_filter, min_article_score)
     else:
@@ -241,7 +210,7 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
         return find_html(response), model
     elif validation == "html-article":
         html = find_html(response)
-        if validate_article_html(html, language_filter, min_article_score):
+        if validate_article_html(html, language_filter, min_article_score, model):
             return html, model
         else:
             logging.info("bad formatting from LLM")
