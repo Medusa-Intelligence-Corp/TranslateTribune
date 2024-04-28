@@ -42,6 +42,9 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
         article_title=title_div.text.strip()
        
         if title_div:
+            article_id = str(uuid.uuid4())
+            title_div['id'] = article_id
+
             flag_span = soup.new_tag('span',\
                     attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
             flag_span.string = html.unescape(source_config["source_flag"])
@@ -67,7 +70,7 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
         article = soup.find('div', class_='article')
         front_page_score = float(article['data-front-page-score'])
 
-        return article_title, article_summary, front_page_score
+        return article_title, article_summary, front_page_score, article_id 
  
 
 def simplify_html(html):
@@ -131,7 +134,7 @@ def publish(sources_config, lang_config, finder_template, \
                     lang_config["publishing_language_short"],\
                     3)
             
-            article_title, article_summary, front_page_score = add_required_html(\
+            article_title, article_summary, front_page_score, article_id = add_required_html(\
                                                                 article_summary,\
                                                                 link,\
                                                                 finder_model,\
@@ -141,6 +144,7 @@ def publish(sources_config, lang_config, finder_template, \
             article_dict[article_title] = {}
             article_dict[article_title]["html"] = article_summary
             article_dict[article_title]["score"] = front_page_score
+            article_dict[article_title]["id"] = article_id
             source_countries_published.append(source_config["source_country"])
             logging.info(article_summary)
             
@@ -156,8 +160,8 @@ def publish(sources_config, lang_config, finder_template, \
         article_rss += f"""
     <item>
       <title>{article_title}</title>
-      <link>https://translatetribune.com/{html_filename}</link>
-      <guid isPermaLink="false">{str(uuid.uuid4())}</guid>
+      <link>https://translatetribune.com/{html_filename}#{article_data['id']}</link>
+      <guid isPermaLink="false">https://translatetribune.com/{html_filename}#{article_data['id']}</guid>
       <description>
         <![CDATA[
           {simplify_html(article_data['html'])}    
