@@ -83,8 +83,8 @@
         "source_country": "Ukraine",
         "source_language": "Ukrainian",
         "source_flag": "&#127482;&#127462;",
-        "source": "Ukrayinska Pravda",
-        "source_url": "https://www.pravda.com.ua",
+        "source": "Suspilne Media",
+        "source_url": "https://suspilne.media",
         "source_parser": "readability",
         "finder_model": "Claude 3h",
         "summarizer_model": "Claude 3h"
@@ -253,8 +253,8 @@
         "source_country": "Ukraine",
         "source_language": "Ukrainian",
         "source_flag": "&#127482;&#127462;",
-        "source": "Segodnya",
-        "source_url": "https://www.segodnya.ua/",
+        "source": "Hromadske",
+        "source_url": "https://hromadske.ua/",
         "source_parser": "readability",
         "finder_model": "Claude 3h",
         "summarizer_model": "Claude 3h"
