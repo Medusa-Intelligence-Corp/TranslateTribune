@@ -36,11 +36,13 @@ Examples:
 - Minor celebrity news or gossip
 - Offbeat or quirky human-interest stories
 
-1: Content that should be omitted from the newspaper (this happens often, be on the lookout for articles gathered in error). This includes articles discussing missing pages, cookie policies, or any other content that was likely gathered in error. Advertisements should also be scored a 1.
+1: Content that should be omitted from the newspaper (this happens often, be on the lookout for articles gathered in error). This includes articles discussing about missing pages, cookie policies, the use of cookies on website or how cookies are being managed, or any other content that was likely gathered in error. Advertisements should also be scored a 1.
 Examples:
 - 404 error pages or articles about missing content
 - Website terms of service or privacy policy pages
-- Pages discussing website cookies, privacy policies or user data collection
+- Pages discussing website cookies, explaining how cookies being used and managed
+- Pages discussing privacy policies or user data collection
+- Pages discussing content is blocked and not available
 - Sponsored content or advertorials
 - Any content that is clearly not a news article or informative piece
 
