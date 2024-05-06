@@ -243,8 +243,8 @@
         "source_country": "Taiwan",
         "source_language": "Chinese",
         "source_flag": "&#127481;&#127484;",
-        "source": "Apple Daily",
-        "source_url": "https://tw.appledaily.com/",
+        "source": "United Daily News",
+        "source_url": "https://udn.com/",
         "source_parser": "text",
         "finder_model": "Claude 3h",
         "summarizer_model": "Claude 3h"
