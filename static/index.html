@@ -12,14 +12,6 @@
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
@@ -47,6 +39,20 @@
       content="https://translatetribune.com/android-chrome-512x512.png"
     />
     <style>
+      @font-face {
+        font-family: RobotoMonoBold;
+        src: url("./assets/fonts/RobotoMono-Bold.ttf");
+      }
+
+      @font-face {
+        font-family: Roboto;
+        src: url("./assets/fonts/Roboto-Regular.ttf");
+      }
+      @font-face {
+        font-family: RobotoBold;
+        src: url("./assets/fonts/Roboto-Bold.ttf");
+      }
+
       body {
         margin: 0;
         color: #141414;
@@ -75,7 +81,7 @@
       }
 
       .motto-message {
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 19px;
@@ -103,7 +109,7 @@
       }
 
       .header-title {
-        font-family: "Roboto Mono", monospace;
+        font-family: RobotoMonoBold, monospace;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
@@ -144,7 +150,7 @@
       a {
         text-decoration: none;
         color: #141414;
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
@@ -236,7 +242,7 @@
 
       .letter {
         display: inline-block;
-        font-family: "Roboto", sans-serif;
+        font-family: Roboto, sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 30px;
