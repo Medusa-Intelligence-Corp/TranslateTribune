@@ -1,363 +1,362 @@
 [
-    {
-        "source_country": "United Kingdom",
-        "source_language": "English", 
-        "source_flag": "&#127468;&#127463;",
-        "source": "The Economist",
-        "source_url": "https://www.economist.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United States",
-        "source_language": "English",
-        "source_flag": "&#127482;&#127480;",
-        "source": "The Verge",
-        "source_url": "https://www.theverge.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Japan",
-        "source_language": "Japanese",
-        "source_flag": "&#127471;&#127477;",
-        "source": "Nikkei",
-        "source_url": "https://www.nikkei.com",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Switzerland",
-        "source_language": "French",
-        "source_flag": "&#127464;&#127469;",
-        "source": "L'Agefi",
-        "source_url": "https://agefi.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "China",
-        "source_language": "Chinese",
-        "source_flag": "&#127464;&#127475;",
-        "source": "PingWest",
-        "source_url": "https://www.pingwest.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "France",
-        "source_language": "French",
-        "source_flag": "&#127467;&#127479;",
-        "source": "FrenchWeb",
-        "source_url": "https://www.frenchweb.fr",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Brazil",
-        "source_language": "Portuguese",
-        "source_flag": "&#127463;&#127479;",
-        "source": "Valor Econômico",
-        "source_url": "https://valor.globo.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Chile",
-        "source_language": "Spanish",
-        "source_flag": "&#127464;&#127473;",
-        "source": "FayerWayer",
-        "source_url": "https://www.fayerwayer.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "South Korea",
-        "source_language": "Korean",
-        "source_flag": "&#127472;&#127479;",
-        "source": "The Korea Economic Daily",
-        "source_url": "https://www.hankyung.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Germany",
-        "source_language": "German",
-        "source_flag": "&#127465;&#127466;",
-        "source": "Gründerszene",
-        "source_url": "https://www.gruenderszene.de/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Russia",
-        "source_language": "Russian",
-        "source_flag": "&#127479;&#127482;",
-        "source": "vc.ru",
-        "source_url": "https://vc.ru/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Mexico",
-        "source_language": "Spanish",
-        "source_flag": "&#127474;&#127485;",
-        "source": "Xataka México",
-        "source_url": "https://www.xataka.com.mx/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Spain",
-        "source_language": "Spanish",
-        "source_flag": "&#127466;&#127480;",
-        "source": "3DJuegos",
-        "source_url": "https://www.3djuegos.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Italy",
-        "source_language": "Italian",
-        "source_flag": "&#127470;&#127481;",
-        "source": "Multiplayer.it",
-        "source_url": "https://multiplayer.it/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Poland",
-        "source_language": "Polish",
-        "source_flag": "&#127477;&#127473;",
-        "source": "Spidersweb",
-        "source_url": "https://spidersweb.pl/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Netherlands",
-        "source_language": "Dutch",
-        "source_flag": "&#127475;&#127473;",
-        "source": "Tweakers",
-        "source_url": "https://tweakers.net/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Sweden",
-        "source_language": "Swedish",
-        "source_flag": "&#127480;&#127466;",
-        "source": "SweClockers",
-        "source_url": "https://www.sweclockers.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Ukraine",
-        "source_language": "Ukrainian",
-        "source_flag": "&#127482;&#127462;",
-        "source": "ITC.ua",
-        "source_url": "https://itc.ua/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United Kingdom",
-        "source_language": "English",
-        "source_flag": "&#127468;&#127463;",
-        "source": "TechCrunch UK",
-        "source_url": "https://techcrunch.com/uk/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United States",
-        "source_language": "English",
-        "source_flag": "&#127482;&#127480;",
-        "source": "Wired",
-        "source_url": "https://www.wired.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Japan",
-        "source_language": "Japanese",
-        "source_flag": "&#127471;&#127477;",
-        "source": "TechCrunch Japan",
-        "source_url": "https://jp.techcrunch.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Switzerland",
-        "source_language": "French",
-        "source_flag": "&#127464;&#127469;",
-        "source": "ICTjournal",
-        "source_url": "https://www.ictjournal.ch/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "China",
-        "source_language": "Chinese",
-        "source_flag": "&#127464;&#127475;",
-        "source": "36Kr",
-        "source_url": "https://36kr.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "France",
-        "source_language": "French",
-        "source_flag": "&#127467;&#127479;",
-        "source": "Les Echos Entrepreneurs",
-        "source_url": "https://business.lesechos.fr/entrepreneurs/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Brazil",
-        "source_language": "Portuguese",
-        "source_flag": "&#127463;&#127479;",
-        "source": "Startupi",
-        "source_url": "https://startupi.com.br/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Chile",
-        "source_language": "Spanish",
-        "source_flag": "&#127464;&#127473;",
-        "source": "Chocale",
-        "source_url": "https://www.chocale.cl/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "South Korea",
-        "source_language": "Korean",
-        "source_flag": "&#127472;&#127479;",
-        "source": "Platum",
-        "source_url": "https://platum.kr/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Germany",
-        "source_language": "German",
-        "source_flag": "&#127465;&#127466;",
-        "source": "t3n",
-        "source_url": "https://t3n.de/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Russia",
-        "source_language": "Russian",
-        "source_flag": "&#127479;&#127482;",
-        "source": "Rusbase",
-        "source_url": "https://rb.ru/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Mexico",
-        "source_language": "Spanish",
-        "source_flag": "&#127474;&#127485;",
-        "source": "Entrepreneur en Español",
-        "source_url": "https://www.entrepreneur.com/es",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Spain",
-        "source_language": "Spanish",
-        "source_flag": "&#127466;&#127480;",
-        "source": "Xataka",
-        "source_url": "https://www.xataka.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Italy",
-        "source_language": "Italian",
-        "source_flag": "&#127470;&#127481;",
-        "source": "Wired Italia",
-        "source_url": "https://www.wired.it/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Poland",
-        "source_language": "Polish",
-        "source_flag": "&#127477;&#127473;",
-        "source": "Antyweb",
-        "source_url": "https://antyweb.pl/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Netherlands",
-        "source_language": "Dutch",
-        "source_flag": "&#127475;&#127473;",
-        "source": "Emerce",
-        "source_url": "https://www.emerce.nl/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Sweden",
-        "source_language": "Swedish",
-        "source_flag": "&#127480;&#127466;",
-        "source": "Breakit",
-        "source_url": "https://www.breakit.se/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Ukraine",
-        "source_language": "Ukrainian",
-        "source_flag": "&#127482;&#127462;",
-        "source": "AIN.UA",
-        "source_url": "https://ain.ua/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    }
+  {
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/png/uk.png",
+    "source": "The Economist",
+    "source_url": "https://www.economist.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Japan",
+    "source_language": "Japanese",
+    "source_flag": "./assets/png/japan.png",
+    "source": "Nikkei",
+    "source_url": "https://www.nikkei.com",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Switzerland",
+    "source_language": "French",
+    "source_flag": "./assets/png/switzerland.png",
+    "source": "L'Agefi",
+    "source_url": "https://agefi.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "China",
+    "source_language": "Chinese",
+    "source_flag": "./assets/png/china.png",
+    "source": "PingWest",
+    "source_url": "https://www.pingwest.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source": "FrenchWeb",
+    "source_url": "https://www.frenchweb.fr",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Brazil",
+    "source_language": "Portuguese",
+    "source_flag": "./assets/png/brazil.png",
+    "source": "Valor Econômico",
+    "source_url": "https://valor.globo.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Chile",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/chile.png",
+    "source": "FayerWayer",
+    "source_url": "https://www.fayerwayer.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "South Korea",
+    "source_language": "Korean",
+    "source_flag": "./assets/png/korea.png",
+    "source": "The Korea Economic Daily",
+    "source_url": "https://www.hankyung.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Germany",
+    "source_language": "German",
+    "source_flag": "./assets/png/germany.png",
+    "source": "Gründerszene",
+    "source_url": "https://www.gruenderszene.de/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Russia",
+    "source_language": "Russian",
+    "source_flag": "./assets/png/russia.png",
+    "source": "vc.ru",
+    "source_url": "https://vc.ru/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Mexico",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/mexico.png",
+    "source": "Xataka México",
+    "source_url": "https://www.xataka.com.mx/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Spain",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/spain.png",
+    "source": "3DJuegos",
+    "source_url": "https://www.3djuegos.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Italy",
+    "source_language": "Italian",
+    "source_flag": "./assets/png/italy.png",
+    "source": "Multiplayer.it",
+    "source_url": "https://multiplayer.it/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Poland",
+    "source_language": "Polish",
+    "source_flag": "./assets/png/poland.png",
+    "source": "Spidersweb",
+    "source_url": "https://spidersweb.pl/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Netherlands",
+    "source_language": "Dutch",
+    "source_flag": "./assets/png/netherlands.png",
+    "source": "Tweakers",
+    "source_url": "https://tweakers.net/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Sweden",
+    "source_language": "Swedish",
+    "source_flag": "./assets/png/sweden.png",
+    "source": "SweClockers",
+    "source_url": "https://www.sweclockers.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Ukraine",
+    "source_language": "Ukrainian",
+    "source_flag": "./assets/png/ukraine.png",
+    "source": "ITC.ua",
+    "source_url": "https://itc.ua/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/png/uk.png",
+    "source": "TechCrunch UK",
+    "source_url": "https://techcrunch.com/uk/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source": "Wired",
+    "source_url": "https://www.wired.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Japan",
+    "source_language": "Japanese",
+    "source_flag": "./assets/png/japan.png",
+    "source": "TechCrunch Japan",
+    "source_url": "https://jp.techcrunch.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Switzerland",
+    "source_language": "French",
+    "source_flag": "./assets/png/switzerland.png",
+    "source": "ICTjournal",
+    "source_url": "https://www.ictjournal.ch/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "China",
+    "source_language": "Chinese",
+    "source_flag": "./assets/png/china.png",
+    "source": "36Kr",
+    "source_url": "https://36kr.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source": "Les Echos Entrepreneurs",
+    "source_url": "https://business.lesechos.fr/entrepreneurs/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Brazil",
+    "source_language": "Portuguese",
+    "source_flag": "./assets/png/brazil.png",
+    "source": "Startupi",
+    "source_url": "https://startupi.com.br/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Chile",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/chile.png",
+    "source": "Chocale",
+    "source_url": "https://www.chocale.cl/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "South Korea",
+    "source_language": "Korean",
+    "source_flag": "./assets/png/korea.png",
+    "source": "Platum",
+    "source_url": "https://platum.kr/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Germany",
+    "source_language": "German",
+    "source_flag": "./assets/png/germany.png",
+    "source": "t3n",
+    "source_url": "https://t3n.de/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Russia",
+    "source_language": "Russian",
+    "source_flag": "./assets/png/russia.png",
+    "source": "Rusbase",
+    "source_url": "https://rb.ru/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Mexico",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/mexico.png",
+    "source": "Entrepreneur en Español",
+    "source_url": "https://www.entrepreneur.com/es",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Spain",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/spain.png",
+    "source": "Xataka",
+    "source_url": "https://www.xataka.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Italy",
+    "source_language": "Italian",
+    "source_flag": "./assets/png/italy.png",
+    "source": "Wired Italia",
+    "source_url": "https://www.wired.it/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Poland",
+    "source_language": "Polish",
+    "source_flag": "./assets/png/poland.png",
+    "source": "Antyweb",
+    "source_url": "https://antyweb.pl/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Netherlands",
+    "source_language": "Dutch",
+    "source_flag": "./assets/png/netherlands.png",
+    "source": "Emerce",
+    "source_url": "https://www.emerce.nl/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Sweden",
+    "source_language": "Swedish",
+    "source_flag": "./assets/png/sweden.png",
+    "source": "Breakit",
+    "source_url": "https://www.breakit.se/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Ukraine",
+    "source_language": "Ukrainian",
+    "source_flag": "./assets/png/ukraine.png",
+    "source": "AIN.UA",
+    "source_url": "https://ain.ua/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  }
 ]
-

@@ -15,6 +15,7 @@ import json
 import traceback
 import random
 import html
+import shutil
 
 from cachetools import LRUCache, TTLCache
 
@@ -38,31 +39,57 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
 
         # Save the title
         soup = BeautifulSoup(article_summary, 'html.parser')
+        article_div = soup.find('div', class_='article')
         title_div = soup.find('div', class_='article-title')
         article_title=title_div.text.strip()
+    
+
+        if article_div:
+            article_header_div = soup.new_tag('div', attrs={"class": "article-header"})
+            flag_img = soup.new_tag('img', src=source_config["source_flag"], attrs={"class": 'source-flag'})
+            source_country_span = soup.new_tag('span', attrs={"class": "source-country"})
+            source_country_span.string = html.unescape(source_config["source_country"])
+
+            article_header_div.append(flag_img)
+            article_header_div.append(source_country_span)
+            article_div.insert(0, article_header_div)
+            article_div['onclick'] = 'toggleArticleDetails(this)'
        
         if title_div:
             article_id = str(uuid.uuid4())
             title_div['id'] = article_id
 
-            flag_span = soup.new_tag('span',\
-                    attrs={'role': 'img', 'aria-label': f'Flag of {source_config["source_country"]}'})
-            flag_span.string = html.unescape(source_config["source_flag"])
-            title_div.insert(0, flag_span)
-            title_div.insert(1, ' ')
-
         content_div = soup.find('div', class_='article-content')
+
 
         if content_div:
             link = soup.new_tag('a', href=article_url)
-            link.string = source_config["source"]
+            wrapper_div = soup.new_tag('div')
+            source_name_span = soup.new_tag('span')
+            source_name_span.string = "Go to " + source_config["source"]
+            svg_html = '''
+                        <svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path
+                                d="M31.7071 16.7071C32.0976 16.3166 32.0976 15.6834 31.7071 15.2929L25.3431 8.92893C24.9526 8.53841 24.3195 8.53841 23.9289 8.92893C23.5384 9.31946 23.5384 9.95262 23.9289 10.3431L29.5858 16L23.9289 21.6569C23.5384 22.0474 23.5384 22.6805 23.9289 23.0711C24.3195 23.4616 24.9526 23.4616 25.3431 23.0711L31.7071 16.7071ZM0 17H31V15H0V17Z"
+                                fill="black"
+                            />
+                        </svg>
+                    '''
+            bg_div=soup.new_tag('div', attrs={"class": "rotated-background-btn"})        
+            wrapper_div.append(source_name_span)
+            wrapper_div.append(BeautifulSoup(svg_html, 'html.parser'))
+            wrapper_div.append(bg_div)
+            
+            link.append(wrapper_div)
+
             content_div.append(' ')
-            content_div.append(link)
-
-        title_div = soup.find('div', class_='article-title')
-
-        if title_div:
-            title_div['onclick'] = 'toggleArticleDetails(this)'
+            content_div.append(link)             
                             
         article_summary = str(soup)
 
@@ -197,6 +224,7 @@ def get_sources_config(filename):
         sources_config = json.load(file)
     return sources_config
 
+
 def deploy_language(publishing_language):
     lang_config = get_language_config(publishing_language)
     
@@ -213,6 +241,15 @@ def deploy_language(publishing_language):
             f'{lang_config["publishing_language_short"]}.html',\
             f'{lang_config["publishing_language_short"]}.xml',\
             "world_news")
+
+    # Copy assets to debug folder
+    if debug:
+        assets_source_folder = '/usr/src/app/static/assets'
+        assets_destination_folder = '/usr/src/app/debug/assets'
+        if os.path.exists(assets_destination_folder):
+            shutil.rmtree(assets_destination_folder)
+        shutil.copytree(assets_source_folder, assets_destination_folder)
+        
 
     # Create the finance and technology page
     if not debug:
