@@ -2,7 +2,7 @@
   {
     "source_country": "United Kingdom",
     "source_language": "English",
-    "source_flag": "./assets/uk.png",
+    "source_flag": "./assets/png/uk.png",
     "source": "The Economist",
     "source_url": "https://www.economist.com/",
     "source_parser": "readability",
@@ -12,7 +12,7 @@
   {
     "source_country": "United States",
     "source_language": "English",
-    "source_flag": "./assets/us.png",
+    "source_flag": "./assets/png/us.png",
     "source": "The Verge",
     "source_url": "https://www.theverge.com/",
     "source_parser": "readability",
@@ -22,7 +22,7 @@
   {
     "source_country": "Japan",
     "source_language": "Japanese",
-    "source_flag": "./assets/japan.png",
+    "source_flag": "./assets/png/japan.png",
     "source": "Nikkei",
     "source_url": "https://www.nikkei.com",
     "source_parser": "readability",
@@ -32,7 +32,7 @@
   {
     "source_country": "Switzerland",
     "source_language": "French",
-    "source_flag": "./assets/switzerland.png",
+    "source_flag": "./assets/png/switzerland.png",
     "source": "L'Agefi",
     "source_url": "https://agefi.com/",
     "source_parser": "readability",
@@ -42,7 +42,7 @@
   {
     "source_country": "China",
     "source_language": "Chinese",
-    "source_flag": "./assets/china.png",
+    "source_flag": "./assets/png/china.png",
     "source": "PingWest",
     "source_url": "https://www.pingwest.com/",
     "source_parser": "goose",
@@ -52,7 +52,7 @@
   {
     "source_country": "France",
     "source_language": "French",
-    "source_flag": "./assets/france.png",
+    "source_flag": "./assets/png/france.png",
     "source": "FrenchWeb",
     "source_url": "https://www.frenchweb.fr",
     "source_parser": "readability",
@@ -62,7 +62,7 @@
   {
     "source_country": "Brazil",
     "source_language": "Portuguese",
-    "source_flag": "./assets/brazil.png",
+    "source_flag": "./assets/png/brazil.png",
     "source": "Valor Econômico",
     "source_url": "https://valor.globo.com/",
     "source_parser": "readability",
@@ -72,7 +72,7 @@
   {
     "source_country": "Chile",
     "source_language": "Spanish",
-    "source_flag": "./assets/chile.png",
+    "source_flag": "./assets/png/chile.png",
     "source": "FayerWayer",
     "source_url": "https://www.fayerwayer.com/",
     "source_parser": "readability",
@@ -82,7 +82,7 @@
   {
     "source_country": "South Korea",
     "source_language": "Korean",
-    "source_flag": "./assets/korea.png",
+    "source_flag": "./assets/png/korea.png",
     "source": "The Korea Economic Daily",
     "source_url": "https://www.hankyung.com/",
     "source_parser": "goose",
@@ -92,7 +92,7 @@
   {
     "source_country": "Germany",
     "source_language": "German",
-    "source_flag": "./assets/germany.png",
+    "source_flag": "./assets/png/germany.png",
     "source": "Gründerszene",
     "source_url": "https://www.gruenderszene.de/",
     "source_parser": "readability",
@@ -102,7 +102,7 @@
   {
     "source_country": "Russia",
     "source_language": "Russian",
-    "source_flag": "./assets/russia.png",
+    "source_flag": "./assets/png/russia.png",
     "source": "vc.ru",
     "source_url": "https://vc.ru/",
     "source_parser": "readability",
@@ -112,7 +112,7 @@
   {
     "source_country": "Mexico",
     "source_language": "Spanish",
-    "source_flag": "./assets/mexico.png",
+    "source_flag": "./assets/png/mexico.png",
     "source": "Xataka México",
     "source_url": "https://www.xataka.com.mx/",
     "source_parser": "readability",
@@ -122,7 +122,7 @@
   {
     "source_country": "Spain",
     "source_language": "Spanish",
-    "source_flag": "./assets/spain.png",
+    "source_flag": "./assets/png/spain.png",
     "source": "3DJuegos",
     "source_url": "https://www.3djuegos.com/",
     "source_parser": "readability",
@@ -132,7 +132,7 @@
   {
     "source_country": "Italy",
     "source_language": "Italian",
-    "source_flag": "./assets/italy.png",
+    "source_flag": "./assets/png/italy.png",
     "source": "Multiplayer.it",
     "source_url": "https://multiplayer.it/",
     "source_parser": "readability",
@@ -142,7 +142,7 @@
   {
     "source_country": "Poland",
     "source_language": "Polish",
-    "source_flag": "./assets/poland.png",
+    "source_flag": "./assets/png/poland.png",
     "source": "Spidersweb",
     "source_url": "https://spidersweb.pl/",
     "source_parser": "goose",
@@ -152,7 +152,7 @@
   {
     "source_country": "Netherlands",
     "source_language": "Dutch",
-    "source_flag": "./assets/netherlands.png",
+    "source_flag": "./assets/png/netherlands.png",
     "source": "Tweakers",
     "source_url": "https://tweakers.net/",
     "source_parser": "readability",
@@ -162,7 +162,7 @@
   {
     "source_country": "Sweden",
     "source_language": "Swedish",
-    "source_flag": "./assets/sweden.png",
+    "source_flag": "./assets/png/sweden.png",
     "source": "SweClockers",
     "source_url": "https://www.sweclockers.com/",
     "source_parser": "readability",
@@ -172,7 +172,7 @@
   {
     "source_country": "Ukraine",
     "source_language": "Ukrainian",
-    "source_flag": "./assets/ukraine.png",
+    "source_flag": "./assets/png/ukraine.png",
     "source": "ITC.ua",
     "source_url": "https://itc.ua/",
     "source_parser": "readability",
@@ -182,7 +182,7 @@
   {
     "source_country": "United Kingdom",
     "source_language": "English",
-    "source_flag": "./assets/uk.png",
+    "source_flag": "./assets/png/uk.png",
     "source": "TechCrunch UK",
     "source_url": "https://techcrunch.com/uk/",
     "source_parser": "readability",
@@ -192,7 +192,7 @@
   {
     "source_country": "United States",
     "source_language": "English",
-    "source_flag": "./assets/us.png",
+    "source_flag": "./assets/png/us.png",
     "source": "Wired",
     "source_url": "https://www.wired.com/",
     "source_parser": "readability",
@@ -202,7 +202,7 @@
   {
     "source_country": "Japan",
     "source_language": "Japanese",
-    "source_flag": "./assets/japan.png",
+    "source_flag": "./assets/png/japan.png",
     "source": "TechCrunch Japan",
     "source_url": "https://jp.techcrunch.com/",
     "source_parser": "readability",
@@ -212,7 +212,7 @@
   {
     "source_country": "Switzerland",
     "source_language": "French",
-    "source_flag": "./assets/switzerland.png",
+    "source_flag": "./assets/png/switzerland.png",
     "source": "ICTjournal",
     "source_url": "https://www.ictjournal.ch/",
     "source_parser": "readability",
@@ -222,7 +222,7 @@
   {
     "source_country": "China",
     "source_language": "Chinese",
-    "source_flag": "./assets/china.png",
+    "source_flag": "./assets/png/china.png",
     "source": "36Kr",
     "source_url": "https://36kr.com/",
     "source_parser": "goose",
@@ -232,7 +232,7 @@
   {
     "source_country": "France",
     "source_language": "French",
-    "source_flag": "./assets/france.png",
+    "source_flag": "./assets/png/france.png",
     "source": "Les Echos Entrepreneurs",
     "source_url": "https://business.lesechos.fr/entrepreneurs/",
     "source_parser": "readability",
@@ -242,7 +242,7 @@
   {
     "source_country": "Brazil",
     "source_language": "Portuguese",
-    "source_flag": "./assets/brazil.png",
+    "source_flag": "./assets/png/brazil.png",
     "source": "Startupi",
     "source_url": "https://startupi.com.br/",
     "source_parser": "readability",
@@ -252,7 +252,7 @@
   {
     "source_country": "Chile",
     "source_language": "Spanish",
-    "source_flag": "./assets/chile.png",
+    "source_flag": "./assets/png/chile.png",
     "source": "Chocale",
     "source_url": "https://www.chocale.cl/",
     "source_parser": "readability",
@@ -262,7 +262,7 @@
   {
     "source_country": "South Korea",
     "source_language": "Korean",
-    "source_flag": "./assets/korea.png",
+    "source_flag": "./assets/png/korea.png",
     "source": "Platum",
     "source_url": "https://platum.kr/",
     "source_parser": "goose",
@@ -272,7 +272,7 @@
   {
     "source_country": "Germany",
     "source_language": "German",
-    "source_flag": "./assets/germany.png",
+    "source_flag": "./assets/png/germany.png",
     "source": "t3n",
     "source_url": "https://t3n.de/",
     "source_parser": "readability",
@@ -282,7 +282,7 @@
   {
     "source_country": "Russia",
     "source_language": "Russian",
-    "source_flag": "./assets/russia.png",
+    "source_flag": "./assets/png/russia.png",
     "source": "Rusbase",
     "source_url": "https://rb.ru/",
     "source_parser": "readability",
@@ -292,7 +292,7 @@
   {
     "source_country": "Mexico",
     "source_language": "Spanish",
-    "source_flag": "./assets/mexico.png",
+    "source_flag": "./assets/png/mexico.png",
     "source": "Entrepreneur en Español",
     "source_url": "https://www.entrepreneur.com/es",
     "source_parser": "readability",
@@ -302,7 +302,7 @@
   {
     "source_country": "Spain",
     "source_language": "Spanish",
-    "source_flag": "./assets/spain.png",
+    "source_flag": "./assets/png/spain.png",
     "source": "Xataka",
     "source_url": "https://www.xataka.com/",
     "source_parser": "readability",
@@ -312,7 +312,7 @@
   {
     "source_country": "Italy",
     "source_language": "Italian",
-    "source_flag": "./assets/italy.png",
+    "source_flag": "./assets/png/italy.png",
     "source": "Wired Italia",
     "source_url": "https://www.wired.it/",
     "source_parser": "readability",
@@ -322,7 +322,7 @@
   {
     "source_country": "Poland",
     "source_language": "Polish",
-    "source_flag": "./assets/poland.png",
+    "source_flag": "./assets/png/poland.png",
     "source": "Antyweb",
     "source_url": "https://antyweb.pl/",
     "source_parser": "goose",
@@ -332,7 +332,7 @@
   {
     "source_country": "Netherlands",
     "source_language": "Dutch",
-    "source_flag": "./assets/netherlands.png",
+    "source_flag": "./assets/png/netherlands.png",
     "source": "Emerce",
     "source_url": "https://www.emerce.nl/",
     "source_parser": "readability",
@@ -342,7 +342,7 @@
   {
     "source_country": "Sweden",
     "source_language": "Swedish",
-    "source_flag": "./assets/sweden.png",
+    "source_flag": "./assets/png/sweden.png",
     "source": "Breakit",
     "source_url": "https://www.breakit.se/",
     "source_parser": "readability",
@@ -352,7 +352,7 @@
   {
     "source_country": "Ukraine",
     "source_language": "Ukrainian",
-    "source_flag": "./assets/ukraine.png",
+    "source_flag": "./assets/png/ukraine.png",
     "source": "AIN.UA",
     "source_url": "https://ain.ua/",
     "source_parser": "readability",
