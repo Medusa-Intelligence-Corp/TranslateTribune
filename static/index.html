@@ -1,308 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TranslateTribune</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TranslateTribune</title>
 
-        <!-- Standard favicon -->
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <!-- Recommended favicon format -->
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <!-- Recommended favicon format -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
 
-        <!-- Apple Touch Icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- For Android -->
-        <link rel="manifest" href="/site.webmanifest">
-        <meta name="theme-color" content="#ffffff">
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://translatetribune.com/">
-        <meta property="og:title" content="Translate Tribune">
-        <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:height" content="512">
+    <!-- For Android -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://translatetribune.com/">
-        <meta name="twitter:title" content="Translate Tribune">
-        <meta name="twitter:image" content="https://translatetribune.com/android-chrome-512x512.png">
-        <style>
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://translatetribune.com/" />
+    <meta property="og:title" content="Translate Tribune" />
+    <meta
+      property="og:image"
+      content="https://translatetribune.com/android-chrome-512x512.png"
+    />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://translatetribune.com/" />
+    <meta name="twitter:title" content="Translate Tribune" />
+    <meta
+      name="twitter:image"
+      content="https://translatetribune.com/android-chrome-512x512.png"
+    />
+    <style>
+      body {
+        margin: 0;
+        color: #141414;
+      }
+
+      .wrapper {
+        position: relative;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .motto-container {
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+      }
+
+      .motto {
+        padding: 16px 32px;
+      }
+
+      .motto-message {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 19px;
+        line-height: 1;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 28px;
+      }
+
+      .motto-message--light {
+        color: #818181;
+      }
+
+      .motto-message--line-1 {
+        display: block;
+        text-align: right;
+      }
+      .motto-message--line-2 {
+        display: flex;
+        gap: 62px;
+      }
+
+      .header {
+        margin-left: 15%;
+      }
+
+      .header-title {
+        font-family: "Roboto Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 84px;
+        letter-spacing: -3%;
+        text-align: left;
+        display: inline-block;
+      }
+
+      .header-title--large {
+        font-size: 130px;
+        letter-spacing: -30px;
+      }
+
+      .header-title--green {
+        color: #bffd4d;
+      }
+
+      .header-languages {
+        max-width: 920px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 26px;
+      }
+
+      li {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: #141414;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .rotated-background {
+        position: absolute;
+        top: -10px;
+        left: -12px;
+        width: 100%;
+        height: 38px;
+        background-color: #bffd4d;
+        transform: rotate(-1.5deg);
+        transition: transform 0.3s;
+        pointer-events: none;
+        opacity: 0;
+        padding: 0 12px;
+      }
+
+      li:hover > .rotated-background {
+        opacity: 1;
+        z-index: -1;
+      }
+
+      .microphone {
+        position: absolute;
+        top: 0;
+        left: 61%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .microphone-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      }
+
+      .microphone-top-wire {
+        border-left: 1px solid #141414;
+        height: 78%;
+        animation: grow 1s ease-in-out forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+      }
+      .microphone-top-head {
+        margin-top: -30px;
+        animation: bounce 1s ease-in-out forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+      }
+
+      .microphone-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .microphone-bottom-stand {
+        margin-bottom: -3px;
+      }
+
+      .microphone-bottom-wire {
+        border-left: 1px solid #141414;
+        height: 35%;
+      }
+
+      .letters {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        z-index: -10;
+        padding: 40px 20px;
+        box-sizing: border-box;
+      }
+
+      .letter {
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      .letters-row-1 {
+        display: flex;
+        width: 70%;
+      }
+
+      .row-1-letter-1,
+      .row-1-letter-4,
+      .row-1-letter-7 {
+        flex: 1;
+      }
+      .row-1-letter-2,
+      .row-1-letter-3,
+      .row-1-letter-5 {
+        flex: 3;
+      }
+
+      .row-1-letter-6 {
+        flex: 4;
+      }
+
+      .letters-row-2 {
+        display: flex;
+        width: 80%;
+        margin-left: auto;
+      }
+
+      .row-2-letter-3,
+      .row-2-letter-1,
+      .row-2-letter-5 {
+        flex: 3;
+      }
+      .row-2-letter-2,
+      .row-2-letter-4 {
+        flex: 2;
+      }
+
+      .row-2-letter-6 {
+        flex: 4;
+      }
+      .row-2-letter-7 {
+        flex: 1;
+      }
+
+      .letters-row-3 {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+      }
+
+      .row-3-letter-1,
+      .row-3-letter-5,
+      .row-3-letter-7 {
+        flex: 1;
+      }
+      .row-3-letter-2 {
+        flex: 2;
+      }
+      .row-3-letter-3 {
+        flex: 5;
+      }
+      .row-3-letter-4,
+      .row-3-letter-6 {
+        flex: 3;
+      }
+
+      .letters-row-4 {
+        display: flex;
+        width: 90%;
+      }
+
+      .row-4-letter-1 {
+        flex: 1;
+      }
+      .row-4-letter-2 {
+        flex: 2;
+      }
+      .row-4-letter-3 {
+        flex: 5;
+      }
+      .row-4-letter-4 {
+        flex: 3;
+      }
+
+      .letters-row-5 {
+        display: flex;
+        margin-left: auto;
+        width: 80%;
+      }
+
+      .row-5-letter-1 {
+        flex: 1;
+      }
+
+      .letters-row-6 {
+        display: flex;
+        width: 20%;
+      }
+
+      .row-6-letter-1 {
+        flex: 2;
+      }
+      .row-6-letter-2 {
+        flex: 1;
+      }
+      .letters-row-7 {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+      }
+
+      .row-7-letter-1 {
+        flex: 1;
+      }
+
+      .letters-row-8 {
+        display: flex;
+        width: 30%;
+      }
+      .row-8-letter-1,
+      .row-8-letter-3 {
+        flex: 1;
+      }
+      .row-8-letter-2 {
+        flex: 2;
+      }
+
+      .letters-row-9 {
+        display: flex;
+        width: 60%;
+      }
+      .row-9-letter-1,
+      .row-9-letter-3,
+      .row-9-letter-4,
+      .row-9-letter-5 {
+        flex: 1;
+      }
+      .row-9-letter-2 {
+        flex: 2;
+      }
+
+      @media screen and (max-width: 560px) {
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .header-title h1 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 28px;
-            line-height: 0px;
-            text-align: center;
-            white-space: nowrap;
-            margin-bottom: 20px;
-        }
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
+          padding: 0 32px;
+          justify-content: center;
         }
 
-        li {
-            display: inline-block;
-            padding: 10px 20px;
+        .motto-container {
+          visibility: hidden;
         }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header-title">
-                <h1 aria-label="TranslateTribune Beta">
-                    <span class="visually-hidden">TranslateTribune</span>
-                    <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
-                </h1>
-            </div>
-            <div id="language-message" aria-label="Select your preferred language"></div>
-            <ul>
-                <li><a href="en.html">English</a></li>
-                <li><a href="zh.html">中文</a></li>
-                <li><a href="es.html">Español</a></li>
-                <li><a href="ar.html">العربية</a></li>
-                <li><a href="fr.html">Français</a></li>
-                <li><a href="ru.html">Русский</a></li>
-                <li><a href="pt.html">Português</a></li>
-                <li><a href="de.html">Deutsch</a></li>
-                <li><a href="ja.html">日本語</a></li>
-                <li><a href="tr.html">Türkçe</a></li>
-                <li><a href="ko.html">한국어</a></li>
-                <li><a href="it.html">Italiano</a></li>
-                <li><a href="nl.html">Nederlands</a></li>
-                <li><a href="fa.html">فارسی</a></li>
-                <li><a href="uk.html">Українська</a></li>
-                <li><a href="sv.html">Svenska</a></li>
-                <li><a href="he.html">עברית</a></li>
-                <li><a href="hu.html">Magyar</a></li>
-                <li><a href="sw.html">Kiswahili</a></li>
-            </ul>
-            <div id="description-message" aria-label="TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI"></div>
+
+        .header {
+          margin: 0px;
+        }
+
+        .header-title {
+          font-size: 56px;
+          letter-spacing: -3%;
+        }
+
+        .header-title--large {
+          display: inline-block;
+          font-size: 65px;
+          letter-spacing: -10px;
+          transform: translateY(3px);
+        }
+
+        .header-languages {
+          max-width: 280px;
+        }
+
+        .microphone {
+          left: 55%;
+        }
+
+        .microphone-top {
+          height: 60%;
+        }
+
+        .microphone-bottom {
+          visibility: hidden;
+        }
+
+        .letters {
+          height: 30%;
+          padding: 20px;
+        }
+
+        .letters-row-2,
+        .letters-row-3,
+        .letters-row-5,
+        .letters-row-7,
+        .letters-row-8,
+        .letters-row-9 {
+          display: none;
+        }
+
+        .row-1-letter-1,
+        .row-1-letter-2 {
+          flex: 1;
+          text-align: right;
+        }
+
+        .row-1-letter-3,
+        .row-1-letter-4,
+        .row-1-letter-5,
+        .row-1-letter-6,
+        .row-1-letter-7 {
+          display: none;
+        }
+
+        .letters-row-6 {
+          width: 100%;
+        }
+        .row-4-letter-1,
+        .row-4-letter-2 {
+          flex: 3;
+        }
+
+        .row-4-letter-3 {
+          flex: 4;
+        }
+
+        .row-4-letter-4 {
+          text-align: right;
+        }
+
+        .letters-row-6 {
+          width: 70%;
+        }
+        .row-6-letter-1 {
+          flex: 1;
+          text-align: right;
+        }
+        .row-6-letter-2 {
+          flex: 2;
+          text-align: right;
+        }
+      }
+
+      @media (min-width: 0) and (max-width: 360px) {
+        .container {
+          padding: 0 8px;
+        }
+      }
+
+      @media (min-width: 561px) and (max-width: 1300px) {
+        .header-title {
+          font-size: 56px;
+          letter-spacing: -3%;
+        }
+
+        .header-title--large {
+          display: inline-block;
+          font-size: 65px;
+          letter-spacing: -10px;
+          transform: translateY(3px);
+        }
+
+        .header-languages {
+          max-width: 90%;
+        }
+
+        .microphone {
+          left: 30%;
+        }
+
+        .letters-row-4,
+        .letters-row-5,
+        .letters-row-6,
+        .letters-row-7 {
+          visibility: hidden;
+        }
+
+        .row-1-letter-2,
+        .row-1-letter-4,
+        .row-1-letter-5,
+        .row-1-letter-6,
+        .row-1-letter-7 {
+          visibility: hidden;
+        }
+
+        .row-2-letter-1,
+        .row-2-letter-2 {
+          visibility: hidden;
+        }
+
+        .row-3-letter-3 {
+          visibility: hidden;
+        }
+
+        .letters-row-8 {
+          width: 60%;
+        }
+
+        .row-8-letter-3 {
+          text-align: right;
+        }
+
+        .letters-row-9 {
+          width: 50%;
+        }
+
+        .row-9-letter-3 {
+          visibility: hidden;
+        }
+      }
+
+      @keyframes bounce {
+        0% {
+          opacity: 1;
+          transform: translateX(0) translateY(0);
+        }
+
+        55% {
+          opacity: 1;
+          transform: translateX(0) translateY(110%);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateX(0) translateY(90%);
+        }
+      }
+
+      @keyframes grow {
+        0% {
+          opacity: 1;
+          height: 0;
+        }
+
+        60% {
+          opacity: 1;
+          height: 90%;
+        }
+
+        100% {
+          opacity: 1;
+          height: 78%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="container">
+        <div class="motto-container">
+          <div class="motto">
+            <span class="motto-message motto-message--line-1">
+              <span class="motto-message--light">Your Source for</span
+              >&#160;Timely Truths
+            </span>
+
+            <span class="motto-message motto-message--line-2">
+              <span>
+                <span class="motto-message--light">Get the</span>&#160;Facts,
+                Fast
+              </span>
+              <span>
+                <span class="motto-message--light"
+                  >&#160;&#160;&#160;News at</span
+                ><br />
+                your Fingertips
+              </span>
+            </span>
+          </div>
         </div>
-        <script>
-            const languageData = [
-                {
-                    code: 'en',
-                    languageMessage: 'Select your preferred language',
-                    languageAriaLabel: 'Select your preferred language',
-                    descriptionMessage: 'TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI.',
-                    descriptionAriaLabel: 'TranslateTribune is a fully autonomous foreign-language news aggregator; all translations, summaries and article curation are performed by AI.'
-                },
-                {
-                    code: 'zh',
-                    languageMessage: '选择您喜欢的语言',
-                    languageAriaLabel: '选择您喜欢的语言',
-                    descriptionMessage: 'TranslateTribune是一个完全自主的外语新闻聚合器；所有翻译、摘要和文章策展都由AI完成.',
-                    descriptionAriaLabel: 'TranslateTribune是一个完全自主的外语新闻聚合器；所有翻译、摘要和文章策展都由AI完成.'
-                },
-                {
-                    code: 'es',
-                    languageMessage: 'Seleccione su idioma preferido',
-                    languageAriaLabel: 'Seleccione su idioma preferido',
-                    descriptionMessage: 'TranslateTribune es un agregador de noticias en idiomas extranjeros totalmente autónomo; todas las traducciones, resúmenes y curaciones de artículos son realizadas por IA.',
-                    descriptionAriaLabel: 'TranslateTribune es un agregador de noticias en idiomas extranjeros totalmente autónomo; todas las traducciones, resúmenes y curaciones de artículos son realizadas por IA.'
-                },
-                {
-                    code: 'ar',
-                    languageMessage: 'اختر لغتك المفضلة',
-                    languageAriaLabel: 'اختر لغتك المفضلة',
-                    descriptionMessage: 'TranslateTribune هو مجمع أخبار باللغات الأجنبية مستقل تمامًا ؛ يتم إجراء جميع الترجمات والملخصات واستيراد المقالات بواسطة الذكاء الاصطناعي',
-                    descriptionAriaLabel: 'TranslateTribune هو مجمع أخبار باللغات الأجنبية مستقل تمامًا ؛ يتم إجراء جميع الترجمات والملخصات واستيراد المقالات بواسطة الذكاء الاصطناعي'
-                },
-                {
-                    code: 'fr',
-                    languageMessage: 'Sélectionnez votre langue préférée',
-                    languageAriaLabel: 'Sélectionnez votre langue préférée',
-                    descriptionMessage: "TranslateTribune est un agrégateur d'actualités en langues étrangères entièrement autonome ; toutes les traductions, résumés et sélections d'articles sont effectués par l'IA.",
-                    descriptionAriaLabel: "TranslateTribune est un agrégateur d'actualités en langues étrangères entièrement autonome ; toutes les traductions, résumés et sélections d'articles sont effectués par l'IA."
-                },
-                {
-                    code: 'ru',
-                    languageMessage: 'Выберите предпочитаемый язык',
-                    languageAriaLabel: 'Выберите предпочитаемый язык',
-                    descriptionMessage: 'TranslateTribune — полностью автономный агрегатор новостей на иностранных языках; все переводы, резюме и подбор статей выполняются с помощью ИИ.',
-                    descriptionAriaLabel: 'TranslateTribune — полностью автономный агрегатор новостей на иностранных языках; все переводы, резюме и подбор статей выполняются с помощью ИИ.'
-                },
-                {
-                    code: 'pt',
-                    languageMessage: 'Selecione seu idioma preferido',
-                    languageAriaLabel: 'Selecione seu idioma preferido',
-                    descriptionMessage: 'TranslateTribune é um agregador de notícias em línguas estrangeiras totalmente autônomo; todas as traduções, resumos e curadoria de artigos são realizados por IA.',
-                    descriptionAriaLabel: 'TranslateTribune é um agregador de notícias em línguas estrangeiras totalmente autônomo; todas as traduções, resumos e curadoria de artigos são realizados por IA.'
-                },
-                {
-                    code: 'de',
-                    languageMessage: 'Wählen Sie Ihre bevorzugte Sprache',
-                    languageAriaLabel: 'Wählen Sie Ihre bevorzugte Sprache',
-                    descriptionMessage: 'TranslateTribune ist ein vollständig autonomer Aggregator für fremdsprachige Nachrichten; alle Übersetzungen, Zusammenfassungen und die Auswahl der Artikel erfolgen durch KI.',
-                    descriptionAriaLabel: 'TranslateTribune ist ein vollständig autonomer Aggregator für fremdsprachige Nachrichten; alle Übersetzungen, Zusammenfassungen und die Auswahl der Artikel erfolgen durch KI.'
-                },
-                {
-                    code: 'ja',
-                    languageMessage: '希望の言語を選択してください',
-                    languageAriaLabel: '希望の言語を選択してください',
-                    descriptionMessage: 'TranslateTribuneは完全自律型の外国語ニュースアグリゲーターです。すべての翻訳、要約、記事のキュレーションはAIによって行われます.',
-                    descriptionAriaLabel: 'TranslateTribuneは完全自律型の外国語ニュースアグリゲーターです。すべての翻訳、要約、記事のキュレーションはAIによって行われます.'
-                },
-                {
-                    code: 'tr',
-                    languageMessage: 'Tercih ettiğiniz dili seçin',
-                    languageAriaLabel: 'Tercih ettiğiniz dili seçin',
-                    descriptionMessage: 'TranslateTribune, tamamen otonom bir yabancı dil haber toplayıcısıdır; tüm çeviriler, özetler ve makale küratörlüğü AI tarafından gerçekleştirilir.',
-                    descriptionAriaLabel: 'TranslateTribune, tamamen otonom bir yabancı dil haber toplayıcısıdır; tüm çeviriler, özetler ve makale küratörlüğü AI tarafından gerçekleştirilir.'
-                },
-                {
-                    code: 'ko',
-                    languageMessage: '선호하는 언어를 선택하세요',
-                    languageAriaLabel: '선호하는 언어를 선택하세요',
-                    descriptionMessage: 'TranslateTribune은 완전히 자율적인 외국어 뉴스 애그리게이터입니다. 모든 번역, 요약 및 기사 큐레이션은 AI에 의해 수행됩니다.',
-                    descriptionAriaLabel: 'TranslateTribune은 완전히 자율적인 외국어 뉴스 애그리게이터입니다. 모든 번역, 요약 및 기사 큐레이션은 AI에 의해 수행됩니다.'
-                },
-                {
-                    code: 'it',
-                    languageMessage: 'Seleziona la tua lingua preferita',
-                    languageAriaLabel: 'Seleziona la tua lingua preferita',
-                    descriptionMessage: 'TranslateTribune è un aggregatore di notizie in lingue straniere completamente autonomo; tutte le traduzioni, i riassunti e la cura degli articoli sono eseguiti dall\'AI.',
-                    descriptionAriaLabel: 'TranslateTribune è un aggregatore di notizie in lingue straniere completamente autonomo; tutte le traduzioni, i riassunti e la cura degli articoli sono eseguiti dall\'AI.'
-                },
-                {
-                    code: 'nl',
-                    languageMessage: 'Selecteer uw voorkeurstaal',
-                    languageAriaLabel: 'Selecteer uw voorkeurstaal',
-                    descriptionMessage: 'TranslateTribune is een volledig autonome aggregator van nieuws in vreemde talen; alle vertalingen, samenvattingen en curatie van artikelen worden uitgevoerd door AI.',
-                    descriptionAriaLabel: 'TranslateTribune is een volledig autonome aggregator van nieuws in vreemde talen; alle vertalingen, samenvattingen en curatie van artikelen worden uitgevoerd door AI.'
-                },
-                {
-                    code: 'fa',
-                    languageMessage: 'زبان مورد نظر خود را انتخاب کنید',
-                    languageAriaLabel: 'زبان مورد نظر خود را انتخاب کنید',
-                    descriptionMessage: 'TranslateTribune یک تجمیع کننده خبری خودکار به زبان های خارجی است. تمام ترجمه ها، خلاصه ها و انتخاب مقالات توسط هوش مصنوعی انجام می شود',
-                    descriptionAriaLabel: 'TranslateTribune یک تجمیع کننده خبری خودکار به زبان های خارجی است. تمام ترجمه ها، خلاصه ها و انتخاب مقالات توسط هوش مصنوعی انجام می شود'
-                },
-                {
-                    code: 'uk',
-                    languageMessage: 'Виберіть бажану мову',
-                    languageAriaLabel: 'Виберіть бажану мову',
-                    descriptionMessage: 'TranslateTribune — це повністю автономний агрегатор новин іноземними мовами; усі переклади, анотації та підбір статей виконуються за допомогою ШІ.',
-                    descriptionAriaLabel: 'TranslateTribune — це повністю автономний агрегатор новин іноземними мовами; усі переклади, анотації та підбір статей виконуються за допомогою ШІ.'
-                },
-                {
-                    code: 'sv',
-                    languageMessage: 'Välj ditt föredragna språk',
-                    languageAriaLabel: 'Välj ditt föredragna språk',
-                    descriptionMessage: 'TranslateTribune är en helt autonom nyhetsaggregator för främmande språk; alla översättningar, sammanfattningar och artikelurval utförs av AI.',
-                    descriptionAriaLabel: 'TranslateTribune är en helt autonom nyhetsaggregator för främmande språk; alla översättningar, sammanfattningar och artikelurval utförs av AI.'
-                },
-                {
-                    code: 'he',
-                    languageMessage: 'בחר את השפה המועדפת עליך',
-                    languageAriaLabel: 'בחר את השפה המועדפת עליך',
-                    descriptionMessage: 'TranslateTribune הוא אגרגטור חדשות אוטונומי לחלוטין בשפות זרות; כל התרגומים, התקצירים והקראטוריון של המאמרים מבוצעים על ידי בינה מלאכותית',
-                    descriptionAriaLabel: 'TranslateTribune הוא אגרגטור חדשות אוטונומי לחלוטין בשפות זרות; כל התרגומים, התקצירים והקראטוריון של המאמרים מבוצעים על ידי בינה מלאכותית'
-                },
-                {
-                    code: 'hu',
-                    languageMessage: 'Válassza ki a kívánt nyelvet',
-                    languageAriaLabel: 'Válassza ki a kívánt nyelvet',
-                    descriptionMessage: 'A TranslateTribune egy teljesen autonóm idegen nyelvű hírgyűjtő; az összes fordítást, összefoglalót és cikk-kurátori feladatot AI végzi.',
-                    descriptionAriaLabel: 'A TranslateTribune egy teljesen autonóm idegen nyelvű hírgyűjtő; az összes fordítást, összefoglalót és cikk-kurátori feladatot AI végzi.'
-                },
-                {
-                    code: 'sw',
-                    languageMessage: 'Chagua lugha unayopendelea',
-                    languageAriaLabel: 'Chagua lugha unayopendelea',
-                    descriptionMessage: 'TranslateTribune ni mkusanyiko wa habari za lugha za kigeni unaojitegemea kikamilifu; tafsiri zote, muhtasari na uteuzi wa makala unafanywa na AI.',
-                    descriptionAriaLabel: 'TranslateTribune ni mkusanyiko wa habari za lugha za kigeni unaojitegemea kikamilifu; tafsiri zote, muhtasari na uteuzi wa makala unafanywa na AI.'
-                }
-            ];
+        <div class="header">
+          <div class="header-title">
+            <span class="header-title--large">T</span>ranslate
+          </div>
+          <div class="header-title">
+            <span class="header-title--large header-title--green">T</span>ribune
+          </div>
 
-            let currentIndex = 0;
-            const languageMessageElement = document.getElementById('language-message');
-            const descriptionMessageElement = document.getElementById('description-message');
+          <div class="header-languages">
+            <ul>
+              <li>
+                <a href="en.html">English</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="zh.html">中文</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="es.html">Español</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="ar.html">العربية</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="fr.html">Français</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="ru.html">Русский</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="pt.html">Português</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="de.html">Deutsch</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="ja.html">日本語</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="tr.html">Türkçe</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="ko.html">한국어</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="it.html">Italiano</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="nl.html">Nederlands</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="fa.html">فارسی</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="uk.html">Українська</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="sv.html">Svenska</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="he.html">עברית</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="hu.html">Magyar</a>
+                <div class="rotated-background"></div>
+              </li>
+              <li>
+                <a href="sw.html">Kiswahili</a>
+                <div class="rotated-background"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="microphone">
+        <div class="microphone-top">
+          <div class="microphone-top-wire"></div>
+          <div class="microphone-top-head">
+            <svg
+              width="13"
+              height="22"
+              viewBox="0 0 13 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 14.0331C13 17.9421 10.0899 21.1109 6.5 21.1109C2.91015 21.1109 0 17.9421 0 14.0331C0 10.1242 2.91015 0.888672 6.5 0.888672C10.0899 0.888672 13 10.1242 13 14.0331Z"
+                fill="#141414"
+              />
+              <path
+                d="M3.61108 15.3336L4.80222 15.0358C5.9169 14.7571 7.08304 14.7571 8.19772 15.0358L9.38886 15.3336"
+                stroke="white"
+                stroke-width="0.7"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3.61108 11.7222L4.80222 11.4244C5.9169 11.1458 7.08304 11.1458 8.19772 11.4244L9.38886 11.7222"
+                stroke="white"
+                stroke-width="0.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3.61108 8.83355L4.80222 8.53577C5.9169 8.2571 7.08304 8.2571 8.19772 8.53577L9.38886 8.83355"
+                stroke="white"
+                stroke-width="0.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="microphone-bottom">
+          <div class="microphone-bottom-stand">
+            <svg
+              width="11"
+              height="4"
+              viewBox="0 0 11 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1.4C11 0.626801 8.53757 0 5.5 0C2.46243 0 0 0.626801 0 1.4C0 2.1732 2.46243 4 5.5 4C8.53757 4 11 2.1732 11 1.4Z"
+                fill="#141414"
+              />
+            </svg>
+          </div>
+          <div class="microphone-bottom-wire"></div>
+        </div>
+      </div>
+      <div class="letters">
+        <div class="letters-row-1">
+          <div class="letter row-1-letter-1">語</div>
+          <div class="letter row-1-letter-2">n</div>
+          <div class="letter row-1-letter-3">O</div>
+          <div class="letter row-1-letter-4">中</div>
+          <div class="letter row-1-letter-5">ㅌ</div>
+          <div class="letter row-1-letter-6">ג</div>
+          <div class="letter row-1-letter-7">Ї</div>
+        </div>
+        <div class="letters-row-2">
+          <div class="letter row-2-letter-1">є</div>
+          <div class="letter row-2-letter-2">ㅅ</div>
+          <div class="letter row-2-letter-3">q</div>
+          <div class="letter row-2-letter-4">こ</div>
+          <div class="letter row-2-letter-5">z</div>
+          <div class="letter row-2-letter-6">v</div>
+          <div class="letter row-2-letter-7">ű</div>
+        </div>
+        <div class="letters-row-3">
+          <div class="letter row-3-letter-1">語</div>
+          <div class="letter row-3-letter-2">n</div>
+          <div class="letter row-3-letter-3">O</div>
+          <div class="letter row-3-letter-4">中</div>
+          <div class="letter row-3-letter-5">ㅌ</div>
+          <div class="letter row-3-letter-6">ג</div>
+          <div class="letter row-3-letter-7">Ї</div>
+        </div>
+        <div class="letters-row-4">
+          <div class="letter row-4-letter-1">語</div>
+          <div class="letter row-4-letter-2">n</div>
+          <div class="letter row-4-letter-3">O</div>
+          <div class="letter row-4-letter-4">中</div>
+        </div>
+        <div class="letters-row-5">
+          <div class="letter row-5-letter-1">h</div>
+        </div>
+        <div class="letters-row-6">
+          <div class="letter row-6-letter-1">р</div>
+          <div class="letter row-6-letter-2">ű</div>
+        </div>
+        <div class="letters-row-7">
+          <div class="letter row-7-letter-1">z</div>
+        </div>
+        <div class="letters-row-8">
+          <div class="letter row-8-letter-1">語</div>
+          <div class="letter row-8-letter-2">n</div>
+          <div class="letter row-8-letter-3">O</div>
+        </div>
+        <div class="letters-row-9">
+          <div class="letter row-9-letter-1">語</div>
+          <div class="letter row-9-letter-2">n</div>
+          <div class="letter row-9-letter-3">O</div>
+          <div class="letter row-9-letter-4">中</div>
+          <div class="letter row-9-letter-5">中</div>
+        </div>
+      </div>
+    </main>
 
-            function displayNextLanguage() {
-                const { code, languageMessage, languageAriaLabel, descriptionMessage, descriptionAriaLabel } = languageData[currentIndex];
+    <script>
+      const languages = {
+        en: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        zh: "的一是在不了有和人这中大为上个国我以要他时来用们生語",
+        es: "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+        ar: "ابتثجحخدذرزسشصضطظعغفقكلمنهوي",
+        fr: "abcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ",
+        ru: "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+        de: "abcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSS",
+        ja: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん",
+        pt: "abcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚ",
+        tr: "abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZ",
+        ko: "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ",
+        it: "abcdefghijklmnopqrstuvwxyz",
+        nl: "abcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜ",
+        fa: "پتثجچحخدذرزژسشصضطظعغفقکگلمنوهی",
+        uk: "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ",
+        sv: "abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ",
+        he: "אבגדהוזחטיכךלמםנןסעפףצץקרשת",
+        hu: "abcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰ",
+        sw: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      };
 
-                languageMessageElement.textContent = languageMessage;
-                languageMessageElement.lang = code;
-                languageMessageElement.setAttribute('aria-label', languageAriaLabel);
+      document.addEventListener("DOMContentLoaded", function () {
+        const letters = document.querySelectorAll(".letter");
 
-                descriptionMessageElement.textContent = descriptionMessage;
-                descriptionMessageElement.lang = code;
-                descriptionMessageElement.setAttribute('aria-label', descriptionAriaLabel);
+        letters.forEach(function (letter) {
+          setInterval(function () {
+            const langArray = Object.values(languages);
 
-                currentIndex = (currentIndex + 1) % languageData.length;
-            }
-
-            displayNextLanguage();
-            setInterval(displayNextLanguage, 4500);
-
-            const title = document.querySelector('.dynamic-logo');
-            let textNode = title.childNodes[0];
-            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-
-            // Track the original text to ensure we can always revert to it
-            const originalText = textNode.nodeValue;
-
-            // Use an array to track which characters are currently being animated
-            let animatingIndices = [];
-
-            setInterval(() => {
-              const textContent = textNode.nodeValue;
-              let index;
-
-              // Find a character index that is not currently being animated and is a letter
-              do {
-                index = Math.floor(Math.random() * textContent.length);
-              } while (animatingIndices.includes(index) || !/[a-zA-Z]/.test(textContent.charAt(index)));
-
-              // Mark this index as being animated
-              animatingIndices.push(index);
-
-              const char = textContent.charAt(index);
-              const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
-              textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
-
-              // Change back to the original character after 500ms
-              setTimeout(() => {
-                // Use the original text to ensure the correct character is restored
-                textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
-
-                // Remove the index from the animatingIndices array
-                animatingIndices = animatingIndices.filter(i => i !== index);
-              }, 500);
-            }, 400);
-        </script>
-    </body>
+            const randomLangIndex = Math.floor(
+              Math.random() * langArray.length
+            );
+            const randomLang = langArray[randomLangIndex];
+            const randomIndex = Math.floor(Math.random() * randomLang.length);
+            const randomLetter = randomLang.charAt(randomIndex);
+            letter.textContent = randomLetter;
+          }, Math.random() * 2000 + 1000); // Random interval between 1000ms and 3000ms
+        });
+      });
+    </script>
+  </body>
 </html>
-

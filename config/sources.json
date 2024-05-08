@@ -1,342 +1,342 @@
 [
-    {
-        "source_country": "United States",
-        "source_language": "English",
-        "source_flag": "&#127482;&#127480;",
-        "source": "USA Today",
-        "source_url": "https://www.usatoday.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United Kingdom",
-        "source_language": "English",
-        "source_flag": "&#127468;&#127463;",
-        "source": "BBC News",
-        "source_url": "https://www.bbc.com/",
-        "source_parser": "readability", 
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Mexico",
-        "source_language": "Spanish",
-        "source_flag": "&#127474;&#127485;",
-        "source": "La Jornada",
-        "source_url": "https://www.jornada.com.mx",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "France",
-        "source_language": "French",
-        "source_flag": "&#127467;&#127479;",
-        "source": "Le Figaro",
-        "source_url": "https://www.lefigaro.fr",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Italy",
-        "source_language": "Italian",
-        "source_flag": "&#127470;&#127481;",
-        "source": "La Repubblica",
-        "source_url": "https://www.repubblica.it",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "China",
-        "source_language": "Chinese",
-        "source_flag": "&#127464;&#127475;",
-        "source": "People's Daily",
-        "source_url": "http://www.people.com.cn",
-        "source_parser": "text",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Israel",
-        "source_language": "Hebrew",
-        "source_flag": "&#127470;&#127473;",
-        "source": "Yedioth Ahronoth",
-        "source_url": "https://www.ynet.co.il",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Taiwan",
-        "source_language": "Chinese",
-        "source_flag": "&#127481;&#127484;",
-        "source": "Liberty Times",
-        "source_url": "https://www.ltn.com.tw",
-        "source_parser": "text",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Ukraine",
-        "source_language": "Ukrainian",
-        "source_flag": "&#127482;&#127462;",
-        "source": "Suspilne Media",
-        "source_url": "https://suspilne.media",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "South Korea",
-        "source_language": "Korean",
-        "source_flag": "&#127472;&#127479;",
-        "source": "JoongAng Ilbo",
-        "source_url": "https://www.joongang.co.kr",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Iran",
-        "source_language": "Farsi",
-        "source_flag": "&#127470;&#127479;",
-        "source": "Ettela'at",
-        "source_url": "https://ettelaat.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Qatar",
-        "source_language": "Arabic",
-        "source_flag": "&#127478;&#127462;",
-        "source": "Al Jazeera",
-        "source_url": "https://www.aljazeera.net/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Saudi Arabia",
-        "source_language": "Arabic",
-        "source_flag": "&#127480;&#127462;",
-        "source": "Al-Riyadh",
-        "source_url": "https://www.alriyadh.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Türkiye",
-        "source_language": "Turkish",
-        "source_flag": "&#127481;&#127479;",
-        "source": "Hürriyet",
-        "source_url": "https://www.hurriyet.com.tr",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Russia",
-        "source_language": "Russian",
-        "source_flag": "&#127479;&#127482;",
-        "source": "Kommersant",
-        "source_url": "https://www.kommersant.ru",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Singapore",
-        "source_language": "Chinese",
-        "source_flag": "&#127480;&#127468;",
-        "source": "Lianhe Zaobao",
-        "source_url": "https://www.zaobao.com.sg",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Kenya",
-        "source_language": "Swahili",
-        "source_flag": "&#127472;&#127466;",
-        "source": "Taifa Leo",
-        "source_url": "https://taifaleo.nation.co.ke",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United States",
-        "source_language": "English",
-        "source_flag": "&#127482;&#127480;",
-        "source": "The New York Times",
-        "source_url": "https://www.nytimes.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "United Kingdom",
-        "source_language": "English",
-        "source_flag": "&#127468;&#127463;",
-        "source": "The Guardian",
-        "source_url": "https://www.theguardian.com/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Mexico",
-        "source_language": "Spanish",
-        "source_flag": "&#127474;&#127485;",
-        "source": "El Universal",
-        "source_url": "https://www.eluniversal.com.mx/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "France",
-        "source_language": "French",
-        "source_flag": "&#127467;&#127479;",
-        "source": "Le Monde",
-        "source_url": "https://www.lemonde.fr/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Italy",
-        "source_language": "Italian",
-        "source_flag": "&#127470;&#127481;",
-        "source": "Corriere della Sera",
-        "source_url": "https://www.corriere.it/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "China",
-        "source_language": "Chinese",
-        "source_flag": "&#127464;&#127475;",
-        "source": "Xinhua News Agency",
-        "source_url": "http://www.xinhuanet.com/",
-        "source_parser": "text",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Israel",
-        "source_language": "Hebrew",
-        "source_flag": "&#127470;&#127473;",
-        "source": "Haaretz",
-        "source_url": "https://www.haaretz.co.il/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Taiwan",
-        "source_language": "Chinese",
-        "source_flag": "&#127481;&#127484;",
-        "source": "United Daily News",
-        "source_url": "https://udn.com/",
-        "source_parser": "text",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Ukraine",
-        "source_language": "Ukrainian",
-        "source_flag": "&#127482;&#127462;",
-        "source": "Hromadske",
-        "source_url": "https://hromadske.ua/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "South Korea",
-        "source_language": "Korean",
-        "source_flag": "&#127472;&#127479;",
-        "source": "The Chosun Ilbo",
-        "source_url": "https://www.chosun.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Iran",
-        "source_language": "Farsi",
-        "source_flag": "&#127470;&#127479;",
-        "source": "Hamshahri",
-        "source_url": "https://www.hamshahrionline.ir/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Qatar",
-        "source_language": "Arabic",
-        "source_flag": "&#127478;&#127462;",
-        "source": "Al-Sharq",
-        "source_url": "https://al-sharq.com/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Saudi Arabia",
-        "source_language": "Arabic",
-        "source_flag": "&#127480;&#127462;",
-        "source": "Okaz",
-        "source_url": "https://www.okaz.com.sa/",
-        "source_parser": "goose",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Türkiye",
-        "source_language": "Turkish",
-        "source_flag": "&#127481;&#127479;",
-        "source": "Sabah",
-        "source_url": "https://www.sabah.com.tr/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Russia",
-        "source_language": "Russian",
-        "source_flag": "&#127479;&#127482;",
-        "source": "Izvestia",
-        "source_url": "https://iz.ru/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Singapore",
-        "source_language": "Chinese",
-        "source_flag": "&#127480;&#127468;",
-        "source": "Shin Min Daily News",
-        "source_url": "https://www.shinmin.sg/",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    },
-    {
-        "source_country": "Kenya",
-        "source_language": "Swahili",
-        "source_flag": "&#127472;&#127466;",
-        "source": "Nipashe",
-        "source_url": "https://www.ippmedia.com/sw/nipashe",
-        "source_parser": "readability",
-        "finder_model": "Claude 3h",
-        "summarizer_model": "Claude 3h"
-    }
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/us.png",
+    "source": "USA Today",
+    "source_url": "https://www.usatoday.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/uk.png",
+    "source": "BBC News",
+    "source_url": "https://www.bbc.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Mexico",
+    "source_language": "Spanish",
+    "source_flag": "./assets/mexico.png",
+    "source": "La Jornada",
+    "source_url": "https://www.jornada.com.mx",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/france.png",
+    "source": "Le Figaro",
+    "source_url": "https://www.lefigaro.fr",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Italy",
+    "source_language": "Italian",
+    "source_flag": "./assets/italy.png",
+    "source": "La Repubblica",
+    "source_url": "https://www.repubblica.it",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "China",
+    "source_language": "Chinese",
+    "source_flag": "./assets/china.png",
+    "source": "People's Daily",
+    "source_url": "http://www.people.com.cn",
+    "source_parser": "text",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Israel",
+    "source_language": "Hebrew",
+    "source_flag": "./assets/israel.png",
+    "source": "Yedioth Ahronoth",
+    "source_url": "https://www.ynet.co.il",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Taiwan",
+    "source_language": "Chinese",
+    "source_flag": "./assets/taiwan.png",
+    "source": "Liberty Times",
+    "source_url": "https://www.ltn.com.tw",
+    "source_parser": "text",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Ukraine",
+    "source_language": "Ukrainian",
+    "source_flag": "./assets/ukraine.png",
+    "source": "Ukrayinska Pravda",
+    "source_url": "https://www.pravda.com.ua",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "South Korea",
+    "source_language": "Korean",
+    "source_flag": "./assets/korea.png",
+    "source": "JoongAng Ilbo",
+    "source_url": "https://www.joongang.co.kr",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Iran",
+    "source_language": "Farsi",
+    "source_flag": "./assets/iran.png",
+    "source": "Ettela'at",
+    "source_url": "https://ettelaat.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Qatar",
+    "source_language": "Arabic",
+    "source_flag": "./assets/qatar.png",
+    "source": "Al Jazeera",
+    "source_url": "https://www.aljazeera.net/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Saudi Arabia",
+    "source_language": "Arabic",
+    "source_flag": "./assets/saudi-arabia.png",
+    "source": "Al-Riyadh",
+    "source_url": "https://www.alriyadh.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Türkiye",
+    "source_language": "Turkish",
+    "source_flag": "./assets/turkey.png",
+    "source": "Hürriyet",
+    "source_url": "https://www.hurriyet.com.tr",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Russia",
+    "source_language": "Russian",
+    "source_flag": "./assets/russia.png",
+    "source": "Kommersant",
+    "source_url": "https://www.kommersant.ru",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Singapore",
+    "source_language": "Chinese",
+    "source_flag": "./assets/singapore.png",
+    "source": "Lianhe Zaobao",
+    "source_url": "https://www.zaobao.com.sg",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Kenya",
+    "source_language": "Swahili",
+    "source_flag": "./assets/kenya.png",
+    "source": "Taifa Leo",
+    "source_url": "https://taifaleo.nation.co.ke",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/us.png",
+    "source": "The New York Times",
+    "source_url": "https://www.nytimes.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/uk.png",
+    "source": "The Guardian",
+    "source_url": "https://www.theguardian.com/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Mexico",
+    "source_language": "Spanish",
+    "source_flag": "./assets/mexico.png",
+    "source": "El Universal",
+    "source_url": "https://www.eluniversal.com.mx/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/france.png",
+    "source": "Le Monde",
+    "source_url": "https://www.lemonde.fr/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Italy",
+    "source_language": "Italian",
+    "source_flag": "./assets/italy.png",
+    "source": "Corriere della Sera",
+    "source_url": "https://www.corriere.it/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "China",
+    "source_language": "Chinese",
+    "source_flag": "./assets/china.png",
+    "source": "Xinhua News Agency",
+    "source_url": "http://www.xinhuanet.com/",
+    "source_parser": "text",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Israel",
+    "source_language": "Hebrew",
+    "source_flag": "./assets/israel.png",
+    "source": "Haaretz",
+    "source_url": "https://www.haaretz.co.il/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Taiwan",
+    "source_language": "Chinese",
+    "source_flag": "./assets/taiwan.png",
+    "source": "Apple Daily",
+    "source_url": "https://tw.appledaily.com/",
+    "source_parser": "text",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Ukraine",
+    "source_language": "Ukrainian",
+    "source_flag": "./assets/ukraine.png",
+    "source": "Segodnya",
+    "source_url": "https://www.segodnya.ua/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "South Korea",
+    "source_language": "Korean",
+    "source_flag": "./assets/korea.png",
+    "source": "The Chosun Ilbo",
+    "source_url": "https://www.chosun.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Iran",
+    "source_language": "Farsi",
+    "source_flag": "./assets/iran.png",
+    "source": "Hamshahri",
+    "source_url": "https://www.hamshahrionline.ir/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Qatar",
+    "source_language": "Arabic",
+    "source_flag": "./assets/qatar.png",
+    "source": "Al-Sharq",
+    "source_url": "https://al-sharq.com/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Saudi Arabia",
+    "source_language": "Arabic",
+    "source_flag": "./assets/saudi-arabia.png",
+    "source": "Okaz",
+    "source_url": "https://www.okaz.com.sa/",
+    "source_parser": "goose",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Türkiye",
+    "source_language": "Turkish",
+    "source_flag": "./assets/turkey.png",
+    "source": "Sabah",
+    "source_url": "https://www.sabah.com.tr/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Russia",
+    "source_language": "Russian",
+    "source_flag": "./assets/russia.png",
+    "source": "Izvestia",
+    "source_url": "https://iz.ru/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Singapore",
+    "source_language": "Chinese",
+    "source_flag": "./assets/singapore.png",
+    "source": "Shin Min Daily News",
+    "source_url": "https://www.shinmin.sg/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Kenya",
+    "source_language": "Swahili",
+    "source_flag": "./assets/kenya.png",
+    "source": "Nipashe",
+    "source_url": "https://www.ippmedia.com/sw/nipashe",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
+  }
 ]
