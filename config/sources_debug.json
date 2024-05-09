@@ -3,6 +3,7 @@
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "USA Today",
     "source_url": "https://www.usatoday.com/",
     "source_parser": "readability",
@@ -13,6 +14,7 @@
     "source_country": "Mexico",
     "source_language": "Spanish",
     "source_flag": "./assets/png/mexico.png",
+    "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
     "source": "La Jornada",
     "source_url": "https://www.jornada.com.mx",
     "source_parser": "readability",
@@ -23,6 +25,7 @@
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "The New York Times",
     "source_url": "https://www.nytimes.com/",
     "source_parser": "readability",
@@ -30,3 +33,4 @@
     "summarizer_model": "Claude 3h"
   }
 ]
+
