@@ -263,7 +263,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
       }
 
       .nav ul li {
@@ -840,6 +839,9 @@
           } else {
             navArrowRight.classList.remove("hidden"); // Show right arrow otherwise
           }
+        } else {
+          navArrowLeft.classList.add("hidden");
+          navArrowRight.classList.add("hidden");
         }
       }
 
