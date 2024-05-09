@@ -8,7 +8,7 @@
         <p align="center">We like to play nice with news providers, read <a href="./DONT_SCRAPE_ME.md">DONT_SCRAPE_ME.md</a> for more info.</p>
     </div>
     <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height=200 alt="Get it on Google Play">
+  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="135" alt="Get it on Google Play">
     </a>
 
 
