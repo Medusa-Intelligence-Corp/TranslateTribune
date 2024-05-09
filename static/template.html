@@ -204,14 +204,32 @@
         white-space: nowrap;
         margin-bottom: 54px;
         width: 100%;
+        position: relative;
       }
 
       .nav-scroll {
-        width: 100%;
         position: relative;
         min-height: 75px;
         display: flex;
         align-items: center;
+      }
+
+      .nav-arrow {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+        max-width: 40px;
+      }
+
+      .nav-arrow.nav-arrow-left {
+        left: 16px;
+      }
+
+      .nav-arrow.nav-arrow-left > svg {
+        transform: rotate(180deg);
       }
 
       .rotated-background {
@@ -577,41 +595,89 @@
         <div class="header-line-right"></div>
       </div>
 
+      <nav class="nav">
+        <div class="nav-arrow nav-arrow-left hidden">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="40"
+              height="40"
+              rx="20"
+              transform="matrix(0 -1 -1 0 40 40)"
+              fill="#141414"
+            />
+            <path
+              d="M16 28L24 20L16 12"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="nav-scroll container">
+          <ul>
+            <li>
+              <a
+                class="nav-link"
+                href="{{ lang_config['publishing_language_short'] }}.html"
+                >{{ lang_config['world_news'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="{{ lang_config['publishing_language_short'] }}-ft.html"
+                >{{ lang_config['finance_technology'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="logic_puzzle.html"
+                >{{ lang_config['logic_puzzles'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-arrow nav-arrow-right hidden">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="40"
+              height="40"
+              rx="20"
+              transform="matrix(0 -1 -1 0 40 40)"
+              fill="#141414"
+            />
+            <path
+              d="M16 28L24 20L16 12"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </nav>
       <div class="container">
-        <nav class="nav">
-          <div class="nav-scroll">
-            <ul>
-              <li>
-                <a
-                  class="nav-link"
-                  href="{{ lang_config['publishing_language_short'] }}.html"
-                  >{{ lang_config['world_news'] }}
-
-                  <div class="rotated-background"></div>
-                  <div class="underline"></div>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="nav-link"
-                  href="{{ lang_config['publishing_language_short'] }}-ft.html"
-                  >{{ lang_config['finance_technology'] }}
-
-                  <div class="rotated-background"></div>
-                  <div class="underline"></div>
-                </a>
-              </li>
-              <li>
-                <a class="nav-link" href="logic_puzzle.html"
-                  >{{ lang_config['logic_puzzles'] }}
-
-                  <div class="rotated-background"></div>
-                  <div class="underline"></div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
         <div class="section">{{ article_html|safe }}</div>
       </div>
 
@@ -685,7 +751,6 @@
         }, Math.random() * 2000 + 1000); // Random interval between 1000ms and 3000ms
       });
 
-      // Function to toggle article details
       function toggleArticleDetails(e) {
         const articleContent = e.querySelector(".article-content");
         const articleContentTruncated = e.querySelector(
@@ -737,8 +802,77 @@
 
       if (isMobileOrTablet) {
         truncateArticleDetails();
-        autoScrollToActiveLink();
       }
+
+      const navScrollContainer = document.querySelector(".nav-scroll");
+      const navArrowRight = document.querySelector(
+        ".nav-arrow.nav-arrow-right"
+      );
+      const navArrowLeft = document.querySelector(".nav-arrow.nav-arrow-left");
+
+      function isElementScrollable(ele) {
+        const hasScrollableContent = ele.scrollWidth > ele.clientWidth;
+
+        const overflowXStyle = window.getComputedStyle(ele).overflowX;
+        const isOverflowHidden = overflowXStyle.indexOf("hidden") !== -1;
+
+        return hasScrollableContent && !isOverflowHidden;
+      }
+
+      function toggleNavbarArrowsVisibility() {
+        const isNavContainerScrollable =
+          isElementScrollable(navScrollContainer);
+
+        if (isNavContainerScrollable) {
+          if (navScrollContainer.scrollLeft < 80) {
+            navArrowLeft.classList.add("hidden"); // Hide left arrow if at the start
+          } else {
+            navArrowLeft.classList.remove("hidden"); // Show left arrow otherwise
+          }
+
+          if (
+            navScrollContainer.scrollLeft +
+              navScrollContainer.clientWidth +
+              80 >=
+            navScrollContainer.scrollWidth
+          ) {
+            navArrowRight.classList.add("hidden"); // Hide right arrow if at the end
+          } else {
+            navArrowRight.classList.remove("hidden"); // Show right arrow otherwise
+          }
+        }
+      }
+
+      toggleNavbarArrowsVisibility();
+      autoScrollToActiveLink();
+
+      window.addEventListener(
+        "resize",
+        function () {
+          toggleNavbarArrowsVisibility();
+        },
+        true
+      );
+
+      navScrollContainer.addEventListener("scroll", function () {
+        toggleNavbarArrowsVisibility();
+      });
+
+      navArrowLeft.addEventListener("click", function (e) {
+        e.stopPropagation();
+        navScrollContainer.scrollBy({
+          left: -navScrollContainer.scrollWidth, // Adjust scroll distance as needed
+          behavior: "smooth",
+        });
+      });
+
+      navArrowRight.addEventListener("click", function (e) {
+        e.stopPropagation();
+        navScrollContainer.scrollBy({
+          left: navScrollContainer.scrollWidth, // Adjust scroll distance as needed
+          behavior: "smooth",
+        });
+      });
 
       const title = document.querySelector(".dynamic-logo");
       let textNode = title.childNodes[0];
