@@ -541,6 +541,7 @@
             margin-top: 64px; /* Ensure there's enough space from the content above */
           }
         }
+      }
     </style>
   </head>
   <body>
@@ -669,14 +670,18 @@
         sw: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
       };
 
-      const allCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ的一是在不了有和人这中大为上个国我以要他时来用们生語abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZابتثجحخدذرزسشصضطظعغفقكلمنهويabcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSSあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんabcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚabcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیабвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯabcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖאבגדהוזחטיכךלמםנןסעפףצץקרשתabcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const allCharacters =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ的一是在不了有和人这中大为上个国我以要他时来用们生語abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZابتثجحخدذرزسشصضطظعغفقكلمنهويabcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSSあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんabcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚabcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیабвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯabcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖאבגדהוזחטיכךלמםנןסעפףצץקרשתabcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
       const letters = document.querySelectorAll(".letter");
 
       // Function to update letter content
       function updateLetterContent(letter) {
-        const currentLanguageLetters = languages[currentLanguage] || languages['en'];
-        const nonLanguageChars = [...allCharacters].filter(char => !currentLanguageLetters.includes(char)).join('');
+        const currentLanguageLetters =
+          languages[currentLanguage] || languages["en"];
+        const nonLanguageChars = [...allCharacters]
+          .filter((char) => !currentLanguageLetters.includes(char))
+          .join("");
 
         const randomIndex = Math.floor(Math.random() * nonLanguageChars.length);
         const randomLetter = nonLanguageChars.charAt(randomIndex);
@@ -692,7 +697,6 @@
           updateLetterContent(letter);
         }, Math.random() * 1000 + 1000); // Random interval between 1000ms and 2000ms
       });
-
 
       // Function to toggle article details
       function toggleArticleDetails(e) {
