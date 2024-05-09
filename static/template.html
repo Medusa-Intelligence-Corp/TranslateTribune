@@ -312,25 +312,23 @@
       }
 
       .section {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        column-count: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        column-gap: 54px;
       }
       .article {
-        align-self: flex-start;
-        width: calc(50% - 27px);
-        break-inside: avoid;
         box-sizing: border-box;
         cursor: pointer;
         padding: 32px 0;
-        border-bottom: 1px solid #141414;
-      }
-      .article:nth-child(2),
-      .article:first-child {
         border-top: 1px solid #141414;
+        border-bottom: 1px solid #141414;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: -1px;
       }
+
       .article-header {
         display: flex;
         align-items: center;

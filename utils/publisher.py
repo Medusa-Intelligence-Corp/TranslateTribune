@@ -71,6 +71,7 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
 
         if content_div:
             link = soup.new_tag('a', href=article_url)
+            link['onclick'] = 'event.stopPropagation();'
             wrapper_div = soup.new_tag('div')
             source_name_span = soup.new_tag('span')
             source_name_span.string = "Go to " + source_config["source"]
