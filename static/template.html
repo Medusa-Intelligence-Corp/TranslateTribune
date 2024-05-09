@@ -197,6 +197,7 @@
       .container {
         max-width: 1099px;
         margin: 0 auto;
+        padding: 0 24px;
       }
 
       .nav {
@@ -530,6 +531,10 @@
           white-space: nowrap;
         }
 
+        .section {
+          column-count: 1;
+        }
+
         .footer {
           display: flex;
           flex-direction: column;
@@ -549,10 +554,6 @@
         }
 
         @media screen and (max-width: 1110px) {
-          .container {
-            padding: 0 24px;
-          }
-
           .footer {
             margin-top: 64px; /* Ensure there's enough space from the content above */
           }
