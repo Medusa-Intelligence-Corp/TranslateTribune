@@ -312,25 +312,23 @@
       }
 
       .section {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        column-count: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        column-gap: 54px;
       }
       .article {
-        align-self: flex-start;
-        width: calc(50% - 27px);
-        break-inside: avoid;
         box-sizing: border-box;
         cursor: pointer;
         padding: 32px 0;
-        border-bottom: 1px solid #141414;
-      }
-      .article:nth-child(2),
-      .article:first-child {
         border-top: 1px solid #141414;
+        border-bottom: 1px solid #141414;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: -1px;
       }
+
       .article-header {
         display: flex;
         align-items: center;
@@ -535,30 +533,29 @@
         .footer {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
-          width: auto;
+          align-items: center; /* Center align items for better mobile view */
+          width: 100%; /* Use 100% width for better control on all screen sizes */
           margin: 0 auto;
-          row-gap: 20px;
+          padding: 20px; /* Consistent padding */
+          box-sizing: border-box; /* Include padding and border in the width */
+          row-gap: 20px; /* Maintain vertical spacing */
         }
 
         .footer span {
-          display: inline-block;
-          min-width: 26px;
-          margin: 0 auto;
-        }
-      }
-
-      @media screen and (max-width: 1110px) {
-        .container {
-          padding: 0 24px;
+          display: block; /* Change to block to better handle on mobile */
+          width: 100%; /* Full width for better touch accessibility */
+          text-align: center; /* Center text for better aesthetics */
+          margin-top: 10px; /* Add top margin for spacing */
         }
 
-        .footer {
-          padding: 20px;
-          margin-top: 64px;
-          justify-content: space-between;
-          box-sizing: border-box;
+        @media screen and (max-width: 1110px) {
+          .container {
+            padding: 0 24px;
+          }
+
+          .footer {
+            margin-top: 64px; /* Ensure there's enough space from the content above */
+          }
         }
       }
     </style>
@@ -723,7 +720,7 @@
         fr: "abcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ",
         ru: "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
         de: "abcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSS",
-        ja: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん",
+        ja: "あいうえおかきくけ��さしすせそたちつてとなにぬねのはひふへほまみむめ1もやゆよらりるれろわをん",
         pt: "abcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚ",
         tr: "abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZ",
         ko: "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ",
@@ -737,18 +734,32 @@
         sw: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
       };
 
+      const allCharacters =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ的一是在不了有和人这中大为上个国我以要他时来用们生語abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZابتثجحخدذرزسشصضطظعغفقكلمنهويabcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSSあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんabcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚabcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیабвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯabcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖאבגדהוזחטיכךלמםנןסעפףצץקרשתabcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
       const letters = document.querySelectorAll(".letter");
 
-      letters.forEach(function (letter) {
-        setInterval(function () {
-          const currentLanguageLetters = languages[currentLanguage];
+      // Function to update letter content
+      function updateLetterContent(letter) {
+        const currentLanguageLetters =
+          languages[currentLanguage] || languages["en"];
+        const nonLanguageChars = [...allCharacters]
+          .filter((char) => !currentLanguageLetters.includes(char))
+          .join("");
 
-          const randomIndex = Math.floor(
-            Math.random() * currentLanguageLetters.length
-          );
-          const randomLetter = currentLanguageLetters.charAt(randomIndex);
-          letter.textContent = randomLetter;
-        }, Math.random() * 2000 + 1000); // Random interval between 1000ms and 3000ms
+        const randomIndex = Math.floor(Math.random() * nonLanguageChars.length);
+        const randomLetter = nonLanguageChars.charAt(randomIndex);
+        letter.textContent = randomLetter;
+      }
+
+      letters.forEach(function (letter) {
+        // Initialize letter content immediately
+        updateLetterContent(letter);
+
+        // Update letter content at random intervals
+        setInterval(function () {
+          updateLetterContent(letter);
+        }, Math.random() * 1000 + 1000); // Random interval between 1000ms and 2000ms
       });
 
       function toggleArticleDetails(e) {

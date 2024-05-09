@@ -31,7 +31,7 @@ from llm import fetch_llm_response
 from templater import deploy_website
 
 
-def add_required_html(article_summary, article_url, finder_model, summarizer_model, source_config):
+def add_required_html(article_summary, article_url, finder_model, summarizer_model, source_config, lang_config):
         # Add HTML comment with model information for debugging
         article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
                               <!-- Summarizer Model: {summarizer_model} -->  
@@ -45,12 +45,19 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
     
 
         if article_div:
+            if lang_config.get("is_rtl", False):
+                article_div["dir"] = "rtl"
+
             article_header_div = soup.new_tag('div', attrs={"class": "article-header"})
             flag_img = soup.new_tag('img', src=source_config["source_flag"], attrs={"class": 'source-flag'})
+            flag_emoji = soup.new_tag('span', attrs={"class": "hidden"})
+            flag_emoji.string = html.unescape(source_config["source_flag_emoji"])
+
             source_country_span = soup.new_tag('span', attrs={"class": "source-country"})
             source_country_span.string = html.unescape(source_config["source_country"])
 
             article_header_div.append(flag_img)
+            article_header_div.append(flag_emoji)
             article_header_div.append(source_country_span)
             article_div.insert(0, article_header_div)
             article_div['onclick'] = 'toggleArticleDetails(this)'
@@ -64,6 +71,7 @@ def add_required_html(article_summary, article_url, finder_model, summarizer_mod
 
         if content_div:
             link = soup.new_tag('a', href=article_url)
+            link['onclick'] = 'event.stopPropagation();'
             wrapper_div = soup.new_tag('div')
             source_name_span = soup.new_tag('span')
             source_name_span.string = "Go to " + source_config["source"]
@@ -166,7 +174,8 @@ def publish(sources_config, lang_config, finder_template, \
                                                                 link,\
                                                                 finder_model,\
                                                                 summarizer_model,\
-                                                                source_config)
+                                                                source_config,\
+                                                                lang_config)
             
             article_dict[article_title] = {}
             article_dict[article_title]["html"] = article_summary
@@ -266,7 +275,7 @@ if __name__ == "__main__":
     debug = os.environ.get('DEBUG', False)
     
     if debug:
-        deploy_language("Chinese")
+        deploy_language("Arabic")
         deploy_language("English")
     else:
         with open('config/languages.json', 'r') as file:
