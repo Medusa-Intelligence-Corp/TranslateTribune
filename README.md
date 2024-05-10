@@ -7,8 +7,7 @@
 
 <table align="center">
     <tr>
-        <th><a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/Read%20Daily%20Edition-19%20Languages-blue?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO2UQQqDMBBFx4oFPYCCt5+FLlyWLr2GhYJQKLRYaJcKhfyMbzLJdFRo/eHBMO8x40wA/vnjqNQRwBrAFsA1NRsAFwAHAE9bQaVOthgJDt6U87K1Q6UcgBDAKMHBalfKOQBPAGsLdlbKOY/g7cDWgTBXcef6mRa02ST4dCB3YDIHnmbBu4KMYcqCUQog5YNJCvYAlhaMfwUuQWQFz7yCvAc/gu43dDNcNyhcNAhoNwASNxsA3KBBQNtskPHYP+dIc7MB4GA+2Fz8FjOPVOoLQJFrROK2s6AAAAAASUVORK5CYII=" alt="Read Daily Edition"></a>
-</th>
+        <th><a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/Read%20on%20the%20Web-Translate%20Tribune%20🌐-blue?style=for-the-badge&logoColor=white" alt="Read on the Web - Translate Tribune"></a></th>
         <th><a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/Subscribe-RSS%20Feeds-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a></th>
     </tr>
     <tr>
