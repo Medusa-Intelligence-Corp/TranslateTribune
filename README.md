@@ -6,12 +6,21 @@
     <div align="center">
         <p align="center">A free and open-source project that leverages AI (see <a href="./DEV_GUIDE.md#llmpy">DEV_GUIDE.md</a>) to curate, translate, and summarize foreign-language news articles from diverse countries. Read our daily edition in 19 languages at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>. We're redefining social news through code.</p>
         <p align="center">We like to play nice with news providers, read <a href="./DONT_SCRAPE_ME.md">DONT_SCRAPE_ME.md</a> for more info.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="135" alt="Get it on Google Play">
-    </a>
     </div>
 
 <h4 align="center">
+    <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60" width="160" alt="Get it on Google Play">
+    </a>
+    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="60" width="160" alt="Download on the App Store">
+    </a>
+</h4>
+
+
+<h4 align="center">
+    <a href="http://translatetribune.com/en.xml"><img src="https://img.shields.io/badge/RSS-Feed-orange" alt="RSS Feed">
+    </a>
     <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
         <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
     </a>
