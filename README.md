@@ -1,6 +1,6 @@
 <div align="center">
     <h1>
-        <img src="./static/icon-16x16.png" alt="Translate Tribune" width="150">
+        <img src="./static/favicon-16x16.png" alt="Translate Tribune" width="150">
         TranslateTribune
     </h1>
 </div>
