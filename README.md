@@ -3,11 +3,24 @@
     <h1>
         <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
+</div>
 
 <div align="center">
     <a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/Read%20Daily%20Edition-19%20Languages-blue?style=for-the-badge" alt="Read Daily Edition"></a>
     <a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/Subscribe-RSS%20Feeds-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a>
 </div>
+
+<h4 align="center">
+    <a href="https://github.com/Medusa-ML/TranslateTribune/actions/workflows/build-and-push.yml" target="_blank">
+        <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Medusa-ML/TranslateTribune/build-and-push.yml">
+    </a>
+    <a href="https://discord.gg/bEPkfhbwE4">
+        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
+    </a>
+    <a href="#support-us">
+        <img alt="Support Us" src="https://img.shields.io/badge/%F0%9F%92%B0_Support_Us-purple">
+    </a>
+</h4>
 
 <table align="center">
     <tr>
@@ -34,18 +47,6 @@
         </td>
     </tr>
 </table>
-
-<h4 align="center">
-    <a href="https://github.com/Medusa-ML/TranslateTribune/actions/workflows/build-and-push.yml" target="_blank">
-        <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Medusa-ML/TranslateTribune/build-and-push.yml">
-    </a>
-    <a href="https://discord.gg/bEPkfhbwE4">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
-    </a>
-    <a href="#support-us">
-        <img alt="Support Us" src="https://img.shields.io/badge/%F0%9F%92%B0_Support_Us-purple">
-    </a>
-</h4>
 
 <h4 align="center">
     <a href="#English">
