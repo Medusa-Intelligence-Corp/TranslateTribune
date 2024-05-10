@@ -1,8 +1,6 @@
 <div align="center">
-    <img src="./static/icon.png" alt="Translate Tribune" width="150">
-    <h1>
-        TranslateTribune
-    </h1>
+    <img src="./static/android-chrome-192x192.png" alt="Translate Tribune" width="150" align="center">
+    <h1>TranslateTribune</h1>
 </div>
 
 <table align="center">
