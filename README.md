@@ -839,6 +839,50 @@ TranslateTribune הוא חינמי (במובן של חופש הביטוי) וק�
 
 כל תרומה, ללא קשר לגודלה, עושה הבדל ומקרבת אותנו למטרות שלנו. אנו מעריכים את התמיכה וההתמסרות שלכם לפרויקט שלנו. ביחד, אנחנו יכולים ליצור השפעה משמעותית.
 
+# Magyar
+
+Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző országokból származó idegen nyelvű híreket tartalmazó cikkek gyűjtésére, fordítására és összefoglalására.
+
+## Küldetés 🎯
+
+- 🚀 Nyelvi akadályok és médiaelfogultságok leküzdése
+- 🌈 Különböző nézőpontok kiemelése
+- 🔄 Az önfrissítő, önfejlesztő projektek lehetőségeinek bizonyítása
+- ⚖️ A szerzői jog korlátainak bemutatása az AI korában
+- 💡 Alternatívát kínálni a drága hírfeliratkozásokkal szemben
+- 🗣️ Egy tájékozottabb és sokszínűbb globális diskurzus ösztönzése
+- 🌟 Annak bizonyítása, hogy az adatvédelmet tiszteletben tartó ingyenes és nyílt forráskódú projektek virágozhatnak
+
+## Jellemzők ✨
+
+- 📅 Napi frissítések keleti idő szerint reggel 6 óráig
+- 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources.json](./config/sources.json) és [sources_technology_finance.json](sources_technology_finance.json))
+- 🧠 AI-vezérelt fordítások és összefoglalók
+- 🔒 Adatvédelem tervezés által: nincsenek sütik, minimális JavaScript és nincsenek nyomkövetők. [Olvasd el teljes adatvédelmi irányelveinket itt.](https://translatetribune.com/privacy.html).
+
+## Fejlesztési elvek 🛠️
+
+- **🔒 Adatvédelem tervezés által**: A TranslateTribune a felhasználók adatvédelmét helyezi előtérbe a sütik mellőzésével, a JavaScript minimalizálásával és a nyomkövetők kiküszöbölésével. Az adatvédelem iránti elkötelezettségünket az [adatvédelmi irányelvekben](https://translatetribune.com/privacy.html) vázoljuk.
+- **🚀 Könnyű és hordozható**: Könnyűsúlyú statikus oldalunk kerüli a nehéz keretrendszereket és a túlzott JavaScript használatát. Teljesen dockerizált, dokumentált függőségekkel, biztosítva a reprodukálható fejlesztői környezetet és a könnyű telepítést bárhol.
+- **🛡️ Biztonságos és ellenálló**: Nem gyűjtünk felhasználói adatokat és nem vezetünk naplókat. Statikus architektúránk rugalmassá és alkalmazkodóvá teszi a webhelyet a világ különböző tárhelykörnyezeteihez.
+
+
+## Licenc és védjegy 📜
+
+A TranslateTribune ingyenes (a szólásszabadság értelmében) és nyílt forráskódú a [GPLv3 licenc](./LICENSE) alatt. A "TranslateTribune" név a [Medusa Intelligence Corporation](https://medusaintel.co) tulajdonában lévő bejegyzett védjegy.
+
+## Támogass minket
+
+1. **Patreon**: Legyél támogató és [vállalj havi 10 dolláros adományt a Patreon oldalunkon keresztül](https://www.patreon.com/bradflaugher). A folyamatos támogatásod segít fenntartani és bővíteni a projektet.
+
+2. **Coinbase**: Nagyobb egyszeri adományokhoz kérjük, fontold meg [az adományozást a Coinbase-en keresztül](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). A nagylelkű hozzájárulásod jelentősen felgyorsítja az új funkciók fejlesztését.
+
+3. **Közvetlenül BTC-vel**: használd a ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo``` BTC címet.
+
+<img src="./static/BTC.png" alt="BTC cím">
+
+Minden adomány, mérettől függetlenül, számít és közelebb visz minket a céljainkhoz. Nagyra értékeljük a támogatásodat és az elkötelezettségedet a projektünk iránt. Együtt jelentős hatást érhetünk el.
+
 # Kiswahili
 
 Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na kufupisha makala ya habari ya lugha za kigeni kutoka nchi mbalimbali.
