@@ -1,7 +1,7 @@
 <div align="center">
     <img src="./static/icon.png" alt="Translate Tribune" width="150">
     <h1>
-        <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
+        TranslateTribune
     </h1>
 </div>
 
@@ -16,9 +16,6 @@
     </a>
     <a href="https://discord.gg/bEPkfhbwE4">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
-    </a>
-    <a href="#support-us">
-        <img alt="Support Us" src="https://img.shields.io/badge/%F0%9F%92%B0_Support_Us-purple">
     </a>
 </h4>
 
@@ -62,17 +59,55 @@
         Español
     </a>|
     <a href="#ﺎﻠﻋﺮﺒﻳﺓ">
-        العربية
+        ﺎﻠﻋﺮﺒﻳﺓ
     </a>|
     <a href="#français">
         Français
     </a>|
     <a href="#русский">
         Русский
+    </a>|
+    <a href="#português">
+        Português
+    </a>|
+    <a href="#deutsch">
+        Deutsch
+    </a>|
+    <a href="#日本語">
+        日本語
+    </a>|
+    <a href="#türkçe">
+        Türkçe
+    </a>|
+    <a href="#한국어">
+        한국어
+    </a>|
+    <a href="#italiano">
+        Italiano
+    </a>|
+    <a href="#nederlands">
+        Nederlands
+    </a>|
+    <a href="#فارسی">
+        فارسی
+    </a>|
+    <a href="#svenska">
+        Svenska
+    </a>|
+    <a href="#עברית">
+        עברית
+    </a>|
+    <a href="#magyar">
+        Magyar
+    </a>|
+    <a href="#kiswahili">
+        Kiswahili
     </a>
 </h4>
 
 # English
+
+A free and open-source project that leverages AI to curate, translate, and summarize foreign-language news articles from diverse countries.
 
 ## Mission 🎯
 
@@ -116,6 +151,8 @@ Every donation, no matter the size, makes a difference and brings us closer to o
 
 # Українська
 
+Безкоштовний проект з відкритим кодом, який використовує ШІ для курування, перекладу та узагальнення новинних статей іноземними мовами з різних країн.
+
 ## Місія 🎯
 
 - 🚀 Подолання мовних бар'єрів та упереджень ЗМІ
@@ -158,6 +195,8 @@ TranslateTribune є безкоштовним(чит. "вільним") (як і 
 
 # 中文
 
+一个免费的开源项目，利用人工智能来策划、翻译和总结来自不同国家的外语新闻文章。
+
 ## 使命 🎯
 
 - 🚀 克服语言障碍和媒体偏见
@@ -198,6 +237,8 @@ TranslateTribune 是自由（言论自由）的，并根据 [GPLv3 许可](./LIC
 每一笔捐款，无论金额大小，都会产生影响，使我们更接近目标。我们感谢您对我们项目的支持和奉献。让我们一起努力，产生有意义的影响。
 
 # Español
+
+Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, traducir y resumir artículos de noticias en idiomas extranjeros de diversos países.
 
 ## Misión 🎯
 
@@ -240,6 +281,8 @@ Cada donación, sin importar el tamaño, marca la diferencia y nos acerca a nues
 
 # ﺎﻠﻋﺮﺒﻳﺓ
 
+مشروع مجاني ومفتوح المصدر يستخدم الذكاء الاصطناعي لاختيار وترجمة وتلخيص مقالات الأخبار بلغات أجنبية من بلدان متنوعة.
+
 ## المهمة 🎯
 
 - 🚀 التغلب على حواجز اللغة وتحيزات وسائل الإعلام
@@ -280,6 +323,8 @@ TranslateTribune مجاني (من حيث حرية التعبير) ومفتوح �
 كل تبرع، بغض النظر عن حجمه، يحدث فرقًا ويقربنا من أهدافنا. نحن نقدر دعمك وتفانيك في مشروعنا. معًا، يمكننا إحداث تأثير هادف.
 
 # Français
+
+Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire et résumer des articles d'actualité en langues étrangères provenant de divers pays.
 
 ## Mission 🎯
 
@@ -322,6 +367,8 @@ Chaque don, quelle que soit sa taille, fait une différence et nous rapproche de
 
 # Русский
 
+Бесплатный проект с открытым исходным кодом, который использует ИИ для сбора, перевода и обобщения новостных статей на иностранных языках из разных стран.
+
 ## Миссия 🎯
 
 - 🚀 Преодоление языковых барьеров и предвзятости СМИ
@@ -360,3 +407,225 @@ TranslateTribune является бесплатным (в плане свобо
 <img src="./static/BTC.png" alt="BTC Address">
 
 Каждое пожертвование, независимо от размера, имеет значение и приближает нас к нашим целям. Мы ценим вашу поддержку и преданность нашему проекту. Вместе мы можем добиться значимых изменений.
+
+# Português
+
+Um projeto gratuito e de código aberto que aproveita a IA para selecionar, traduzir e resumir artigos de notícias em língua estrangeira de diversos países.
+
+## Missão 🎯
+
+- 🚀 Superar barreiras linguísticas e vieses da mídia
+- 🌈 Destacar perspectivas diversas
+- 🔄 Provar o potencial de projetos auto-atualizáveis e auto-aperfeiçoáveis
+- ⚖️ Demonstrar as limitações dos direitos autorais na era da IA
+- 💡 Fornecer uma alternativa às caras assinaturas de notícias
+- 🗣️ Incentivar um discurso global mais informado e diversificado
+- 🌟 Provar que projetos gratuitos e de código aberto que protegem a privacidade podem prosperar
+
+## Recursos ✨
+
+- 📅 Atualizações diárias até às 6h no horário do leste
+- 🌍 Fontes diversas de vários países e perspectivas (veja [sources.json](./config/sources.json) e [sources_technology_finance.json](sources_technology_finance.json))
+- 🧠 Traduções e resumos alimentados por IA
+- 🔒 Privacidade por Design: sem cookies, JavaScript mínimo e sem rastreadores. [Leia nossa política de privacidade completa aqui.](https://translatetribune.com/privacy.html).
+
+## Princípios de Desenvolvimento 🛠️
+
+- **🔒 Privacidade por Design**: O TranslateTribune prioriza a privacidade do usuário, evitando cookies, minimizando o JavaScript e eliminando rastreadores. Nosso compromisso com a privacidade está descrito em nossa [política de privacidade](https://translatetribune.com/privacy.html).
+- **🚀 Leve e Portátil**: Nosso site estático leve evita frameworks pesados e JavaScript excessivo. Ele é totalmente Dockerizado com dependências documentadas, garantindo um ambiente de desenvolvimento reproduzível e fácil implantação em qualquer lugar.
+- **🛡️ Seguro e Resiliente**: Não coletamos dados do usuário e não mantemos registros. Nossa arquitetura estática torna o site resiliente e adaptável a uma variedade de ambientes de hospedagem em todo o mundo.
+
+
+## Licença e Marca Registrada 📜
+
+O TranslateTribune é gratuito (como na liberdade de expressão) e de código aberto sob a [Licença GPLv3](./LICENSE). O nome "TranslateTribune" é uma marca registrada de propriedade da [Medusa Intelligence Corporation](https://medusaintel.co).
+
+## Apoie-nos
+
+1. **Patreon**: Torne-se um patrono e [faça uma doação mensal de $10 através da nossa página no Patreon](https://www.patreon.com/bradflaugher). Seu apoio consistente nos ajudará a sustentar e expandir o projeto.
+
+2. **Coinbase**: Para doações únicas maiores, considere [fazer uma doação via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Sua generosa contribuição acelerará significativamente o desenvolvimento de novos recursos.
+
+3. **Diretamente com BTC**: use o endereço BTC ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo```.
+
+<img src="./static/BTC.png" alt="Endereço BTC">
+
+Cada doação, não importa o tamanho, faz a diferença e nos aproxima de nossos objetivos. Agradecemos seu apoio e dedicação ao nosso projeto. Juntos, podemos causar um impacto significativo.
+
+# Deutsch
+
+Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachrichtenartikel aus verschiedenen Ländern zu kuratieren, zu übersetzen und zusammenzufassen.
+
+## Mission 🎯
+
+- 🚀 Sprachbarrieren und Medienverzerrungen überwinden
+- 🌈 Vielfältige Perspektiven hervorheben
+- 🔄 Das Potenzial selbstaktualisierender, selbstverbessernder Projekte aufzeigen
+- ⚖️ Die Grenzen des Urheberrechts im Zeitalter der KI aufzeigen
+- 💡 Eine Alternative zu teuren Nachrichtenabonnements bieten
+- 🗣️ Einen besser informierten und vielfältigeren globalen Diskurs fördern
+- 🌟 Beweisen, dass datenschutzfreundliche, kostenlose und quelloffene Projekte gedeihen können
+
+## Funktionen ✨
+
+- 📅 Tägliche Aktualisierungen bis 6 Uhr Eastern Time
+- 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources.json](./config/sources.json) und [sources_technology_finance.json](sources_technology_finance.json))
+- 🧠 KI-gestützte Übersetzungen und Zusammenfassungen
+- 🔒 Privacy by Design: keine Cookies, minimales JavaScript und keine Tracker. [Lesen Sie hier unsere vollständige Datenschutzerklärung.](https://translatetribune.com/privacy.html).
+
+## Entwicklungsprinzipien 🛠️
+
+- **🔒 Privacy by Design**: TranslateTribune priorisiert den Datenschutz der Nutzer, indem es auf Cookies verzichtet, JavaScript minimiert und Tracker eliminiert. Unser Engagement für den Datenschutz ist in unserer [Datenschutzerklärung](https://translatetribune.com/privacy.html) dargelegt.
+- **🚀 Schlank und portabel**: Unsere leichtgewichtige, statische Website vermeidet schwere Frameworks und übermäßiges JavaScript. Sie ist vollständig dockerisiert mit dokumentierten Abhängigkeiten, was eine reproduzierbare Entwicklungsumgebung und eine einfache Bereitstellung überall gewährleistet.
+- **🛡️ Sicher und widerstandsfähig**: Wir sammeln keine Benutzerdaten und führen keine Protokolle. Unsere statische Architektur macht die Website widerstandsfähig und anpassungsfähig an eine Vielzahl von Hosting-Umgebungen weltweit.
+
+
+## Lizenz und Warenzeichen 📜
+
+TranslateTribune ist frei (im Sinne von Redefreiheit) und quelloffen unter der [GPLv3-Lizenz](./LICENSE). Der Name "TranslateTribune" ist eine eingetragene Marke im Besitz der [Medusa Intelligence Corporation](https://medusaintel.co).
+
+## Unterstützen Sie uns
+
+1. **Patreon**: Werden Sie Patron und [verpflichten Sie sich zu einer monatlichen Spende von 10 $ über unsere Patreon-Seite](https://www.patreon.com/bradflaugher). Ihre kontinuierliche Unterstützung wird uns helfen, das Projekt aufrechtzuerhalten und auszubauen.
+
+2. **Coinbase**: Für größere einmalige Spenden erwägen Sie bitte [eine Spende über Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Ihr großzügiger Beitrag wird die Entwicklung neuer Funktionen erheblich beschleunigen.
+
+3. **Direkt mit BTC**: Verwenden Sie die BTC-Adresse ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo```.
+
+<img src="./static/BTC.png" alt="BTC-Adresse">
+
+Jede Spende, egal wie groß, macht einen Unterschied und bringt uns unseren Zielen näher. Wir schätzen Ihre Unterstützung und Ihr Engagement für unser Projekt. Gemeinsam können wir etwas bewirken.
+
+# 日本語
+
+多様な国の外国語ニュース記事をキュレーション、翻訳、要約するために、AIを活用した無料のオープンソースプロジェクトです。
+
+## ミッション 🎯
+
+- 🚀 言語の壁とメディアのバイアスを克服する
+- 🌈 多様な視点を強調する
+- 🔄 自己更新型、自己改善型プロジェクトの可能性を証明する
+- ⚖️ AI時代の著作権の限界を示す
+- 💡 高価なニュース購読の代替手段を提供する
+- 🗣️ より情報に基づいた多様なグローバルな議論を奨励する
+- 🌟 プライバシーを保護する無料のオープンソースプロジェクトが繁栄できることを証明する
+
+## 特徴 ✨
+
+- 📅 東部時間の午前6時までに毎日更新
+- 🌍 様々な国や視点からの多様なソース（[sources.json](./config/sources.json)と[sources_technology_finance.json](sources_technology_finance.json)を参照）
+- 🧠 AIを活用した翻訳と要約
+- 🔒 プライバシー・バイ・デザイン：クッキーなし、最小限のJavaScript、トラッカーなし。[完全なプライバシーポリシーはこちらをご覧ください。](https://translatetribune.com/privacy.html)。
+
+## 開発原則 🛠️
+
+- **🔒 プライバシー・バイ・デザイン**: TranslateTribuneは、クッキーを排除し、JavaScriptを最小限に抑え、トラッカーを排除することで、ユーザーのプライバシーを優先しています。プライバシーへの取り組みは、[プライバシーポリシー](https://translatetribune.com/privacy.html)に概説されています。
+- **🚀 軽量でポータブル**: 軽量な静的サイトは、重いフレームワークと過剰なJavaScriptを避けています。完全にDockerized化され、依存関係が文書化されているため、再現可能な開発環境とどこでも簡単にデプロイできます。
+- **🛡️ 安全で回復力のある**: ユーザーデータを収集せず、ログも保持しません。静的なアーキテクチャにより、サイトは世界中のさまざまなホスティング環境に適応し、回復力を持ちます。
+
+
+## ライセンスと商標 📜
+
+TranslateTribuneは、[GPLv3ライセンス](./LICENSE)の下で無料（スピーチの自由の意味で）でオープンソースです。 "TranslateTribune"という名前は、[Medusa Intelligence Corporation](https://medusaintel.co)が所有する登録商標です。
+
+## 支援方法
+
+1. **Patreon**: パトロンになり、[Patreonページから月額10ドルの寄付を誓約してください](https://www.patreon.com/bradflaugher)。あなたの一貫したサポートは、プロジェクトを維持し、拡大するのに役立ちます。
+
+2. **Coinbase**: より大きな1回限りの寄付については、[Coinbaseを通じて寄付することを検討してください](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c)。あなたの寛大な貢献は、新機能の開発を大幅に加速します。
+
+3. **BTCで直接**: BTCアドレス```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo```を使用してください。
+
+<img src="./static/BTC.png" alt="BTCアドレス">
+
+寄付の規模に関係なく、すべての寄付が私たちの目標に近づくのに役立ちます。私たちのプロジェクトへのあなたのサポートと献身に感謝します。一緒に、私たちは意味のある影響を与えることができます。
+
+# Türkçe
+
+Çeşitli ülkelerden yabancı dilde haber makalelerini seçmek, çevirmek ve özetlemek için AI'yı kullanan ücretsiz ve açık kaynaklı bir proje.
+
+## Misyon 🎯
+
+- 🚀 Dil engellerini ve medya önyargılarını aşmak
+- 🌈 Farklı bakış açılarını vurgulamak
+- 🔄 Kendini güncelleyen, kendini geliştiren projelerin potansiyelini kanıtlamak
+- ⚖️ AI çağında telif hakkının sınırlarını göstermek
+- 💡 Pahalı haber aboneliklerine alternatif sağlamak
+- 🗣️ Daha bilgili ve çeşitli küresel bir söylemi teşvik etmek
+- 🌟 Gizliliği koruyan ücretsiz ve açık kaynak projelerin gelişebileceğini kanıtlamak
+
+## Özellikler ✨
+
+- 📅 Doğu saatiyle sabah 6'ya kadar günlük güncellemeler
+- 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources.json](./config/sources.json) ve [sources_technology_finance.json](sources_technology_finance.json) dosyalarına bakın)
+- 🧠 AI destekli çeviriler ve özetler
+- 🔒 Tasarımla Gizlilik: çerez yok, minimum JavaScript ve takip yok. [Tam gizlilik politikamızı burada okuyun.](https://translatetribune.com/privacy.html).
+
+## Geliştirme İlkeleri 🛠️
+
+- **🔒 Tasarımla Gizlilik**: TranslateTribune, çerezleri kaldırarak, JavaScript'i en aza indirerek ve takipçileri ortadan kaldırarak kullanıcı gizliliğine öncelik verir. Gizliliğe bağlılığımız [gizlilik politikamızda](https://translatetribune.com/privacy.html) özetlenmiştir.
+- **🚀 Hafif ve Taşınabilir**: Hafif, statik sitemiz ağır çerçevelerden ve aşırı JavaScript'ten kaçınır. Tamamen Dockerize edilmiş, belgelenmiş bağımlılıkları ile yeniden üretilebilir bir geliştirme ortamı ve her yerde kolay dağıtım sağlar.
+- **🛡️ Güvenli ve Dirençli**: Kullanıcı verisi toplamıyoruz ve günlük tutmuyoruz. Statik mimarimiz, siteyi dünyanın dört bir yanındaki çeşitli barındırma ortamlarına uyarlanabilir ve dirençli hale getirir.
+
+
+## Lisans ve Ticari Marka 📜
+
+TranslateTribune, [GPLv3 Lisansı](./LICENSE) altında ücretsiz (konuşma özgürlüğü anlamında) ve açık kaynaklıdır. "TranslateTribune" adı, [Medusa Intelligence Corporation](https://medusaintel.co) tarafından sahip olunan tescilli bir ticari markadır.
+
+## Bizi Destekleyin
+
+1. **Patreon**: Patron olun ve [Patreon sayfamız üzerinden aylık 10$ bağış taahhüt edin](https://www.patreon.com/bradflaugher). Tutarlı desteğiniz, projeyi sürdürmemize ve genişletmemize yardımcı olacaktır.
+
+2. **Coinbase**: Daha büyük tek seferlik bağışlar için lütfen [Coinbase aracılığıyla bağış yapmayı düşünün](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Cömert katkınız, yeni özelliklerin geliştirilmesini önemli ölçüde hızlandıracaktır.
+
+3. **Doğrudan BTC ile**: ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo``` BTC adresini kullanın.
+
+<img src="./static/BTC.png" alt="BTC Adresi">
+
+Boyutu ne olursa olsun, her bağış fark yaratır ve bizi hedeflerimize yaklaştırır. Desteğiniz ve projemize bağlılığınız için teşekkür ederiz. Birlikte anlamlı bir etki yaratabiliriz.
+
+# 한국어
+
+다양한 국가의 외국어 뉴스 기사를 큐레이션, 번역 및 요약하기 위해 AI를 활용하는 무료 오픈 소스 프로젝트입니다.
+
+## 미션 🎯
+
+- 🚀 언어 장벽과 미디어 편견 극복
+- 🌈 다양한 관점 강조
+- 🔄 자가 업데이트, 자가 개선 프로젝트의 잠재력 입증
+- ⚖️ AI 시대의 저작권 한계 시연
+- 💡 비싼 뉴스 구독에 대한 대안 제공
+- 🗣️ 더 많은 정보와 다양한 글로벌 담론 장려
+- 🌟 프라이버시를 보호하는 무료 오픈 소스 프로젝트가 번창할 수 있음을 증명
+
+## 특징 ✨
+
+- 📅 동부 표준시 오전 6시까지 매일 업데이트
+- 🌍 다양한 국가와 관점의 다양한 출처 ([sources.json](./config/sources.json)과 [sources_technology_finance.json](sources_technology_finance.json) 참조)
+- 🧠 AI 기반 번역 및 요약
+- 🔒 프라이버시 중심 설계: 쿠키 없음, 최소한의 JavaScript, 추적기 없음. [전체 개인정보 보호정책은 여기에서 읽으세요.](https://translatetribune.com/privacy.html)
+
+## 개발 원칙 🛠️
+
+- **🔒 프라이버시 중심 설계**: TranslateTribune은 쿠키를 제거하고, JavaScript를 최소화하며, 추적기를 제거함으로써 사용자 프라이버시를 우선시합니다. 개인정보 보호에 대한 우리의 약속은 [개인정보 보호정책](https://translatetribune.com/privacy.html)에 요약되어 있습니다.
+- **🚀 가볍고 이식 가능**: 가벼운 정적 사이트는 무거운 프레임워크와 과도한 JavaScript를 피합니다. 문서화된 종속성과 함께 완전히 Dockerized되어 재현 가능한 개발 환경과 어디서나 쉬운 배포를 보장합니다.
+- **🛡️ 안전하고 탄력적**: 사용자 데이터를 수집하지 않고 로그를 보관하지 않습니다. 정적 아키텍처는 사이트를 전 세계 다양한 호스팅 환경에 적응하고 탄력적으로 만듭니다.
+
+
+## 라이선스 및 상표 📜
+
+TranslateTribune은 [GPLv3 라이선스](./LICENSE) 하에서 무료(언론의 자유 의미)이며 오픈 소스입니다. "TranslateTribune"이라는 이름은 [Medusa Intelligence Corporation](https://medusaintel.co)이 소유한 등록 상표입니다.
+
+## 후원하기
+
+1. **Patreon**: Patreon이 되어 [Patreon 페이지를 통해 월 $10의 기부를 약속하세요](https://www.patreon.com/bradflaugher). 꾸준한 후원은 프로젝트를 유지하고 확장하는 데 도움이 될 것입니다.
+
+2. **Coinbase**: 더 큰 일회성 기부의 경우 [Coinbase를 통해 기부하는 것을 고려해 주세요](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). 관대한 기부는 새로운 기능 개발을 크게 가속화할 것입니다.
+
+3. **BTC로 직접**: BTC 주소 ```3DQtrUDhiPaQXLds3s6feRjnmg5vjBJjwo```를 사용하세요.
+
+<img src="./static/BTC.png" alt="BTC 주소">
+
+크기에 상관없이 모든 기부는 우리를 목표에 더 가깝게 만듭니다. 프로젝트에 대한 여러분의 지지와 헌신에 감사드립니다. 함께 우리는 의미 있는 영향을 만들 수 있습니다.
+
+
