@@ -10,10 +10,10 @@
 
 <h4 align="center">
     <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="83" alt="Get it on Google Play">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60" width="160" alt="Get it on Google Play">
     </a>
     <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60">
-    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="50" alt="Download on the App Store">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="60" width="160" alt="Download on the App Store">
     </a>
 </h4>
 
