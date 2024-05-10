@@ -1,55 +1,44 @@
-<h1 align="center">
-        <img src="./static/icon.png" alt="Translate Tribune">
-        <br>
+<div align="center">
+    <img src="./static/icon.png" alt="Translate Tribune" width="150">
+    <h1>
         <a href="https://translatetribune.com" target="_blank">TranslateTribune</a>
     </h1>
-    <div align="center">
-        <p>A free and open-source project that leverages AI (see <a href="./DEV_GUIDE.md#llmpy">DEV_GUIDE.md</a>) to curate, translate, and summarize foreign-language news articles from diverse countries. Read our daily edition in 19 languages at <a href="https://translatetribune.com" target="_blank">TranslateTribune.com</a>. We're redefining social news through code.</p>
-        <p>We like to play nice with news providers, read <a href="./DONT_SCRAPE_ME.md">DONT_SCRAPE_ME.md</a> for more info.</p>
-    </div>
 
-<h3 align="center">Android</h3>
+<h2 align="center">Web and RSS</h2>
 
 <div align="center">
-    <a href="http://translatetribune.com/" target="_blank"><img src="https://img.shields.io/badge/Web%20App-blue?style=for-the-badge&logo=web&logoColor=white" alt="Access Web App"></a>
-    <a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/RSS%20Feed-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a>
-    <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="80" alt="Get it on Google Play"></a>
+    <a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/Read%20Daily%20Edition-19%20Languages-blue?style=for-the-badge" alt="Read Daily Edition"></a>
+    <a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/Subscribe-RSS%20Feeds-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a>
 </div>
 
-<div align="center">
-Coming soon...
-    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/62" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
-</div>
+<h2 align="center">Get the App</h2>
 
-<h3 align="center">iOS</h3>
+<table align="center">
+    <tr>
+        <th>Android</th>
+        <th>iOS</th>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="80" alt="Get it on Google Play"></a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="55" alt="Download on the App Store"></a><br>
+            <sub><i>Coming soon...</i></sub>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/Medusa-ML/TranslateTribune/issues/62" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a><br>
+            <sub><i>Coming soon...</i></sub>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank"><img src="https://img.shields.io/badge/Get%20it%20on%20the%20AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore"></a><br>
+            <sub><i>Coming soon...</i></sub>
+        </td>
+    </tr>
+</table>
 
-<div align="center">
-    <a href="http://translatetribune.com/" target="_blank"><img src="https://img.shields.io/badge/Web%20App-blue?style=for-the-badge&logo=web&logoColor=white" alt="Access Web App"></a>
-    <a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/RSS%20Feed-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="55" alt="Download on the App Store"></a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank"><img src="https://img.shields.io/badge/Get%20it%20on%20the%20AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore"></a>
-</div>
-
-<div align="center">
-Coming soon...
-    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" height="55" alt="Download on the App Store"></a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank"><img src="https://img.shields.io/badge/Get%20it%20on%20the%20AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore"></a>
-</div>
-
-<h4 align="center">
-    <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
-        <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
-    </a>
-    <a href="https://github.com/Medusa-ML/TranslateTribune/actions/workflows/build-and-push.yml" target="_blank">
-        <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Medusa-ML/TranslateTribune/build-and-push.yml">
-    </a>
-    <a href="https://discord.gg/bEPkfhbwE4">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
-    </a>
-    <a href="#support-us">
-        <img alt="Support Us" src="https://img.shields.io/badge/%F0%9F%92%B0_Support_Us-purple">
-    </a>
-</h4>
 <h4 align="center">
     <a href="#English">
         English
