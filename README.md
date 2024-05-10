@@ -7,7 +7,7 @@
 
 <table align="center">
     <tr>
-        <th><a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/🌐%20Read%20on%20the%20Web-Translate%20Tribune-blue?style=for-the-badge&logoColor=white" alt="Read on the Web - Translate Tribune"></a></th>
+        <th><a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/🌐%20Read%20on%20the%20Web-In%2019%20Languages-blue?style=for-the-badge&logoColor=white" alt="Read on the Web - Translate Tribune"></a></th>
         <th><a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/Subscribe-RSS%20Feeds-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a></th>
     </tr>
     <tr>
