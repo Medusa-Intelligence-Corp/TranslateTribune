@@ -17,23 +17,18 @@
   </a>
   <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank">
     <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" width="200" alt="Download on the App Store">
-    <br>
-    <sub><i>Coming soon...</i></sub>
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Medusa-ML/TranslateTribune/issues/62" target="_blank">
     <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="200"/>
-    <br>
-    <sub><i>Coming soon...</i></sub>
   </a>
   <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank">
     <img src="https://img.shields.io/badge/Get%20it%20on%20the%20AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore">
-    <br>
-    <sub><i>Coming soon...</i></sub>
   </a>
 </p>
+
 
 <h4 align="center">
     <a href="#English">
