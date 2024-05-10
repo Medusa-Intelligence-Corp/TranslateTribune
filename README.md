@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./static/favicon-16x16.png" alt="Translate Tribune" width="150" align="center">
+    <img src="./static/android-chrome-192x192.png" alt="Translate Tribune" width="150" align="center">
     <h1>TranslateTribune</h1>
 </div>
 
