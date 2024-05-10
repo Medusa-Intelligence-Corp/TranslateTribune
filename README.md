@@ -9,9 +9,9 @@
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200" alt="Get it on Google Play"></a>
-  <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" width="200" alt="Download on the App Store"></a>
+  <a href="https://github.com/Medusa-ML/TranslateTribune/issues/60" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" width="150" alt="Download on the App Store"></a>
   <a href="https://github.com/Medusa-ML/TranslateTribune/issues/62" target="_blank"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" width="200"/></a>
-  <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank"><img src="https://img.shields.io/badge/Get%20it%20on%20the%20AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore"></a>
+  <a href="https://github.com/Medusa-ML/TranslateTribune/issues/63" target="_blank"><img src="https://img.shields.io/badge/AltStore-black?style=for-the-badge&logo=apple&logoColor=white" alt="Get it on the AltStore" width="200"></a>
 </p>
 
 
