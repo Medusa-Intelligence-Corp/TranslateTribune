@@ -9,10 +9,11 @@
     <a href="https://play.google.com/store/apps/details?id=com.inoxoft.translatetribune">
         <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="135" alt="Get it on Google Play">
     </a>
-    <a href="http://translatetribune.com/en.xml"><img src="https://img.shields.io/badge/RSS-Feed-orange" alt="RSS Feed"></a>
     </div>
 
 <h4 align="center">
+    <a href="http://translatetribune.com/en.xml"><img src="https://img.shields.io/badge/RSS-Feed-orange" alt="RSS Feed">
+    </a>
     <a href="https://github.com/Medusa-ML/TranslateTribune/blob/main/LICENSE" target="_blank">
         <img alt="GitHub License" src="https://img.shields.io/github/license/Medusa-ML/TranslateTribune">
     </a>
