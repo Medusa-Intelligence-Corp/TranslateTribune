@@ -440,7 +440,7 @@
         align-items: center;
         text-align: center;
         padding: 5px;
-        width: 100%;
+        width: 95%;
         color: #d1d1d1;
       }
 
@@ -547,16 +547,7 @@
           margin: 0 auto;
           padding: 20px; /* Consistent padding */
           box-sizing: border-box; /* Include padding and border in the width */
-          row-gap: 20px; /* Maintain vertical spacing */
         }
-
-        .footer span {
-          display: block; /* Change to block to better handle on mobile */
-          width: 100%; /* Full width for better touch accessibility */
-          text-align: center; /* Center text for better aesthetics */
-          margin-top: 10px; /* Add top margin for spacing */
-        }
-
         @media screen and (max-width: 1110px) {
           .footer {
             margin-top: 64px; /* Ensure there's enough space from the content above */
@@ -684,22 +675,10 @@
       </div>
 
       <div class="footer">
-        <a href="https://github.com/Medusa-ML/TranslateTribune/"
-          ><span aria-hidden="true">&#128187;</span> {{
-          lang_config['open_source'] }}</a
-        >
-        <a href="https://www.patreon.com/bradflaugher"
-          ><span aria-hidden="true">&#128150;</span> {{
-          lang_config['support_us'] }}</a
-        >
-        <a href="mailto:editor@translatetribune.com"
-          ><span aria-hidden="true">&#9993;</span> {{
-          lang_config['email_editor'] }}</a
-        >
-        <a href="privacy.html"
-          ><span aria-hidden="true">&#128274;</span> {{
-          lang_config['privacy_policy'] }}</a
-        >
+        <a href="https://github.com/Medusa-ML/TranslateTribune/">{{ lang_config['open_source'] }}</a>
+        <a href="https://www.patreon.com/medusaintel">{{ lang_config['support_us'] }}</a>
+        <a href="mailto:editor@translatetribune.com">{{ lang_config['email_editor'] }}</a>
+        <a href="privacy.html">{{ lang_config['privacy_policy'] }}</a>
       </div>
 
       <div class="ai-warning">{{ lang_config['ai_warning'] }}</div>
