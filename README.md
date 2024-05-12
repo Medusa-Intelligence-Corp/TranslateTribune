@@ -111,7 +111,7 @@ TranslateTribune is free (as in speech) and open source under the [GPLv3 License
 
 ## Support Us
 
-1. **Patreon**: Become a patron and [pledge a monthly donation of $10 via our Patreon page](https://www.patreon.com/bradflaugher). Your consistent support will help us sustain and expand the project.
+1. **Patreon**: Become a patron and [pledge a monthly donation of $10 via our Patreon page](https://www.patreon.com/medusaintel). Your consistent support will help us sustain and expand the project.
 
 2. **Coinbase**: For larger one-time donations, please consider [making a donation via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Your generous contribution will significantly accelerate the development of new features.
 
@@ -155,7 +155,7 @@ TranslateTribune є безкоштовним(чит. "вільним") (як і 
 
 ## Підтримайте нас
 
-1. **Patreon**: Станьте патроном та [зробіть щомісячний внесок у розмірі 10 доларів США через нашу сторінку на Patreon](https://www.patreon.com/bradflaugher). Ваша постійна підтримка допоможе нам підтримувати та розширювати проєкт.
+1. **Patreon**: Станьте патроном та [зробіть щомісячний внесок у розмірі 10 доларів США через нашу сторінку на Patreon](https://www.patreon.com/medusaintel). Ваша постійна підтримка допоможе нам підтримувати та розширювати проєкт.
 
 2. **Coinbase**: Для більших одноразових пожертв, будь ласка, розгляньте [можливість здійснення пожертви через Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Ваш щедрий внесок значно прискорить розробку нових функцій.
 
@@ -198,7 +198,7 @@ TranslateTribune 是自由（言论自由）的，并根据 [GPLv3 许可](./LIC
 
 ## 支持我们
 
-1. **Patreon**：成为赞助人并[通过我们的 Patreon 页面承诺每月捐款 10 美元](https://www.patreon.com/bradflaugher)。您的持续支持将帮助我们维持和扩展该项目。
+1. **Patreon**：成为赞助人并[通过我们的 Patreon 页面承诺每月捐款 10 美元](https://www.patreon.com/medusaintel)。您的持续支持将帮助我们维持和扩展该项目。
 
 2. **Coinbase**：对于较大的一次性捐款，请考虑[通过 Coinbase 进行捐款](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c)。您慷慨的捐助将大大加快新功能的开发。
 
@@ -241,7 +241,7 @@ TranslateTribune es gratuito (en cuanto a la libertad de expresión) y de códig
 
 ## Apóyanos
 
-1. **Patreon**: Conviértete en patrocinador y [compromete una donación mensual de $10 a través de nuestra página de Patreon](https://www.patreon.com/bradflaugher). Tu apoyo constante nos ayudará a mantener y expandir el proyecto.
+1. **Patreon**: Conviértete en patrocinador y [compromete una donación mensual de $10 a través de nuestra página de Patreon](https://www.patreon.com/medusaintel). Tu apoyo constante nos ayudará a mantener y expandir el proyecto.
 
 2. **Coinbase**: Para donaciones únicas más grandes, considera [hacer una donación a través de Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Tu generosa contribución acelerará significativamente el desarrollo de nuevas funciones.
 
@@ -284,7 +284,7 @@ TranslateTribune مجاني (من حيث حرية التعبير) ومفتوح �
 
 ## ادعمنا
 
-1. **Patreon**: كن راعيًا و[تعهد بتبرع شهري بقيمة 10 دولارات عبر صفحتنا على Patreon](https://www.patreon.com/bradflaugher). سيساعدنا دعمك المستمر على الحفاظ على المشروع وتوسيعه.
+1. **Patreon**: كن راعيًا و[تعهد بتبرع شهري بقيمة 10 دولارات عبر صفحتنا على Patreon](https://www.patreon.com/medusaintel). سيساعدنا دعمك المستمر على الحفاظ على المشروع وتوسيعه.
 
 2. **Coinbase**: للتبرعات الفردية الأكبر، يرجى النظر في [التبرع عبر Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). ستساهم مساهمتك السخية بشكل كبير في تسريع تطوير الميزات الجديدة.
 
@@ -327,7 +327,7 @@ TranslateTribune est gratuit (au sens de la liberté d'expression) et open sourc
 
 ## Soutenez-nous
 
-1. **Patreon** : Devenez un mécène et [engagez-vous à faire un don mensuel de 10 $ via notre page Patreon](https://www.patreon.com/bradflaugher). Votre soutien constant nous aidera à maintenir et à développer le projet.
+1. **Patreon** : Devenez un mécène et [engagez-vous à faire un don mensuel de 10 $ via notre page Patreon](https://www.patreon.com/medusaintel). Votre soutien constant nous aidera à maintenir et à développer le projet.
 
 2. **Coinbase** : Pour les dons uniques plus importants, veuillez envisager de [faire un don via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Votre généreuse contribution accélérera considérablement le développement de nouvelles fonctionnalités.
 
@@ -370,7 +370,7 @@ TranslateTribune является бесплатным (в плане свобо
 
 ## Поддержите нас
 
-1. **Patreon**: Станьте покровителем и [пообещайте ежемесячное пожертвование в размере 10 долларов через нашу страницу на Patreon](https://www.patreon.com/bradflaugher). Ваша постоянная поддержка поможет нам поддерживать и расширять проект.
+1. **Patreon**: Станьте покровителем и [пообещайте ежемесячное пожертвование в размере 10 долларов через нашу страницу на Patreon](https://www.patreon.com/medusaintel). Ваша постоянная поддержка поможет нам поддерживать и расширять проект.
 
 2. **Coinbase**: Для более крупных единовременных пожертвований, пожалуйста, рассмотрите возможность [сделать пожертвование через Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Ваш щедрый вклад значительно ускорит разработку новых функций.
 
@@ -414,7 +414,7 @@ O TranslateTribune é gratuito (como na liberdade de expressão) e de código ab
 
 ## Apoie-nos
 
-1. **Patreon**: Torne-se um patrono e [faça uma doação mensal de $10 através da nossa página no Patreon](https://www.patreon.com/bradflaugher). Seu apoio consistente nos ajudará a sustentar e expandir o projeto.
+1. **Patreon**: Torne-se um patrono e [faça uma doação mensal de $10 através da nossa página no Patreon](https://www.patreon.com/medusaintel). Seu apoio consistente nos ajudará a sustentar e expandir o projeto.
 
 2. **Coinbase**: Para doações únicas maiores, considere [fazer uma doação via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Sua generosa contribuição acelerará significativamente o desenvolvimento de novos recursos.
 
@@ -458,7 +458,7 @@ TranslateTribune ist frei (im Sinne von Redefreiheit) und quelloffen unter der [
 
 ## Unterstützen Sie uns
 
-1. **Patreon**: Werden Sie Patron und [verpflichten Sie sich zu einer monatlichen Spende von 10 $ über unsere Patreon-Seite](https://www.patreon.com/bradflaugher). Ihre kontinuierliche Unterstützung wird uns helfen, das Projekt aufrechtzuerhalten und auszubauen.
+1. **Patreon**: Werden Sie Patron und [verpflichten Sie sich zu einer monatlichen Spende von 10 $ über unsere Patreon-Seite](https://www.patreon.com/medusaintel). Ihre kontinuierliche Unterstützung wird uns helfen, das Projekt aufrechtzuerhalten und auszubauen.
 
 2. **Coinbase**: Für größere einmalige Spenden erwägen Sie bitte [eine Spende über Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Ihr großzügiger Beitrag wird die Entwicklung neuer Funktionen erheblich beschleunigen.
 
@@ -502,7 +502,7 @@ TranslateTribuneは、[GPLv3ライセンス](./LICENSE)の下で無料（スピ�
 
 ## 支援方法
 
-1. **Patreon**: パトロンになり、[Patreonページから月額10ドルの寄付を誓約してください](https://www.patreon.com/bradflaugher)。あなたの一貫したサポートは、プロジェクトを維持し、拡大するのに役立ちます。
+1. **Patreon**: パトロンになり、[Patreonページから月額10ドルの寄付を誓約してください](https://www.patreon.com/medusaintel)。あなたの一貫したサポートは、プロジェクトを維持し、拡大するのに役立ちます。
 
 2. **Coinbase**: より大きな1回限りの寄付については、[Coinbaseを通じて寄付することを検討してください](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c)。あなたの寛大な貢献は、新機能の開発を大幅に加速します。
 
@@ -546,7 +546,7 @@ TranslateTribune, [GPLv3 Lisansı](./LICENSE) altında ücretsiz (konuşma özg�
 
 ## Bizi Destekleyin
 
-1. **Patreon**: Patron olun ve [Patreon sayfamız üzerinden aylık 10$ bağış taahhüt edin](https://www.patreon.com/bradflaugher). Tutarlı desteğiniz, projeyi sürdürmemize ve genişletmemize yardımcı olacaktır.
+1. **Patreon**: Patron olun ve [Patreon sayfamız üzerinden aylık 10$ bağış taahhüt edin](https://www.patreon.com/medusaintel). Tutarlı desteğiniz, projeyi sürdürmemize ve genişletmemize yardımcı olacaktır.
 
 2. **Coinbase**: Daha büyük tek seferlik bağışlar için lütfen [Coinbase aracılığıyla bağış yapmayı düşünün](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Cömert katkınız, yeni özelliklerin geliştirilmesini önemli ölçüde hızlandıracaktır.
 
@@ -590,7 +590,7 @@ TranslateTribune은 [GPLv3 라이선스](./LICENSE) 하에서 무료(언론의 �
 
 ## 후원하기
 
-1. **Patreon**: Patreon이 되어 [Patreon 페이지를 통해 월 $10의 기부를 약속하세요](https://www.patreon.com/bradflaugher). 꾸준한 후원은 프로젝트를 유지하고 확장하는 데 도움이 될 것입니다.
+1. **Patreon**: Patreon이 되어 [Patreon 페이지를 통해 월 $10의 기부를 약속하세요](https://www.patreon.com/medusaintel). 꾸준한 후원은 프로젝트를 유지하고 확장하는 데 도움이 될 것입니다.
 
 2. **Coinbase**: 더 큰 일회성 기부의 경우 [Coinbase를 통해 기부하는 것을 고려해 주세요](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). 관대한 기부는 새로운 기능 개발을 크게 가속화할 것입니다.
 
@@ -634,7 +634,7 @@ TranslateTribune è gratuito (nel senso di libertà di parola) e open source sot
 
 ## Sostienici
 
-1. **Patreon**: Diventa un patron e [impegnati a donare mensilmente $10 tramite la nostra pagina Patreon](https://www.patreon.com/bradflaugher). Il tuo supporto costante ci aiuterà a sostenere ed espandere il progetto.
+1. **Patreon**: Diventa un patron e [impegnati a donare mensilmente $10 tramite la nostra pagina Patreon](https://www.patreon.com/medusaintel). Il tuo supporto costante ci aiuterà a sostenere ed espandere il progetto.
 
 2. **Coinbase**: Per donazioni una tantum più grandi, considera [di fare una donazione tramite Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Il tuo generoso contributo accelererà significativamente lo sviluppo di nuove funzionalità.
 
@@ -678,7 +678,7 @@ TranslateTribune is gratis (in de zin van vrijheid van meningsuiting) en open-so
 
 ## Steun ons
 
-1. **Patreon**: Word een patroon en [beloof een maandelijkse donatie van $10 via onze Patreon-pagina](https://www.patreon.com/bradflaugher). Uw consistente steun zal ons helpen het project in stand te houden en uit te breiden.
+1. **Patreon**: Word een patroon en [beloof een maandelijkse donatie van $10 via onze Patreon-pagina](https://www.patreon.com/medusaintel). Uw consistente steun zal ons helpen het project in stand te houden en uit te breiden.
 
 2. **Coinbase**: Overweeg voor grotere eenmalige donaties [een donatie te doen via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Uw gulle bijdrage zal de ontwikkeling van nieuwe functies aanzienlijk versnellen.
 
@@ -722,7 +722,7 @@ TranslateTribune تحت [مجوز GPLv3](./LICENSE) رایگان (به معنا�
 
 ## از ما حمایت کنید
 
-1. **پترئون**: حامی ما شوید و [از طریق صفحه پترئون ما متعهد به اهدای ماهانه 10 دلار شوید](https://www.patreon.com/bradflaugher). حمایت مداوم شما به ما کمک خواهد کرد تا پروژه را حفظ و گسترش دهیم.
+1. **پترئون**: حامی ما شوید و [از طریق صفحه پترئون ما متعهد به اهدای ماهانه 10 دلار شوید](https://www.patreon.com/medusaintel). حمایت مداوم شما به ما کمک خواهد کرد تا پروژه را حفظ و گسترش دهیم.
 
 2. **کوین بیس**: برای کمک های یکباره بزرگتر، لطفاً [اهدای کمک از طریق کوین بیس را در نظر بگیرید](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). مشارکت سخاوتمندانه شما توسعه ویژگی های جدید را به طور قابل توجهی تسریع خواهد کرد.
 
@@ -766,7 +766,7 @@ TranslateTribune är gratis (i betydelsen yttrandefrihet) och öppen källkod un
 
 ## Stöd oss
 
-1. **Patreon**: Bli en patron och [lova en månatlig donation på 10 dollar via vår Patreon-sida](https://www.patreon.com/bradflaugher). Ditt konsekventa stöd kommer att hjälpa oss att upprätthålla och utöka projektet.
+1. **Patreon**: Bli en patron och [lova en månatlig donation på 10 dollar via vår Patreon-sida](https://www.patreon.com/medusaintel). Ditt konsekventa stöd kommer att hjälpa oss att upprätthålla och utöka projektet.
 
 2. **Coinbase**: För större engångsdonationer, överväg att [göra en donation via Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Ditt generösa bidrag kommer avsevärt att påskynda utvecklingen av nya funktioner.
 
@@ -810,7 +810,7 @@ TranslateTribune הוא חינמי (במובן של חופש הביטוי) וק�
 
 ## תמכו בנו
 
-1. **Patreon**: הפכו לפטרון ו[התחייבו לתרומה חודשית של 10$ דרך דף ה-Patreon שלנו](https://www.patreon.com/bradflaugher). התמיכה העקבית שלכם תעזור לנו לקיים ולהרחיב את הפרויקט.
+1. **Patreon**: הפכו לפטרון ו[התחייבו לתרומה חודשית של 10$ דרך דף ה-Patreon שלנו](https://www.patreon.com/medusaintel). התמיכה העקבית שלכם תעזור לנו לקיים ולהרחיב את הפרויקט.
 
 2. **Coinbase**: לתרומות חד פעמיות גדולות יותר, אנא שקלו [לתרום דרך Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). התרומה הנדיבה שלכם תאיץ משמעותית את פיתוח התכונות החדשות.
 
@@ -854,7 +854,7 @@ A TranslateTribune ingyenes (a szólásszabadság értelmében) és nyílt forr�
 
 ## Támogass minket
 
-1. **Patreon**: Legyél támogató és [vállalj havi 10 dolláros adományt a Patreon oldalunkon keresztül](https://www.patreon.com/bradflaugher). A folyamatos támogatásod segít fenntartani és bővíteni a projektet.
+1. **Patreon**: Legyél támogató és [vállalj havi 10 dolláros adományt a Patreon oldalunkon keresztül](https://www.patreon.com/medusaintel). A folyamatos támogatásod segít fenntartani és bővíteni a projektet.
 
 2. **Coinbase**: Nagyobb egyszeri adományokhoz kérjük, fontold meg [az adományozást a Coinbase-en keresztül](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). A nagylelkű hozzájárulásod jelentősen felgyorsítja az új funkciók fejlesztését.
 
@@ -898,7 +898,7 @@ TranslateTribune ni bure (kwa maana ya uhuru wa hotuba) na chanzo wazi chini ya 
 
 ## Tutumie
 
-1. **Patreon**: Kuwa mfadhili na [ahidi mchango wa kila mwezi wa $10 kupitia ukurasa wetu wa Patreon](https://www.patreon.com/bradflaugher). Msaada wako thabiti utatusaidia kudumisha na kupanua mradi.
+1. **Patreon**: Kuwa mfadhili na [ahidi mchango wa kila mwezi wa $10 kupitia ukurasa wetu wa Patreon](https://www.patreon.com/medusaintel). Msaada wako thabiti utatusaidia kudumisha na kupanua mradi.
 
 2. **Coinbase**: Kwa michango mikubwa ya mara moja, tafadhali fikiria [kufanya mchango kupitia Coinbase](https://commerce.coinbase.com/checkout/97bb9f4f-1736-48c7-9c68-682134c8db5c). Mchango wako mkarimu utaharakisha sana maendeleo ya vipengele vipya.
 
