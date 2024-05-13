@@ -431,8 +431,8 @@
         align-items: center;
         text-align: center;
         margin: 0 auto;
-        padding: 5px;
-        width: 100%;
+        padding: 10px 20px; /* Increase padding for more space */
+        width: calc(100% - 40px); /* Subtract the total horizontal padding from the width */
         color: #d1d1d1;
       }
       .visually-hidden {
@@ -532,17 +532,17 @@
 
         .footer {
           display: flex;
-          flex-direction: column;
-          align-items: center; /* Center align items for better mobile view */
-          width: 100%; /* Use 100% width for better control on all screen sizes */
+          flex-wrap: wrap; /* Allow items to wrap to the next line */
+          justify-content: center; /* Center align items horizontally */
+          align-items: flex-start; /* Align items to the top */
+          width: 100%;
           margin: 0 auto;
-          padding: 20px; /* Consistent padding */
-          box-sizing: border-box; /* Include padding and border in the width */
+          padding: 20px;
+          box-sizing: border-box;
         }
-        @media screen and (max-width: 1110px) {
-          .footer {
-            margin-top: 64px; /* Ensure there's enough space from the content above */
-          }
+        .footer > * {
+          padding: 10px; /* Add some padding between items */
+          box-sizing: border-box;
         }
       }
     </style>
