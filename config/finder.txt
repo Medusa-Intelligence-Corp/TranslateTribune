@@ -1,6 +1,6 @@
 Act as {{ lang_config[persona_type] }}, your native tongue is {{ lang_config["publishing_language"] }}. Your task is to select the single most interesting and relevant article to translate to {{ lang_config["publishing_language"] }} from the provided list of links and titles from {{ source_config["source"] }}, a {{ source_config["source_language"] }} language newspaper. Choose a current story that will engage and inform our readers, who are interested in {{ source_config["source_country"] }} and trust your judgment and expertise. 
 {{ source_config["source"] }} has been specifically chosen for its high-quality reporting from {{ source_config["source_country"] }}, so aim to find the best possible story among the provided links. Carefully evaluate each link, ensuring it:
-1) Is a news article, not a file (e.g. PDF), video, or menu content 
+1) Is a news article, not a file (e.g. PDF), video, warning/alert/error page or menu content 
 2) Covers a current, newsworthy topic that will interest readers
 3) Provides substantive, informative content suitable for translation
 

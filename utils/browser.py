@@ -80,6 +80,13 @@ def fetch_content(url, mode, language):
     time.sleep(5)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
+    # Check if Cloudflare has blocked the request
+    page_source = driver.page_source
+    if "Cloudflare" in page_source or "CAPTCHA" in page_source:
+        logging.info(f"Request to {url} blocked by Cloudflare.")
+        driver.quit()
+        raise BadPageException(f"Website blocked by CloudFlare")
+
     if mode=="text":
         text = driver.execute_script("return document.body.innerText")
     elif mode=="source":
