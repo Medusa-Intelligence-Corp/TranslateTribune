@@ -1,285 +1,913 @@
 <!DOCTYPE html>
 <html lang="{{ lang_config['publishing_language_short'] }}">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
-        <title>TranslateTribune - {{ lang_config[section_key] }}</title>
-        <meta name="description" content="{{ lang_config['motto'] }}">
+    <title>TranslateTribune - {{ lang_config[section_key] }}</title>
+    <meta name="description" content="{{ lang_config['motto'] }}" />
 
-        <!-- Standard favicon -->
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <!-- Recommended favicon format -->
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <!-- Recommended favicon format -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
 
-        <!-- Apple Touch Icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        <!-- For Android -->
-        <link rel="manifest" href="/site.webmanifest">
-        <meta name="theme-color" content="#ffffff">
+    <!-- For Android -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://translatetribune.com/{{ html_filename }}">
-        <meta property="og:title" content="Translate Tribune - {{ lang_config[section_key] }}">
-        <meta property="og:description" content="{{ lang_config['motto'] }}">
-        <meta property="og:image" content="https://translatetribune.com/android-chrome-512x512.png">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:height" content="512">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://translatetribune.com/{{ html_filename }}"
+    />
+    <meta
+      property="og:title"
+      content="Translate Tribune - {{ lang_config[section_key] }}"
+    />
+    <meta property="og:description" content="{{ lang_config['motto'] }}" />
+    <meta
+      property="og:image"
+      content="https://translatetribune.com/android-chrome-512x512.png"
+    />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
 
-        <!-- RSS -->
-        <link rel="alternate" type="application/rss+xml" title="Translate Tribune {{ lang_config[section_key] }} RSS" href="https://translatetribune.com/{{ rss_filename }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://translatetribune.com/{{ html_filename }}"
+    />
+    <meta
+      property="og:title"
+      content="Translate Tribune - {{ lang_config[section_key] }}"
+    />
+    <meta property="og:description" content="{{ lang_config['motto'] }}" />
+    <meta
+      property="og:image"
+      content="https://translatetribune.com/android-chrome-512x512.png"
+    />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
 
-        <style>
-        html {
-            max-width: 100%;
-            overflow-x: hidden;
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- RSS -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Translate Tribune {{ lang_config[section_key] }} RSS"
+      href="https://translatetribune.com/{{ rss_filename }}"
+    />
+
+    <style>
+      @font-face {
+        font-family: RobotoMonoBold;
+        src: url("./assets/fonts/RobotoMono-Bold.ttf");
+      }
+
+      @font-face {
+        font-family: Roboto;
+        src: url("./assets/fonts/Roboto-Regular.ttf");
+      }
+      @font-face {
+        font-family: RobotoBold;
+        src: url("./assets/fonts/Roboto-Bold.ttf");
+      }
+
+      html {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        color: #141414;
+        font-family: Roboto, sans-serif;
+      }
+
+      .wrapper {
+        position: relative;
+      }
+
+      .letters {
+        display: flex;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        line-height: 40px;
+        width: 100%;
+        margin-top: 12px;
+        height: 40px;
+        padding: 0 24px;
+        box-sizing: border-box;
+      }
+
+      .letter {
+        min-width: 35px;
+      }
+
+      .letter-1,
+      .letter-3,
+      .letter-5,
+      .letter-6,
+      .letter-7,
+      .letter-9 .letter-10 {
+        flex: 1;
+      }
+      .letter-2 {
+        flex: 2;
+      }
+
+      .letter-4 {
+        flex: 4;
+      }
+
+      .letter-7 {
+        transform: translateY(15px);
+      }
+      .letter-8 {
+        flex: 3;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 43px;
+      }
+
+      .header h1 {
+        font-size: 42px;
+        line-height: 0px;
+        text-align: center;
+        white-space: nowrap;
+        font-family: RobotoMonoBold, monospace;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .header a {
+        text-decoration: none;
+        color: #141414;
+      }
+
+      .header-motto {
+        color: #818181;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .motto-mobile {
+        display: none;
+      }
+
+      .motto-sm {
+        display: none;
+      }
+
+      .header__line-left,
+      .header-line-right {
+        flex: 1;
+        border-bottom: 1px solid #141414;
+      }
+      .header-line-center {
+        flex: 5;
+        border-bottom: 1px solid #141414;
+      }
+
+      .container {
+        max-width: 1099px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 54px;
+        width: 100%;
+        position: relative;
+      }
+
+      .nav-scroll {
+        position: relative;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-arrow {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+        max-width: 40px;
+      }
+
+      .nav-arrow.nav-arrow-left {
+        left: 16px;
+      }
+
+      .nav-arrow.nav-arrow-left > svg {
+        transform: rotate(180deg);
+      }
+
+      .rotated-background {
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 100%;
+        height: 67px;
+        background-color: #bffd4d;
+        transform: rotate(-1.5deg);
+        transition: transform 0.3s;
+        pointer-events: none;
+        opacity: 0;
+        padding: 0 12px;
+        z-index: -1;
+      }
+
+      .underline {
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        width: 42px;
+        border-top: 1px solid #141414;
+        opacity: 0;
+      }
+
+      .nav ul {
+        list-style-type: none;
+        padding: 0 13px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav ul li {
+        height: 67px;
+      }
+
+      .nav ul li {
+        height: 67px;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav a {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+      .nav ul li:hover .rotated-background {
+        opacity: 1;
+        background-color: #141414;
+      }
+
+      .nav ul li:hover .nav-link:not(.active) {
+        color: #fff;
+      }
+
+      .nav ul li a.active .rotated-background {
+        opacity: 1;
+        background-color: #bffd4d;
+      }
+      .nav ul li a.active .underline {
+        opacity: 1;
+      }
+
+      .nav ul li a {
+        font-size: 16px;
+        line-height: 20px;
+        color: #141414;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section {
+        column-count: 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        column-gap: 54px;
+      }
+      .article {
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 32px 0;
+        border-top: 1px solid #141414;
+        border-bottom: 1px solid #141414;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin: -1px;
+      }
+
+      .article-header {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+
+      .source-flag {
+        max-width: 27px;
+      }
+
+      .source-country {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 5px;
+        color: #818181;
+      }
+
+      .article-title {
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+
+        color: #141414;
+        text-decoration: none;
+      }
+
+      .article-content,
+      .article-content-truncated {
+        font-size: 16px;
+        line-height: 24px;
+        color: #818181;
+        margin-top: 12px;
+      }
+
+      .article-content p,
+      .article-content-truncated p {
+        margin: 0 0 12px 0;
+      }
+
+      .article-content a {
+        text-decoration: none;
+        color: #141414;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+
+      .article-content a > div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: fit-content;
+        position: relative;
+      }
+
+      .rotated-background-btn {
+        position: absolute;
+        top: -5px;
+        left: -12px;
+        width: 100%;
+        height: 45px;
+        background-color: #bffd4d;
+        transform: rotate(-1.5deg);
+        transition: transform 0.3s;
+        pointer-events: none;
+        opacity: 0;
+        padding: 0 12px;
+        z-index: -1;
+      }
+
+      .article-content a:hover > div .rotated-background-btn {
+        opacity: 1;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        max-width: 1128px;
+        padding: 100px 0 32px;
+        margin: 0 auto;
+      }
+      .footer a {
+        text-decoration: none;
+        color: #141414;
+      }
+      .current-date, .ai-warning{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px;
+        width: 100%;
+        color: #d1d1d1;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      @media screen and (max-width: 760px) {
+        .motto-mobile {
+          display: block;
         }
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-            font-family: 'Georgia', 'Times New Roman', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .header {
-            width: 100%;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 12px;
-        }
-        .header a { 
-            text-decoration: none;
-            color: black;
-        }
-        .header h1 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 28px;
-            line-height: 0px;
-            text-align: center;
-            white-space: nowrap;
-        }
-        .motto {
-            font-style: italic;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 5px;
-            width: 100%; 
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
-        .nav a {
-            flex: 1; 
-            margin: 0 10px;
-            text-decoration: none;
-            color: black;
-        }
-        .nav a:hover {
-            color: #303030;
-        }
-        .section {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding-top: 12px;
-        }
+
         .article {
-            width: calc(50% - 20px);
-            margin-bottom: 20px;
-            break-inside: avoid;
-            box-sizing: border-box;
+          width: 100%;
         }
-        .article-title {
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px;
-            color: black;
-            text-decoration: none;
+
+        .article:nth-child(2) {
+          border-top: none;
+        }
+
+        .header {
+          margin-bottom: 24px;
+        }
+
+        .header h1 {
+          font-size: 24px;
+          line-height: 31px;
+        }
+
+        .header-line-center {
+          display: none;
+        }
+
+        .header-line-right {
+          flex: 4;
+        }
+
+        .header-motto {
+          display: none;
+        }
+
+        .motto-sm {
+          display: block;
+          text-align: right;
+          margin-top: 24px;
+        }
+
+        .nav {
+          margin-bottom: 24px;
+        }
+
+        .nav-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .nav a:hover {
+          color: black;
         }
         .article-title:hover {
-            color: #303030;
+          color: black;
         }
-        .article-content {
-            text-align: justify;
-            margin: 10px;
+
+        .letter-2,
+        .letter-3,
+        .letter-4,
+        .letter-6,
+        .letter-8,
+        .letter-10 {
+          visibility: hidden;
         }
-        .article-content a {
-            text-decoration: none; 
-            color: blue;
+
+        .nav ul {
+          gap: 32px;
         }
+
+        .nav ul li a {
+          display: inline-flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+
+        .section {
+          column-count: 1;
+        }
+
         .footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            width: 100%; 
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Center align items for better mobile view */
+          width: 100%; /* Use 100% width for better control on all screen sizes */
+          margin: 0 auto;
+          padding: 20px; /* Consistent padding */
+          box-sizing: border-box; /* Include padding and border in the width */
         }
-        .footer a {
-            flex: 1; 
-            margin: 0 10px;
-            text-decoration: none;
-            color: black;
+        @media screen and (max-width: 1110px) {
+          .footer {
+            margin-top: 64px; /* Ensure there's enough space from the content above */
+          }
         }
-        .current-date {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            color: #d1d1d1;
-        }
-        .ai-warning {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            color: #d1d1d1;
-        }
-        .hidden {
-            display: none;
-        }
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        @media (max-width: 950px) {
-            .article {
-                width: 100%;
-            }
-            .header {
-                flex-direction: column;
-                align-items: center;
-            }
-            .nav a:hover {
-                color: black;
-            }
-            .article-title:hover {
-                color: black;
-            }
-        }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div class="header-title">
-                  <a href="https://translatetribune.com/">
-                      <h1 aria-label="TranslateTribune Beta">
-                          <span class="visually-hidden">TranslateTribune</span>
-                          <span class="dynamic-logo" aria-hidden="true">TranslateTribune</span>
-                      </h1>
-                  </a>
-                </div>  
-                <div class="motto">"{{ lang_config['motto'] }}"</div>
-            </div>
-            <div class="nav">
-                <a href="{{ lang_config['publishing_language_short'] }}.html">{{ lang_config['world_news'] }}</a>
-                <a href="{{ lang_config['publishing_language_short'] }}-ft.html">{{ lang_config['finance_technology'] }}</a>
-                <a href="logic_puzzle.html">{{ lang_config['logic_puzzles'] }}</a>
-            </div>
-            <div class="section">            
-                {{ article_html|safe }}            
-            </div>
-            <div class="footer">                                          
-                <a href="https://github.com/Medusa-ML/TranslateTribune/"><span aria-hidden="true">&#128187;</span> {{ lang_config['open_source'] }}</a>
-                <a href="https://www.patreon.com/bradflaugher"><span aria-hidden="true">&#128150;</span> {{ lang_config['support_us'] }}</a>
-                <a href="mailto:editor@translatetribune.com"><span aria-hidden="true">&#9993;</span> {{ lang_config['email_editor'] }}</a>
-                <a href="privacy.html"><span aria-hidden="true">&#128274;</span> {{ lang_config['privacy_policy'] }}</a>  
-            </div>
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="letters">
+        <div class="letter letter-1"></div>
+        <div class="letter letter-2"></div>
+        <div class="letter letter-3"></div>
+        <div class="letter letter-4"></div>
+        <div class="letter letter-5"></div>
+        <div class="letter letter-6"></div>
+        <div class="letter letter-7"></div>
+        <div class="letter letter-8"></div>
+        <div class="letter letter-9"></div>
+        <div class="letter letter-10"></div>
+      </div>
+      <div class="header-motto motto-mobile">"{{ lang_config['motto'] }}"</div>
+      <div class="header">
+        <div class="header__line-left"></div>
+        <div class="header__title">
+          <a href="javascript:window.location.reload(true)">
+            <h1 aria-label="TranslateTribune Beta">
+              <span class="visually-hidden">TranslateTribune</span>
+              <span class="dynamic-logo" aria-hidden="true"
+                >TranslateTribune</span
+              >
+            </h1>
+          </a>
         </div>
-        <div class="ai-warning">
-            {{ lang_config['ai_warning'] }}
+        <div class="header-line-center"></div>
+        <div class="header-motto">"{{ lang_config['motto'] }}"</div>
+        <div class="header-line-right"></div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav-arrow nav-arrow-left hidden">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="40"
+              height="40"
+              rx="20"
+              transform="matrix(0 -1 -1 0 40 40)"
+              fill="#141414"
+            />
+            <path
+              d="M16 28L24 20L16 12"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
-        <div class="current-date">
-            {{ date_string|safe }}
+        <div class="nav-scroll container">
+          <ul>
+            <li>
+              <a
+                class="nav-link"
+                href="{{ lang_config['publishing_language_short'] }}.html"
+                >{{ lang_config['world_news'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="{{ lang_config['publishing_language_short'] }}-ft.html"
+                >{{ lang_config['finance_technology'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="logic_puzzle.html"
+                >{{ lang_config['logic_puzzles'] }}
+
+                <div class="rotated-background"></div>
+                <div class="underline"></div>
+              </a>
+            </li>
+          </ul>
         </div>
+        <div class="nav-arrow nav-arrow-right hidden">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="40"
+              height="40"
+              rx="20"
+              transform="matrix(0 -1 -1 0 40 40)"
+              fill="#141414"
+            />
+            <path
+              d="M16 28L24 20L16 12"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="section">{{ article_html|safe }}</div>
+      </div>
 
-        <script>
-            function toggleArticleDetails(element) {
-                // Find the next sibling elements of the clicked title and toggle their visibility
-                let sibling = element.nextElementSibling;
-                while (sibling) {
-                    sibling.classList.toggle('hidden');
-                    sibling = sibling.nextElementSibling;
-                }
-            }
+      <div class="footer">
+        <a href="https://github.com/Medusa-ML/TranslateTribune/">{{ lang_config['open_source'] }}</a>
+        <a href="https://www.patreon.com/medusaintel">{{ lang_config['support_us'] }}</a>
+        <a href="mailto:editor@translatetribune.com">{{ lang_config['email_editor'] }}</a>
+        <a href="privacy.html">{{ lang_config['privacy_policy'] }}</a>
+      </div>
 
-            const title = document.querySelector('.dynamic-logo');
-            let textNode = title.childNodes[0];
-            const chars = 'āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+      <div class="ai-warning">{{ lang_config['ai_warning'] }}</div>
+      <div class="current-date">{{ date_string|safe }}</div>
+    </div>
+    <script>
+      const isMobileOrTablet = window.innerWidth < 760;
+      const currentLanguage = document.documentElement.lang;
+      const currentUrl = window.location.pathname;
+      const links = document.querySelectorAll("a.nav-link");
 
-            // Track the original text to ensure we can always revert to it
-            const originalText = textNode.nodeValue;
+      links.forEach((link) => {
+        if (currentUrl.endsWith(link.getAttribute("href"))) {
+          link.classList.add("active");
+        }
+      });
 
-            // Use an array to track which characters are currently being animated
-            let animatingIndices = [];
+      const languages = {
+        en: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        zh: "的一是在不了有和人这中大为上个国我以要他时来用们生語",
+        es: "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+        ar: "ابتثجحخدذرزسشصضطظعغفقكلمنهوي",
+        fr: "abcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ",
+        ru: "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+        de: "abcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSS",
+        ja: "あいうえおかきくけ��さしすせそたちつてとなにぬねのはひふへほまみむめ1もやゆよらりるれろわをん",
+        pt: "abcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚ",
+        tr: "abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZ",
+        ko: "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ",
+        it: "abcdefghijklmnopqrstuvwxyz",
+        nl: "abcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜ",
+        fa: "پتثجچحخدذرزژسشصضطظعغفقکگلمنوهی",
+        uk: "абвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ",
+        sv: "abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ",
+        he: "אבגדהוזחטיכךלמםנןסעפףצץקרשת",
+        hu: "abcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰ",
+        sw: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      };
 
-            setInterval(() => {
-              const textContent = textNode.nodeValue;
-              let index;
+      const allCharacters =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ的一是在不了有和人这中大为上个国我以要他时来用们生語abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZابتثجحخدذرزسشصضطظعغفقكلمنهويabcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzäöüßABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜSSあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんabcdefghijklmnopqrstuvwxyzáâàãçéêíóôõúABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÀÃÇÉÊÍÓÔÕÚabcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIIJKLMNOÖPRSŞTUÜVYZㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzäëéïöüABCDEFGHIJKLMNOPQRSTUVWXYZÄËÉÏÖÜپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیабвгґдеєжзиіїйклмнопрстуфхцчшщьюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯabcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖאבגדהוזחטיכךלמםנןסעפףצץקרשתabcdefghijklmnopqrstuvwxyzáéíóöőúüűABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÖŐÚÜŰabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-              // Find a character index that is not currently being animated and is a letter
-              do {
-                index = Math.floor(Math.random() * textContent.length);
-              } while (animatingIndices.includes(index) || !/[a-zA-Z]/.test(textContent.charAt(index)));
+      const letters = document.querySelectorAll(".letter");
 
-              // Mark this index as being animated
-              animatingIndices.push(index);
+      // Function to update letter content
+      function updateLetterContent(letter) {
+        const currentLanguageLetters =
+          languages[currentLanguage] || languages["en"];
+        const nonLanguageChars = [...allCharacters]
+          .filter((char) => !currentLanguageLetters.includes(char))
+          .join("");
 
-              const char = textContent.charAt(index);
-              const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
-              textNode.nodeValue = textContent.substring(0, index) + newChar + textContent.substring(index + 1);
+        const randomIndex = Math.floor(Math.random() * nonLanguageChars.length);
+        const randomLetter = nonLanguageChars.charAt(randomIndex);
+        letter.textContent = randomLetter;
+      }
 
-              // Change back to the original character after 500ms
-              setTimeout(() => {
-                // Use the original text to ensure the correct character is restored
-                textNode.nodeValue = textNode.nodeValue.substring(0, index) + originalText.charAt(index) + textNode.nodeValue.substring(index + 1);
+      letters.forEach(function (letter) {
+        // Initialize letter content immediately
+        updateLetterContent(letter);
 
-                // Remove the index from the animatingIndices array
-                animatingIndices = animatingIndices.filter(i => i !== index);
-              }, 500);
-            }, 400);
-        </script>
-    </body>
+        // Update letter content at random intervals
+        setInterval(function () {
+          updateLetterContent(letter);
+        }, Math.random() * 1000 + 1000); // Random interval between 1000ms and 2000ms
+      });
+
+      function toggleArticleDetails(e) {
+        const articleContent = e.querySelector(".article-content");
+        const articleContentTruncated = e.querySelector(
+          ".article-content-truncated"
+        );
+
+        if (isMobileOrTablet) {
+          articleContentTruncated.classList.toggle("hidden");
+          articleContent.classList.toggle("hidden");
+        } else {
+          articleContent.classList.toggle("hidden");
+        }
+      }
+
+      function truncateArticleDetails() {
+        const article = document.querySelectorAll(".article");
+
+        article.forEach((article) => {
+          const fullText = article.getElementsByTagName("p")[0].textContent;
+
+          const truncatedContent = document.createElement("div");
+          truncatedContent.classList.add("article-content-truncated");
+          const truncatedText = document.createElement("p");
+          if (fullText.length > 200) {
+            truncatedText.textContent = fullText.slice(0, 200) + "...";
+          } else {
+            truncatedText.textContent = fullText;
+          }
+
+          truncatedContent.appendChild(truncatedText);
+          article.appendChild(truncatedContent);
+        });
+      }
+
+      function autoScrollToActiveLink() {
+        const activeLink = document.querySelector(".nav-link.active");
+
+        if (activeLink) {
+          const navScroll = document.querySelector(".nav-scroll");
+          const activeLinkOffsetLeft = activeLink.offsetLeft;
+          const activeLinkWidth = activeLink.offsetWidth;
+          const navScrollWidth = navScroll.offsetWidth;
+          const scrollLeft =
+            activeLinkOffsetLeft - navScrollWidth / 2 + activeLinkWidth / 2;
+
+          navScroll.scrollLeft = scrollLeft;
+        }
+      }
+
+      if (isMobileOrTablet) {
+        truncateArticleDetails();
+      }
+
+      const navScrollContainer = document.querySelector(".nav-scroll");
+      const navArrowRight = document.querySelector(
+        ".nav-arrow.nav-arrow-right"
+      );
+      const navArrowLeft = document.querySelector(".nav-arrow.nav-arrow-left");
+
+      function isElementScrollable(ele) {
+        const hasScrollableContent = ele.scrollWidth > ele.clientWidth;
+
+        const overflowXStyle = window.getComputedStyle(ele).overflowX;
+        const isOverflowHidden = overflowXStyle.indexOf("hidden") !== -1;
+
+        return hasScrollableContent && !isOverflowHidden;
+      }
+
+      function toggleNavbarArrowsVisibility() {
+        const isNavContainerScrollable =
+          isElementScrollable(navScrollContainer);
+
+        if (isNavContainerScrollable) {
+          if (navScrollContainer.scrollLeft < 80) {
+            navArrowLeft.classList.add("hidden"); // Hide left arrow if at the start
+          } else {
+            navArrowLeft.classList.remove("hidden"); // Show left arrow otherwise
+          }
+
+          if (
+            navScrollContainer.scrollLeft +
+              navScrollContainer.clientWidth +
+              80 >=
+            navScrollContainer.scrollWidth
+          ) {
+            navArrowRight.classList.add("hidden"); // Hide right arrow if at the end
+          } else {
+            navArrowRight.classList.remove("hidden"); // Show right arrow otherwise
+          }
+        } else {
+          navArrowLeft.classList.add("hidden");
+          navArrowRight.classList.add("hidden");
+        }
+      }
+
+      toggleNavbarArrowsVisibility();
+      autoScrollToActiveLink();
+
+      window.addEventListener(
+        "resize",
+        function () {
+          toggleNavbarArrowsVisibility();
+        },
+        true
+      );
+
+      navScrollContainer.addEventListener("scroll", function () {
+        toggleNavbarArrowsVisibility();
+      });
+
+      navArrowLeft.addEventListener("click", function (e) {
+        e.stopPropagation();
+        navScrollContainer.scrollBy({
+          left: -navScrollContainer.scrollWidth, // Adjust scroll distance as needed
+          behavior: "smooth",
+        });
+      });
+
+      navArrowRight.addEventListener("click", function (e) {
+        e.stopPropagation();
+        navScrollContainer.scrollBy({
+          left: navScrollContainer.scrollWidth, // Adjust scroll distance as needed
+          behavior: "smooth",
+        });
+      });
+
+      const title = document.querySelector(".dynamic-logo");
+      let textNode = title.childNodes[0];
+      const chars =
+        "āăąδēėęěėęĺļľŀłńňņñøřŕŗřśŝşšťțабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
+      // Track the original text to ensure we can always revert to it
+      const originalText = textNode.nodeValue;
+
+      // Use an array to track which characters are currently being animated
+      let animatingIndices = [];
+
+      setInterval(() => {
+        const textContent = textNode.nodeValue;
+        let index;
+
+        // Find a character index that is not currently being animated and is a letter
+        do {
+          index = Math.floor(Math.random() * textContent.length);
+        } while (
+          animatingIndices.includes(index) ||
+          !/[a-zA-Z]/.test(textContent.charAt(index))
+        );
+
+        // Mark this index as being animated
+        animatingIndices.push(index);
+
+        const char = textContent.charAt(index);
+        const newChar = chars.charAt(Math.floor(Math.random() * chars.length));
+        textNode.nodeValue =
+          textContent.substring(0, index) +
+          newChar +
+          textContent.substring(index + 1);
+
+        // Change back to the original character after 500ms
+        setTimeout(() => {
+          // Use the original text to ensure the correct character is restored
+          textNode.nodeValue =
+            textNode.nodeValue.substring(0, index) +
+            originalText.charAt(index) +
+            textNode.nodeValue.substring(index + 1);
+
+          // Remove the index from the animatingIndices array
+          animatingIndices = animatingIndices.filter((i) => i !== index);
+        }, 500);
+      }, 400);
+    </script>
+  </body>
 </html>
-
-
-

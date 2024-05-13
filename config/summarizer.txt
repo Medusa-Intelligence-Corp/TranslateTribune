@@ -51,7 +51,7 @@ If you encounter an article that does not clearly fit into one of these categori
 Format the response exclusively in valid HTML, adhering to this structure:
 
 ```
-<div class="article" data-front-page-score="0" {% if lang_config["is_rtl"]  %}dir="rtl"{% endif %}>
+<div class="article" data-front-page-score="0">
     <div class="article-title">
         Title, rewritten in {{ lang_config["publishing_language"] }} goes here
     </div>
