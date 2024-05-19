@@ -188,16 +188,12 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
     if model == "Claude 3h":
         chunks = text_to_chunks(text,chunk_size=(190000-len(instructions)))
         response = send_to_anthropic(chunks[0], instructions,'claude-3-haiku-20240307')
-    elif model == "GPT-3.5t":
+    elif model == "GPT-4o":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
-        response = send_to_openai(chunks[0],instructions,'gpt-3.5-turbo')
+        response = send_to_openai(chunks[0],instructions,'gpt-4o')
     elif model == "Open Mixtral":
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_mistral(chunks[0], instructions,'open-mixtral-8x7b')
-    elif model == "Random":
-        models = ["Claude 3h", "GPT-3.5t", "Open Mixtral"]
-        model = random.choice(models)
-        return fetch_llm_response(text, instructions, model, validation, language_filter, min_article_score)
     else:
         raise UnsupportedModelException(model)
         

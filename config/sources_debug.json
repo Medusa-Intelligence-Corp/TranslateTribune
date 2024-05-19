@@ -20,17 +20,6 @@
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
-  },
-  {
-    "source_country": "United States",
-    "source_language": "English",
-    "source_flag": "./assets/png/us.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "The New York Times",
-    "source_url": "https://www.nytimes.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
   }
 ]
 

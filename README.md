@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./static/Logo_Full.svg" alt="Translate Tribune" width="400" align="center">
+    <img src="./static/Logo_Full_v2.svg" alt="Translate Tribune" width="400" align="center">
 </div>
 
 <p align="center">
