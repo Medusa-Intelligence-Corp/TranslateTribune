@@ -257,8 +257,8 @@
     "source_language": "Hebrew",
     "source_flag": "./assets/png/israel.png",
     "source_flag_emoji": "&#x1F1EE;&#x1F1F1;",
-    "source": "Haaretz",
-    "source_url": "https://www.haaretz.co.il/",
+    "source": "Israel Hayom",
+    "source_url": "https://www.israelhayom.co.il/",
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
