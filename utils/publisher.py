@@ -192,20 +192,23 @@ def publish(sources_config, lang_config, finder_template, \
     article_html=""
     article_rss=""
     for article_title, article_data in sorted_articles:
-        article_html += article_data['html']
-        article_rss += f"""
-    <item>
-      <title>{article_title}</title>
-      <link>https://translatetribune.com/{html_filename}#{article_data['id']}</link>
-      <guid isPermaLink="false">https://translatetribune.com/{html_filename}#{article_data['id']}</guid>
-      <description>
-        <![CDATA[
-          {simplify_html(article_data['html'])}    
-        ]]>
-      </description>
-      <pubDate>{datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</pubDate>
-    </item>
-        """
+        if article_data['score'] <= 1:
+            logging.info("Filtering out bad article: " + article_title)
+        else:
+            article_html += article_data['html']
+            article_rss += f"""
+                            <item>
+                              <title>{article_title}</title>
+                              <link>https://translatetribune.com/{html_filename}#{article_data['id']}</link>
+                              <guid isPermaLink="false">https://translatetribune.com/{html_filename}#{article_data['id']}</guid>
+                              <description>
+                                <![CDATA[
+                                  {simplify_html(article_data['html'])}    
+                                ]]>
+                              </description>
+                              <pubDate>{datetime.datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")}</pubDate>
+                            </item>
+                                """
 
     complete_html = deploy_website(article_html, html_filename,\
                                    article_rss, rss_filename,\

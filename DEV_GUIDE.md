@@ -25,6 +25,10 @@
 
 TranslateTribune uses various AI APIs, but can also run 100% locally via ```open-mixtral-8x7b``` or other open models of similar quality.
 
+## Mobile App
+
+If you'd like to contribute to the mobile app, see [https://github.com/Inoxoft-Company/TranslateTribune-Mobile](https://github.com/Inoxoft-Company/TranslateTribune-Mobile)
+
 ### Where in the configs do I change the model selection?
 
 See [sources_debug.json](./config/sources_debug.json) to change models for local testing, [sources.json](./config/sources.json) or [sources_finance_technology.json](./config/sources_finance_technology.json).

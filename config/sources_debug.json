@@ -20,6 +20,17 @@
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Taiwan",
+    "source_language": "Chinese",
+    "source_flag": "./assets/png/taiwan.png",
+    "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
+    "source": "Liberty Times",
+    "source_url": "https://www.ltn.com.tw",
+    "source_parser": "text",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
   }
 ]
 
