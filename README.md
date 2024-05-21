@@ -886,4 +886,4 @@ TranslateTribune ni bure (kwa maana ya uhuru wa hotuba) na chanzo wazi chini ya 
 
 Kila mchango, bila kujali ukubwa, huleta tofauti na kutuletea karibu na malengo yetu. Tunashukuru msaada wako na kujitolea kwako kwa mradi wetu. Pamoja, tunaweza kuwa na athari yenye maana.
 
-[sources-fin-tech]: sources_finance_technology.json
+[sources-fin-tech]: config/sources_finance_technology.json
