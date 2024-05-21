@@ -86,7 +86,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 ## Features ✨
 
 - 📅 Daily updates by 6am Eastern
-- 🌍 Diverse sources from various countries and perspectives (see [sources.json](./config/sources.json) and [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Diverse sources from various countries and perspectives (see [sources.json](./config/sources.json) and [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-powered translations and summaries
 - 🔒 Private by Design: no cookies, minimial JavaScript, and no trackers. [Read our full privacy policy here.](https://translatetribune.com/privacy.html).
 
@@ -95,7 +95,6 @@ A free and open-source project that leverages AI to curate, translate, and summa
 - **🔒 Privacy by Design**: TranslateTribune prioritizes user privacy by eschewing cookies, minimizing JavaScript, and eliminating trackers. Our commitment to privacy is outlined in our [privacy policy](https://translatetribune.com/privacy.html).
 - **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully Dockerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere.
 - **🛡️ Secure and Resilient**: We collect no user data and keep no logs. Our static architecture makes the site resilient and adaptable to a variety of hosting environments worldwide.
-
 
 ## License and Trademark 📜
 
@@ -130,8 +129,8 @@ Every donation, no matter the size, makes a difference and brings us closer to o
 ## Особливості ✨
 
 - 📅 Щоденні оновлення о 6 ранку за східним часом
-- 🌍 Різноманітні джерела з різних країн та різними точками зору (див. [sources.json](./config/sources.json) та [sources_technology_finance.json](sources_technology_finance.json))
-- 🧠 Переклади та підсумовування повністю виконані ШІ 
+- 🌍 Різноманітні джерела з різних країн та різними точками зору (див. [sources.json](./config/sources.json) та [sources_finance_technology.json][sources-fin-tech])
+- 🧠 Переклади та підсумовування повністю виконані ШІ
 - 🔒 Приватність за замовчуванням: без cookies, мінімальне використання JavaScript та без жодних трекерів. [Читайте нашу повну політику конфіденційності тут.](https://translatetribune.com/privacy.html).
 
 ## Принципи розробки 🛠️
@@ -139,7 +138,6 @@ Every donation, no matter the size, makes a difference and brings us closer to o
 - **🔒 Приватність за Замовчуванням:**: TranslateTribune віддає перевагу конфіденційності користувачів, уникаючи cookies, мінімізуючи JavaScript та усуваючи трекери. Наші зобов'язання щодо приватності викладено у нашій [політиці конфіденційності](https://translatetribune.com/privacy.html).
 - **🚀 Легкість та Гнучкість**: Наш легкий, статичний сайт уникає великих фреймворків та зайвого JavaScript. Він повністю працює в Docker з задокументованими залежностями, що забезпечує відтворюване середовище розробки та легке розгортання де завгодно.
 - **🛡️ Безпека та Стійкість**: Ми не збираємо дані користувачів та не ведемо логів. Наша статична архітектура робить сайт стійким та адаптивним до різноманітних хостингових середовищ у всьому світі.
-
 
 ## Ліцензія та Торгова Марка 📜
 
@@ -174,7 +172,7 @@ TranslateTribune є безкоштовним(чит. "вільним") (як і 
 ## 特点 ✨
 
 - 📅 每天东部时间上午6点更新
-- 🌍 来自不同国家和观点的多样化资源（参见 [sources.json](./config/sources.json) 和 [sources_technology_finance.json](sources_technology_finance.json)）
+- 🌍 来自不同国家和观点的多样化资源（参见 [sources.json](./config/sources.json) 和 [sources_finance_technology.json][sources-fin-tech]）
 - 🧠 人工智能驱动的翻译和摘要
 - 🔒 隐私设计：无 cookies，最少的 JavaScript，无跟踪器。[在此阅读我们完整的隐私政策。](https://translatetribune.com/privacy.html)
 
@@ -217,7 +215,7 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 ## Características ✨
 
 - 📅 Actualizaciones diarias a las 6 am, hora del este
-- 🌍 Fuentes diversas de varios países y perspectivas (ver [sources.json](./config/sources.json) y [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Fuentes diversas de varios países y perspectivas (ver [sources.json](./config/sources.json) y [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traducciones y resúmenes generados por IA
 - 🔒 Diseño privado: sin cookies, JavaScript mínimo y sin rastreadores. [Lea nuestra política de privacidad completa aquí.](https://translatetribune.com/privacy.html)
 
@@ -260,7 +258,7 @@ Cada donación, sin importar el tamaño, marca la diferencia y nos acerca a nues
 ## الميزات ✨
 
 - 📅 تحديثات يومية بحلول الساعة 6 صباحًا بالتوقيت الشرقي
-- 🌍 مصادر متنوعة من مختلف البلدان ووجهات النظر (انظر [sources.json](./config/sources.json) و [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 مصادر متنوعة من مختلف البلدان ووجهات النظر (انظر [sources.json](./config/sources.json) و [sources_finance_technology.json][sources-fin-tech])
 - 🧠 ترجمات وملخصات مدعومة بالذكاء الاصطناعي
 - 🔒 تصميم يحمي الخصوصية: لا كوكيز، الحد الأدنى من جافا سكريبت، ولا أدوات تتبع. [اقرأ سياسة الخصوصية الكاملة هنا.](https://translatetribune.com/privacy.html)
 
@@ -303,7 +301,7 @@ Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire e
 ## Fonctionnalités ✨
 
 - 📅 Mises à jour quotidiennes à 6h du matin, heure de l'Est
-- 🌍 Sources diverses provenant de différents pays et perspectives (voir [sources.json](./config/sources.json) et [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Sources diverses provenant de différents pays et perspectives (voir [sources.json](./config/sources.json) et [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traductions et résumés générés par IA
 - 🔒 Conçu pour la confidentialité : pas de cookies, peu de JavaScript et aucun traceur. [Lisez notre politique de confidentialité complète ici.](https://translatetribune.com/privacy.html)
 
@@ -346,7 +344,7 @@ Chaque don, quelle que soit sa taille, fait une différence et nous rapproche de
 ## Особенности ✨
 
 - 📅 Ежедневные обновления к 6 утра по восточному времени
-- 🌍 Разнообразные источники из разных стран и точек зрения (см. [sources.json](./config/sources.json) и [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Разнообразные источники из разных стран и точек зрения (см. [sources.json](./config/sources.json) и [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Переводы и резюме на основе ИИ
 - 🔒 Конфиденциальность по дизайну: отсутствие файлов cookie, минимальное использование JavaScript и отсутствие трекеров. [Прочтите нашу полную политику конфиденциальности здесь.](https://translatetribune.com/privacy.html)
 
@@ -389,7 +387,7 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 ## Recursos ✨
 
 - 📅 Atualizações diárias até às 6h no horário do leste
-- 🌍 Fontes diversas de vários países e perspectivas (veja [sources.json](./config/sources.json) e [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Fontes diversas de vários países e perspectivas (veja [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traduções e resumos alimentados por IA
 - 🔒 Privacidade por Design: sem cookies, JavaScript mínimo e sem rastreadores. [Leia nossa política de privacidade completa aqui.](https://translatetribune.com/privacy.html).
 
@@ -398,7 +396,6 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 - **🔒 Privacidade por Design**: O TranslateTribune prioriza a privacidade do usuário, evitando cookies, minimizando o JavaScript e eliminando rastreadores. Nosso compromisso com a privacidade está descrito em nossa [política de privacidade](https://translatetribune.com/privacy.html).
 - **🚀 Leve e Portátil**: Nosso site estático leve evita frameworks pesados e JavaScript excessivo. Ele é totalmente Dockerizado com dependências documentadas, garantindo um ambiente de desenvolvimento reproduzível e fácil implantação em qualquer lugar.
 - **🛡️ Seguro e Resiliente**: Não coletamos dados do usuário e não mantemos registros. Nossa arquitetura estática torna o site resiliente e adaptável a uma variedade de ambientes de hospedagem em todo o mundo.
-
 
 ## Licença e Marca Registrada 📜
 
@@ -433,7 +430,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 ## Funktionen ✨
 
 - 📅 Tägliche Aktualisierungen bis 6 Uhr Eastern Time
-- 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources.json](./config/sources.json) und [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources.json](./config/sources.json) und [sources_finance_technology.json][sources-fin-tech])
 - 🧠 KI-gestützte Übersetzungen und Zusammenfassungen
 - 🔒 Privacy by Design: keine Cookies, minimales JavaScript und keine Tracker. [Lesen Sie hier unsere vollständige Datenschutzerklärung.](https://translatetribune.com/privacy.html).
 
@@ -442,7 +439,6 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - **🔒 Privacy by Design**: TranslateTribune priorisiert den Datenschutz der Nutzer, indem es auf Cookies verzichtet, JavaScript minimiert und Tracker eliminiert. Unser Engagement für den Datenschutz ist in unserer [Datenschutzerklärung](https://translatetribune.com/privacy.html) dargelegt.
 - **🚀 Schlank und portabel**: Unsere leichtgewichtige, statische Website vermeidet schwere Frameworks und übermäßiges JavaScript. Sie ist vollständig dockerisiert mit dokumentierten Abhängigkeiten, was eine reproduzierbare Entwicklungsumgebung und eine einfache Bereitstellung überall gewährleistet.
 - **🛡️ Sicher und widerstandsfähig**: Wir sammeln keine Benutzerdaten und führen keine Protokolle. Unsere statische Architektur macht die Website widerstandsfähig und anpassungsfähig an eine Vielzahl von Hosting-Umgebungen weltweit.
-
 
 ## Lizenz und Warenzeichen 📜
 
@@ -477,7 +473,7 @@ Jede Spende, egal wie groß, macht einen Unterschied und bringt uns unseren Ziel
 ## 特徴 ✨
 
 - 📅 東部時間の午前6時までに毎日更新
-- 🌍 様々な国や視点からの多様なソース（[sources.json](./config/sources.json)と[sources_technology_finance.json](sources_technology_finance.json)を参照）
+- 🌍 様々な国や視点からの多様なソース（[sources.json](./config/sources.json)と[sources_finance_technology.json][sources-fin-tech]を参照）
 - 🧠 AIを活用した翻訳と要約
 - 🔒 プライバシー・バイ・デザイン：クッキーなし、最小限のJavaScript、トラッカーなし。[完全なプライバシーポリシーはこちらをご覧ください。](https://translatetribune.com/privacy.html)。
 
@@ -486,7 +482,6 @@ Jede Spende, egal wie groß, macht einen Unterschied und bringt uns unseren Ziel
 - **🔒 プライバシー・バイ・デザイン**: TranslateTribuneは、クッキーを排除し、JavaScriptを最小限に抑え、トラッカーを排除することで、ユーザーのプライバシーを優先しています。プライバシーへの取り組みは、[プライバシーポリシー](https://translatetribune.com/privacy.html)に概説されています。
 - **🚀 軽量でポータブル**: 軽量な静的サイトは、重いフレームワークと過剰なJavaScriptを避けています。完全にDockerized化され、依存関係が文書化されているため、再現可能な開発環境とどこでも簡単にデプロイできます。
 - **🛡️ 安全で回復力のある**: ユーザーデータを収集せず、ログも保持しません。静的なアーキテクチャにより、サイトは世界中のさまざまなホスティング環境に適応し、回復力を持ちます。
-
 
 ## ライセンスと商標 📜
 
@@ -521,7 +516,7 @@ TranslateTribuneは、[GPLv3ライセンス](./LICENSE)の下で無料（スピ�
 ## Özellikler ✨
 
 - 📅 Doğu saatiyle sabah 6'ya kadar günlük güncellemeler
-- 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources.json](./config/sources.json) ve [sources_technology_finance.json](sources_technology_finance.json) dosyalarına bakın)
+- 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources.json](./config/sources.json) ve [sources_finance_technology.json][sources-fin-tech] dosyalarına bakın)
 - 🧠 AI destekli çeviriler ve özetler
 - 🔒 Tasarımla Gizlilik: çerez yok, minimum JavaScript ve takip yok. [Tam gizlilik politikamızı burada okuyun.](https://translatetribune.com/privacy.html).
 
@@ -530,7 +525,6 @@ TranslateTribuneは、[GPLv3ライセンス](./LICENSE)の下で無料（スピ�
 - **🔒 Tasarımla Gizlilik**: TranslateTribune, çerezleri kaldırarak, JavaScript'i en aza indirerek ve takipçileri ortadan kaldırarak kullanıcı gizliliğine öncelik verir. Gizliliğe bağlılığımız [gizlilik politikamızda](https://translatetribune.com/privacy.html) özetlenmiştir.
 - **🚀 Hafif ve Taşınabilir**: Hafif, statik sitemiz ağır çerçevelerden ve aşırı JavaScript'ten kaçınır. Tamamen Dockerize edilmiş, belgelenmiş bağımlılıkları ile yeniden üretilebilir bir geliştirme ortamı ve her yerde kolay dağıtım sağlar.
 - **🛡️ Güvenli ve Dirençli**: Kullanıcı verisi toplamıyoruz ve günlük tutmuyoruz. Statik mimarimiz, siteyi dünyanın dört bir yanındaki çeşitli barındırma ortamlarına uyarlanabilir ve dirençli hale getirir.
-
 
 ## Lisans ve Ticari Marka 📜
 
@@ -565,7 +559,7 @@ Boyutu ne olursa olsun, her bağış fark yaratır ve bizi hedeflerimize yaklaş
 ## 특징 ✨
 
 - 📅 동부 표준시 오전 6시까지 매일 업데이트
-- 🌍 다양한 국가와 관점의 다양한 출처 ([sources.json](./config/sources.json)과 [sources_technology_finance.json](sources_technology_finance.json) 참조)
+- 🌍 다양한 국가와 관점의 다양한 출처 ([sources.json](./config/sources.json)과 [sources_finance_technology.json][sources-fin-tech] 참조)
 - 🧠 AI 기반 번역 및 요약
 - 🔒 프라이버시 중심 설계: 쿠키 없음, 최소한의 JavaScript, 추적기 없음. [전체 개인정보 보호정책은 여기에서 읽으세요.](https://translatetribune.com/privacy.html)
 
@@ -574,7 +568,6 @@ Boyutu ne olursa olsun, her bağış fark yaratır ve bizi hedeflerimize yaklaş
 - **🔒 프라이버시 중심 설계**: TranslateTribune은 쿠키를 제거하고, JavaScript를 최소화하며, 추적기를 제거함으로써 사용자 프라이버시를 우선시합니다. 개인정보 보호에 대한 우리의 약속은 [개인정보 보호정책](https://translatetribune.com/privacy.html)에 요약되어 있습니다.
 - **🚀 가볍고 이식 가능**: 가벼운 정적 사이트는 무거운 프레임워크와 과도한 JavaScript를 피합니다. 문서화된 종속성과 함께 완전히 Dockerized되어 재현 가능한 개발 환경과 어디서나 쉬운 배포를 보장합니다.
 - **🛡️ 안전하고 탄력적**: 사용자 데이터를 수집하지 않고 로그를 보관하지 않습니다. 정적 아키텍처는 사이트를 전 세계 다양한 호스팅 환경에 적응하고 탄력적으로 만듭니다.
-
 
 ## 라이선스 및 상표 📜
 
@@ -609,7 +602,7 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 ## Caratteristiche ✨
 
 - 📅 Aggiornamenti giornalieri entro le 6 del mattino, ora orientale
-- 🌍 Fonti diverse da vari paesi e prospettive (vedi [sources.json](./config/sources.json) e [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Fonti diverse da vari paesi e prospettive (vedi [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traduzioni e riassunti basati sull'AI
 - 🔒 Privacy by Design: nessun cookie, JavaScript minimo e nessun tracker. [Leggi qui la nostra informativa sulla privacy completa.](https://translatetribune.com/privacy.html).
 
@@ -618,7 +611,6 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 - **🔒 Privacy by Design**: TranslateTribune dà priorità alla privacy degli utenti eliminando i cookie, minimizzando JavaScript ed eliminando i tracker. Il nostro impegno per la privacy è delineato nella nostra [informativa sulla privacy](https://translatetribune.com/privacy.html).
 - **🚀 Leggero e portatile**: Il nostro sito statico leggero evita framework pesanti e JavaScript eccessivo. È completamente dockerizzato con dipendenze documentate, garantendo un ambiente di sviluppo riproducibile e una facile distribuzione ovunque.
 - **🛡️ Sicuro e resiliente**: Non raccogliamo dati degli utenti e non conserviamo registri. La nostra architettura statica rende il sito resiliente e adattabile a una varietà di ambienti di hosting in tutto il mondo.
-
 
 ## Licenza e marchio 📜
 
@@ -653,7 +645,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 ## Functies ✨
 
 - 📅 Dagelijkse updates vóór 6 uur 's ochtends Eastern Time
-- 🌍 Diverse bronnen uit verschillende landen en perspectieven (zie [sources.json](./config/sources.json) en [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Diverse bronnen uit verschillende landen en perspectieven (zie [sources.json](./config/sources.json) en [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-aangedreven vertalingen en samenvattingen
 - 🔒 Privacy by Design: geen cookies, minimale JavaScript en geen trackers. [Lees hier ons volledige privacybeleid.](https://translatetribune.com/privacy.html).
 
@@ -662,7 +654,6 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - **🔒 Privacy by Design**: TranslateTribune geeft prioriteit aan de privacy van gebruikers door cookies te vermijden, JavaScript te minimaliseren en trackers te elimineren. Onze toewijding aan privacy wordt uiteengezet in ons [privacybeleid](https://translatetribune.com/privacy.html).
 - **🚀 Lichtgewicht en draagbaar**: Onze lichtgewicht statische site vermijdt zware frameworks en overmatig JavaScript. Het is volledig gedockeriseerd met gedocumenteerde afhankelijkheden, wat zorgt voor een reproduceerbare ontwikkelomgeving en eenvoudige implementatie overal.
 - **🛡️ Veilig en veerkrachtig**: We verzamelen geen gebruikersgegevens en houden geen logboeken bij. Onze statische architectuur maakt de site veerkrachtig en aanpasbaar aan een verscheidenheid aan hostingomgevingen wereldwijd.
-
 
 ## Licentie en handelsmerk 📜
 
@@ -697,7 +688,7 @@ Elke donatie, ongeacht de grootte, maakt een verschil en brengt ons dichter bij 
 ## ویژگی ها ✨
 
 - 📅 به روزرسانی روزانه تا ساعت 6 صبح به وقت شرقی
-- 🌍 منابع متنوع از کشورها و دیدگاه های مختلف (به [sources.json](./config/sources.json) و [sources_technology_finance.json](sources_technology_finance.json) مراجعه کنید)
+- 🌍 منابع متنوع از کشورها و دیدگاه های مختلف (به [sources.json](./config/sources.json) و [sources_finance_technology.json][sources-fin-tech] مراجعه کنید)
 - 🧠 ترجمه ها و خلاصه های مبتنی بر هوش مصنوعی
 - 🔒 حریم خصوصی با طراحی: بدون کوکی، حداقل جاوا اسکریپت و بدون ردیاب. [سیاست حفظ حریم خصوصی کامل ما را اینجا بخوانید.](https://translatetribune.com/privacy.html).
 
@@ -706,7 +697,6 @@ Elke donatie, ongeacht de grootte, maakt een verschil en brengt ons dichter bij 
 - **🔒 حریم خصوصی با طراحی**: TranslateTribune با حذف کوکی ها، به حداقل رساندن جاوا اسکریپت و حذف ردیاب ها، حریم خصوصی کاربران را در اولویت قرار می دهد. تعهد ما به حریم خصوصی در [سیاست حفظ حریم خصوصی](https://translatetribune.com/privacy.html) ما تشریح شده است.
 - **🚀 سبک و قابل حمل**: سایت ایستای سبک ما از فریمورک های سنگین و جاوا اسکریپت بیش از حد اجتناب می کند. این سایت کاملاً داکرایز شده با وابستگی های مستند است که محیط توسعه تکرارپذیر و استقرار آسان در هر جایی را تضمین می کند.
 - **🛡️ ایمن و انعطاف پذیر**: ما هیچ داده کاربری جمع آوری نمی کنیم و هیچ گونه لاگی نگه نمی داریم. معماری ایستای ما، سایت را انعطاف پذیر و سازگار با طیف گسترده ای از محیط های میزبانی در سراسر جهان می کند.
-
 
 ## مجوز و علامت تجاری 📜
 
@@ -741,7 +731,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 ## Funktioner ✨
 
 - 📅 Dagliga uppdateringar senast kl. 06.00 Eastern Time
-- 🌍 Olika källor från olika länder och perspektiv (se [sources.json](./config/sources.json) och [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Olika källor från olika länder och perspektiv (se [sources.json](./config/sources.json) och [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-drivna översättningar och sammanfattningar
 - 🔒 Integritet genom design: inga cookies, minimal JavaScript och inga spårare. [Läs vår fullständiga integritetspolicy här.](https://translatetribune.com/privacy.html).
 
@@ -750,7 +740,6 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 - **🔒 Integritet genom design**: TranslateTribune prioriterar användarnas integritet genom att undvika cookies, minimera JavaScript och eliminera spårare. Vårt åtagande för integritet beskrivs i vår [integritetspolicy](https://translatetribune.com/privacy.html).
 - **🚀 Lätt och portabel**: Vår lättviktiga statiska webbplats undviker tunga ramverk och överdriven JavaScript. Den är helt dockeriserad med dokumenterade beroenden, vilket säkerställer en reproducerbar utvecklingsmiljö och enkel driftsättning var som helst.
 - **🛡️ Säker och motståndskraftig**: Vi samlar inte in några användardata och behåller inga loggar. Vår statiska arkitektur gör webbplatsen motståndskraftig och anpassningsbar till en mängd olika hostingmiljöer över hela världen.
-
 
 ## Licens och varumärke 📜
 
@@ -785,7 +774,7 @@ Varje donation, oavsett storlek, gör skillnad och för oss närmare våra mål.
 ## תכונות ✨
 
 - 📅 עדכונים יומיים עד השעה 6 בבוקר שעון מזרחי
-- 🌍 מקורות מגוונים ממדינות ונקודות מבט שונות (ראה [sources.json](./config/sources.json) ו-[sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 מקורות מגוונים ממדינות ונקודות מבט שונות (ראה [sources.json](./config/sources.json) ו-[sources_finance_technology.json][sources-fin-tech])
 - 🧠 תרגומים ותקצירים מונעי AI
 - 🔒 פרטיות לפי עיצוב: ללא עוגיות, מינימום JavaScript וללא גששים. [קרא את מדיניות הפרטיות המלאה שלנו כאן.](https://translatetribune.com/privacy.html).
 
@@ -794,7 +783,6 @@ Varje donation, oavsett storlek, gör skillnad och för oss närmare våra mål.
 - **🔒 פרטיות לפי עיצוב**: TranslateTribune מעניק עדיפות לפרטיות המשתמשים על ידי הימנעות מעוגיות, מזעור JavaScript וביטול גששים. המחויבות שלנו לפרטיות מתוארת ב[מדיניות הפרטיות](https://translatetribune.com/privacy.html) שלנו.
 - **🚀 קל ונייד**: אתר הסטטי הקל שלנו נמנע ממסגרות כבדות ו-JavaScript מופרז. הוא מוכל לחלוטין עם תלויות מתועדות, מה שמבטיח סביבת פיתוח ניתנת לשחזור ופריסה קלה בכל מקום.
 - **🛡️ מאובטח ועמיד**: אנו לא אוספים נתוני משתמשים ולא שומרים יומנים. הארכיטקטורה הסטטית שלנו הופכת את האתר לעמיד ומותאם למגוון סביבות אירוח ברחבי העולם.
-
 
 ## רישיון וסימן מסחרי 📜
 
@@ -829,7 +817,7 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 ## Jellemzők ✨
 
 - 📅 Napi frissítések keleti idő szerint reggel 6 óráig
-- 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources.json](./config/sources.json) és [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources.json](./config/sources.json) és [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-vezérelt fordítások és összefoglalók
 - 🔒 Adatvédelem tervezés által: nincsenek sütik, minimális JavaScript és nincsenek nyomkövetők. [Olvasd el teljes adatvédelmi irányelveinket itt.](https://translatetribune.com/privacy.html).
 
@@ -838,7 +826,6 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 - **🔒 Adatvédelem tervezés által**: A TranslateTribune a felhasználók adatvédelmét helyezi előtérbe a sütik mellőzésével, a JavaScript minimalizálásával és a nyomkövetők kiküszöbölésével. Az adatvédelem iránti elkötelezettségünket az [adatvédelmi irányelvekben](https://translatetribune.com/privacy.html) vázoljuk.
 - **🚀 Könnyű és hordozható**: Könnyűsúlyú statikus oldalunk kerüli a nehéz keretrendszereket és a túlzott JavaScript használatát. Teljesen dockerizált, dokumentált függőségekkel, biztosítva a reprodukálható fejlesztői környezetet és a könnyű telepítést bárhol.
 - **🛡️ Biztonságos és ellenálló**: Nem gyűjtünk felhasználói adatokat és nem vezetünk naplókat. Statikus architektúránk rugalmassá és alkalmazkodóvá teszi a webhelyet a világ különböző tárhelykörnyezeteihez.
-
 
 ## Licenc és védjegy 📜
 
@@ -873,7 +860,7 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 ## Vipengele ✨
 
 - 📅 Sasisho za kila siku kabla ya saa 12 asubuhi Mashariki
-- 🌍 Vyanzo mbalimbali kutoka nchi na mitazamo tofauti (tazama [sources.json](./config/sources.json) na [sources_technology_finance.json](sources_technology_finance.json))
+- 🌍 Vyanzo mbalimbali kutoka nchi na mitazamo tofauti (tazama [sources.json](./config/sources.json) na [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Tafsiri na muhtasari unaoendesha na AI
 - 🔒 Faragha kwa Muundo: hakuna vidakuzi, JavaScript ndogo, na hakuna vifuatiliaji. [Soma sera yetu kamili ya faragha hapa.](https://translatetribune.com/privacy.html).
 
@@ -882,7 +869,6 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 - **🔒 Faragha kwa Muundo**: TranslateTribune inatoa kipaumbele kwa faragha ya watumiaji kwa kuepuka vidakuzi, kupunguza JavaScript, na kuondoa vifuatiliaji. Kujitolea kwetu kwa faragha kumeelezwa katika [sera yetu ya faragha](https://translatetribune.com/privacy.html).
 - **🚀 Nyepesi na Inayohamishika**: Tovuti yetu nyepesi na tuli inaepuka mifumo mizito na JavaScript kupita kiasi. Ina dockerized kikamilifu na utegemezi uliodokumentishwa, kuhakikisha mazingira ya maendeleo yanayorudiwa na uanzishaji rahisi popote.
 - **🛡️ Salama na Stahimilivu**: Hatukusanyi data ya watumiaji na hatuhifadhi kumbukumbu. Muundo wetu tuli unafanya tovuti kuwa stahimilivu na inayoweza kubadilika kwa mazingira mbalimbali ya ukaribishaji duniani kote.
-
 
 ## Leseni na Alama ya Biashara 📜
 
@@ -899,3 +885,5 @@ TranslateTribune ni bure (kwa maana ya uhuru wa hotuba) na chanzo wazi chini ya 
 <img src="./static/BTC.png" alt="Anwani ya BTC">
 
 Kila mchango, bila kujali ukubwa, huleta tofauti na kutuletea karibu na malengo yetu. Tunashukuru msaada wako na kujitolea kwako kwa mradi wetu. Pamoja, tunaweza kuwa na athari yenye maana.
+
+[sources-fin-tech]: sources_finance_technology.json
