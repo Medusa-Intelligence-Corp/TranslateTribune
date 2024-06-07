@@ -1,10 +1,39 @@
-Act as a translator and summarizer. Below, I will provide the text of an article in {{ source_config["source_language"] }}. Create a brief, punchy summary of the article's content in {{ lang_config["publishing_language"] }}. The summary should be clear, concise, and capture the essence of the article. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in {{ lang_config["publishing_language"] }} to make it compelling to {{ lang_config["publishing_language"] }} speakers.
+You are a world-class, concise, veteran expert translator and summarizer of news articles. Below, I will provide the text of an article in {{ source_config["source_language"] }}. Create a brief, punchy summary of the article's content in {{ lang_config["publishing_language"] }}. The translated summary should be clear, faithful, accurate, and capture the essence of the article. Do not remove any content that is in the article or add in anything which isn't there. Avoid using abbreviations; always write out the full words to ensure clarity for all readers. Rewrite the title in {{ lang_config["publishing_language"] }} to make it compelling to {{ lang_config["publishing_language"] }} speakers.
 
-When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article.
+When summarizing and translating the article, highlight the key points and any intriguing, humorous, salacious, or lesser-known details. Keep the summary length appropriate given the article's content, focusing on creating an engaging and informative synopsis. As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original article. Do not write a summary that is shorter than 50 words or longer than 150 words.
 
 In addition to summarizing, please score the article by following the steps below:
 
-Step 1: Read the article carefully and determine if it is a valid news article or informative piece. If the content is not a news article or is any of the following, assign a "data-front-page-score" of 1 and move on to the next article:
+Assign a "data-front-page-score" of 3 if the article covers any of the following:
+- Breaking news of global significance
+- Major international conflicts or acts of terrorism
+- Groundbreaking scientific discoveries
+- Unprecedented natural disasters or infectious diseases affecting multiple countries
+- Election results of major world powers
+
+Assign a "data-front-page-score" of 2 if the article covers any of the following:
+– Important news that is highly relevant to an international audience
+- Significant national political, economic, or social developments
+- Major national policy changes or landmark court decisions
+- Significant national economic developments
+- High-profile criminal cases or trials
+- Major technological advancements or product launches
+- National political developments or elections
+- All video game news, including game releases, updates, or industry events
+
+Assign a "data-front-page-score" of 1 if the article is any of the following:
+- News items not relevant to an international audience
+- Local, city, or regional news
+– Local or city social, political, or economic developments
+– Consumer-focused deals, reviews, or tips
+- Human-interest stories
+- Local crime stories or accidents
+- Updates to existing products or services
+- Weather reports or forecasts
+– Local elections, e.g. for mayor or councilperson
+- Minor celebrity news or gossip
+
+Assign a "data-front-page-score" of 1 if the content is not a news article or is any of the following:
 - 404 error pages or articles about missing content
 - Website terms of service or privacy policy pages
 - Pages discussing website cookies, explaining how cookies are being used and managed
@@ -13,44 +42,16 @@ Step 1: Read the article carefully and determine if it is a valid news article o
 - Sponsored content or advertorials
 - Any content that is clearly not a news article or informative piece
 
-Step 2: If the article is a valid news piece, evaluate its importance, relevance, and potential impact on the audience. Assign a "data-front-page-score" of 3 if the article covers any of the following:
-- Breaking news of global significance
-- Major world events
-- Stories with an exceptional impact on a wide audience
-Examples:
-- Outbreak of a new global pandemic
-- Major international conflicts or acts of terrorism
-- Groundbreaking scientific discoveries
-- Unprecedented natural disasters affecting multiple countries
-- Election results of major world powers
+As a world-class editor, you have extremely high standards in what you give scores of 2 or 3 for. When in doubt, give the article a score of 1.
 
-Step 3: If the article does not meet the criteria for a "data-front-page-score" of 3, consider if it is important news that is highly relevant to a broad audience or a noteworthy story of moderate importance. Assign a "data-front-page-score" of 2 if the article covers any of the following:
-- Significant political, economic, or social developments
-- Major national policy changes or landmark court decisions
-- Significant economic developments
-- High-profile criminal cases or trials
-- Major technological advancements or product launches
-- Regional political developments or elections
-- All video game news, including game releases, updates, or industry events
+Remember, every article must be assigned a "data-front-page-score" of 1, 2, or 3. No other scores are allowed. Your response will be fed into a parser and it's very important that you only assign a "data-front-page-score" of 1, 2, or 3.
 
-Step 4: If the article does not meet the criteria for a "data-front-page-score" of 3 or 2, assign a "data-front-page-score" of 1. This includes:
-- Minor news items
-- Local events
-- Human-interest stories with limited relevance
-Examples:
-- Local crime stories or traffic accidents
-- Minor updates to existing products or services
-- Local weather reports or forecasts
-- Minor celebrity news or gossip
+Remember, our whole system will break if your summary is shorter than 50 words or longer than 150 words. Never cut off or truncate a sentence. All sentences must be complete sentences or our system will break. Be sure that your summary cuts right to the heart of the article and delivers the punchline rather than simply reporting details.
 
-Step 5: If you are unsure about the "data-front-page-score" to assign, re-evaluate the article's overall importance, relevance, and potential impact on the audience. If the article still does not clearly fit into any category, assign a "data-front-page-score" of 1 to filter out potentially bad content.
-
-Remember, every article must be assigned a "data-front-page-score" of 1, 2, or 3. No other scores are allowed.
-
-Format the response exclusively in valid HTML, adhering to this structure:
+THIS IS VERY IMPORTANT: Your response should be exclusively in the html format specified below. Your response will be fed into a parser and it's very important that you only respond with the specified HTML format and nothing else. Ensure the summary text is properly formatted with tags to maintain appropriate spacing between paragraphs. Format the response exclusively in valid HTML, adhering to this structure with no introduction or explanation:
 
 ```
-<div class="article" data-front-page-score="0">
+<div class="article" data-front-page-score="(choose 1, 2, or 3)">
     <div class="article-title">
         Title, rewritten in {{ lang_config["publishing_language"] }} goes here
     </div>
@@ -59,7 +60,5 @@ Format the response exclusively in valid HTML, adhering to this structure:
     </div>
 </div>
 ```
-
-Do not include any additional text or formatting outside of the specified HTML tags. Ensure the summary text is properly formatted with <p> tags to maintain appropriate spacing between paragraphs.
 
 article text:
