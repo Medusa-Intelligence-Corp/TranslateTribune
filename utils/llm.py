@@ -135,9 +135,9 @@ def route_llm_prompt(text_chunk, instructions, llm_providers, source_langage, ta
     Route the given prompt to the appropriate LLM model using Not Diamond.
     """
     nd_url = "https://not-diamond-server.onrender.com/v2/TT/translate"
-    nd_api_key = os.getenv("ND_API_KEY")
+    nd_api_key = os.getenv("NOTDIAMOND_API_KEY")
     if not nd_api_key:
-        logging.warning("ND_API_KEY not set. Skipping routing.")
+        logging.warning("NOTDIAMOND_API_KEY not set. Skipping routing.")
         return None
 
     body = {
@@ -154,7 +154,11 @@ def route_llm_prompt(text_chunk, instructions, llm_providers, source_langage, ta
             "content-type": "application/json",
         },
     )
-    selected_model = response.json().get("provider").get("model")
+    logging.info(f"ND body={body}, response={response}")
+    if "provider" not in response.json():
+        selected_model = None
+    else:
+        selected_model = response.json().get("provider").get("model")
     logging.info(f"ND routing to {selected_model} for {source_langage} to {target_language} translation.")
     return selected_model
 
@@ -163,7 +167,7 @@ def send_to_gemini(text_chunk, instructions, n_retries: int=3, retry_wait: float
     """
     Send a prompt to the specified model at Gemini. Retry up to n_retries times if the response is empty.
     """
-    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
     gemini = genai.GenerativeModel(f"models/{model_id}")
 
     messages = [

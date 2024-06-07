@@ -149,7 +149,9 @@ def publish(sources_config, lang_config, finder_template, \
                 all_links,\
                 finder_template.render(**locals()),\
                 source_config["finder_model"],\
-                "url")
+                "url",
+                source_langage=source_config['source_language'],
+                target_language=lang_config['publishing_language'])
             logging.info(best_links)
             link = best_links[0]
 
@@ -167,8 +169,11 @@ def publish(sources_config, lang_config, finder_template, \
                     source_config["summarizer_model"],\
                     "html-article",\
                     lang_config["publishing_language_short"],\
-                    3)
-            
+                    3,
+                    source_langage=source_config['source_language'],
+                    target_language=lang_config['publishing_language']
+                )
+
             article_title, article_summary, front_page_score, article_id = add_required_html(\
                                                                 article_summary,\
                                                                 link,\
