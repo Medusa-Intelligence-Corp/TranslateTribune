@@ -35,7 +35,8 @@ RUN pip3 install --no-cache-dir \
     anthropic \
     openai \
     mistralai \
-    boto3
+    boto3 \
+    google-generativeai
 
 
 # Copy the rest of your application's code
