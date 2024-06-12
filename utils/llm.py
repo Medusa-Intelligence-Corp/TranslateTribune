@@ -91,18 +91,8 @@ def validate_article_html(html, language_code, min_article_score, model):
             if attr not in allowed_attributes:
                 del tag[attr]
 
-    article_div = soup.find('div', class_='article',\
-            attrs=lambda attrs: 'data-front-page-score'\
-            in attrs and min_article_score <= int(attrs['data-front-page-score']) <= 5)
-    if not article_div:
-        return False
-
-    article_title_div = article_div.find('div', class_='article-title')
-    if not article_title_div:
-        return False
-
-    article_content = article_div.find('div', class_='article-content hidden')
-    if not article_content:
+    article_content = find_article_content(soup, min_article_score)
+    if article_content is None:
         return False
 
     content_text = article_content.text.strip()
@@ -115,6 +105,19 @@ def validate_article_html(html, language_code, min_article_score, model):
         return False
 
     return True
+
+def find_article_content(soup, min_article_score):
+
+    article_content = None
+    article_div = soup.find('div', class_='article',\
+            attrs=lambda attrs: 'data-front-page-score'\
+            in attrs and min_article_score <= int(attrs['data-front-page-score']) <= 5)
+    if article_div:
+        article_title_div = article_div.find('div', class_='article-title')
+        if article_title_div:
+            article_content = article_div.find('div', class_='article-content hidden')
+
+    return article_content
 
 
 def find_json(text):
@@ -280,8 +283,22 @@ def fetch_llm_response(text, instructions, model, validation=None, language_filt
         chunks = text_to_chunks(text,chunk_size=(31000-len(instructions)))
         response = send_to_openai(chunks[0],instructions,'gpt-4o-2024-05-13')
         nd_routing = True
-    else:
+
+    # Fallbacks:
+    # - Check the summary. Too long?
+    # - Routing failed?
+    if validation == 'html-article':
+        soup = BeautifulSoup(response, 'html.parser')
+        article_summary = find_article_content(soup, min_article_score)
+        summary_length = len(article_summary.text.strip().split(' '))
+
+    if not nd_routing or (validation == 'html-article' and (summary_length > 150 or summary_length < 50)):
+        log_msg = f"Falling back to {model}."
+        if validation == 'html-article':
+            log_msg = f"Article summary length: {summary_length} " + log_msg
+        logging.info(log_msg)
         response = fetch_llm_response_fallback(text, instructions, model, nd_routed_model)
+        nd_routing = False
 
     if nd_routing:
         model = nd_routed_model
