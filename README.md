@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://translatetribune.com" target="_blank"><img src="https://img.shields.io/badge/🌐%20Read%20on%20the%20Web-In%2019%20Languages-blue?style=for-the-badge&logoColor=white" alt="Read on the Web - Translate Tribune"></a>
   <a href="./RSS.md" target="_blank"><img src="https://img.shields.io/badge/Subscribe-RSS%20Feeds-orange?style=for-the-badge&logo=rss&logoColor=white" alt="Subscribe via RSS"></a>
-  <a href="https://github.com/Inoxoft-Company/TranslateTribune-Mobile"><img src="https://img.shields.io/badge/Flutter_App-0D96F6?style=for-the-badge&logo=app-store&logoColor=white" alt="App Store badge">
+  <a href="https://github.com/Inoxoft/TranslateTribune-Mobile"><img src="https://img.shields.io/badge/Flutter_App-0D96F6?style=for-the-badge&logo=app-store&logoColor=white" alt="App Store badge">
 </a>
 </p>
 
