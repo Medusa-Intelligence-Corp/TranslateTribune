@@ -285,6 +285,7 @@ if __name__ == "__main__":
     if debug:
         deploy_language("Arabic")
         deploy_language("English")
+        deploy_language("Hungarian")
     else:
         with open('config/languages.json', 'r') as file:
             lang_configs = json.load(file)
