@@ -74,7 +74,8 @@ def fetch_content(url, mode, language):
 
     if status_code != 200:
         raise BadPageException(f"Bad status code: {status_code}")
-    
+
+    driver.set_page_load_timeout(15)
     driver.get(url)
 
     time.sleep(5)
@@ -99,7 +100,7 @@ def fetch_content(url, mode, language):
         else:
             g = Goose()
 
-        article = g.extract(raw_html=driver.page_source)
+        article = g.extract(raw_html=driver.page_source, timeout=5)
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
         #This selects all 'a' tags, keeps track of their order in the document
