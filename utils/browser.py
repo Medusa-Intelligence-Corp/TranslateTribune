@@ -100,7 +100,8 @@ def fetch_content(url, mode, language):
         else:
             g = Goose()
 
-        article = g.extract(raw_html=driver.page_source, timeout=5)
+        g.http_timeout = 10
+        article = g.extract(raw_html=driver.page_source)
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
         #This selects all 'a' tags, keeps track of their order in the document
