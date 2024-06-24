@@ -361,6 +361,17 @@
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
+  },
+  {
+    "source_country": "Iran",
+    "source_language": "Farsi",
+    "source_flag": "./assets/png/iran.png",
+    "source_flag_emoji": "&#x1F1EE;&#x1F1F7;",
+    "source": "Tabnak",
+    "source_url": "https://www.tabnak.ir/",
+    "source_parser": "readability",
+    "finder_model": "Claude 3h",
+    "summarizer_model": "Claude 3h"
   }
 ]
 
