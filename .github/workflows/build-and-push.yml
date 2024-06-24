@@ -28,6 +28,6 @@ jobs:
         file: ./deploy/Dockerfile
         push: true
         tags: |
-          ghcr.io/medusa-ml/translatetribune:latest
-          ghcr.io/medusa-ml/translatetribune:${{ github.sha }}
+          ghcr.io/medusa-intelligence-corp/translatetribune:latest
+          ghcr.io/medusa-intelligence-corp/translatetribune:${{ github.sha }}
 
