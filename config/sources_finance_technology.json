@@ -268,8 +268,8 @@
     "source_language": "Portuguese",
     "source_flag": "./assets/png/brazil.png",
     "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
-    "source": "Startupi",
-    "source_url": "https://startupi.com.br/",
+    "source": "Canaltech",
+    "source_url": "https://canaltech.com.br/",
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
