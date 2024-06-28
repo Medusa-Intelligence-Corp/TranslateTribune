@@ -71,3 +71,6 @@ While we do not condone copyright infringement, we believe that our approach of 
 
 6. **Not Diamond** ([Usage](https://app.notdiamond.ai/usage)) 💎
    - First 100,000 in query routing free 🎁
+
+7. **Google** ([Usage](https://console.cloud.google.com/billing/))
+   - First $250 in free credits
