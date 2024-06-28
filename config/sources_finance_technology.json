@@ -103,8 +103,8 @@
     "source_language": "German",
     "source_flag": "./assets/png/germany.png",
     "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
-    "source": "Gründerszene",
-    "source_url": "https://www.gruenderszene.de/",
+    "source": "Handelsblatt",
+    "source_url": "https://www.handelsblatt.com/", 
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
