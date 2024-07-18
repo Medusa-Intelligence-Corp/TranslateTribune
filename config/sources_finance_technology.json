@@ -147,8 +147,8 @@
     "source_language": "Italian",
     "source_flag": "./assets/png/italy.png",
     "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
-    "source": "Multiplayer.it",
-    "source_url": "https://multiplayer.it/",
+    "source": "Tutto Android",
+    "source_url": "https://www.tuttoandroid.net/",
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
