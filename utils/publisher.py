@@ -297,13 +297,13 @@ def deploy_language(publishing_language):
             "world_news")
 
     # Copy assets to debug folder
-    #if debug:
-    #    assets_source_folder = '/usr/src/app/static/assets'
-    #    assets_destination_folder = '/usr/src/app/debug/assets'
-    #    if os.path.exists(assets_destination_folder):
-    #        shutil.rmtree(assets_destination_folder)
-    #    shutil.copytree(assets_source_folder, assets_destination_folder)
-        
+    if debug:
+        assets_source_folder = '/usr/src/app/static/assets'
+        assets_destination_folder = '/usr/src/app/debug/assets'
+        if os.path.exists(assets_destination_folder):
+            shutil.rmtree(assets_destination_folder)
+        shutil.copytree(assets_source_folder, assets_destination_folder)
+       
 
     # Create the finance and technology page
     if not debug:
