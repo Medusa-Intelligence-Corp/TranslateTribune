@@ -93,7 +93,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 ## Development Principles 🛠️
 
 - **🔒 Privacy by Design**: TranslateTribune prioritizes user privacy by eschewing cookies, minimizing JavaScript, and eliminating trackers. Our commitment to privacy is outlined in our [privacy policy](https://translatetribune.com/privacy.html).
-- **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully Dockerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere.
+- **🚀 Lean and Portable**: Our lightweight, static site avoids heavy frameworks and excessive JavaScript. It's fully containerized with documented dependencies, ensuring a reproducible dev environment and easy deployment anywhere.
 - **🛡️ Secure and Resilient**: We collect no user data and keep no logs. Our static architecture makes the site resilient and adaptable to a variety of hosting environments worldwide.
 
 ## License and Trademark 📜
@@ -136,7 +136,7 @@ Every donation, no matter the size, makes a difference and brings us closer to o
 ## Принципи розробки 🛠️
 
 - **🔒 Приватність за Замовчуванням:**: TranslateTribune віддає перевагу конфіденційності користувачів, уникаючи cookies, мінімізуючи JavaScript та усуваючи трекери. Наші зобов'язання щодо приватності викладено у нашій [політиці конфіденційності](https://translatetribune.com/privacy.html).
-- **🚀 Легкість та Гнучкість**: Наш легкий, статичний сайт уникає великих фреймворків та зайвого JavaScript. Він повністю працює в Docker з задокументованими залежностями, що забезпечує відтворюване середовище розробки та легке розгортання де завгодно.
+- **🚀 Легкість та Гнучкість**: Наш легкий, статичний сайт уникає великих фреймворків та зайвого JavaScript. Він повністю працює в Container з задокументованими залежностями, що забезпечує відтворюване середовище розробки та легке розгортання де завгодно.
 - **🛡️ Безпека та Стійкість**: Ми не збираємо дані користувачів та не ведемо логів. Наша статична архітектура робить сайт стійким та адаптивним до різноманітних хостингових середовищ у всьому світі.
 
 ## Ліцензія та Торгова Марка 📜
@@ -179,7 +179,7 @@ TranslateTribune є безкоштовним(чит. "вільним") (як і 
 ## 开发原则 🛠️
 
 - **🔒 隐私设计**：TranslateTribune 通过避免使用 cookies，最小化 JavaScript 并消除跟踪器来优先考虑用户隐私。我们对隐私的承诺在我们的[隐私政策](https://translatetribune.com/privacy.html)中有详细说明。
-- **🚀 精简和可移植**：我们轻量级的静态网站避免了沉重的框架和过多的 JavaScript。它完全 Dockerized，并记录了依赖项，确保可重现的开发环境并可轻松部署到任何地方。
+- **🚀 精简和可移植**：我们轻量级的静态网站避免了沉重的框架和过多的 JavaScript。它完全 Containerized，并记录了依赖项，确保可重现的开发环境并可轻松部署到任何地方。
 - **🛡️ 安全和弹性**：我们不收集用户数据，也不保留日志。我们的静态架构使网站具有弹性，可适应全球各种托管环境。
 
 ## 许可和商标 📜
@@ -222,7 +222,7 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 ## Principios de desarrollo 🛠️
 
 - **🔒 Privacidad por diseño**: TranslateTribune prioriza la privacidad del usuario al evitar las cookies, minimizar JavaScript y eliminar los rastreadores. Nuestro compromiso con la privacidad se detalla en nuestra [política de privacidad](https://translatetribune.com/privacy.html).
-- **🚀 Ligero y portátil**: Nuestro sitio estático ligero evita los frameworks pesados y el exceso de JavaScript. Está completamente Dockerizado con dependencias documentadas, lo que garantiza un entorno de desarrollo reproducible y una fácil implementación en cualquier lugar.
+- **🚀 Ligero y portátil**: Nuestro sitio estático ligero evita los frameworks pesados y el exceso de JavaScript. Está completamente Containerizado con dependencias documentadas, lo que garantiza un entorno de desarrollo reproducible y una fácil implementación en cualquier lugar.
 - **🛡️ Seguro y resistente**: No recopilamos datos de usuarios ni mantenemos registros. Nuestra arquitectura estática hace que el sitio sea resistente y adaptable a una variedad de entornos de alojamiento en todo el mundo.
 
 ## Licencia y marca comercial 📜
@@ -394,7 +394,7 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 ## Princípios de Desenvolvimento 🛠️
 
 - **🔒 Privacidade por Design**: O TranslateTribune prioriza a privacidade do usuário, evitando cookies, minimizando o JavaScript e eliminando rastreadores. Nosso compromisso com a privacidade está descrito em nossa [política de privacidade](https://translatetribune.com/privacy.html).
-- **🚀 Leve e Portátil**: Nosso site estático leve evita frameworks pesados e JavaScript excessivo. Ele é totalmente Dockerizado com dependências documentadas, garantindo um ambiente de desenvolvimento reproduzível e fácil implantação em qualquer lugar.
+- **🚀 Leve e Portátil**: Nosso site estático leve evita frameworks pesados e JavaScript excessivo. Ele é totalmente Containerizado com dependências documentadas, garantindo um ambiente de desenvolvimento reproduzível e fácil implantação em qualquer lugar.
 - **🛡️ Seguro e Resiliente**: Não coletamos dados do usuário e não mantemos registros. Nossa arquitetura estática torna o site resiliente e adaptável a uma variedade de ambientes de hospedagem em todo o mundo.
 
 ## Licença e Marca Registrada 📜
@@ -437,7 +437,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 ## Entwicklungsprinzipien 🛠️
 
 - **🔒 Privacy by Design**: TranslateTribune priorisiert den Datenschutz der Nutzer, indem es auf Cookies verzichtet, JavaScript minimiert und Tracker eliminiert. Unser Engagement für den Datenschutz ist in unserer [Datenschutzerklärung](https://translatetribune.com/privacy.html) dargelegt.
-- **🚀 Schlank und portabel**: Unsere leichtgewichtige, statische Website vermeidet schwere Frameworks und übermäßiges JavaScript. Sie ist vollständig dockerisiert mit dokumentierten Abhängigkeiten, was eine reproduzierbare Entwicklungsumgebung und eine einfache Bereitstellung überall gewährleistet.
+- **🚀 Schlank und portabel**: Unsere leichtgewichtige, statische Website vermeidet schwere Frameworks und übermäßiges JavaScript. Sie ist vollständig containerisiert mit dokumentierten Abhängigkeiten, was eine reproduzierbare Entwicklungsumgebung und eine einfache Bereitstellung überall gewährleistet.
 - **🛡️ Sicher und widerstandsfähig**: Wir sammeln keine Benutzerdaten und führen keine Protokolle. Unsere statische Architektur macht die Website widerstandsfähig und anpassungsfähig an eine Vielzahl von Hosting-Umgebungen weltweit.
 
 ## Lizenz und Warenzeichen 📜
@@ -480,7 +480,7 @@ Jede Spende, egal wie groß, macht einen Unterschied und bringt uns unseren Ziel
 ## 開発原則 🛠️
 
 - **🔒 プライバシー・バイ・デザイン**: TranslateTribuneは、クッキーを排除し、JavaScriptを最小限に抑え、トラッカーを排除することで、ユーザーのプライバシーを優先しています。プライバシーへの取り組みは、[プライバシーポリシー](https://translatetribune.com/privacy.html)に概説されています。
-- **🚀 軽量でポータブル**: 軽量な静的サイトは、重いフレームワークと過剰なJavaScriptを避けています。完全にDockerized化され、依存関係が文書化されているため、再現可能な開発環境とどこでも簡単にデプロイできます。
+- **🚀 軽量でポータブル**: 軽量な静的サイトは、重いフレームワークと過剰なJavaScriptを避けています。完全にContainerized化され、依存関係が文書化されているため、再現可能な開発環境とどこでも簡単にデプロイできます。
 - **🛡️ 安全で回復力のある**: ユーザーデータを収集せず、ログも保持しません。静的なアーキテクチャにより、サイトは世界中のさまざまなホスティング環境に適応し、回復力を持ちます。
 
 ## ライセンスと商標 📜
@@ -523,7 +523,7 @@ TranslateTribuneは、[GPLv3ライセンス](./LICENSE)の下で無料（スピ�
 ## Geliştirme İlkeleri 🛠️
 
 - **🔒 Tasarımla Gizlilik**: TranslateTribune, çerezleri kaldırarak, JavaScript'i en aza indirerek ve takipçileri ortadan kaldırarak kullanıcı gizliliğine öncelik verir. Gizliliğe bağlılığımız [gizlilik politikamızda](https://translatetribune.com/privacy.html) özetlenmiştir.
-- **🚀 Hafif ve Taşınabilir**: Hafif, statik sitemiz ağır çerçevelerden ve aşırı JavaScript'ten kaçınır. Tamamen Dockerize edilmiş, belgelenmiş bağımlılıkları ile yeniden üretilebilir bir geliştirme ortamı ve her yerde kolay dağıtım sağlar.
+- **🚀 Hafif ve Taşınabilir**: Hafif, statik sitemiz ağır çerçevelerden ve aşırı JavaScript'ten kaçınır. Tamamen Containerize edilmiş, belgelenmiş bağımlılıkları ile yeniden üretilebilir bir geliştirme ortamı ve her yerde kolay dağıtım sağlar.
 - **🛡️ Güvenli ve Dirençli**: Kullanıcı verisi toplamıyoruz ve günlük tutmuyoruz. Statik mimarimiz, siteyi dünyanın dört bir yanındaki çeşitli barındırma ortamlarına uyarlanabilir ve dirençli hale getirir.
 
 ## Lisans ve Ticari Marka 📜
@@ -566,7 +566,7 @@ Boyutu ne olursa olsun, her bağış fark yaratır ve bizi hedeflerimize yaklaş
 ## 개발 원칙 🛠️
 
 - **🔒 프라이버시 중심 설계**: TranslateTribune은 쿠키를 제거하고, JavaScript를 최소화하며, 추적기를 제거함으로써 사용자 프라이버시를 우선시합니다. 개인정보 보호에 대한 우리의 약속은 [개인정보 보호정책](https://translatetribune.com/privacy.html)에 요약되어 있습니다.
-- **🚀 가볍고 이식 가능**: 가벼운 정적 사이트는 무거운 프레임워크와 과도한 JavaScript를 피합니다. 문서화된 종속성과 함께 완전히 Dockerized되어 재현 가능한 개발 환경과 어디서나 쉬운 배포를 보장합니다.
+- **🚀 가볍고 이식 가능**: 가벼운 정적 사이트는 무거운 프레임워크와 과도한 JavaScript를 피합니다. 문서화된 종속성과 함께 완전히 Containerized되어 재현 가능한 개발 환경과 어디서나 쉬운 배포를 보장합니다.
 - **🛡️ 안전하고 탄력적**: 사용자 데이터를 수집하지 않고 로그를 보관하지 않습니다. 정적 아키텍처는 사이트를 전 세계 다양한 호스팅 환경에 적응하고 탄력적으로 만듭니다.
 
 ## 라이선스 및 상표 📜
@@ -609,7 +609,7 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 ## Principi di sviluppo 🛠️
 
 - **🔒 Privacy by Design**: TranslateTribune dà priorità alla privacy degli utenti eliminando i cookie, minimizzando JavaScript ed eliminando i tracker. Il nostro impegno per la privacy è delineato nella nostra [informativa sulla privacy](https://translatetribune.com/privacy.html).
-- **🚀 Leggero e portatile**: Il nostro sito statico leggero evita framework pesanti e JavaScript eccessivo. È completamente dockerizzato con dipendenze documentate, garantendo un ambiente di sviluppo riproducibile e una facile distribuzione ovunque.
+- **🚀 Leggero e portatile**: Il nostro sito statico leggero evita framework pesanti e JavaScript eccessivo. È completamente containerizzato con dipendenze documentate, garantendo un ambiente di sviluppo riproducibile e una facile distribuzione ovunque.
 - **🛡️ Sicuro e resiliente**: Non raccogliamo dati degli utenti e non conserviamo registri. La nostra architettura statica rende il sito resiliente e adattabile a una varietà di ambienti di hosting in tutto il mondo.
 
 ## Licenza e marchio 📜
@@ -652,7 +652,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 ## Ontwikkelingsprincipes 🛠️
 
 - **🔒 Privacy by Design**: TranslateTribune geeft prioriteit aan de privacy van gebruikers door cookies te vermijden, JavaScript te minimaliseren en trackers te elimineren. Onze toewijding aan privacy wordt uiteengezet in ons [privacybeleid](https://translatetribune.com/privacy.html).
-- **🚀 Lichtgewicht en draagbaar**: Onze lichtgewicht statische site vermijdt zware frameworks en overmatig JavaScript. Het is volledig gedockeriseerd met gedocumenteerde afhankelijkheden, wat zorgt voor een reproduceerbare ontwikkelomgeving en eenvoudige implementatie overal.
+- **🚀 Lichtgewicht en draagbaar**: Onze lichtgewicht statische site vermijdt zware frameworks en overmatig JavaScript. Het is volledig gecontaineriseerd met gedocumenteerde afhankelijkheden, wat zorgt voor een reproduceerbare ontwikkelomgeving en eenvoudige implementatie overal.
 - **🛡️ Veilig en veerkrachtig**: We verzamelen geen gebruikersgegevens en houden geen logboeken bij. Onze statische architectuur maakt de site veerkrachtig en aanpasbaar aan een verscheidenheid aan hostingomgevingen wereldwijd.
 
 ## Licentie en handelsmerk 📜
@@ -738,7 +738,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 ## Utvecklingsprinciper 🛠️
 
 - **🔒 Integritet genom design**: TranslateTribune prioriterar användarnas integritet genom att undvika cookies, minimera JavaScript och eliminera spårare. Vårt åtagande för integritet beskrivs i vår [integritetspolicy](https://translatetribune.com/privacy.html).
-- **🚀 Lätt och portabel**: Vår lättviktiga statiska webbplats undviker tunga ramverk och överdriven JavaScript. Den är helt dockeriserad med dokumenterade beroenden, vilket säkerställer en reproducerbar utvecklingsmiljö och enkel driftsättning var som helst.
+- **🚀 Lätt och portabel**: Vår lättviktiga statiska webbplats undviker tunga ramverk och överdriven JavaScript. Den är helt containeriserad med dokumenterade beroenden, vilket säkerställer en reproducerbar utvecklingsmiljö och enkel driftsättning var som helst.
 - **🛡️ Säker och motståndskraftig**: Vi samlar inte in några användardata och behåller inga loggar. Vår statiska arkitektur gör webbplatsen motståndskraftig och anpassningsbar till en mängd olika hostingmiljöer över hela världen.
 
 ## Licens och varumärke 📜
@@ -824,7 +824,7 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 ## Fejlesztési elvek 🛠️
 
 - **🔒 Adatvédelem tervezés által**: A TranslateTribune a felhasználók adatvédelmét helyezi előtérbe a sütik mellőzésével, a JavaScript minimalizálásával és a nyomkövetők kiküszöbölésével. Az adatvédelem iránti elkötelezettségünket az [adatvédelmi irányelvekben](https://translatetribune.com/privacy.html) vázoljuk.
-- **🚀 Könnyű és hordozható**: Könnyűsúlyú statikus oldalunk kerüli a nehéz keretrendszereket és a túlzott JavaScript használatát. Teljesen dockerizált, dokumentált függőségekkel, biztosítva a reprodukálható fejlesztői környezetet és a könnyű telepítést bárhol.
+- **🚀 Könnyű és hordozható**: Könnyűsúlyú statikus oldalunk kerüli a nehéz keretrendszereket és a túlzott JavaScript használatát. Teljesen containerizált, dokumentált függőségekkel, biztosítva a reprodukálható fejlesztői környezetet és a könnyű telepítést bárhol.
 - **🛡️ Biztonságos és ellenálló**: Nem gyűjtünk felhasználói adatokat és nem vezetünk naplókat. Statikus architektúránk rugalmassá és alkalmazkodóvá teszi a webhelyet a világ különböző tárhelykörnyezeteihez.
 
 ## Licenc és védjegy 📜
@@ -867,7 +867,7 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 ## Kanuni za Maendeleo 🛠️
 
 - **🔒 Faragha kwa Muundo**: TranslateTribune inatoa kipaumbele kwa faragha ya watumiaji kwa kuepuka vidakuzi, kupunguza JavaScript, na kuondoa vifuatiliaji. Kujitolea kwetu kwa faragha kumeelezwa katika [sera yetu ya faragha](https://translatetribune.com/privacy.html).
-- **🚀 Nyepesi na Inayohamishika**: Tovuti yetu nyepesi na tuli inaepuka mifumo mizito na JavaScript kupita kiasi. Ina dockerized kikamilifu na utegemezi uliodokumentishwa, kuhakikisha mazingira ya maendeleo yanayorudiwa na uanzishaji rahisi popote.
+- **🚀 Nyepesi na Inayohamishika**: Tovuti yetu nyepesi na tuli inaepuka mifumo mizito na JavaScript kupita kiasi. Ina containerized kikamilifu na utegemezi uliodokumentishwa, kuhakikisha mazingira ya maendeleo yanayorudiwa na uanzishaji rahisi popote.
 - **🛡️ Salama na Stahimilivu**: Hatukusanyi data ya watumiaji na hatuhifadhi kumbukumbu. Muundo wetu tuli unafanya tovuti kuwa stahimilivu na inayoweza kubadilika kwa mazingira mbalimbali ya ukaribishaji duniani kote.
 
 ## Leseni na Alama ya Biashara 📜

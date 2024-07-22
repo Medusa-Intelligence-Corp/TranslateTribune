@@ -26,17 +26,14 @@ RUN pip3 install --no-cache-dir \
     pytz \
     cachetools \
     urlextract \
-    validators \
     langdetect \
     goose3[all] \
     readabilipy \
     Jinja2 \
     bleach \
-    anthropic \
-    openai \
-    mistralai \
-    boto3 \
-    google-generativeai
+    func-timeout \
+    smartenough \
+    boto3 
 
 
 # Copy the rest of your application's code

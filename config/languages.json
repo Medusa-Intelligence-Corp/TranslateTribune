@@ -2,6 +2,7 @@
   {
     "publishing_language_short": "en",
     "publishing_language": "English",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is an ex-CIA analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer",
     "publishing_language_native": "English",
@@ -20,6 +21,7 @@
   {
     "publishing_language_short": "zh",
     "publishing_language": "Chinese",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former Ministry of State Security (Chinese Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology news editor who previously worked as a Bank of China Analyst and Huawei Engineer",
     "publishing_language_native": "中文",
@@ -38,6 +40,7 @@
   {
     "publishing_language_short": "es",
     "publishing_language": "Spanish",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former CNI (Spanish Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Banco Santander Analyst and Telefónica Engineer",
     "publishing_language_native": "Español",
@@ -56,6 +59,7 @@
   {
     "publishing_language_short": "ar",
     "publishing_language": "Arabic",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former Saudi Arabian intelligence analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Saudi National Bank Analyst and Aramco Engineer",
     "publishing_language_native": "العربية",
@@ -75,6 +79,7 @@
   {
     "publishing_language_short": "fr",
     "publishing_language": "French",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former DGSE (French Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former BNP Paribas Analyst and Thales Group Engineer",
     "publishing_language_native": "Français",
@@ -93,6 +98,7 @@
   {
     "publishing_language_short": "ru",
     "publishing_language": "Russian",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former FSB (Russian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Sberbank Analyst and Yandex Engineer",
     "publishing_language_native": "Русский",
@@ -111,6 +117,7 @@
   {
     "publishing_language_short": "pt",
     "publishing_language": "Portuguese",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former ABIN (Brazilian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Banco do Brasil Analyst and Embraer Engineer",
     "publishing_language_native": "Português",
@@ -129,6 +136,7 @@
   {
     "publishing_language_short": "de",
     "publishing_language": "German",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former BND (German Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Deutsche Bank Analyst and Siemens Engineer",
     "publishing_language_native": "Deutsch",
@@ -147,6 +155,7 @@
   {
     "publishing_language_short": "ja",
     "publishing_language": "Japanese",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former Public Security Intelligence Agency (Japanese Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Mitsubishi UFJ Financial Group Analyst and Sony Engineer",
     "publishing_language_native": "日本語",
@@ -165,6 +174,7 @@
   {
     "publishing_language_short": "tr",
     "publishing_language": "Turkish",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former MIT (Turkish Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Türkiye İş Bankası Analyst and Aselsan Engineer",
     "publishing_language_native": "Türkçe",
@@ -183,6 +193,7 @@
   {
     "publishing_language_short": "ko",
     "publishing_language": "Korean",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former NIS (South Korean Intelligence) analyst",
     "finance_technology_persona": "a South Korean finance and technology newspaper editor who is a former KB Financial Group Analyst and Samsung Engineer",
     "publishing_language_native": "한국어",
@@ -201,6 +212,7 @@
   {
     "publishing_language_short": "it",
     "publishing_language": "Italian",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former AISE (Italian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Intesa Sanpaolo Analyst and Leonardo S.p.A. Engineer",
     "publishing_language_native": "Italiano",
@@ -219,6 +231,7 @@
   {
     "publishing_language_short": "nl",
     "publishing_language": "Dutch",
+    "summarizer_model": "Mistral",
     "persona": "an international newspaper editor who is a former AIVD (Netherlands Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former ING Group Analyst and Philips Engineer",
     "publishing_language_native": "Nederlands",
@@ -237,6 +250,7 @@
   {
     "publishing_language_short": "fa",
     "publishing_language": "Farsi",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former VAJA (Iranian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Bank Melli Iran Analyst and Iran Electronics Industries Engineer",
     "publishing_language_native": "فارسی",
@@ -256,6 +270,7 @@
   {
     "publishing_language_short": "uk",
     "publishing_language": "Ukrainian",
+    "summarizer_model": "Anthropic",
     "persona": "an international newspaper editor who is a former SBU (Ukranian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former PrivatBank Analyst and Antonov Engineer",
     "publishing_language_native": "Українська",
@@ -274,6 +289,7 @@
   {
     "publishing_language_short": "sv",
     "publishing_language": "Swedish",
+    "summarizer_model": "Anthropic",
     "persona": "an international newspaper editor who is a former MUST (Swedish Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Skandinaviska Enskilda Banken Analyst and Ericsson Engineer",
     "publishing_language_native": "Svenska",
@@ -292,6 +308,7 @@
   {
     "publishing_language_short": "he",
     "publishing_language": "Hebrew",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former Mossad (Israeli Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Bank Hapoalim Analyst and Elbit Systems Engineer",
     "publishing_language_native": "עברית",
@@ -311,6 +328,7 @@
   {
     "publishing_language_short": "hu",
     "publishing_language": "Hungarian",
+    "summarizer_model": "Anthropic",
     "persona": "an international newspaper editor who is a former IH (Hungarian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former OTP Bank Analyst and Gedeon Richter Engineer",
     "publishing_language_native": "Magyar",
@@ -329,6 +347,7 @@
   {
     "publishing_language_short": "sw",
     "publishing_language": "Swahili",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former NIS (Kenyan Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Kenya Commercial Bank Group Analyst and Safaricom Engineer",
     "publishing_language_native": "Kiswahili",

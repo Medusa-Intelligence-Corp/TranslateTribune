@@ -4,8 +4,8 @@ read -p "Do you want to rebuild the Docker image from scratch? This will take lo
 
 if [[ $rebuild =~ ^[Yy]$ ]]; then
     echo "Rebuilding the Docker image from scratch..."
-    docker build --no-cache -t ghcr.io/medusa-ml/translatetribune:latest -f deploy/Dockerfile .
+    podman build --no-cache -t ghcr.io/medusa-ml/translatetribune:latest -f deploy/Dockerfile .
 else
     echo "Building the Docker image using cached layers (if available)..."
-    docker build -t ghcr.io/medusa-ml/translatetribune:latest -f deploy/Dockerfile .
+    podman build -t ghcr.io/medusa-ml/translatetribune:latest -f deploy/Dockerfile .
 fi

@@ -25,18 +25,15 @@ link_cache = TTLCache(maxsize=100, ttl=3600)
 import bleach
 from jinja2 import Template
 from bs4 import BeautifulSoup
+from langdetect import detect
+from smartenough import get_smart_answer
+from func_timeout import func_timeout
 
 from browser import fetch_content
-from llm import fetch_llm_response
 from templater import deploy_website
 
 
-def add_required_html(article_summary, article_url, finder_model, summarizer_model, source_config, lang_config):
-        # Add HTML comment with model information for debugging
-        article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
-                              <!-- Summarizer Model: {summarizer_model} -->  
-                              {article_summary}"""
-
+def add_required_html(article_summary, article_url, source_config, lang_config):
         # Save the title
         soup = BeautifulSoup(article_summary, 'html.parser')
         article_div = soup.find('div', class_='article')
@@ -117,6 +114,51 @@ def simplify_html(html):
     return cleaned_html
 
 
+def validate_article_html(html, language_code, min_article_score):
+    max_size = 10000
+    if len(html) > max_size:
+        return False
+
+    soup = BeautifulSoup(html, 'html.parser')
+
+    if soup.find('script'):
+        return False
+
+    allowed_tags = ['div', 'p', 'ul', 'ol', 'li']
+    allowed_attributes = ['class', 'id', 'alt', 'data-front-page-score']
+
+    # Sanitize HTML tags and attributes
+    for tag in soup.find_all():
+        if tag.name not in allowed_tags:
+            tag.decompose()
+        for attr in list(tag.attrs.keys()):
+            if attr not in allowed_attributes:
+                del tag[attr]
+
+    article_content = None
+    article_div = soup.find('div', class_='article',\
+            attrs=lambda attrs: 'data-front-page-score'\
+            in attrs and min_article_score <= int(attrs['data-front-page-score']) <= 5)
+    if article_div:
+        article_title_div = article_div.find('div', class_='article-title')
+        if article_title_div:
+            article_content = article_div.find('div', class_='article-content hidden')
+
+    if article_content is None:
+        return False
+
+    content_text = article_content.text.strip()
+    llm_output_language = detect(content_text)
+    logging.info(f"detected output language {llm_output_language}")
+    if language_code not in llm_output_language:
+        logging.info(f"Wrong Language from LLM. \
+                Expected {language_code}\
+                got {llm_output_language}")
+        return False
+
+    return True
+
+
 def publish(sources_config, lang_config, finder_template, \
         summarizer_template, html_filename, rss_filename, section_key, persona_type="persona"):        
 
@@ -140,45 +182,40 @@ def publish(sources_config, lang_config, finder_template, \
             try:
                 all_links = link_cache[source_config["source_url"]]
             except KeyError:
-                all_links = fetch_content(source_config["source_url"],\
-                        "links",\
-                        source_config["source_language"]) 
+                all_links = func_timeout(60,fetch_content,\
+                        (source_config["source_url"],"links",source_config["source_language"]))
                 link_cache[source_config["source_url"]] = all_links
 
-            best_links, finder_model = fetch_llm_response(
-                all_links,\
+            best_links = get_smart_answer(
                 finder_template.render(**locals()),\
-                source_config["finder_model"],\
-                "url",
-                source_langage=source_config['source_language'],
-                target_language=lang_config['publishing_language'])
+                all_links,\
+                "OpenAI", \
+                "url")
             logging.info(best_links)
             link = best_links[0]
 
             try:
                 article_text = article_cache[link]
             except KeyError:
-                article_text = fetch_content(link,\
-                        source_config["source_parser"],\
-                        lang_config["publishing_language"])
+                article_text = func_timeout(60,fetch_content,\
+                        (link,source_config["source_parser"],lang_config["publishing_language"]))
                 article_cache[link] = article_text
 
-            article_summary, summarizer_model = fetch_llm_response(
-                    article_text,\
+            article_summary = get_smart_answer(
                     summarizer_template.render(**locals()),\
-                    source_config["summarizer_model"],\
-                    "html-article",\
+                    article_text,\
+                    lang_config["summarizer_model"],\
+                    "html")
+
+            if not validate_article_html(article_summary,\
                     lang_config["publishing_language_short"],\
-                    3,
-                    source_langage=source_config['source_language'],
-                    target_language=lang_config['publishing_language']
-                )
+                    3):
+                logging.info("Invalid article, skipping")
+                raise Exception("Invalid article")
 
             article_title, article_summary, front_page_score, article_id = add_required_html(\
                                                                 article_summary,\
                                                                 link,\
-                                                                finder_model,\
-                                                                summarizer_model,\
                                                                 source_config,\
                                                                 lang_config)
             
@@ -260,12 +297,12 @@ def deploy_language(publishing_language):
             "world_news")
 
     # Copy assets to debug folder
-    if debug:
-        assets_source_folder = '/usr/src/app/static/assets'
-        assets_destination_folder = '/usr/src/app/debug/assets'
-        if os.path.exists(assets_destination_folder):
-            shutil.rmtree(assets_destination_folder)
-        shutil.copytree(assets_source_folder, assets_destination_folder)
+    #if debug:
+    #    assets_source_folder = '/usr/src/app/static/assets'
+    #    assets_destination_folder = '/usr/src/app/debug/assets'
+    #    if os.path.exists(assets_destination_folder):
+    #        shutil.rmtree(assets_destination_folder)
+    #    shutil.copytree(assets_source_folder, assets_destination_folder)
         
 
     # Create the finance and technology page

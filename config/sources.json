@@ -6,9 +6,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "USA Today",
     "source_url": "https://www.usatoday.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United Kingdom",
@@ -17,9 +15,7 @@
     "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
     "source": "BBC News",
     "source_url": "https://www.bbc.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Mexico",
@@ -28,9 +24,7 @@
     "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
     "source": "La Jornada",
     "source_url": "https://www.jornada.com.mx",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "France",
@@ -39,9 +33,7 @@
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
     "source": "Le Figaro",
     "source_url": "https://www.lefigaro.fr",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Italy",
@@ -50,9 +42,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
     "source": "La Repubblica",
     "source_url": "https://www.repubblica.it",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "China",
@@ -61,9 +51,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
     "source": "People's Daily",
     "source_url": "http://www.people.com.cn",
-    "source_parser": "text",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "text"
   },
   {
     "source_country": "Israel",
@@ -72,9 +60,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F1;",
     "source": "Yedioth Ahronoth",
     "source_url": "https://www.ynet.co.il",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Taiwan",
@@ -83,9 +69,7 @@
     "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
     "source": "Liberty Times",
     "source_url": "https://www.ltn.com.tw",
-    "source_parser": "text",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "text"
   },
   {
     "source_country": "Ukraine",
@@ -94,9 +78,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
     "source": "Ukrayinska Pravda",
     "source_url": "https://www.pravda.com.ua",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "South Korea",
@@ -105,9 +87,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
     "source": "JoongAng Ilbo",
     "source_url": "https://www.joongang.co.kr",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Iran",
@@ -116,9 +96,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F7;",
     "source": "Ettela'at",
     "source_url": "https://ettelaat.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Qatar",
@@ -127,9 +105,7 @@
     "source_flag_emoji": "&#x1F1F6;&#x1F1E6;",
     "source": "Al Jazeera",
     "source_url": "https://www.aljazeera.net/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Saudi Arabia",
@@ -138,9 +114,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1E6;",
     "source": "Al-Riyadh",
     "source_url": "https://www.alriyadh.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Türkiye",
@@ -149,9 +123,7 @@
     "source_flag_emoji": "&#x1F1F9;&#x1F1F7;",
     "source": "Hürriyet",
     "source_url": "https://www.hurriyet.com.tr",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Russia",
@@ -160,9 +132,7 @@
     "source_flag_emoji": "&#x1F1F7;&#x1F1FA;",
     "source": "Kommersant",
     "source_url": "https://www.kommersant.ru",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Singapore",
@@ -171,9 +141,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
     "source": "Lianhe Zaobao",
     "source_url": "https://www.zaobao.com.sg",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Kenya",
@@ -182,9 +150,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1EA;",
     "source": "Taifa Leo",
     "source_url": "https://taifaleo.nation.co.ke",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United States",
@@ -193,9 +159,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "The New York Times",
     "source_url": "https://www.nytimes.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United Kingdom",
@@ -204,9 +168,7 @@
     "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
     "source": "The Guardian",
     "source_url": "https://www.theguardian.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Mexico",
@@ -215,9 +177,7 @@
     "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
     "source": "El Universal",
     "source_url": "https://www.eluniversal.com.mx/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "France",
@@ -226,9 +186,7 @@
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
     "source": "Le Monde",
     "source_url": "https://www.lemonde.fr/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Italy",
@@ -237,9 +195,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
     "source": "Corriere della Sera",
     "source_url": "https://www.corriere.it/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "China",
@@ -248,9 +204,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
     "source": "Xinhua News Agency",
     "source_url": "http://www.xinhuanet.com/",
-    "source_parser": "text",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "text"
   },
   {
     "source_country": "Israel",
@@ -259,9 +213,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F1;",
     "source": "Israel Hayom",
     "source_url": "https://www.israelhayom.co.il/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Taiwan",
@@ -270,9 +222,7 @@
     "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
     "source": "United Daily News",
     "source_url": "https://udn.com/",
-    "source_parser": "text",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "text"
   },
   {
     "source_country": "Ukraine",
@@ -281,9 +231,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
     "source": "Hromadske",
     "source_url": "https://hromadske.ua/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "South Korea",
@@ -292,9 +240,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
     "source": "The Chosun Ilbo",
     "source_url": "https://www.chosun.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Qatar",
@@ -303,9 +249,7 @@
     "source_flag_emoji": "&#x1F1F6;&#x1F1E6;",
     "source": "Al-Sharq",
     "source_url": "https://al-sharq.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Saudi Arabia",
@@ -314,9 +258,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1E6;",
     "source": "Okaz",
     "source_url": "https://www.okaz.com.sa/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Türkiye",
@@ -325,9 +267,7 @@
     "source_flag_emoji": "&#x1F1F9;&#x1F1F7;",
     "source": "Sabah",
     "source_url": "https://www.sabah.com.tr/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Russia",
@@ -336,9 +276,7 @@
     "source_flag_emoji": "&#x1F1F7;&#x1F1FA;",
     "source": "Izvestia",
     "source_url": "https://iz.ru/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Singapore",
@@ -347,9 +285,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
     "source": "Shin Min Daily News",
     "source_url": "https://www.shinmin.sg/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Kenya",
@@ -358,9 +294,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1EA;",
     "source": "Nipashe",
     "source_url": "https://www.ippmedia.com/sw/nipashe",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Iran",
@@ -369,9 +303,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F7;",
     "source": "Tabnak",
     "source_url": "https://www.tabnak.ir/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   }
 ]
 

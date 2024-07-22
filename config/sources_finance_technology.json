@@ -6,9 +6,7 @@
     "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
     "source": "The Economist",
     "source_url": "https://www.economist.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United States",
@@ -17,9 +15,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "The Verge",
     "source_url": "https://www.theverge.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Japan",
@@ -28,9 +24,7 @@
     "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
     "source": "Nikkei",
     "source_url": "https://www.nikkei.com",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Switzerland",
@@ -39,9 +33,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1ED;",
     "source": "L'Agefi",
     "source_url": "https://agefi.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "China",
@@ -50,9 +42,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
     "source": "PingWest",
     "source_url": "https://www.pingwest.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "France",
@@ -61,9 +51,7 @@
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
     "source": "FrenchWeb",
     "source_url": "https://www.frenchweb.fr",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Brazil",
@@ -72,9 +60,7 @@
     "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
     "source": "Valor Econômico",
     "source_url": "https://valor.globo.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Chile",
@@ -83,9 +69,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F1;",
     "source": "FayerWayer",
     "source_url": "https://www.fayerwayer.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "South Korea",
@@ -94,9 +78,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
     "source": "The Korea Economic Daily",
     "source_url": "https://www.hankyung.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Germany",
@@ -105,9 +87,7 @@
     "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
     "source": "Handelsblatt",
     "source_url": "https://www.handelsblatt.com/", 
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Russia",
@@ -116,9 +96,7 @@
     "source_flag_emoji": "&#x1F1F7;&#x1F1FA;",
     "source": "vc.ru",
     "source_url": "https://vc.ru/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Mexico",
@@ -127,9 +105,7 @@
     "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
     "source": "Xataka México",
     "source_url": "https://www.xataka.com.mx/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Spain",
@@ -138,9 +114,7 @@
     "source_flag_emoji": "&#x1F1EA;&#x1F1F8;",
     "source": "3DJuegos",
     "source_url": "https://www.3djuegos.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Italy",
@@ -149,9 +123,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
     "source": "Tutto Android",
     "source_url": "https://www.tuttoandroid.net/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Poland",
@@ -160,9 +132,7 @@
     "source_flag_emoji": "&#x1F1F5;&#x1F1F1;",
     "source": "Spidersweb",
     "source_url": "https://spidersweb.pl/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Netherlands",
@@ -171,9 +141,7 @@
     "source_flag_emoji": "&#x1F1F3;&#x1F1F1;",
     "source": "Tweakers",
     "source_url": "https://tweakers.net/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Sweden",
@@ -182,9 +150,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1EA;",
     "source": "SweClockers",
     "source_url": "https://www.sweclockers.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Ukraine",
@@ -193,9 +159,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
     "source": "ITC.ua",
     "source_url": "https://itc.ua/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United Kingdom",
@@ -204,9 +168,7 @@
     "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
     "source": "TechCrunch UK",
     "source_url": "https://techcrunch.com/uk/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "United States",
@@ -215,9 +177,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "Wired",
     "source_url": "https://www.wired.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Japan",
@@ -226,9 +186,7 @@
     "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
     "source": "TechCrunch Japan",
     "source_url": "https://jp.techcrunch.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Switzerland",
@@ -237,9 +195,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1ED;",
     "source": "ICTjournal",
     "source_url": "https://www.ictjournal.ch/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "China",
@@ -248,9 +204,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
     "source": "36Kr",
     "source_url": "https://36kr.com/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "France",
@@ -259,9 +213,7 @@
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
     "source": "Les Echos Entrepreneurs",
     "source_url": "https://business.lesechos.fr/entrepreneurs/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Brazil",
@@ -270,9 +222,7 @@
     "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
     "source": "Canaltech",
     "source_url": "https://canaltech.com.br/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Chile",
@@ -281,9 +231,7 @@
     "source_flag_emoji": "&#x1F1E8;&#x1F1F1;",
     "source": "Chocale",
     "source_url": "https://www.chocale.cl/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "South Korea",
@@ -292,9 +240,7 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
     "source": "Platum",
     "source_url": "https://platum.kr/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Germany",
@@ -303,9 +249,7 @@
     "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
     "source": "t3n",
     "source_url": "https://t3n.de/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Russia",
@@ -314,9 +258,7 @@
     "source_flag_emoji": "&#x1F1F7;&#x1F1FA;",
     "source": "Rusbase",
     "source_url": "https://rb.ru/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Mexico",
@@ -325,9 +267,7 @@
     "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
     "source": "Entrepreneur en Español",
     "source_url": "https://www.entrepreneur.com/es",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Spain",
@@ -336,9 +276,7 @@
     "source_flag_emoji": "&#x1F1EA;&#x1F1F8;",
     "source": "Xataka",
     "source_url": "https://www.xataka.com/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Italy",
@@ -347,9 +285,7 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
     "source": "Wired Italia",
     "source_url": "https://www.wired.it/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Poland",
@@ -358,9 +294,7 @@
     "source_flag_emoji": "&#x1F1F5;&#x1F1F1;",
     "source": "Antyweb",
     "source_url": "https://antyweb.pl/",
-    "source_parser": "goose",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "goose"
   },
   {
     "source_country": "Netherlands",
@@ -369,9 +303,7 @@
     "source_flag_emoji": "&#x1F1F3;&#x1F1F1;",
     "source": "Emerce",
     "source_url": "https://www.emerce.nl/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Sweden",
@@ -380,9 +312,7 @@
     "source_flag_emoji": "&#x1F1F8;&#x1F1EA;",
     "source": "Breakit",
     "source_url": "https://www.breakit.se/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   },
   {
     "source_country": "Ukraine",
@@ -391,9 +321,7 @@
     "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
     "source": "AIN.UA",
     "source_url": "https://ain.ua/",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_parser": "readability"
   }
 ]
 
