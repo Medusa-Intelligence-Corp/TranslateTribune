@@ -30,6 +30,15 @@
          }
     ]    
     ```
+
+## Big-Picture Principles 🌍
+
+* **Privacy**: We think the news that people consume is sensitive, we don't want to know what you read
+* **Decentralization**: We don't want to be a single point of failure, we want to be able to run on any machine
+* **Open-Source**: We want to be able to share our code with the world
+* **Cheap**: We want to be able to run this on a Raspberry Pi if we have to
+* **Free (as in Freedom)**: We want this to be free to use and free to modify
+
 ## Can I use Docker instead of Podman? 🐳
 
 Yes you should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
