@@ -112,8 +112,8 @@
     "source_language": "Arabic",
     "source_flag": "./assets/png/saudi-arabia.png",
     "source_flag_emoji": "&#x1F1F8;&#x1F1E6;",
-    "source": "Al-Riyadh",
-    "source_url": "https://www.alriyadh.com/",
+    "source": "Okaz",
+    "source_url": "https://www.okaz.com.sa/",
     "source_parser": "goose"
   },
   {
@@ -265,8 +265,8 @@
     "source_language": "Turkish",
     "source_flag": "./assets/png/turkey.png",
     "source_flag_emoji": "&#x1F1F9;&#x1F1F7;",
-    "source": "Sabah",
-    "source_url": "https://www.sabah.com.tr/",
+    "source": "Cumhuriyet",
+    "source_url": "https://www.cumhuriyet.com.tr/",
     "source_parser": "readability"
   },
   {
