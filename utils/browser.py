@@ -75,11 +75,11 @@ def fetch_content(url, mode, language):
     if status_code != 200:
         raise BadPageException(f"Bad status code: {status_code}")
 
-    driver.set_page_load_timeout(15)
+    driver.set_page_load_timeout(30)
     driver.get(url)
 
     time.sleep(5)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+    WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
     if mode=="text":
         text = driver.execute_script("return document.body.innerText")
@@ -100,7 +100,7 @@ def fetch_content(url, mode, language):
         else:
             g = Goose()
 
-        g.http_timeout = 10
+        g.http_timeout = 20
         article = g.extract(raw_html=driver.page_source)
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":

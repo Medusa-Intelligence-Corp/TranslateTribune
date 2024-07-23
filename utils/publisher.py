@@ -182,14 +182,14 @@ def publish(sources_config, lang_config, finder_template, \
             try:
                 all_links = link_cache[source_config["source_url"]]
             except KeyError:
-                all_links = func_timeout(60,fetch_content,\
+                all_links = func_timeout(120,fetch_content,\
                         (source_config["source_url"],"links",source_config["source_language"]))
                 link_cache[source_config["source_url"]] = all_links
 
             best_links = get_smart_answer(
                 finder_template.render(**locals()),\
                 all_links,\
-                "OpenAI", \
+                "Random", \
                 "url")
             logging.info(best_links)
             link = best_links[0]
@@ -197,7 +197,7 @@ def publish(sources_config, lang_config, finder_template, \
             try:
                 article_text = article_cache[link]
             except KeyError:
-                article_text = func_timeout(60,fetch_content,\
+                article_text = func_timeout(120,fetch_content,\
                         (link,source_config["source_parser"],lang_config["publishing_language"]))
                 article_cache[link] = article_text
 
