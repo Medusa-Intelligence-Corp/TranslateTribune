@@ -27,7 +27,7 @@ from jinja2 import Template
 from bs4 import BeautifulSoup
 from langdetect import detect
 from smartenough import get_smart_answer
-from func_timeout import func_timeout
+from func_timeout import func_timeout, FunctionTimedOut
 
 from browser import fetch_content
 from templater import deploy_website
@@ -225,7 +225,9 @@ def publish(sources_config, lang_config, finder_template, \
             article_dict[article_title]["id"] = article_id
             source_countries_published.append(source_config["source_country"])
             logging.info(article_summary)
-            
+        except FunctionTimedOut:    
+            logging.info("Function timed out")
+            traceback.print_exc()
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             traceback.print_exc()
