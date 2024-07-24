@@ -88,7 +88,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 - 📅 Daily updates by 6am Eastern
 - 🌍 Diverse sources from various countries and perspectives (see [sources.json](./config/sources.json) and [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-powered translations and summaries
-- 🔒 Private by Design: no cookies, minimial JavaScript, and no trackers. [Read our full privacy policy here.](https://translatetribune.com/privacy.html).
+- 🔒 Private by Design: no cookies, minimial JavaScript, and no trackers. [Read our full privacy policy here.](https://translatetribune.com/privacy.html)
 
 ## Support Us
 
@@ -113,7 +113,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 - 📅 Щоденні оновлення о 6 ранку за східним часом
 - 🌍 Різноманітні джерела з різних країн та різними точками зору (див. [sources.json](./config/sources.json) та [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Переклади та підсумовування повністю виконані ШІ
-- 🔒 Приватність за замовчуванням: без cookies, мінімальне використання JavaScript та без жодних трекерів. [Читайте нашу повну політику конфіденційності тут.](https://translatetribune.com/privacy.html).
+- 🔒 Приватність за замовчуванням: без cookies, мінімальне використання JavaScript та без жодних трекерів. [Читайте нашу повну політику конфіденційності тут.](https://translatetribune.com/privacy.html)
 
 ## Підтримайте нас
 
@@ -263,7 +263,7 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 - 📅 Atualizações diárias até às 6h no horário do leste
 - 🌍 Fontes diversas de vários países e perspectivas (veja [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traduções e resumos alimentados por IA
-- 🔒 Privacidade por Design: sem cookies, JavaScript mínimo e sem rastreadores. [Leia nossa política de privacidade completa aqui.](https://translatetribune.com/privacy.html).
+- 🔒 Privacidade por Design: sem cookies, JavaScript mínimo e sem rastreadores. [Leia nossa política de privacidade completa aqui.](https://translatetribune.com/privacy.html)
 
 ## Apoie-nos
 
@@ -288,7 +288,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 📅 Tägliche Aktualisierungen bis 6 Uhr Eastern Time
 - 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources.json](./config/sources.json) und [sources_finance_technology.json][sources-fin-tech])
 - 🧠 KI-gestützte Übersetzungen und Zusammenfassungen
-- 🔒 Privacy by Design: keine Cookies, minimales JavaScript und keine Tracker. [Lesen Sie hier unsere vollständige Datenschutzerklärung.](https://translatetribune.com/privacy.html).
+- 🔒 Privacy by Design: keine Cookies, minimales JavaScript und keine Tracker. [Lesen Sie hier unsere vollständige Datenschutzerklärung.](https://translatetribune.com/privacy.html)
 
 ## Unterstützen Sie uns
 
@@ -313,7 +313,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 📅 東部時間の午前6時までに毎日更新
 - 🌍 様々な国や視点からの多様なソース（[sources.json](./config/sources.json)と[sources_finance_technology.json][sources-fin-tech]を参照）
 - 🧠 AIを活用した翻訳と要約
-- 🔒 プライバシー・バイ・デザイン：クッキーなし、最小限のJavaScript、トラッカーなし。[完全なプライバシーポリシーはこちらをご覧ください。](https://translatetribune.com/privacy.html)。
+- 🔒 プライバシー・バイ・デザイン：クッキーなし、最小限のJavaScript、トラッカーなし。[完全なプライバシーポリシーはこちらをご覧ください。](https://translatetribune.com/privacy.html)
 
 ## 支援方法
 
@@ -338,7 +338,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 📅 Doğu saatiyle sabah 6'ya kadar günlük güncellemeler
 - 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources.json](./config/sources.json) ve [sources_finance_technology.json][sources-fin-tech] dosyalarına bakın)
 - 🧠 AI destekli çeviriler ve özetler
-- 🔒 Tasarımla Gizlilik: çerez yok, minimum JavaScript ve takip yok. [Tam gizlilik politikamızı burada okuyun.](https://translatetribune.com/privacy.html).
+- 🔒 Tasarımla Gizlilik: çerez yok, minimum JavaScript ve takip yok. [Tam gizlilik politikamızı burada okuyun.](https://translatetribune.com/privacy.html)
 
 ## Bizi Destekleyin
 
@@ -388,7 +388,7 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 - 📅 Aggiornamenti giornalieri entro le 6 del mattino, ora orientale
 - 🌍 Fonti diverse da vari paesi e prospettive (vedi [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Traduzioni e riassunti basati sull'AI
-- 🔒 Privacy by Design: nessun cookie, JavaScript minimo e nessun tracker. [Leggi qui la nostra informativa sulla privacy completa.](https://translatetribune.com/privacy.html).
+- 🔒 Privacy by Design: nessun cookie, JavaScript minimo e nessun tracker. [Leggi qui la nostra informativa sulla privacy completa.](https://translatetribune.com/privacy.html)
 
 ## Sostienici
 
@@ -413,7 +413,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - 📅 Dagelijkse updates vóór 6 uur 's ochtends Eastern Time
 - 🌍 Diverse bronnen uit verschillende landen en perspectieven (zie [sources.json](./config/sources.json) en [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-aangedreven vertalingen en samenvattingen
-- 🔒 Privacy by Design: geen cookies, minimale JavaScript en geen trackers. [Lees hier ons volledige privacybeleid.](https://translatetribune.com/privacy.html).
+- 🔒 Privacy by Design: geen cookies, minimale JavaScript en geen trackers. [Lees hier ons volledige privacybeleid.](https://translatetribune.com/privacy.html)
 
 ## Steun ons
 
@@ -438,7 +438,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - 📅 به روزرسانی روزانه تا ساعت 6 صبح به وقت شرقی
 - 🌍 منابع متنوع از کشورها و دیدگاه های مختلف (به [sources.json](./config/sources.json) و [sources_finance_technology.json][sources-fin-tech] مراجعه کنید)
 - 🧠 ترجمه ها و خلاصه های مبتنی بر هوش مصنوعی
-- 🔒 حریم خصوصی با طراحی: بدون کوکی، حداقل جاوا اسکریپت و بدون ردیاب. [سیاست حفظ حریم خصوصی کامل ما را اینجا بخوانید.](https://translatetribune.com/privacy.html).
+- 🔒 حریم خصوصی با طراحی: بدون کوکی، حداقل جاوا اسکریپت و بدون ردیاب. [سیاست حفظ حریم خصوصی کامل ما را اینجا بخوانید.](https://translatetribune.com/privacy.html)
 
 ## از ما حمایت کنید
 
@@ -463,7 +463,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 - 📅 Dagliga uppdateringar senast kl. 06.00 Eastern Time
 - 🌍 Olika källor från olika länder och perspektiv (se [sources.json](./config/sources.json) och [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-drivna översättningar och sammanfattningar
-- 🔒 Integritet genom design: inga cookies, minimal JavaScript och inga spårare. [Läs vår fullständiga integritetspolicy här.](https://translatetribune.com/privacy.html).
+- 🔒 Integritet genom design: inga cookies, minimal JavaScript och inga spårare. [Läs vår fullständiga integritetspolicy här.](https://translatetribune.com/privacy.html)
 
 ## Stöd oss
 
@@ -488,7 +488,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 - 📅 עדכונים יומיים עד השעה 6 בבוקר שעון מזרחי
 - 🌍 מקורות מגוונים ממדינות ונקודות מבט שונות (ראה [sources.json](./config/sources.json) ו-[sources_finance_technology.json][sources-fin-tech])
 - 🧠 תרגומים ותקצירים מונעי AI
-- 🔒 פרטיות לפי עיצוב: ללא עוגיות, מינימום JavaScript וללא גששים. [קרא את מדיניות הפרטיות המלאה שלנו כאן.](https://translatetribune.com/privacy.html).
+- 🔒 פרטיות לפי עיצוב: ללא עוגיות, מינימום JavaScript וללא גששים. [קרא את מדיניות הפרטיות המלאה שלנו כאן.](https://translatetribune.com/privacy.html)
 
 ## תמכו בנו
 
@@ -513,7 +513,7 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 - 📅 Napi frissítések keleti idő szerint reggel 6 óráig
 - 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources.json](./config/sources.json) és [sources_finance_technology.json][sources-fin-tech])
 - 🧠 AI-vezérelt fordítások és összefoglalók
-- 🔒 Adatvédelem tervezés által: nincsenek sütik, minimális JavaScript és nincsenek nyomkövetők. [Olvasd el teljes adatvédelmi irányelveinket itt.](https://translatetribune.com/privacy.html).
+- 🔒 Adatvédelem tervezés által: nincsenek sütik, minimális JavaScript és nincsenek nyomkövetők. [Olvasd el teljes adatvédelmi irányelveinket itt.](https://translatetribune.com/privacy.html)
 
 ## Támogass minket
 
@@ -538,7 +538,7 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 - 📅 Sasisho za kila siku kabla ya saa 12 asubuhi Mashariki
 - 🌍 Vyanzo mbalimbali kutoka nchi na mitazamo tofauti (tazama [sources.json](./config/sources.json) na [sources_finance_technology.json][sources-fin-tech])
 - 🧠 Tafsiri na muhtasari unaoendesha na AI
-- 🔒 Faragha kwa Muundo: hakuna vidakuzi, JavaScript ndogo, na hakuna vifuatiliaji. [Soma sera yetu kamili ya faragha hapa.](https://translatetribune.com/privacy.html).
+- 🔒 Faragha kwa Muundo: hakuna vidakuzi, JavaScript ndogo, na hakuna vifuatiliaji. [Soma sera yetu kamili ya faragha hapa.](https://translatetribune.com/privacy.html)
 
 ## Tutumie
 
