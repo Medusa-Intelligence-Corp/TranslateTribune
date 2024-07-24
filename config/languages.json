@@ -2,7 +2,7 @@
   {
     "publishing_language_short": "en",
     "publishing_language": "English",
-    "summarizer_model": "Mistral",
+    "summarizer_model": "Meta",
     "persona": "an international newspaper editor who is an ex-CIA analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Goldman Sachs International Equity Analyst and Google Engineer",
     "publishing_language_native": "English",
@@ -21,7 +21,7 @@
   {
     "publishing_language_short": "zh",
     "publishing_language": "Chinese",
-    "summarizer_model": "Mistral",
+    "summarizer_model": "OpenAI",
     "persona": "an international newspaper editor who is a former Ministry of State Security (Chinese Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology news editor who previously worked as a Bank of China Analyst and Huawei Engineer",
     "publishing_language_native": "中文",
@@ -59,7 +59,7 @@
   {
     "publishing_language_short": "ar",
     "publishing_language": "Arabic",
-    "summarizer_model": "Google",
+    "summarizer_model": "Anthropic",
     "persona": "an international newspaper editor who is a former Saudi Arabian intelligence analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Saudi National Bank Analyst and Aramco Engineer",
     "publishing_language_native": "العربية",
@@ -87,7 +87,7 @@
     "motto": "Le Chuchotement des Mondes, Fort et Clair",
     "world_news": "Actualités Internationales",
     "finance_technology": "Finance et Technologie",
-    "logic_puzzles":"Casse-têtes Logiques",
+    "logic_puzzles":"Casse-têtis les Logiques",
     "language_selection": "Sélection de la Langue",
     "open_source": "Nous Sommes Open Source",
     "support_us": "Soutenez-nous",
@@ -155,7 +155,7 @@
   {
     "publishing_language_short": "ja",
     "publishing_language": "Japanese",
-    "summarizer_model": "Mistral",
+    "summarizer_model": "OpenAI",
     "persona": "an international newspaper editor who is a former Public Security Intelligence Agency (Japanese Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Mitsubishi UFJ Financial Group Analyst and Sony Engineer",
     "publishing_language_native": "日本語",
@@ -270,7 +270,7 @@
   {
     "publishing_language_short": "uk",
     "publishing_language": "Ukrainian",
-    "summarizer_model": "Anthropic",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former SBU (Ukranian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former PrivatBank Analyst and Antonov Engineer",
     "publishing_language_native": "Українська",
@@ -289,7 +289,7 @@
   {
     "publishing_language_short": "sv",
     "publishing_language": "Swedish",
-    "summarizer_model": "Anthropic",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former MUST (Swedish Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former Skandinaviska Enskilda Banken Analyst and Ericsson Engineer",
     "publishing_language_native": "Svenska",
@@ -328,7 +328,7 @@
   {
     "publishing_language_short": "hu",
     "publishing_language": "Hungarian",
-    "summarizer_model": "Anthropic",
+    "summarizer_model": "Google",
     "persona": "an international newspaper editor who is a former IH (Hungarian Intelligence) analyst",
     "finance_technology_persona": "an international finance and technology newspaper editor who is a former OTP Bank Analyst and Gedeon Richter Engineer",
     "publishing_language_native": "Magyar",

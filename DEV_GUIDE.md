@@ -44,31 +44,7 @@
 Yes you should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
 
 
-## How do you connect to LLMs? 🤔
+## How do you connect to LLMs and which ones do you use? 🤔
 
-TranslateTribune forked its original implementation of ```llm.py``` into its own project called [```smartenough```](https://pypi.org/project/smartenough/). It wraps the best cheap LLMs and makes classification and translation easy. The package is available on PyPi and can be installed via ```pip install smartenough```.
+TranslateTribune forked its original implementation of ```llm.py``` into its own project called [```smartenough```](https://pypi.org/project/smartenough/). It wraps the best cheap LLMs and makes classification and translation easy. The package is available on PyPi and can be installed via ```pip install smartenough```. We use most of the provied models in the package, and try to use the most free and open models available.
 
-
-## Which LLMS are you using? 🤖
-
-1. **Mistral AI** ([Usage](https://console.mistral.ai/usage/)) 🌬️
-   - Very good at European languages 🇪🇺
-   - Free and open-source models available 🆓
-
-2. **Anthropic** ([Usage](https://console.anthropic.com/settings/logs)) 🤖
-   - Free Evaluation Period 🎉
-   - Very good at Asian languages
-   - Cheapest acceptable model available via API @ $ USD 0.25 per 1M tokens
-   - Annoying application/approval process 😒
-
-3. **OpenAI** ([Usage](https://platform.openai.com/usage)) 🧠
-   - Performs decently on all languages, used for finding articles to translate
-   - $50 in free credits 💰
-
-4. **Google** ([Usage](https://console.cloud.google.com/billing/))
-   - Good at Asian languages and other Non-European languages
-   - First $250 in free credits
-
-5. **OpenRouter** ([Usage](https://openrouter.io/))
-   - Free ($0) and Libre/Free and open-source models available 🆓
-   - They are a bit slow and not as good as Mistral AI
