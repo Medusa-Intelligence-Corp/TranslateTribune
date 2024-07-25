@@ -33,7 +33,12 @@ from browser import fetch_content
 from templater import deploy_website
 
 
-def add_required_html(article_summary, article_url, source_config, lang_config):
+def add_required_html(article_summary, article_url, source_config, lang_config, finder_model, summarizer_model):
+        # Add HTML comment with model information for debugging
+        article_summary = f"""<!-- Finder Model:     {finder_model} -->\n
+                              <!-- Summarizer Model: {summarizer_model} -->  
+                              {article_summary}"""
+
         # Save the title
         soup = BeautifulSoup(article_summary, 'html.parser')
         article_div = soup.find('div', class_='article')
@@ -186,10 +191,11 @@ def publish(sources_config, lang_config, finder_template, \
                         (source_config["source_url"],"links",source_config["source_language"]))
                 link_cache[source_config["source_url"]] = all_links
 
+            finder_model = random.choice(["OpenAI","Google"])
             best_links = get_smart_answer(
                 finder_template.render(**locals()),\
                 all_links,\
-                "Random", \
+                finder_model, \
                 "url")
             logging.info(best_links)
             link = best_links[0]
@@ -201,10 +207,11 @@ def publish(sources_config, lang_config, finder_template, \
                         (link,source_config["source_parser"],lang_config["publishing_language"]))
                 article_cache[link] = article_text
 
+            summarizer_model = random.choice(lang_config["summarizer_models"])
             article_summary = get_smart_answer(
                     summarizer_template.render(**locals()),\
                     article_text,\
-                    lang_config["summarizer_model"],\
+                    summarizer_model,\
                     "html")
 
             if not validate_article_html(article_summary,\
@@ -217,7 +224,9 @@ def publish(sources_config, lang_config, finder_template, \
                                                                 article_summary,\
                                                                 link,\
                                                                 source_config,\
-                                                                lang_config)
+                                                                lang_config,\
+                                                                finder_model,\
+                                                                summarizer_model)
             
             article_dict[article_title] = {}
             article_dict[article_title]["html"] = article_summary
