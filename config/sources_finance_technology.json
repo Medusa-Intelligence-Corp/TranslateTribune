@@ -202,8 +202,8 @@
     "source_language": "Chinese",
     "source_flag": "./assets/png/china.png",
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
-    "source": "36Kr",
-    "source_url": "https://36kr.com/",
+    "source": "Github",
+    "source_url": "https://github.com/trending?spoken_language_code=zh",
     "source_parser": "goose"
   },
   {
@@ -213,6 +213,15 @@
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
     "source": "Les Echos Entrepreneurs",
     "source_url": "https://business.lesechos.fr/entrepreneurs/",
+    "source_parser": "readability"
+  },
+{
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
+    "source": "Le Monde",
+    "source_url": "https://www.lemonde.fr/intelligence-artificielle/",
     "source_parser": "readability"
   },
   {
