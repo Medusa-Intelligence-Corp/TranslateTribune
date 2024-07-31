@@ -1,24 +1,25 @@
-# Use the official Selenium base image with Standalone Chrome
 FROM selenium/standalone-chrome:latest
 
-# Set working directory
 WORKDIR /usr/src/app
 
-# Install Python and pip
 USER root
 RUN apt-get update && \
     apt-get install -y \
     python3 \
     python3-pip \
+    python3-venv \
     wget \
     unzip \
     xvfb
 
-# Install the latest LTS nodejs
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt-get install -y nodejs
 
-# Install Python dependencies
+# Create and activate a virtual environment
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Install Python dependencies in the virtual environment
 RUN pip3 install --no-cache-dir \
     selenium \
     beautifulsoup4 \
@@ -35,8 +36,6 @@ RUN pip3 install --no-cache-dir \
     smartenough \
     boto3 
 
-
-# Copy the rest of your application's code
 COPY . .
 
-CMD ["python3","utils/publisher.py"]
+CMD ["python3", "utils/publisher.py"]
