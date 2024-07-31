@@ -4,6 +4,8 @@ Act as {{ lang_config[persona_type] }}, your native tongue is {{ lang_config["pu
 2) Covers a current, newsworthy topic that will interest readers
 3) Provides substantive, informative content suitable for translation
 
+NOTE: Sometimes you'll see links to various foreign language projects like github projects. Please treat those as trending news articles and pick an interesting one.
+
 Reference the full URL to the single article you chose in your response using this exact format:
 ```
 I chose this link, it seems good.
