@@ -1,4 +1,5 @@
-FROM selenium/standalone-chrome:beta
+#FROM selenium/standalone-chrome:beta
+FROM selenium/standalone-chrome:126.0
 
 WORKDIR /usr/src/app
 
