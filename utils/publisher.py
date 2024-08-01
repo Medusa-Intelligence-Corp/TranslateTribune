@@ -12,7 +12,6 @@ import datetime
 import uuid
 import re
 import json
-import traceback
 import random
 import html
 import shutil
@@ -236,10 +235,10 @@ def publish(sources_config, lang_config, finder_template, \
             logging.info(article_summary)
         except FunctionTimedOut:    
             logging.info("Function timed out")
-            traceback.print_exc()
+            logging.error("Exception occurred", exc_info=True)
         except Exception as e:
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
-            traceback.print_exc()
+            logging.error("Exception occurred", exc_info=True)
     
     sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
