@@ -163,6 +163,41 @@ def validate_article_html(html, language_code, min_article_score):
     return True
 
 
+def load_template(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return Template(file.read())
+
+
+def get_language_config(language):
+    with open('config/languages.json', 'r') as file:
+        lang_configs = json.load(file)
+    
+    for item in lang_configs:
+        if item.get("publishing_language") == language:
+            return item
+    return None
+
+
+def get_finder_models(lang1):
+    models1 = set(get_language_config(lang1).get("supported_models",[]))  # Get models for lang1, default to empty if not found
+    return list(models1)
+
+
+def get_summarizer_models(lang1, lang2):
+    """Finds the union of summarizer models for two languages using a compact data structure."""
+
+    models1 = set(get_language_config(lang1).get("supported_models",[]))  # Get models for lang1, default to empty if not found
+    models2 = set(get_language_config(lang2).get("supported_models",[]))  # Get models for lang2, default to empty if not found
+    union_models = list(models1.intersection(models2))
+    return union_models
+
+
+def get_sources_config(filename):
+    with open(filename, 'r') as file:
+        sources_config = json.load(file)
+    return sources_config
+
+
 def publish(sources_config, lang_config, finder_template, \
         summarizer_template, html_filename, rss_filename, section_key, persona_type="persona"):        
 
@@ -186,11 +221,11 @@ def publish(sources_config, lang_config, finder_template, \
             try:
                 all_links = link_cache[source_config["source_url"]]
             except KeyError:
-                all_links = func_timeout(120,fetch_content,\
+                all_links = func_timeout(180,fetch_content,\
                         (source_config["source_url"],"links",source_config["source_language"]))
                 link_cache[source_config["source_url"]] = all_links
 
-            finder_model = random.choice(["OpenAI","Google"])
+            finder_model = random.choice(get_finder_models(source_config["source_language"]))
             best_links = get_smart_answer(
                 finder_template.render(**locals()),\
                 all_links,\
@@ -202,11 +237,11 @@ def publish(sources_config, lang_config, finder_template, \
             try:
                 article_text = article_cache[link]
             except KeyError:
-                article_text = func_timeout(120,fetch_content,\
+                article_text = func_timeout(180,fetch_content,\
                         (link,source_config["source_parser"],lang_config["publishing_language"]))
                 article_cache[link] = article_text
 
-            summarizer_model = random.choice(lang_config["summarizer_models"])
+            summarizer_model = random.choice(get_summarizer_models(source_config["source_language"],lang_config["publishing_language"]))
             article_summary = get_smart_answer(
                     summarizer_template.render(**locals()),\
                     article_text,\
@@ -266,27 +301,6 @@ def publish(sources_config, lang_config, finder_template, \
                                    article_rss, rss_filename,\
                                    lang_config, section_key)
     logging.info(complete_html)
-
-
-def load_template(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return Template(file.read())
-
-
-def get_language_config(language):
-    with open('config/languages.json', 'r') as file:
-        lang_configs = json.load(file)
-    
-    for item in lang_configs:
-        if item.get("publishing_language") == language:
-            return item
-    return None
-
-
-def get_sources_config(filename):
-    with open(filename, 'r') as file:
-        sources_config = json.load(file)
-    return sources_config
 
 
 def deploy_language(publishing_language):
