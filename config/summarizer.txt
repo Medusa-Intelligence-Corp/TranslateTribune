@@ -26,27 +26,18 @@ Assign a "data-front-page-score" of 2 if the article covers any of the following
 - Major technological advancements or product launches
 - National political developments or elections
 - All video game news, including game releases, updates, or industry events
+- All github projects or technical articles
 
 Assign a "data-front-page-score" of 1 if the article is any of the following:
-- News items not relevant to an international audience
-- Local, city, or regional news
-– Local or city social, political, or economic developments
 – Consumer-focused deals, reviews, or tips
-- Human-interest stories
-- Local crime stories or accidents
 - Updates to existing products or services
 - Weather reports or forecasts
-– Local elections, e.g. for mayor or councilperson
-- Minor celebrity news or gossip
-
-Assign a "data-front-page-score" of 1 if the content is not a news article or is any of the following:
 - 404 error pages or articles about missing content
 - Website terms of service or privacy policy pages
 - Pages discussing website cookies, explaining how cookies are being used and managed
 - Pages discussing privacy policies or user data collection
 - Pages discussing content that is blocked and not available
 - Sponsored content or advertorials
-- Any content that is clearly not a news article or informative piece
 
 As a world-class editor, you have extremely high standards in what you give scores of 2 or 3 for. When in doubt, give the article a score of 1.
 
