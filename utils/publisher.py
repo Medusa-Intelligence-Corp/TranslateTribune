@@ -257,7 +257,6 @@ def publish(sources_config, lang_config, finder_template, \
             article_dict[article_title]["html"] = article_summary
             article_dict[article_title]["score"] = front_page_score
             article_dict[article_title]["id"] = article_id
-            source_countries_published.append(source_config["source_country"])
             logging.info(article_summary)
         except FunctionTimedOut:    
             logging.info("Function timed out")
