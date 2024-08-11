@@ -203,19 +203,10 @@ def publish(sources_config, lang_config, finder_template, \
 
     random.shuffle(sources_config)
 
-    source_countries_published = []
     article_dict = {}
 
     for source_config in sources_config:
         try:
-            #as a rule, we don't publish same-language summaries
-            if source_config["source_language"] == lang_config["publishing_language"]:
-                continue
-
-            #we also only publish from one source country per day
-            if source_config["source_country"] in source_countries_published:
-                continue
-
             logging.info(source_config["source"])
 
             try:

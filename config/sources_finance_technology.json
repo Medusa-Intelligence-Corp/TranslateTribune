@@ -108,15 +108,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Spain",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/spain.png",
-    "source_flag_emoji": "&#x1F1EA;&#x1F1F8;",
-    "source": "3DJuegos",
-    "source_url": "https://www.3djuegos.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "Italy",
     "source_language": "Italian",
     "source_flag": "./assets/png/italy.png",
@@ -124,15 +115,6 @@
     "source": "Tutto Android",
     "source_url": "https://www.tuttoandroid.net/",
     "source_parser": "readability"
-  },
-  {
-    "source_country": "Poland",
-    "source_language": "Polish",
-    "source_flag": "./assets/png/poland.png",
-    "source_flag_emoji": "&#x1F1F5;&#x1F1F1;",
-    "source": "Spidersweb",
-    "source_url": "https://spidersweb.pl/",
-    "source_parser": "goose"
   },
   {
     "source_country": "Netherlands",
@@ -162,30 +144,12 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "United Kingdom",
-    "source_language": "English",
-    "source_flag": "./assets/png/uk.png",
-    "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
-    "source": "TechCrunch UK",
-    "source_url": "https://techcrunch.com/uk/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "Wired",
-    "source_url": "https://www.wired.com/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Japan",
-    "source_language": "Japanese",
-    "source_flag": "./assets/png/japan.png",
-    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
-    "source": "TechCrunch Japan",
-    "source_url": "https://jp.techcrunch.com/",
+    "source": "Hacker News",
+    "source_url": "https://news.ycombinator.com/",
     "source_parser": "readability"
   },
   {
@@ -205,24 +169,6 @@
     "source": "Github",
     "source_url": "https://github.com/trending?spoken_language_code=zh",
     "source_parser": "goose"
-  },
-  {
-    "source_country": "France",
-    "source_language": "French",
-    "source_flag": "./assets/png/france.png",
-    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "Les Echos Entrepreneurs",
-    "source_url": "https://business.lesechos.fr/entrepreneurs/",
-    "source_parser": "readability"
-  },
-{
-    "source_country": "France",
-    "source_language": "French",
-    "source_flag": "./assets/png/france.png",
-    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "Le Monde",
-    "source_url": "https://www.lemonde.fr/intelligence-artificielle/",
-    "source_parser": "readability"
   },
   {
     "source_country": "Brazil",
@@ -252,15 +198,6 @@
     "source_parser": "goose"
   },
   {
-    "source_country": "Germany",
-    "source_language": "German",
-    "source_flag": "./assets/png/germany.png",
-    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
-    "source": "t3n",
-    "source_url": "https://t3n.de/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "Russia",
     "source_language": "Russian",
     "source_flag": "./assets/png/russia.png",
@@ -270,66 +207,21 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Mexico",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/mexico.png",
-    "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
-    "source": "Entrepreneur en Español",
-    "source_url": "https://www.entrepreneur.com/es",
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/png/uk.png",
+    "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
+    "source": "Financial Times",
+    "source_url": "https://www.ft.com/",
     "source_parser": "readability"
   },
   {
-    "source_country": "Spain",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/spain.png",
-    "source_flag_emoji": "&#x1F1EA;&#x1F1F8;",
-    "source": "Xataka",
-    "source_url": "https://www.xataka.com/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Italy",
-    "source_language": "Italian",
-    "source_flag": "./assets/png/italy.png",
-    "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
-    "source": "Wired Italia",
-    "source_url": "https://www.wired.it/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Poland",
-    "source_language": "Polish",
-    "source_flag": "./assets/png/poland.png",
-    "source_flag_emoji": "&#x1F1F5;&#x1F1F1;",
-    "source": "Antyweb",
-    "source_url": "https://antyweb.pl/",
-    "source_parser": "goose"
-  },
-  {
-    "source_country": "Netherlands",
-    "source_language": "Dutch",
-    "source_flag": "./assets/png/netherlands.png",
-    "source_flag_emoji": "&#x1F1F3;&#x1F1F1;",
-    "source": "Emerce",
-    "source_url": "https://www.emerce.nl/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Sweden",
-    "source_language": "Swedish",
-    "source_flag": "./assets/png/sweden.png",
-    "source_flag_emoji": "&#x1F1F8;&#x1F1EA;",
-    "source": "Breakit",
-    "source_url": "https://www.breakit.se/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Ukraine",
-    "source_language": "Ukrainian",
-    "source_flag": "./assets/png/ukraine.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
-    "source": "AIN.UA",
-    "source_url": "https://ain.ua/",
+    "source_country": "India",
+    "source_language": "English",
+    "source_flag": "./assets/png/india.png",
+    "source_flag_emoji": "&#x1F1EE;&#x1F1F3;",
+    "source": "Economic Times (tech)",
+    "source_url": "https://economictimes.indiatimes.com/tech",
     "source_parser": "readability"
   }
 ]
