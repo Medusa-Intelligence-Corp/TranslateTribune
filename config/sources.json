@@ -149,7 +149,7 @@
     "source_flag": "./assets/png/us.png",
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "NextDraft",
-    "source_url": "https://www.nextdraft.com/",
+    "source_url": "https://nextdraft.com/",
     "source_parser": "readability"
   },
   {
@@ -169,15 +169,6 @@
     "source": "Le Monde",
     "source_url": "https://www.lemonde.fr/",
     "source_parser": "readability"
-  },
-  {
-    "source_country": "Taiwan",
-    "source_language": "Chinese",
-    "source_flag": "./assets/png/taiwan.png",
-    "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
-    "source": "United Daily News",
-    "source_url": "https://udn.com/",
-    "source_parser": "text"
   },
   {
     "source_country": "Ukraine",
