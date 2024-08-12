@@ -171,6 +171,15 @@
     "source_parser": "readability"
   },
   {
+    "source_country": "Germany",
+    "source_language": "English",
+    "source_flag": "./assets/png/germany.png",
+    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
+    "source": "Codeberg",
+    "source_url": "https://codeberg.org/explore/repos",
+    "source_parser": "readability"
+  },
+  {
     "source_country": "Brazil",
     "source_language": "Portuguese",
     "source_flag": "./assets/png/brazil.png",
