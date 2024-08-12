@@ -162,13 +162,13 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "China",
-    "source_language": "Chinese",
-    "source_flag": "./assets/png/china.png",
-    "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "Github",
-    "source_url": "https://github.com/trending?spoken_language_code=zh",
-    "source_parser": "goose"
+    "source_url": "https://github.com/trending",
+    "source_parser": "readability"
   },
   {
     "source_country": "Brazil",
