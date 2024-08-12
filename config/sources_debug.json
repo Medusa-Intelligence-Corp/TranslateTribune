@@ -11,6 +11,33 @@
     "summarizer_model": "Claude 3h"
   },
   {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "Github",
+    "source_url": "https://github.com/trending",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Germany",
+    "source_language": "English",
+    "source_flag": "./assets/png/germany.png",
+    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
+    "source": "Codeberg",
+    "source_url": "https://codeberg.org/explore/repos",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "Polymarket",
+    "source_url": "https://polymarket.com/markets?_s=volume_24hr:desc",
+    "source_parser": "readability"
+  },  
+  {
     "source_country": "Mexico",
     "source_language": "Spanish",
     "source_flag": "./assets/png/mexico.png",

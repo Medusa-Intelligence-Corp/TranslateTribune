@@ -104,23 +104,81 @@ def fetch_content(url, mode, language):
         article = g.extract(raw_html=driver.page_source)
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
-        #This selects all 'a' tags, keeps track of their order in the document
-        #Then gives the 50 longest links (combined length of url and text)
-        #The assumption is that article titles are optimized for SEO
-        #and an article name is longer than a command like "Sign Out" or 
-        #some other garbage link we don't want to see
-        text = driver.execute_script("""
-          const links = Array.from(document.querySelectorAll('a'));
-          const csvLines = links.map((link, index) => `${index + 1},"${link.textContent.trim()}","${link.href}"`);
-          const sortedLines = csvLines.sort((a, b) => b.length - a.length);
-          const topTenLines = sortedLines.slice(0, 50);
-          const reorderedLines = topTenLines.sort((a, b) => {
-            const indexA = parseInt(a.split(',')[0]);
-            const indexB = parseInt(b.split(',')[0]);
-            return indexA - indexB;
-          });
-          return reorderedLines.join('\\n');
-        """)
+        # check if the url contains codeberg or github
+        if "codeberg" in url or "github" in url:
+            text = driver.execute_script("""
+                function extractTextAndLinks() {
+                  // Function to get visible text from an element
+                  function getVisibleText(element) {
+                    if (element.nodeType === Node.TEXT_NODE) {
+                      return element.textContent.trim();
+                    }
+
+                    if (element.nodeType !== Node.ELEMENT_NODE) {
+                      return '';
+                    }
+
+                    const style = window.getComputedStyle(element);
+                    if (style.display === 'none' || style.visibility === 'hidden') {
+                      return '';
+                    }
+
+                    let text = '';
+                    for (let child of element.childNodes) {
+                      text += getVisibleText(child);
+                    }
+                    return text;
+                  }
+
+                  // Function to convert relative URL to absolute URL
+                  function getAbsoluteUrl(relativeUrl) {
+                    const a = document.createElement('a');
+                    a.href = relativeUrl;
+                    return a.href;
+                  }
+
+                  const result = [];
+                  const containers = document.querySelectorAll('.Box-row, .flex-item');
+
+                  containers.forEach(container => {
+                    // Extract visible text from this container
+                    const visibleText = getVisibleText(container).replace(/\s+/g, ' ').trim();
+
+                    // Extract hrefs from anchor tags within this container, convert to absolute URLs,
+                    // and filter out 'stargazers' and 'forks' links
+                    const links = Array.from(container.querySelectorAll('a'))
+                      .map(a => getAbsoluteUrl(a.getAttribute('href')))
+                      .filter(href => href && !href.includes('stargazers') && !href.includes('forks'));
+
+                    result.push({
+                      text: visibleText,
+                      links: links
+                    });
+                  });
+
+                  return result;
+                }
+
+                return extractTextAndLinks();
+            """)
+        else:
+            #This selects all 'a' tags, keeps track of their order in the document
+            #Then gives the 50 longest links (combined length of url and text)
+            #The assumption is that article titles are optimized for SEO
+            #and an article name is longer than a command like "Sign Out" or 
+            #some other garbage link we don't want to see
+            text = driver.execute_script("""
+              const links = Array.from(document.querySelectorAll('a'));
+              const csvLines = links.map((link, index) => `${index + 1},"${link.textContent.trim()}","${link.href}"`);
+              const sortedLines = csvLines.sort((a, b) => b.length - a.length);
+              const topTenLines = sortedLines.slice(0, 50);
+              const reorderedLines = topTenLines.sort((a, b) => {
+                const indexA = parseInt(a.split(',')[0]);
+                const indexB = parseInt(b.split(',')[0]);
+                return indexA - indexB;
+              });
+              return reorderedLines.join('\\n');
+            """)
     else:
         raise UnsupportedModeException(mode)
     

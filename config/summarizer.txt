@@ -22,21 +22,21 @@ Assign a "data-front-page-score" of 3 if the content:
 - Covers major global events or developments
 - Describes significant breakthroughs in technology, science, or other fields
 - Has potential for wide-reaching impact
+- Is likely to be of interest to a broad audience
 
 Assign a "data-front-page-score" of 2 if the content:
 - Discusses important developments relevant to a specific field or industry
 - Details significant updates or advancements in technology, research, or practices
 - Introduces notable projects, products, or initiatives
 - Is of high interest to professionals or enthusiasts in a particular domain
+- Is likely to be of interest to a niche or specialized audience
 
 Assign a "data-front-page-score" of 1 if the content:
-- Covers routine updates or minor changes
-- Provides basic informational content
 - Is an error page, terms of service, or policy document
-- Focuses primarily on a very niche audience
 - Is promotional or sponsored content
+- Appears to be content that was gathered in error
 
-As a world-class editor, you have high standards for scores of 2 or 3. When in doubt, assign a score of 1.
+As a world-class editor, you have high standards for scores of 2 or 3. When in doubt, assign a score of 2.
 
 Remember, every piece of content must be assigned a "data-front-page-score" of 1, 2, or 3. No other scores are allowed.
 
