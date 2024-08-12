@@ -45,15 +45,6 @@
     "source_parser": "goose"
   },
   {
-    "source_country": "France",
-    "source_language": "French",
-    "source_flag": "./assets/png/france.png",
-    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "FrenchWeb",
-    "source_url": "https://www.frenchweb.fr",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "Brazil",
     "source_language": "Portuguese",
     "source_flag": "./assets/png/brazil.png",
@@ -153,15 +144,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Switzerland",
-    "source_language": "French",
-    "source_flag": "./assets/png/switzerland.png",
-    "source_flag_emoji": "&#x1F1E8;&#x1F1ED;",
-    "source": "ICTjournal",
-    "source_url": "https://www.ictjournal.ch/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
@@ -180,42 +162,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Brazil",
-    "source_language": "Portuguese",
-    "source_flag": "./assets/png/brazil.png",
-    "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
-    "source": "Canaltech",
-    "source_url": "https://canaltech.com.br/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Chile",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/chile.png",
-    "source_flag_emoji": "&#x1F1E8;&#x1F1F1;",
-    "source": "Chocale",
-    "source_url": "https://www.chocale.cl/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "South Korea",
-    "source_language": "Korean",
-    "source_flag": "./assets/png/korea.png",
-    "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
-    "source": "Platum",
-    "source_url": "https://platum.kr/",
-    "source_parser": "goose"
-  },
-  {
-    "source_country": "Russia",
-    "source_language": "Russian",
-    "source_flag": "./assets/png/russia.png",
-    "source_flag_emoji": "&#x1F1F7;&#x1F1FA;",
-    "source": "Rusbase",
-    "source_url": "https://rb.ru/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
@@ -229,7 +175,7 @@
     "source_language": "English",
     "source_flag": "./assets/png/india.png",
     "source_flag_emoji": "&#x1F1EE;&#x1F1F3;",
-    "source": "Economic Times (tech)",
+    "source": "Economic Times",
     "source_url": "https://economictimes.indiatimes.com/tech",
     "source_parser": "readability"
   }

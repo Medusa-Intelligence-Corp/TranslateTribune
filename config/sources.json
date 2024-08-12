@@ -118,11 +118,11 @@
   },
   {
     "source_country": "Singapore",
-    "source_language": "Chinese",
+    "source_language": "English",
     "source_flag": "./assets/png/singapore.png",
     "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
-    "source": "Lianhe Zaobao",
-    "source_url": "https://www.zaobao.com.sg",
+    "source": "The Straits Times",
+    "source_url": "https://www.straitstimes.com/global",
     "source_parser": "readability"
   },
   {
@@ -171,15 +171,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Ukraine",
-    "source_language": "Ukrainian",
-    "source_flag": "./assets/png/ukraine.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1E6;",
-    "source": "Hromadske",
-    "source_url": "https://hromadske.ua/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "South Korea",
     "source_language": "Korean",
     "source_flag": "./assets/png/korea.png",
@@ -189,21 +180,12 @@
     "source_parser": "goose"
   },
   {
-    "source_country": "Qatar",
-    "source_language": "Arabic",
-    "source_flag": "./assets/png/qatar.png",
-    "source_flag_emoji": "&#x1F1F6;&#x1F1E6;",
-    "source": "Al-Sharq",
-    "source_url": "https://al-sharq.com/",
-    "source_parser": "goose"
-  },  
-  {
     "source_country": "India",
     "source_language": "English",
     "source_flag": "./assets/png/india.png",
     "source_flag_emoji": "&#x1F1EE;&#x1F1F3;",
-    "source": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/",
+    "source": "News 18",
+    "source_url": "https://www.news18.com/",
     "source_parser": "readability"
   },
   {
