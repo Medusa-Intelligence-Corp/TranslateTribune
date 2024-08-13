@@ -20,6 +20,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
 RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
+RUN pip3 install --upgrade --no-cache-dir pip
+
 # Install Python dependencies in the virtual environment
 RUN pip3 install --no-cache-dir \
     selenium \

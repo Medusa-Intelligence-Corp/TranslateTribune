@@ -200,9 +200,6 @@ def get_sources_config(filename):
 
 def publish(sources_config, lang_config, finder_template, \
         summarizer_template, html_filename, rss_filename, section_key, persona_type="persona"):        
-
-    random.shuffle(sources_config)
-
     article_dict = {}
 
     for source_config in sources_config:

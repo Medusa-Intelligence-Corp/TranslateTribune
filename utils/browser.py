@@ -105,62 +105,87 @@ def fetch_content(url, mode, language):
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
         # check if the url contains codeberg or github
-        if "codeberg" in url or "github" in url:
+        if "codeberg" in url:
             text = driver.execute_script("""
-                function extractTextAndLinks() {
-                  // Function to get visible text from an element
-                  function getVisibleText(element) {
-                    if (element.nodeType === Node.TEXT_NODE) {
-                      return element.textContent.trim();
+                function extractCodebergTextAndLinks() {
+                    function getAbsoluteUrl(relativeUrl) {
+                        return new URL(relativeUrl, window.location.origin).href;
                     }
 
-                    if (element.nodeType !== Node.ELEMENT_NODE) {
-                      return '';
+                    function extractText(element, selector) {
+                        const el = element.querySelector(selector);
+                        return el ? el.textContent.trim() : '';
                     }
 
-                    const style = window.getComputedStyle(element);
-                    if (style.display === 'none' || style.visibility === 'hidden') {
-                      return '';
-                    }
+                    return Array.from(document.querySelectorAll('.flex-item')).map(container => {
+                        const nameElements = container.querySelectorAll('.flex-item-title .text.primary.name');
+                        const fullName = Array.from(nameElements).map(el => el.textContent.trim()).join('/');
+                        const link = nameElements.length ? getAbsoluteUrl(nameElements[nameElements.length - 1].getAttribute('href')) : '';
 
-                    let text = '';
-                    for (let child of element.childNodes) {
-                      text += getVisibleText(child);
-                    }
-                    return text;
-                  }
+                        const description = extractText(container, '.flex-item-body');
+                        const language = extractText(container, '.flex-item-trailing .flex-text-inline');
+                        const updateTime = container.querySelector('.flex-item-body relative-time')?.getAttribute('datetime') || '';
 
-                  // Function to convert relative URL to absolute URL
-                  function getAbsoluteUrl(relativeUrl) {
-                    const a = document.createElement('a');
-                    a.href = relativeUrl;
-                    return a.href;
-                  }
-
-                  const result = [];
-                  const containers = document.querySelectorAll('.Box-row, .flex-item');
-
-                  containers.forEach(container => {
-                    // Extract visible text from this container
-                    const visibleText = getVisibleText(container).replace(/\s+/g, ' ').trim();
-
-                    // Extract hrefs from anchor tags within this container, convert to absolute URLs,
-                    // and filter out 'stargazers' and 'forks' links
-                    const links = Array.from(container.querySelectorAll('a'))
-                      .map(a => getAbsoluteUrl(a.getAttribute('href')))
-                      .filter(href => href && !href.includes('stargazers') && !href.includes('forks'));
-
-                    result.push({
-                      text: visibleText,
-                      links: links
-                    });
-                  });
-
-                  return result;
+                        return [
+                            fullName,
+                            link,
+                            description,
+                            language ? 'Language: ' + language : '',
+                            updateTime ? 'Updated: ' + updateTime : ''
+                        ].filter(Boolean).join('\\n');
+                    }).join('\\n\\n');
                 }
-
-                return extractTextAndLinks();
+                return extractCodebergTextAndLinks();
             """)
+            text = text.replace('\\n', '\n')
+        elif "github" in url:
+            text = driver.execute_script("""
+                function extractGitHubTextAndLinks() {
+                    function getVisibleText(element) {
+                        if (element.nodeType === Node.TEXT_NODE) {
+                            return element.textContent.trim();
+                        }
+                        if (element.nodeType !== Node.ELEMENT_NODE) {
+                            return '';
+                        }
+                        const style = window.getComputedStyle(element);
+                        if (style.display === 'none' || style.visibility === 'hidden') {
+                            return '';
+                        }
+                        let text = '';
+                        for (let child of element.childNodes) {
+                            text += getVisibleText(child);
+                        }
+                        return text;
+                    }
+
+                    function getAbsoluteUrl(relativeUrl) {
+                        const a = document.createElement('a');
+                        a.href = relativeUrl;
+                        return a.href;
+                    }
+
+                    let result = '';
+                    const containers = document.querySelectorAll('.Box-row');
+
+                    containers.forEach(container => {
+                        const visibleText = getVisibleText(container).replace(/\\s+/g, ' ').trim();
+                        const links = Array.from(container.querySelectorAll('a.Link'))
+                            .map(a => getAbsoluteUrl(a.getAttribute('href')))
+                            .filter(href => href && !href.endsWith('/stargazers') && !href.endsWith('/forks'));
+
+                        result += visibleText + '\\n';
+                        links.forEach(link => {
+                            result += link + '\\n';
+                        });
+                        result += '\\n';
+                    });
+
+                    return result.trim();
+                }
+                return extractGitHubTextAndLinks();
+            """)
+            text = text.replace('\\n', '\n')
         else:
             #This selects all 'a' tags, keeps track of their order in the document
             #Then gives the 50 longest links (combined length of url and text)
