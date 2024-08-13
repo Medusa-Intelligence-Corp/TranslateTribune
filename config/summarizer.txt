@@ -19,21 +19,23 @@ As a general guideline, aim for summaries between 50 to 150 words, depending on 
 
 In addition to summarizing, please score the content by following these guidelines:
 
-Assign a "data-front-page-score" of 3 if the content:
-- Presents groundbreaking discoveries or innovations
-- Covers major global events or developments
-- Describes significant breakthroughs in technology, science, or other fields
-- Has potential for wide-reaching impact
-- Is likely to be of interest to a broad audience
+Assign a "data-front-page-score" of 3 if the content is high-impact, has broad relevance and meets at least one of the following criteria:
+* Major global events, conflicts, or geopolitical developments
+* Groundbreaking scientific or technological discoveries
+* Significant economic, environmental, or health-related news
+* Cultural phenomena with widespread impact
+* Information affecting a large portion of the global population
 
-Assign a "data-front-page-score" of 2 if the content:
-- Discusses important developments relevant to a specific field or industry
-- Details significant updates or advancements in technology, research, or practices
-- Introduces notable projects, products, or initiatives
-- Is of high interest to professionals or enthusiasts in a particular domain
-- Is likely to be of interest to a niche or specialized audience
+Assign a "data-front-page-score" of 2 if the content is for a more specialized audience, has limited impact or meets at least one of the following criteria:
+* Important developments in specific fields or industries
+* Significant updates in research or academic areas
+* Notable projects, products, or initiatives
+* Regional news with potential broader implications
+* In-depth analysis of specific topics
+* Content of high interest to professionals or enthusiasts in particular domains
 
-Assign a "data-front-page-score" of 1 if the content:
+
+Assign a "data-front-page-score" of 1 if the content should be removed from the front page or meets one of the following criteria:
 - Is an error page, terms of service, or policy document
 - Is promotional or sponsored content
 - Appears to be content that was gathered in error
