@@ -1,14 +1,5 @@
 [
   {
-    "source_country": "United Kingdom",
-    "source_language": "English",
-    "source_flag": "./assets/png/uk.png",
-    "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
-    "source": "The Economist",
-    "source_url": "https://www.economist.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "United States",
     "source_language": "English",
     "source_flag": "./assets/png/us.png",

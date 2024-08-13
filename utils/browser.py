@@ -105,7 +105,7 @@ def fetch_content(url, mode, language):
         text = article.title + "\n\n" + article.cleaned_text 
     elif mode=="links":
         # check if the url contains codeberg or github
-        if "codeberg" in url:
+        if "codeberg.org" in url:
             text = driver.execute_script("""
                 function extractCodebergTextAndLinks() {
                     function getAbsoluteUrl(relativeUrl) {
@@ -138,7 +138,7 @@ def fetch_content(url, mode, language):
                 return extractCodebergTextAndLinks();
             """)
             text = text.replace('\\n', '\n')
-        elif "github" in url:
+        elif "github.com" in url:
             text = driver.execute_script("""
                 function extractGitHubTextAndLinks() {
                     function getVisibleText(element) {
@@ -184,6 +184,30 @@ def fetch_content(url, mode, language):
                     return result.trim();
                 }
                 return extractGitHubTextAndLinks();
+            """)
+            text = text.replace('\\n', '\n')
+        elif "polymarket.com" in url:
+            text = driver.execute_script("""
+                function getFirstAnchorsFromQuickBuyCards() {
+                  const cards = document.querySelectorAll('[id^="quick-buy-card"]');
+                  let result = [];
+
+                  for (let i = 0; i < Math.min(cards.length, 20); i++) {
+                    const anchor = cards[i].querySelector('a');
+                    if (anchor) {
+                      result.push(anchor.textContent.trim() + ' - ' + anchor.href);
+                    }
+                  }
+
+                  // Pad the result to ensure 20 items
+                  while (result.length < 20) {
+                    result.push('');
+                  }
+
+                  return result.join('\\n');
+                }
+
+                return getFirstAnchorsFromQuickBuyCards();
             """)
             text = text.replace('\\n', '\n')
         else:
