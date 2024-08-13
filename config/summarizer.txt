@@ -27,17 +27,15 @@ Assign a "data-front-page-score" of 3 if the content is high-impact, has broad r
 * Information affecting a large portion of the global population
 
 Assign a "data-front-page-score" of 2 if the content is for a more specialized audience, has limited impact or meets at least one of the following criteria:
-* Important developments in specific fields or industries
-* Significant updates in research or academic areas
-* Notable projects, products, or initiatives
+* Developments in specific fields or industries
+* Updates in research or academic areas
+* New projects, products, or initiatives
 * Regional news with potential broader implications
 * In-depth analysis of specific topics
-* Content of high interest to professionals or enthusiasts in particular domains
-
+* Content of interest to professionals or enthusiasts in particular domains
 
 Assign a "data-front-page-score" of 1 if the content should be removed from the front page or meets one of the following criteria:
-- Is an error page, terms of service, or policy document
-- Is promotional or sponsored content
+- Is an error page, terms of service, or policy document (e.g. cookie policy, privacy policy)
 - Appears to be content that was gathered in error
 
 As a world-class editor, you have high standards for scores of 2 or 3. When in doubt, assign a score of 2.
