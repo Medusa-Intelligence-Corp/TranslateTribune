@@ -81,6 +81,15 @@
     "source_parser": "readability"
   },
   {
+    "source_country": "Singapore",
+    "source_language": "English",
+    "source_flag": "./assets/png/singapore.png",
+    "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
+    "source": "The Straits Times",
+    "source_url": "https://www.straitstimes.com/global",
+    "source_parser": "readability"
+  },
+  {
     "source_country": "Russia",
     "source_language": "Russian",
     "source_flag": "./assets/png/russia.png",
