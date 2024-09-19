@@ -153,15 +153,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "France",
-    "source_language": "French",
-    "source_flag": "./assets/png/france.png",
-    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "Le Monde",
-    "source_url": "https://www.lemonde.fr/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "South Korea",
     "source_language": "Korean",
     "source_flag": "./assets/png/korea.png",
