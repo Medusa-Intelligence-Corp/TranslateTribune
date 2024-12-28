@@ -27,6 +27,33 @@
     "source_parser": "readability"
   },
   {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "The New York Times",
+    "source_url": "https://www.nytimes.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "LibRed",
+    "source_url": "https://safereddit.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
+    "source": "Le Figaro",
+    "source_url": "https://www.lefigaro.fr",
+    "source_parser": "readability"
+  },
+  {
     "source_country": "China",
     "source_language": "Chinese",
     "source_flag": "./assets/png/china.png",
@@ -123,15 +150,6 @@
     "source_flag_emoji": "&#x1F1F0;&#x1F1EA;",
     "source": "Taifa Leo",
     "source_url": "https://taifaleo.nation.co.ke",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "United States",
-    "source_language": "English",
-    "source_flag": "./assets/png/us.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "NextDraft",
-    "source_url": "https://nextdraft.com/",
     "source_parser": "readability"
   },
   {
