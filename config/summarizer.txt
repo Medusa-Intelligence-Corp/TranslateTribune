@@ -9,9 +9,7 @@ Your summary should:
 4. Capture the essence of the content in a concise manner
 5. Be engaging and informative for {{ lang_config["publishing_language"] }} speakers
 
-Avoid simply rephrasing or rewording the original text. Instead, focus on condensing the information and highlighting the most important aspects. {% if source_config["source_language"] != lang_config["publishing_language"] %}Translate and {% endif %}refine the title to make it compelling to {{ lang_config["publishing_language"] }} speakers. {% if source_config["source"] == "Polymarket" %}
-Please write an engaging title that incorporates the betting odds from Polymarket for significant political and global events. Ensure the title is compelling and accurately reflects the odds displayed on the site.
-{% endif %}
+Avoid simply rephrasing or rewording the original text. Instead, focus on condensing the information and highlighting the most important aspects. {% if source_config["source_language"] != lang_config["publishing_language"] %}Translate and {% endif %}refine the title to make it compelling to {{ lang_config["publishing_language"] }} speakers. 
 
 As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original content. Do not write a summary that is shorter than 50 words or longer than 150 words. Ensure that your summary provides a true overview of the content, rather than just focusing on a few details.
 

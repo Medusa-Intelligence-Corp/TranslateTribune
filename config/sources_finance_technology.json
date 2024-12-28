@@ -94,17 +94,8 @@
     "source_language": "Spanish",
     "source_flag": "./assets/png/mexico.png",
     "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
-    "source": "Xataka México",
-    "source_url": "https://www.xataka.com.mx/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Italy",
-    "source_language": "Italian",
-    "source_flag": "./assets/png/italy.png",
-    "source_flag_emoji": "&#x1F1EE;&#x1F1F9;",
-    "source": "Tutto Android",
-    "source_url": "https://www.tuttoandroid.net/",
+    "source": "ForoBeta",
+    "source_url": "https://www.forobeta.com/",
     "source_parser": "readability"
   },
   {
@@ -153,6 +144,16 @@
     "source_parser": "readability"
   },
   {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "PrivacyGuides",
+    "source_url": "https://discuss.privacyguides.net",
+    "source_parser": "readability"
+  },
+
+  {
     "source_country": "Germany",
     "source_language": "English",
     "source_flag": "./assets/png/germany.png",
@@ -162,12 +163,12 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "United States",
-    "source_language": "English",
-    "source_flag": "./assets/png/us.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "Morningstar",
-    "source_url": "https://www.morningstar.com/news",
+    "source_country": "Germany",
+    "source_language": "German",
+    "source_flag": "./assets/png/germany.png",
+    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
+    "source": "Heise",
+    "source_url": "https://heise.de",
     "source_parser": "readability"
   },
   {
@@ -177,6 +178,24 @@
     "source_flag_emoji": "&#x1F1EE;&#x1F1F3;",
     "source": "Economic Times",
     "source_url": "https://economictimes.indiatimes.com/tech",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
+    "source": "Gameblog",
+    "source_url": "https://www.gameblog.fr/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Japan",
+    "source_language": "Japanese",
+    "source_flag": "./assets/png/japan.png",
+    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
+    "source": "4Gamer",
+    "source_url": "https://www.4gamer.net",
     "source_parser": "readability"
   }
 ]

@@ -2,12 +2,10 @@ Act as {{ lang_config[persona_type] }}, your native tongue is {{ lang_config["pu
 
 {{ source_config["source"] }} has been specifically chosen for its high-quality content from {{ source_config["source_country"] }}, so aim to find the best possible item among the provided links. Carefully evaluate each link, ensuring it:
 1) Is substantive content, not a file (e.g. PDF), video, warning/alert/error page or menu
-2) Covers a current, noteworthy topic that will interest readers
+2) Covers a current, noteworthy topic that will interest readers (most often a news story on engaging forum post)
 3) Provides informative material {% if source_config["source_language"] != lang_config["publishing_language"] %}suitable for translation{% else %}worthy of featuring{% endif %}
 {% if source_config["source"] in ["Github", "Codeberg"] %}
 4) Prioritize cool new projects in the AI space or foundational open source projects
-{% elif source_config["source"] == "Polymarket" %}
-4) Pick an interesting betting market for a trending news story (e.g., presidential elections, sports, Fed decisions, timing of political or military responses)
 {% endif %}
 
 Reference the full URL to the single item you chose in your response using this exact format:
