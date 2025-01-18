@@ -1,0 +1,205 @@
+{
+    "id": "classpass_001",
+    "vendor": "ClassPass",
+    "status": true,
+    "type": "referral",
+    "referral_code": "1PK1LS5U11",
+    "url": "https://classpass.com/refer/1PK1LS5U11",
+    "offer": {
+        "type": "free_trial",
+        "bonus": "20_credits"
+    },
+    "ad_copy": {
+        "en": {
+            "title": "Your Global Fitness Pass Awaits!",
+            "headline": "Get 20 Free Credits to Transform Your Fitness Journey",
+            "content": "Transform your fitness journey with ClassPass! Get exclusive access to thousands of top-rated gyms, fitness studios, and wellness centers worldwide. As my friend, you'll receive a special free trial with 20 bonus credits to explore diverse workouts, from yoga to HIIT, at your own pace. Join millions of satisfied members and discover your perfect workout routine today!"
+        },
+        "es": {
+            "title": "¡Tu Pase Global de Fitness te Espera!",
+            "headline": "Obtén 20 Créditos Gratis para Transformar tu Rutina",
+            "content": "¡Transforma tu rutina de ejercicios con ClassPass! Obtén acceso exclusivo a miles de gimnasios, estudios de fitness y centros de bienestar de primera categoría en todo el mundo. Como mi amigo, recibirás una prueba gratuita especial con 20 créditos extra para explorar diversos entrenamientos, desde yoga hasta HIIT, a tu propio ritmo. ¡Únete a millones de miembros satisfechos y descubre tu rutina perfecta hoy!"
+        },
+        "fr": {
+            "title": "Votre Pass Fitness Global vous Attend !",
+            "headline": "Recevez 20 Crédits Gratuits pour Transformer votre Parcours Fitness",
+            "content": "Transformez votre parcours fitness avec ClassPass ! Accédez en exclusivité à des milliers de salles de sport, studios de fitness et centres de bien-être réputés dans le monde entier. En tant qu'ami, vous recevrez un essai gratuit spécial avec 20 crédits bonus pour explorer divers entraînements, du yoga au HIIT, à votre rythme. Rejoignez des millions de membres satisfaits et découvrez votre routine parfaite dès aujourd'hui !"
+        },
+        "de": {
+            "title": "Ihr Globaler Fitness-Pass Wartet!",
+            "headline": "Erhalten Sie 20 Gratis-Credits für Ihre Fitness-Transformation",
+            "content": "Verwandeln Sie Ihre Fitness-Reise mit ClassPass! Erhalten Sie exklusiven Zugang zu Tausenden von erstklassigen Fitnessstudios, Sportzentren und Wellness-Einrichtungen weltweit. Als mein Freund erhalten Sie eine spezielle kostenlose Testphase mit 20 Bonus-Credits, um verschiedene Workouts von Yoga bis HIIT in Ihrem eigenen Tempo zu erkunden. Schließen Sie sich Millionen zufriedener Mitglieder an und entdecken Sie noch heute Ihre perfekte Trainingsroutine!"
+        },
+        "nl": {
+            "title": "Jouw Wereldwijde Fitness Pass Wacht!",
+            "headline": "Ontvang 20 Gratis Credits om je Fitness Reis te Transformeren",
+            "content": "Transformeer je fitnessreis met ClassPass! Krijg exclusieve toegang tot duizenden toprated sportscholen, fitnessstudio's en wellnesscentra wereldwijd. Als mijn vriend ontvang je een speciale gratis proefperiode met 20 bonuskredieten om diverse workouts te verkennen, van yoga tot HIIT, in je eigen tempo. Sluit je aan bij miljoenen tevreden leden en ontdek vandaag nog je perfecte trainingsroutine!"
+        }
+    }
+},
+{
+    "id": "robinhood_gold_001",
+    "vendor": "Robinhood",
+    "status": true,
+    "type": "credit_card",
+    "referral_code": "d24ecbe3",
+    "url": "https://robinhood.com/creditcard?referral_code=d24ecbe3",
+    "ad_copy": {
+        "en": {
+            "title": "The Future of Finance in Your Wallet",
+            "headline": "Early Access to the Revolutionary Robinhood Gold Card",
+            "content": "Be among the first to experience the innovative Robinhood Gold Card! This exclusive opportunity gives you early access to Robinhood's premier credit card, combining powerful rewards with the seamless integration of your investment journey. Join the financial revolution with a card that understands both your spending and investing needs. Use my exclusive link to secure your spot on the waitlist today!"
+        }
+    }
+},
+{
+    "id": "robinhood_trading_001",
+    "vendor": "Robinhood",
+    "status": true,
+    "type": "trading",
+    "referral_code": "bradf80",
+    "url": "https://join.robinhood.com/bradf80",
+    "offer": {
+        "type": "free_stock",
+        "details": "both_parties"
+    },
+    "ad_copy": {
+        "en": {
+            "title": "Start Your Investment Journey Today",
+            "headline": "Get a Free Stock When You Join Robinhood",
+            "content": "Start your investment journey with Robinhood and get a free stock on us! Experience commission-free trading in stocks, ETFs, options, and cryptocurrencies on our user-friendly platform. When you sign up using my link, we'll both receive a free stock to kickstart your portfolio. Join millions of investors who trust Robinhood for their financial future. No minimum deposit required, start investing today! 🎁"
+        }
+    }
+},
+{
+    "id": "proton_001",
+    "vendor": "ProtonMail",
+    "status": true,
+    "type": "service",
+    "referral_code": "D43FC3R88E9G",
+    "url": "https://pr.tn/ref/D43FC3R88E9G",
+    "ad_copy": {
+        "en": {
+            "title": "Your Privacy Matters",
+            "headline": "Secure Your Email with Swiss Privacy Protection",
+            "content": "Take control of your email privacy with ProtonMail! Experience end-to-end encrypted email from Switzerland's leading secure email provider. With zero-access encryption, no ads, and built-in privacy features, your communications stay truly private. Perfect for professionals, privacy enthusiasts, and anyone who values digital security. Join millions of users protecting their correspondence today!"
+        },
+        "de": {
+            "title": "Ihre Privatsphäre ist wichtig",
+            "headline": "Sichern Sie Ihre E-Mails mit Schweizer Datenschutz",
+            "content": "Übernehmen Sie die Kontrolle über Ihre E-Mail-Privatsphäre mit ProtonMail! Erleben Sie Ende-zu-Ende-verschlüsselte E-Mails vom führenden Schweizer Anbieter. Mit Zero-Access-Verschlüsselung, ohne Werbung und integrierten Datenschutzfunktionen bleiben Ihre Kommunikationen wirklich privat. Schließen Sie sich Millionen von Nutzern an, die ihre Korrespondenz schützen!"
+        },
+        "fr": {
+            "title": "Votre Confidentialité est Importante",
+            "headline": "Sécurisez Vos Emails avec la Protection Suisse",
+            "content": "Prenez le contrôle de votre confidentialité avec ProtonMail ! Découvrez le service de messagerie chiffré de bout en bout du principal fournisseur suisse. Avec un chiffrement à zéro accès, sans publicité et des fonctionnalités de confidentialité intégrées, vos communications restent vraiment privées. Rejoignez des millions d'utilisateurs qui protègent leur correspondance !"
+        }
+    }
+},
+{
+    "id": "deleteme_001",
+    "vendor": "DeleteMe",
+    "status": true,
+    "type": "privacy_service",
+    "referral_code": "RFR-295973-N64CPW",
+    "url": "https://joindeleteme.com/refer?coupon=RFR-295973-N64CPW",
+    "offer": {
+        "referrer_bonus": "50_usd",
+        "referee_discount": "20_percent"
+    },
+    "ad_copy": {
+        "en": {
+            "title": "Take Back Control of Your Online Privacy",
+            "headline": "20% Off Professional Privacy Protection Services",
+            "content": "Protect your online privacy with DeleteMe, the leading data removal service! Take control of your digital footprint as expert privacy advocates work to remove your personal information from data broker sites. Get 20% off your subscription and help safeguard your privacy from data brokers, marketers, and potential threats. Join thousands of satisfied customers who trust DeleteMe to keep their personal information private and secure!"
+        }
+    }
+},
+{
+    "id": "vultr_001",
+    "vendor": "Vultr",
+    "status": true,
+    "type": "cloud_hosting",
+    "referral_code": "9710418",
+    "url": "https://www.vultr.com/?ref=9710418",
+    "ad_copy": {
+        "en": {
+            "title": "Power Your Projects with Cloud Excellence",
+            "headline": "High-Performance Cloud Infrastructure at Your Fingertips",
+            "content": "Launch your next project on Vultr's high-performance cloud infrastructure! Experience lightning-fast SSD storage, powerful compute instances, and global data center locations. Perfect for developers, businesses, and tech enthusiasts who demand reliable, scalable hosting solutions. Start with our user-friendly platform and take advantage of competitive pricing today!"
+        },
+        "ja": {
+            "title": "クラウドの卓越性であなたのプロジェクトを強化",
+            "headline": "高性能クラウドインフラを、すぐに",
+            "content": "Vultrの高性能クラウドインフラストラクチャで次のプロジェクトを始めましょう！高速SSDストレージ、強力なコンピュートインスタンス、グローバルなデータセンターロケーションをご体験ください。信頼性が高くスケーラブルなホスティングソリューションを求める開発者、企業、テック愛好家に最適です。使いやすいプラットフォームと競争力のある価格で、今すぐ始めましょう！"
+        },
+        "zh": {
+            "title": "用云计算卓越性为您的项目助力",
+            "headline": "触手可及的高性能云基础设施",
+            "content": "在Vultr高性能云基础设施上启动您的下一个项目！体验闪电般快速的SSD存储、强大的计算实例和全球数据中心位置。为追求可靠、可扩展托管解决方案的开发人员、企业和技术爱好者提供完美选择。立即使用我们用户友好的平台，享受具有竞争力的价格！"
+        }
+    }
+},
+{
+    "id": "ladder_001",
+    "vendor": "Ladder Life",
+    "status": true,
+    "type": "insurance",
+    "referral_code": "AAAQAA92Tgk",
+    "url": "https://lddr.io/p/c/AAAQAA92Tgk",
+    "ad_copy": {
+        "en": {
+            "title": "Life Insurance Made Simple",
+            "headline": "Protect Your Family's Future in Minutes",
+            "content": "Secure your family's future with Ladder's innovative life insurance! Experience a fully digital, hassle-free application process with coverage decisions in minutes, not weeks. No commissioned agents, no hidden fees - just straightforward, flexible term life insurance that can be adjusted as your life changes. Join thousands of families who trust Ladder for their life insurance needs. Get your personalized quote today!"
+        }
+    }
+},
+{
+    "id": "fantastical_001",
+    "vendor": "Fantastical",
+    "status": false,
+    "type": "software",
+    "ad_copy": {
+        "en": {
+            "title": "Your Calendar, Revolutionized",
+            "headline": "The Smart Calendar App That Works Like You Think",
+            "content": "Revolutionize your calendar experience with Fantastical! Transform how you manage your time with natural language event creation, beautiful interfaces, and powerful scheduling features. Perfect for professionals, teams, and anyone seeking to master their schedule. Seamlessly sync across all your devices and enjoy the most intelligent calendar app available."
+        }
+    }
+},
+{
+    "id": "google_one_001",
+    "vendor": "Google One",
+    "status": true,
+    "type": "subscription",
+    "referral_code": "0KZYXKMQ",
+    "url": "g.co/g1referral/0KZYXKMQ",
+    "offer": {
+        "type": "trial",
+        "duration": "4_months",
+        "product": "google_one_ai_premium",
+        "referee_discount": "80_usd"
+    },
+    "restrictions": {
+        "max_referrals": 3
+    },
+    "ad_copy": {
+        "en": {
+            "title": "Unlock the Power of AI",
+            "headline": "Save $80 on Gemini Advanced with Google One",
+            "content": "Upgrade your AI experience with Google One AI Premium! Get an exclusive $80 discount on Gemini Advanced and enjoy a 4-month trial of Google One's premium features. Access cutting-edge AI technology, enhanced cloud storage, and premium support. Share the innovation with friends and transform how you work, create, and interact with AI. Limited offer for the first 3 referrals!"
+        },
+        "ja": {
+            "title": "AIのパワーを解き放つ",
+            "headline": "Google OneでGemini Advancedが$80お得に",
+            "content": "Google One AIプレミアムで、AIエクスペリエンスをアップグレード！Gemini Advancedで80ドルの特別割引を受け、Google Oneプレミアム機能を4ヶ月間お試しください。最先端のAI技術、強化されたクラウドストレージ、プレミアムサポートにアクセス。最初の3件の紹介に限定されたオファーです！"
+        },
+        "zh": {
+            "title": "释放AI的力量",
+            "headline": "通过Google One节省Gemini Advanced 80美元",
+            "content": "使用Google One AI Premium升级您的AI体验！在Gemini Advanced上获得80美元独家优惠，享受4个月的Google One高级功能试用。访问尖端AI技术、增强的云存储和高级支持。仅限前3个推荐名额！"
+        }
+    }
+}
+
