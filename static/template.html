@@ -594,7 +594,15 @@
     </div>
     <script>
       const isMobileOrTablet = window.innerWidth < 760;
-      const currentLanguage = document.documentElement.lang; 
+      const currentLanguage = document.documentElement.lang;
+      const currentUrl = window.location.pathname;
+      const links = document.querySelectorAll("a.nav-link");
+
+      links.forEach((link) => {
+        if (currentUrl.endsWith(link.getAttribute("href"))) {
+          link.classList.add("active");
+        }
+      });
 
       const languages = {
         en: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
