@@ -1,205 +1,74 @@
+[
 {
-    "id": "classpass_001",
-    "vendor": "ClassPass",
+    "source": "ProtonMail",
     "status": true,
-    "type": "referral",
-    "referral_code": "1PK1LS5U11",
-    "url": "https://classpass.com/refer/1PK1LS5U11",
-    "offer": {
-        "type": "free_trial",
-        "bonus": "20_credits"
-    },
-    "ad_copy": {
-        "en": {
-            "title": "Your Global Fitness Pass Awaits!",
-            "headline": "Get 20 Free Credits to Transform Your Fitness Journey",
-            "content": "Transform your fitness journey with ClassPass! Get exclusive access to thousands of top-rated gyms, fitness studios, and wellness centers worldwide. As my friend, you'll receive a special free trial with 20 bonus credits to explore diverse workouts, from yoga to HIIT, at your own pace. Join millions of satisfied members and discover your perfect workout routine today!"
-        },
-        "es": {
-            "title": "¡Tu Pase Global de Fitness te Espera!",
-            "headline": "Obtén 20 Créditos Gratis para Transformar tu Rutina",
-            "content": "¡Transforma tu rutina de ejercicios con ClassPass! Obtén acceso exclusivo a miles de gimnasios, estudios de fitness y centros de bienestar de primera categoría en todo el mundo. Como mi amigo, recibirás una prueba gratuita especial con 20 créditos extra para explorar diversos entrenamientos, desde yoga hasta HIIT, a tu propio ritmo. ¡Únete a millones de miembros satisfechos y descubre tu rutina perfecta hoy!"
-        },
-        "fr": {
-            "title": "Votre Pass Fitness Global vous Attend !",
-            "headline": "Recevez 20 Crédits Gratuits pour Transformer votre Parcours Fitness",
-            "content": "Transformez votre parcours fitness avec ClassPass ! Accédez en exclusivité à des milliers de salles de sport, studios de fitness et centres de bien-être réputés dans le monde entier. En tant qu'ami, vous recevrez un essai gratuit spécial avec 20 crédits bonus pour explorer divers entraînements, du yoga au HIIT, à votre rythme. Rejoignez des millions de membres satisfaits et découvrez votre routine parfaite dès aujourd'hui !"
-        },
-        "de": {
-            "title": "Ihr Globaler Fitness-Pass Wartet!",
-            "headline": "Erhalten Sie 20 Gratis-Credits für Ihre Fitness-Transformation",
-            "content": "Verwandeln Sie Ihre Fitness-Reise mit ClassPass! Erhalten Sie exklusiven Zugang zu Tausenden von erstklassigen Fitnessstudios, Sportzentren und Wellness-Einrichtungen weltweit. Als mein Freund erhalten Sie eine spezielle kostenlose Testphase mit 20 Bonus-Credits, um verschiedene Workouts von Yoga bis HIIT in Ihrem eigenen Tempo zu erkunden. Schließen Sie sich Millionen zufriedener Mitglieder an und entdecken Sie noch heute Ihre perfekte Trainingsroutine!"
-        },
-        "nl": {
-            "title": "Jouw Wereldwijde Fitness Pass Wacht!",
-            "headline": "Ontvang 20 Gratis Credits om je Fitness Reis te Transformeren",
-            "content": "Transformeer je fitnessreis met ClassPass! Krijg exclusieve toegang tot duizenden toprated sportscholen, fitnessstudio's en wellnesscentra wereldwijd. Als mijn vriend ontvang je een speciale gratis proefperiode met 20 bonuskredieten om diverse workouts te verkennen, van yoga tot HIIT, in je eigen tempo. Sluit je aan bij miljoenen tevreden leden en ontdek vandaag nog je perfecte trainingsroutine!"
-        }
-    }
-},
-{
-    "id": "robinhood_gold_001",
-    "vendor": "Robinhood",
-    "status": true,
-    "type": "credit_card",
-    "referral_code": "d24ecbe3",
-    "url": "https://robinhood.com/creditcard?referral_code=d24ecbe3",
-    "ad_copy": {
-        "en": {
-            "title": "The Future of Finance in Your Wallet",
-            "headline": "Early Access to the Revolutionary Robinhood Gold Card",
-            "content": "Be among the first to experience the innovative Robinhood Gold Card! This exclusive opportunity gives you early access to Robinhood's premier credit card, combining powerful rewards with the seamless integration of your investment journey. Join the financial revolution with a card that understands both your spending and investing needs. Use my exclusive link to secure your spot on the waitlist today!"
-        }
-    }
-},
-{
-    "id": "robinhood_trading_001",
-    "vendor": "Robinhood",
-    "status": true,
-    "type": "trading",
-    "referral_code": "bradf80",
-    "url": "https://join.robinhood.com/bradf80",
-    "offer": {
-        "type": "free_stock",
-        "details": "both_parties"
-    },
-    "ad_copy": {
-        "en": {
-            "title": "Start Your Investment Journey Today",
-            "headline": "Get a Free Stock When You Join Robinhood",
-            "content": "Start your investment journey with Robinhood and get a free stock on us! Experience commission-free trading in stocks, ETFs, options, and cryptocurrencies on our user-friendly platform. When you sign up using my link, we'll both receive a free stock to kickstart your portfolio. Join millions of investors who trust Robinhood for their financial future. No minimum deposit required, start investing today! 🎁"
-        }
-    }
-},
-{
-    "id": "proton_001",
-    "vendor": "ProtonMail",
-    "status": true,
-    "type": "service",
-    "referral_code": "D43FC3R88E9G",
     "url": "https://pr.tn/ref/D43FC3R88E9G",
-    "ad_copy": {
-        "en": {
-            "title": "Your Privacy Matters",
-            "headline": "Secure Your Email with Swiss Privacy Protection",
-            "content": "Take control of your email privacy with ProtonMail! Experience end-to-end encrypted email from Switzerland's leading secure email provider. With zero-access encryption, no ads, and built-in privacy features, your communications stay truly private. Perfect for professionals, privacy enthusiasts, and anyone who values digital security. Join millions of users protecting their correspondence today!"
-        },
-        "de": {
-            "title": "Ihre Privatsphäre ist wichtig",
-            "headline": "Sichern Sie Ihre E-Mails mit Schweizer Datenschutz",
-            "content": "Übernehmen Sie die Kontrolle über Ihre E-Mail-Privatsphäre mit ProtonMail! Erleben Sie Ende-zu-Ende-verschlüsselte E-Mails vom führenden Schweizer Anbieter. Mit Zero-Access-Verschlüsselung, ohne Werbung und integrierten Datenschutzfunktionen bleiben Ihre Kommunikationen wirklich privat. Schließen Sie sich Millionen von Nutzern an, die ihre Korrespondenz schützen!"
-        },
-        "fr": {
-            "title": "Votre Confidentialité est Importante",
-            "headline": "Sécurisez Vos Emails avec la Protection Suisse",
-            "content": "Prenez le contrôle de votre confidentialité avec ProtonMail ! Découvrez le service de messagerie chiffré de bout en bout du principal fournisseur suisse. Avec un chiffrement à zéro accès, sans publicité et des fonctionnalités de confidentialité intégrées, vos communications restent vraiment privées. Rejoignez des millions d'utilisateurs qui protègent leur correspondance !"
-        }
-    }
+    "source_country": "ADVERTISEMENT",
+    "source_flag": "./assets/png/ad.png",
+    "source_flag_emoji": "&#x26A0;&#xFE0F;",
+    "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Your Privacy Matters: Swiss-Grade Email Security for a Connected World\n    </div>\n    <div class=\"article-content hidden\">\n        <p>In an era where data has become the new global currency, ProtonMail stands as Switzerland's premier secure email solution. With state-of-the-art end-to-end encryption and zero-access technology, we're revolutionizing how professionals and privacy enthusiasts protect their digital communications. Our commitment? No ads, no tracking, just pure, uncompromised privacy.</p>\n\n        <p>Join millions of users who've taken control of their digital footprint. Whether you're a business professional safeguarding sensitive correspondence or an individual valuing personal privacy, ProtonMail offers the security you deserve. Sign up with the link below and enjoy a free month of Proton Mail Plus.</p>\n    </div>\n</div>",
+    "hu": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Az Ön Adatvédelme Fontos: Svájci Szintű E-mail Biztonság egy Összekapcsolt Világban\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Egy olyan korban, amikor az adat az új globális valuta, a ProtonMail Svájc vezető biztonságos e-mail megoldásaként áll rendelkezésre. Csúcstechnológiás végpontok közötti titkosítással és zéró-hozzáférésű technológiával forradalmasítjuk, ahogyan a szakemberek és az adatvédelem-tudatos felhasználók védik digitális kommunikációjukat. Elkötelezettségünk? Nincsenek hirdetések, nincs nyomkövetés, csak tiszta, kompromisszummentes adatvédelem.</p>\n\n        <p>Csatlakozzon a milliókhoz, akik már átvették az irányítást digitális lábnyomuk felett. Legyen Ön üzleti szakember, aki bizalmas levelezését védi, vagy magánszemély, aki értékeli a személyes adatvédelmet, a ProtonMail biztosítja az Önnek járó biztonságot. Regisztráljon az alábbi linken és élvezzen egy hónap ingyenes Proton Mail Plus szolgáltatást.</p>\n    </div>\n</div>",
+    "sw": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Faragha Yako ni Muhimu: Usalama wa Barua Pepe wa Kiwango cha Uswisi kwa Ulimwengu Uliunganishwa\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Katika enzi ambapo data imekuwa sarafu mpya ya kimataifa, ProtonMail inasimama kama suluhisho bora la barua pepe salama la Uswisi. Kwa teknolojia ya usimbaji fiche ya kisasa na ufikiaji-sifuri, tunabadilisha jinsi wataalamu na wapenzi wa faragha wanavyolinda mawasiliano yao ya kidijitali. Ahadi yetu? Hakuna matangazo, hakuna ufuatiliaji, ni faragha safi na isiyoathiriwa tu.</p>\n\n        <p>Jiunge na mamilioni ya watumiaji ambao wamechukua udhibiti wa alama zao za kidijitali. Iwe wewe ni mtaalamu wa biashara unayehifadhi mawasiliano nyeti au mtu binafsi anayethamini faragha ya kibinafsi, ProtonMail inatoa usalama unaoostahili. Jiandikishe kupitia kiungo cha hapa chini na ufurahie mwezi mmoja wa bure wa Proton Mail Plus.</p>\n    </div>\n</div>",
+    "zh": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        您的隐私至关重要：为互联世界提供瑞士级别的电子邮件安全\n    </div>\n    <div class=\"article-content hidden\">\n        <p>在数据成为新型全球货币的时代，ProtonMail作为瑞士首要的安全电子邮件解决方案脱颖而出。凭借最先进的端到端加密和零访问技术，我们正在革新专业人士和隐私爱好者保护其数字通信的方式。我们的承诺？没有广告，没有跟踪，只有纯粹、不妥协的隐私保护。</p>\n\n        <p>加入数百万已经掌控自己数字足迹的用户。无论您是保护敏感通信的商务专业人士，还是重视个人隐私的个人用户，ProtonMail都能为您提供应得的安全保障。点击下方链接注册，即可享受一个月的Proton Mail Plus免费试用。</p>\n    </div>\n</div>",
+    "es": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Su Privacidad Importa: Seguridad de Correo Electrónico de Grado Suizo para un Mundo Conectado\n    </div>\n    <div class=\"article-content hidden\">\n        <p>En una era donde los datos se han convertido en la nueva moneda global, ProtonMail se destaca como la principal solución de correo electrónico seguro de Suiza. Con cifrado de extremo a extremo de última generación y tecnología de acceso cero, estamos revolucionando cómo los profesionales y entusiastas de la privacidad protegen sus comunicaciones digitales. ¿Nuestro compromiso? Sin anuncios, sin rastreo, solo privacidad pura y sin compromisos.</p>\n\n        <p>Únase a millones de usuarios que han tomado el control de su huella digital. Ya sea un profesional de negocios que protege correspondencia sensible o un individuo que valora la privacidad personal, ProtonMail ofrece la seguridad que merece. Regístrese con el enlace a continuación y disfrute de un mes gratis de Proton Mail Plus.</p>\n    </div>\n</div>",
+    "ar": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        خصوصيتك مهمة: أمان البريد الإلكتروني بمستوى سويسري لعالم متصل\n    </div>\n    <div class=\"article-content hidden\">\n        <p>في عصر أصبحت فيه البيانات العملة العالمية الجديدة، يقف ProtonMail كحل البريد الإلكتروني الآمن الأول في سويسرا. مع تقنية التشفير المتطورة من طرف إلى طرف وتقنية الوصول الصفري، نحن نُحدث ثورة في كيفية حماية المحترفين وعشاق الخصوصية لاتصالاتهم الرقمية. التزامنا؟ لا إعلانات، لا تتبع، فقط خصوصية خالصة وغير مساومة.</p>\n\n        <p>انضم إلى ملايين المستخدمين الذين تولوا السيطرة على بصمتهم الرقمية. سواء كنت محترفًا في مجال الأعمال تحمي المراسلات الحساسة أو فردًا يقدر الخصوصية الشخصية، يوفر ProtonMail الأمان الذي تستحقه. اشترك عبر الرابط أدناه واستمتع بشهر مجاني من Proton Mail Plus.</p>\n    </div>\n</div>",
+    "fr": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Votre Vie Privée Compte : Sécurité Email de Niveau Suisse pour un Monde Connecté\n    </div>\n    <div class=\"article-content hidden\">\n        <p>À une époque où les données sont devenues la nouvelle monnaie mondiale, ProtonMail s'impose comme la première solution de messagerie sécurisée de Suisse. Avec un chiffrement de bout en bout à la pointe de la technologie et une technologie d'accès zéro, nous révolutionnons la façon dont les professionnels et les passionnés de la confidentialité protègent leurs communications numériques. Notre engagement ? Pas de publicité, pas de traçage, juste une confidentialité pure et sans compromis.</p>\n\n        <p>Rejoignez des millions d'utilisateurs qui ont pris le contrôle de leur empreinte numérique. Que vous soyez un professionnel protégeant une correspondance sensible ou un particulier soucieux de sa vie privée, ProtonMail offre la sécurité que vous méritez. Inscrivez-vous via le lien ci-dessous et profitez d'un mois gratuit de Proton Mail Plus.</p>\n    </div>\n</div>",
+    "ru": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Ваша Конфиденциальность Имеет Значение: Швейцарский Уровень Защиты Электронной Почты для Связанного Мира\n    </div>\n    <div class=\"article-content hidden\">\n        <p>В эпоху, когда данные стали новой мировой валютой, ProtonMail является ведущим швейцарским решением для защищенной электронной почты. Благодаря современному сквозному шифрованию и технологии нулевого доступа, мы революционизируем способ защиты цифровых коммуникаций для профессионалов и энтузиастов конфиденциальности. Наше обязательство? Никакой рекламы, никакого отслеживания, только чистая, бескомпромиссная конфиденциальность.</p>\n\n        <p>Присоединяйтесь к миллионам пользователей, которые взяли под контроль свой цифровой след. Независимо от того, являетесь ли вы бизнес-профессионалом, защищающим конфиденциальную переписку, или частным лицом, ценящим личную конфиденциальность, ProtonMail предлагает заслуженную вами безопасность. Зарегистрируйтесь по ссылке ниже и получите бесплатный месяц использования Proton Mail Plus.</p>\n    </div>\n</div>",
+    "pt": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Sua Privacidade Importa: Segurança de E-mail de Nível Suíço para um Mundo Conectado\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Em uma era em que os dados se tornaram a nova moeda global, o ProtonMail se destaca como a principal solução de e-mail seguro da Suíça. Com criptografia ponta a ponta de última geração e tecnologia de acesso zero, estamos revolucionando como profissionais e entusiastas da privacidade protegem suas comunicações digitais. Nosso compromisso? Sem anúncios, sem rastreamento, apenas privacidade pura e sem compromissos.</p>\n\n        <p>Junte-se a milhões de usuários que assumiram o controle de sua pegada digital. Seja você um profissional de negócios protegendo correspondência sensível ou um indivíduo que valoriza a privacidade pessoal, o ProtonMail oferece a segurança que você merece. Cadastre-se através do link abaixo e aproveite um mês gratuito do Proton Mail Plus.</p>\n    </div>\n</div>",
+    "de": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Ihre Privatsphäre ist wichtig: E-Mail-Sicherheit auf Schweizer Niveau für eine vernetzte Welt\n    </div>\n    <div class=\"article-content hidden\">\n        <p>In einer Zeit, in der Daten zur neuen globalen Währung geworden sind, steht ProtonMail als führende Schweizer Lösung für sichere E-Mails. Mit modernster Ende-zu-Ende-Verschlüsselung und Zero-Access-Technologie revolutionieren wir die Art und Weise, wie Fachleute und Datenschutz-Enthusiasten ihre digitale Kommunikation schützen. Unser Versprechen? Keine Werbung, kein Tracking, nur reine, kompromisslose Privatsphäre.</p>\n\n        <p>Schließen Sie sich Millionen von Nutzern an, die die Kontrolle über ihren digitalen Fußabdruck übernommen haben. Ob Sie ein Geschäftsprofi sind, der vertrauliche Korrespondenz schützt, oder eine Privatperson, die Wert auf persönliche Privatsphäre legt, ProtonMail bietet Ihnen die Sicherheit, die Sie verdienen. Registrieren Sie sich über den untenstehenden Link und genießen Sie einen kostenlosen Monat Proton Mail Plus.</p>\n    </div>\n</div>",
+    "ja": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        あなたのプライバシーが重要です：つながる世界のためのスイス品質のメールセキュリティ\n    </div>\n    <div class=\"article-content hidden\">\n        <p>データが新しい世界通貨となった時代において、ProtonMailはスイスを代表する安全なメールソリューションとして確立されています。最先端のエンドツーエンド暗号化とゼロアクセス技術により、専門家やプライバシー愛好家のデジタルコミュニケーションの保護方法に革命を起こしています。私たちの約束？広告なし、追跡なし、純粋で妥協のないプライバシーだけです。</p>\n\n        <p>デジタルフットプリントをコントロールする何百万人ものユーザーに加わりましょう。機密性の高い通信を保護するビジネスプロフェッショナルでも、個人のプライバシーを重視する個人でも、ProtonMailは皆様に相応しいセキュリティを提供します。下のリンクから登録して、Proton Mail Plusの1ヶ月無料をお楽しみください。</p>\n    </div>\n</div>",
+    "tr": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Gizliliğiniz Önemlidir: Bağlantılı Bir Dünya için İsviçre Kalitesinde E-posta Güvenliği\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Verinin yeni küresel para birimi haline geldiği bir çağda, ProtonMail İsviçre'nin önde gelen güvenli e-posta çözümü olarak öne çıkıyor. En son teknoloji uçtan uca şifreleme ve sıfır erişim teknolojisiyle, profesyonellerin ve gizlilik meraklılarının dijital iletişimlerini koruma şeklini devrimleştiriyoruz. Taahhüdümüz? Reklam yok, izleme yok, sadece saf, ödünsüz gizlilik.</p>\n\n        <p>Dijital ayak izlerinin kontrolünü ele alan milyonlarca kullanıcıya katılın. İster hassas yazışmaları koruyan bir iş profesyoneli, ister kişisel gizliliğe değer veren bir birey olun, ProtonMail hak ettiğiniz güvenliği sunar. Aşağıdaki bağlantıdan kaydolun ve bir ay ücretsiz Proton Mail Plus'ın keyfini çıkarın.</p>\n    </div>\n</div>",
+    "ko": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        당신의 프라이버시가 중요합니다: 연결된 세상을 위한 스위스 등급의 이메일 보안\n    </div>\n    <div class=\"article-content hidden\">\n        <p>데이터가 새로운 글로벌 통화가 된 시대에, ProtonMail은 스위스의 최고 보안 이메일 솔루션으로 자리잡았습니다. 최첨단 종단간 암호화와 제로 액세스 기술로, 전문가와 프라이버시 애호가들의 디지털 통신 보호 방식에 혁명을 일으키고 있습니다. 우리의 약속? 광고 없음, 추적 없음, 오직 순수하고 타협 없는 프라이버시만 있을 뿐입니다.</p>\n\n        <p>자신의 디지털 발자국을 통제하는 수백만 사용자들과 함께하세요. 민감한 서신을 보호하는 비즈니스 전문가이든, 개인 프라이버시를 중요시하는 개인이든, ProtonMail은 귀하가 받아야 할 보안을 제공합니다. 아래 링크로 가입하고 Proton Mail Plus 한 달 무료 사용을 즐기세요.</p>\n    </div>\n</div>",
+    "it": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        La Tua Privacy Conta: Sicurezza Email di Livello Svizzero per un Mondo Connesso\n    </div>\n    <div class=\"article-content hidden\">\n        <p>In un'era in cui i dati sono diventati la nuova valuta globale, ProtonMail si distingue come la principale soluzione di posta elettronica sicura della Svizzera. Con la crittografia end-to-end all'avanguardia e la tecnologia zero-access, stiamo rivoluzionando il modo in cui professionisti e appassionati della privacy proteggono le loro comunicazioni digitali. Il nostro impegno? Niente pubblicità, niente tracciamento, solo privacy pura e senza compromessi.</p>\n\n        <p>Unisciti a milioni di utenti che hanno preso il controllo della loro impronta digitale. Che tu sia un professionista che protegge la corrispondenza sensibile o un individuo che apprezza la privacy personale, ProtonMail offre la sicurezza che meriti. Registrati tramite il link qui sotto e goditi un mese gratuito di Proton Mail Plus.</p>\n    </div>\n</div>",
+    "nl": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Uw Privacy is Belangrijk: Zwitserse E-mailbeveiliging voor een Verbonden Wereld\n    </div>\n    <div class=\"article-content hidden\">\n        <p>In een tijdperk waarin data de nieuwe mondiale valuta is geworden, staat ProtonMail bekend als Zwitserlands toonaangevende beveiligde e-mailoplossing. Met geavanceerde end-to-end encryptie en zero-access technologie revolutioneren we hoe professionals en privacy-enthousiastelingen hun digitale communicatie beschermen. Onze belofte? Geen advertenties, geen tracking, alleen pure, compromisloze privacy.</p>\n\n        <p>Sluit u aan bij miljoenen gebruikers die controle hebben genomen over hun digitale voetafdruk. Of u nu een zakelijke professional bent die gevoelige correspondentie beschermt of een individu die persoonlijke privacy waardeert, ProtonMail biedt de beveiliging die u verdient. Registreer via de onderstaande link en geniet van een gratis maand Proton Mail Plus.</p>\n    </div>\n</div>",
+    "fa": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        حریم خصوصی شما مهم است: امنیت ایمیل در سطح سوئیس برای دنیای متصل\n    </div>\n    <div class=\"article-content hidden\">\n        <p>در عصری که داده‌ها به ارز جدید جهانی تبدیل شده‌اند، ProtonMail به عنوان راهکار برتر ایمیل امن سوئیس شناخته می‌شود. با رمزگذاری پیشرفته نقطه به نقطه و فناوری دسترسی صفر، ما در حال انقلاب در نحوه محافظت متخصصان و علاقه‌مندان به حریم خصوصی از ارتباطات دیجیتال خود هستیم. تعهد ما چیست؟ بدون تبلیغات، بدون ردیابی، فقط حریم خصوصی خالص و بدون مصالحه.</p>\n\n        <p>به میلیون‌ها کاربری بپیوندید که کنترل ردپای دیجیتال خود را به دست گرفته‌اند. چه یک متخصص کسب و کار باشید که از مکاتبات حساس محافظت می‌کند یا فردی که به حریم خصوصی شخصی اهمیت می‌دهد، ProtonMail امنیتی را که شایسته آن هستید ارائه می‌دهد. از طریق لینک زیر ثبت‌نام کنید و از یک ماه رایگان Proton Mail Plus بهره‌مند شوید.</p>\n    </div>\n</div>",
+    "uk": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Ваша Конфіденційність Має Значення: Швейцарський Рівень Захисту Електронної Пошти для Пов'язаного Світу\n    </div>\n    <div class=\"article-content hidden\">\n        <p>У епоху, коли дані стали новою світовою валютою, ProtonMail виступає провідним швейцарським рішенням для захищеної електронної пошти. За допомогою найсучаснішого наскрізного шифрування та технології нульового доступу ми революціонізуємо спосіб захисту цифрових комунікацій для професіоналів та ентузіастів конфіденційності. Наше зобов'язання? Жодної реклами, жодного відстеження, лише чиста, безкомпромісна конфіденційність.</p>\n\n        <p>Приєднуйтесь до мільйонів користувачів, які взяли під контроль свій цифровий слід. Незалежно від того, чи ви бізнес-професіонал, який захищає конфіденційну кореспонденцію, чи особа, яка цінує особисту конфіденційність, ProtonMail пропонує безпеку, на яку ви заслуговуєте. Зареєструйтеся за посиланням нижче та отримайте безкоштовний місяць Proton Mail Plus.</p>\n    </div>\n</div>",
+    "sv": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Din Integritet Är Viktig: Schweizisk E-postsäkerhet för en Uppkopplad Värld\n    </div>\n    <div class=\"article-content hidden\">\n        <p>I en era där data har blivit den nya globala valutan står ProtonMail som Schweiz främsta säkra e-postlösning. Med toppmodern end-to-end-kryptering och noll-åtkomst-teknologi revolutionerar vi hur yrkesverksamma och integritetsentusiaster skyddar sin digitala kommunikation. Vårt löfte? Inga annonser, ingen spårning, bara ren, kompromisslös integritet.</p>\n\n        <p>Anslut dig till miljontals användare som har tagit kontroll över sitt digitala fotavtryck. Oavsett om du är en yrkesperson som skyddar känslig korrespondens eller en individ som värdesätter personlig integritet, erbjuder ProtonMail den säkerhet du förtjänar. Registrera dig via länken nedan och få en gratis månad av Proton Mail Plus.</p>\n    </div>\n</div>",
+    "he": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        הפרטיות שלך חשובה: אבטחת דואר אלקטרוני ברמה שווייצרית לעולם מחובר\n    </div>\n    <div class=\"article-content hidden\">\n        <p>בעידן שבו מידע הפך למטבע העולמי החדש, ProtonMail עומד כפתרון הדואר האלקטרוני המאובטח המוביל של שווייץ. עם הצפנה מתקדמת מקצה לקצה וטכנולוגיית גישה-אפס, אנו מחוללים מהפכה באופן שבו אנשי מקצוע וחובבי פרטיות מגנים על התקשורת הדיגיטלית שלהם. המחויבות שלנו? ללא פרסומות, ללא מעקב, רק פרטיות טהורה וללא פשרות.</p>\n\n        <p>הצטרפו למיליוני משתמשים שלקחו שליטה על טביעת הרגל הדיגיטלית שלהם. בין אם אתם אנשי מקצוע המגנים על תכתובת רגישה או אדם פרטי המעריך פרטיות אישית, ProtonMail מציע את האבטחה שמגיעה לכם. הירשמו דרך הקישור למטה ותיהנו מחודש חינם של Proton Mail Plus.</p>\n    </div>\n</div>"
 },
 {
-    "id": "deleteme_001",
-    "vendor": "DeleteMe",
-    "status": true,
-    "type": "privacy_service",
-    "referral_code": "RFR-295973-N64CPW",
-    "url": "https://joindeleteme.com/refer?coupon=RFR-295973-N64CPW",
-    "offer": {
-        "referrer_bonus": "50_usd",
-        "referee_discount": "20_percent"
-    },
-    "ad_copy": {
-        "en": {
-            "title": "Take Back Control of Your Online Privacy",
-            "headline": "20% Off Professional Privacy Protection Services",
-            "content": "Protect your online privacy with DeleteMe, the leading data removal service! Take control of your digital footprint as expert privacy advocates work to remove your personal information from data broker sites. Get 20% off your subscription and help safeguard your privacy from data brokers, marketers, and potential threats. Join thousands of satisfied customers who trust DeleteMe to keep their personal information private and secure!"
-        }
-    }
-},
-{
-    "id": "vultr_001",
-    "vendor": "Vultr",
-    "status": true,
-    "type": "cloud_hosting",
-    "referral_code": "9710418",
-    "url": "https://www.vultr.com/?ref=9710418",
-    "ad_copy": {
-        "en": {
-            "title": "Power Your Projects with Cloud Excellence",
-            "headline": "High-Performance Cloud Infrastructure at Your Fingertips",
-            "content": "Launch your next project on Vultr's high-performance cloud infrastructure! Experience lightning-fast SSD storage, powerful compute instances, and global data center locations. Perfect for developers, businesses, and tech enthusiasts who demand reliable, scalable hosting solutions. Start with our user-friendly platform and take advantage of competitive pricing today!"
-        },
-        "ja": {
-            "title": "クラウドの卓越性であなたのプロジェクトを強化",
-            "headline": "高性能クラウドインフラを、すぐに",
-            "content": "Vultrの高性能クラウドインフラストラクチャで次のプロジェクトを始めましょう！高速SSDストレージ、強力なコンピュートインスタンス、グローバルなデータセンターロケーションをご体験ください。信頼性が高くスケーラブルなホスティングソリューションを求める開発者、企業、テック愛好家に最適です。使いやすいプラットフォームと競争力のある価格で、今すぐ始めましょう！"
-        },
-        "zh": {
-            "title": "用云计算卓越性为您的项目助力",
-            "headline": "触手可及的高性能云基础设施",
-            "content": "在Vultr高性能云基础设施上启动您的下一个项目！体验闪电般快速的SSD存储、强大的计算实例和全球数据中心位置。为追求可靠、可扩展托管解决方案的开发人员、企业和技术爱好者提供完美选择。立即使用我们用户友好的平台，享受具有竞争力的价格！"
-        }
-    }
-},
-{
-    "id": "ladder_001",
-    "vendor": "Ladder Life",
-    "status": true,
-    "type": "insurance",
-    "referral_code": "AAAQAA92Tgk",
-    "url": "https://lddr.io/p/c/AAAQAA92Tgk",
-    "ad_copy": {
-        "en": {
-            "title": "Life Insurance Made Simple",
-            "headline": "Protect Your Family's Future in Minutes",
-            "content": "Secure your family's future with Ladder's innovative life insurance! Experience a fully digital, hassle-free application process with coverage decisions in minutes, not weeks. No commissioned agents, no hidden fees - just straightforward, flexible term life insurance that can be adjusted as your life changes. Join thousands of families who trust Ladder for their life insurance needs. Get your personalized quote today!"
-        }
-    }
-},
-{
-    "id": "fantastical_001",
-    "vendor": "Fantastical",
+    "source": "DeleteMe",
     "status": false,
-    "type": "software",
-    "ad_copy": {
-        "en": {
-            "title": "Your Calendar, Revolutionized",
-            "headline": "The Smart Calendar App That Works Like You Think",
-            "content": "Revolutionize your calendar experience with Fantastical! Transform how you manage your time with natural language event creation, beautiful interfaces, and powerful scheduling features. Perfect for professionals, teams, and anyone seeking to master their schedule. Seamlessly sync across all your devices and enjoy the most intelligent calendar app available."
-        }
-    }
+    "url": "https://joindeleteme.com/refer?coupon=RFR-295973-N64CPW",
+    "source_country": "ADVERTISEMENT",
+    "source_flag": "./assets/png/ad.png",
+    "source_flag_emoji": "&#x26A0;&#xFE0F;",
+    "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Reclaim Your Digital Privacy: Remove Your Personal Data from the Internet\n    </div>\n    <div class=\"article-content hidden\">\n        <p>In today's digital age, your personal information is being bought and sold by data brokers without your consent. DeleteMe empowers you to take back control by automatically removing your sensitive data from over 600 data broker sites. Our expert privacy team works tirelessly to protect your identity, address, and personal details from being exposed online.</p>\n\n        <p>Join thousands of privacy-conscious individuals who trust DeleteMe to safeguard their digital footprint. Whether you're concerned about identity theft, doxxing, or simply value your privacy, our service provides the protection you need. Sign up now to support TranslateTribune.</p>\n    </div>\n</div>"
 },
 {
-    "id": "google_one_001",
-    "vendor": "Google One",
-    "status": true,
-    "type": "subscription",
-    "referral_code": "0KZYXKMQ",
-    "url": "g.co/g1referral/0KZYXKMQ",
-    "offer": {
-        "type": "trial",
-        "duration": "4_months",
-        "product": "google_one_ai_premium",
-        "referee_discount": "80_usd"
-    },
-    "restrictions": {
-        "max_referrals": 3
-    },
-    "ad_copy": {
-        "en": {
-            "title": "Unlock the Power of AI",
-            "headline": "Save $80 on Gemini Advanced with Google One",
-            "content": "Upgrade your AI experience with Google One AI Premium! Get an exclusive $80 discount on Gemini Advanced and enjoy a 4-month trial of Google One's premium features. Access cutting-edge AI technology, enhanced cloud storage, and premium support. Share the innovation with friends and transform how you work, create, and interact with AI. Limited offer for the first 3 referrals!"
-        },
-        "ja": {
-            "title": "AIのパワーを解き放つ",
-            "headline": "Google OneでGemini Advancedが$80お得に",
-            "content": "Google One AIプレミアムで、AIエクスペリエンスをアップグレード！Gemini Advancedで80ドルの特別割引を受け、Google Oneプレミアム機能を4ヶ月間お試しください。最先端のAI技術、強化されたクラウドストレージ、プレミアムサポートにアクセス。最初の3件の紹介に限定されたオファーです！"
-        },
-        "zh": {
-            "title": "释放AI的力量",
-            "headline": "通过Google One节省Gemini Advanced 80美元",
-            "content": "使用Google One AI Premium升级您的AI体验！在Gemini Advanced上获得80美元独家优惠，享受4个月的Google One高级功能试用。访问尖端AI技术、增强的云存储和高级支持。仅限前3个推荐名额！"
-        }
-    }
+    "source": "Vultr",
+    "status": false,
+    "url": "https://www.vultr.com/?ref=9710813-9J",
+    "source_country": "ADVERTISEMENT",
+    "source_flag": "./assets/png/ad.png",
+    "source_flag_emoji": "&#x26A0;&#xFE0F;",
+    "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        High-Performance Cloud Computing at Your Fingertips\n    </div>\n    <div class=\"article-content hidden\">\n        <p>TranslateTribune uses Vultr, you can too! Experience lightning-fast cloud infrastructure with Vultr's global network of 25+ data centers. Deploy powerful cloud servers, bare metal, and storage solutions in seconds. With their next-generation NVMe SSD storage and AMD EPYC™ processors, your applications will run at peak performance while maintaining cost-effectiveness.</p>\n\n        <p>Join over 1.5 million developers and businesses who trust Vultr for their cloud computing needs. Whether you're launching a startup or scaling an enterprise, our platform offers the flexibility and reliability you demand. Sign up now and receive $100 in credit to explore their cloud solutions (and support TranslateTribune)!</p>\n    </div>\n</div>"
+},
+{
+    "source": "TranslateTribune",
+    "status": false,
+    "url": "https://github.com/Medusa-Intelligence-Corp/TranslateTribune/",
+    "source_country": "ADVERTISEMENT",
+    "source_flag": "./assets/png/ad.png",
+    "source_flag_emoji": "&#x26A0;&#xFE0F;",
+    "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        This Edition is Ad-Free – Help Spread the Word\n    </div>\n    <div class=\"article-content hidden\">\n        <p>TranslateTribune uses AI to translate and curate global news, making international information accessible across language barriers.</p>\n\n        <p>If you find this service valuable, please consider starring the project on GitHub or sharing TranslateTribune with others who might benefit from accessing news in their language. Your support helps expand this service's reach.</p>\n    </div>\n</div>",
+    "hu": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Ez a Kiadás Reklámmentes – Segítsen Terjeszteni\n    </div>\n    <div class=\"article-content hidden\">\n        <p>A mai szám reklámok nélkül jelenik meg. A TranslateTribune mesterséges intelligenciát használ a globális hírek fordításához és válogatásához, hogy a nemzetközi információk nyelvi akadályok nélkül elérhetőek legyenek.</p>\n\n        <p>Ha hasznosnak találja szolgáltatásunkat, kérjük, fontolja meg, hogy csillagot ad projektünknek GitHubon, vagy megosztja a TranslateTribune-t másokkal, akiknek hasznos lehet az anyanyelvükön olvasni a híreket. Támogatása segít szolgáltatásunk hatókörének bővítésében.</p>\n    </div>\n</div>",
+    "sw": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Toleo Hili Halina Matangazo – Tusaidie Kueneza Habari\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Toleo la leo linatolewa bila matangazo. TranslateTribune hutumia AI kutafsiri na kuchagua habari za kimataifa, kufanya taarifa za kimataifa zifikike bila vikwazo vya lugha.</p>\n\n        <p>Ikiwa unaona huduma hii ni ya manufaa, tafadhali fikiria kuweka nyota kwenye mradi wetu katika GitHub au kushiriki TranslateTribune na wengine wanaoweza kufaidika na kupata habari kwa lugha yao. Msaada wako utasaidia kupanua ufikiwaji wa huduma hii.</p>\n    </div>\n</div>",
+    "zh": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        本期无广告 – 请助力传播\n    </div>\n    <div class=\"article-content hidden\">\n        <p>本期内容不含广告。TranslateTribune使用人工智能翻译和整理全球新闻，打破语言障碍，使国际信息触手可及。</p>\n\n        <p>如果您觉得这项服务有价值，请考虑在GitHub上为我们的项目点亮星标，或与可能需要母语新闻服务的人分享TranslateTribune。您的支持将帮助扩大这项服务的影响力。</p>\n    </div>\n</div>",
+    "es": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Esta Edición es Sin Publicidad – Ayúdanos a Difundir\n    </div>\n    <div class=\"article-content hidden\">\n        <p>La edición de hoy se ofrece sin publicidad. TranslateTribune utiliza IA para traducir y seleccionar noticias globales, haciendo que la información internacional sea accesible sin barreras lingüísticas.</p>\n\n        <p>Si encuentra útil este servicio, considere dar una estrella al proyecto en GitHub o compartir TranslateTribune con otros que podrían beneficiarse de acceder a noticias en su idioma. Su apoyo ayuda a expandir el alcance de este servicio.</p>\n    </div>\n</div>",
+    "ar": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        هذا الإصدار بدون إعلانات - ساعدنا في نشر الخبر\n    </div>\n    <div class=\"article-content hidden\">\n        <p>عدد اليوم مقدم بدون إعلانات. يستخدم TranslateTribune الذكاء الاصطناعي لترجمة وتنظيم الأخبار العالمية، مما يجعل المعلومات الدولية متاحة عبر الحواجز اللغوية.</p>\n\n        <p>إذا وجدت هذه الخدمة مفيدة، يرجى النظر في منح المشروع نجمة على GitHub أو مشاركة TranslateTribune مع آخرين قد يستفيدون من الوصول إلى الأخبار بلغتهم. دعمكم يساعد في توسيع نطاق هذه الخدمة.</p>\n    </div>\n</div>",
+    "fr": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Cette Édition est Sans Publicité – Aidez-nous à Faire Passer le Mot\n    </div>\n    <div class=\"article-content hidden\">\n        <p>L'édition d'aujourd'hui est fournie sans publicité. TranslateTribune utilise l'IA pour traduire et organiser les actualités mondiales, rendant l'information internationale accessible au-delà des barrières linguistiques.</p>\n\n        <p>Si vous trouvez ce service utile, pensez à mettre une étoile au projet sur GitHub ou à partager TranslateTribune avec d'autres personnes qui pourraient bénéficier d'accéder aux actualités dans leur langue. Votre soutien aide à étendre la portée de ce service.</p>\n    </div>\n</div>",
+    "ru": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Этот Выпуск Без Рекламы – Помогите Распространить Информацию\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Сегодняшний выпуск предоставляется без рекламы. TranslateTribune использует ИИ для перевода и подборки мировых новостей, делая международную информацию доступной без языковых барьеров.</p>\n\n        <p>Если вы находите этот сервис полезным, пожалуйста, поставьте звезду проекту на GitHub или поделитесь TranslateTribune с другими, кому может быть полезен доступ к новостям на их языке. Ваша поддержка помогает расширить охват этого сервиса.</p>\n    </div>\n</div>",
+    "pt": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Esta Edição é Sem Anúncios – Ajude a Espalhar a Palavra\n    </div>\n    <div class=\"article-content hidden\">\n        <p>A edição de hoje é fornecida sem anúncios. O TranslateTribune usa IA para traduzir e selecionar notícias globais, tornando a informação internacional acessível através das barreiras linguísticas.</p>\n\n        <p>Se você considera este serviço valioso, considere dar uma estrela ao projeto no GitHub ou compartilhar o TranslateTribune com outros que possam se beneficiar do acesso às notícias em seu idioma. Seu apoio ajuda a expandir o alcance deste serviço.</p>\n    </div>\n</div>",
+    "de": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Diese Ausgabe ist Werbefrei – Helfen Sie uns, die Nachricht zu Verbreiten\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Die heutige Ausgabe wird ohne Werbung bereitgestellt. TranslateTribune nutzt KI zur Übersetzung und Kuratierung globaler Nachrichten und macht internationale Informationen über Sprachbarrieren hinweg zugänglich.</p>\n\n        <p>Wenn Sie diesen Dienst wertvoll finden, erwägen Sie bitte, dem Projekt auf GitHub einen Stern zu geben oder TranslateTribune mit anderen zu teilen, die von Nachrichten in ihrer Sprache profitieren könnten. Ihre Unterstützung hilft, die Reichweite dieses Dienstes zu erweitern.</p>\n    </div>\n</div>",
+    "ja": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        今回の配信は広告なし – 拡散にご協力ください\n    </div>\n    <div class=\"article-content hidden\">\n        <p>本日の配信は広告なしでお届けします。TranslateTribuneはAIを使用して世界のニュースを翻訳・キュレーションし、言語の壁を越えて国際情報にアクセスできるようにしています。</p>\n\n        <p>このサービスが有用だと感じられましたら、GitHubでプロジェクトにスターを付けるか、母国語でニュースを読みたい方々にTranslateTribuneをご紹介ください。皆様のサポートがこのサービスの reach拡大につながります。</p>\n    </div>\n</div>",
+    "tr": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Bu Sayı Reklamsız – Yaymamıza Yardım Edin\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Bugünkü sayı reklamsız olarak sunulmaktadır. TranslateTribune, yapay zeka kullanarak küresel haberleri çeviriyor ve düzenliyor, uluslararası bilgileri dil engellerini aşarak erişilebilir kılıyor.</p>\n\n        <p>Bu hizmeti değerli buluyorsanız, lütfen GitHub'da projemize yıldız vermeyi veya TranslateTribune'u kendi dillerinde haberlere erişmek isteyebilecek başkalarıyla paylaşmayı düşünün. Desteğiniz bu hizmetin erişimini genişletmeye yardımcı oluyor.</p>\n    </div>\n</div>",
+    "ko": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        이번 호는 광고 없이 제공됩니다 – 소문 내주세요\n    </div>\n    <div class=\"article-content hidden\">\n        <p>오늘의 발행본은 광고 없이 제공됩니다. TranslateTribune은 AI를 사용하여 글로벌 뉴스를 번역하고 선별하여, 언어 장벽을 넘어 국제 정보에 접근할 수 있게 합니다.</p>\n\n        <p>이 서비스가 유용하다고 생각하시면, GitHub에서 프로젝트에 별표를 주시거나 자국어로 뉴스를 접하고 싶은 다른 분들과 TranslateTribune을 공유해 주세요. 여러분의 지원이 이 서비스의 범위를 확장하는 데 도움이 됩니다.</p>\n    </div>\n</div>",
+    "it": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Questa Edizione è Senza Pubblicità – Aiutaci a Diffondere la Voce\n    </div>\n    <div class=\"article-content hidden\">\n        <p>L'edizione di oggi è fornita senza pubblicità. TranslateTribune utilizza l'IA per tradurre e curare notizie globali, rendendo le informazioni internazionali accessibili attraverso le barriere linguistiche.</p>\n\n        <p>Se trovi questo servizio utile, considera di dare una stella al progetto su GitHub o di condividere TranslateTribune con altri che potrebbero beneficiare dell'accesso alle notizie nella loro lingua. Il tuo supporto aiuta ad espandere la portata di questo servizio.</p>\n    </div>\n</div>",
+    "nl": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Deze Editie is Reclamevrij – Help Ons het Woord te Verspreiden\n    </div>\n    <div class=\"article-content hidden\">\n        <p>De uitgave van vandaag wordt zonder advertenties aangeboden. TranslateTribune gebruikt AI om wereldnieuws te vertalen en te cureren, waardoor internationale informatie toegankelijk wordt over taalbarrières heen.</p>\n\n        <p>Als u deze service waardevol vindt, overweeg dan om het project een ster te geven op GitHub of TranslateTribune te delen met anderen die baat kunnen hebben bij nieuws in hun taal. Uw steun helpt het bereik van deze service te vergroten.</p>\n    </div>\n</div>",
+    "fa": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        این نسخه بدون تبلیغات است - به انتشار آن کمک کنید\n    </div>\n    <div class=\"article-content hidden\">\n        <p>نسخه امروز بدون تبلیغات ارائه می‌شود. TranslateTribune از هوش مصنوعی برای ترجمه و گردآوری اخبار جهانی استفاده می‌کند و اطلاعات بین‌المللی را بدون مانع زبانی در دسترس قرار می‌دهد.</p>\n\n        <p>اگر این سرویس را مفید می‌دانید، لطفاً به پروژه ما در GitHub ستاره دهید یا TranslateTribune را با دیگرانی که ممکن است از دسترسی به اخبار به زبان خود بهره‌مند شوند، به اشتراک بگذارید. حمایت شما به گسترش دامنه این سرویس کمک می‌کند.</p>\n    </div>\n</div>",
+    "uk": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Це Видання Без Реклами – Допоможіть Поширити Інформацію\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Сьогоднішній випуск надається без реклами. TranslateTribune використовує ШІ для перекладу та курації світових новин, роблячи міжнародну інформацію доступною через мовні бар'єри.</p>\n\n        <p>Якщо ви вважаєте цей сервіс корисним, будь ласка, розгляньте можливість поставити зірку проєкту на GitHub або поділитися TranslateTribune з іншими, кому може бути корисний доступ до новин їхньою мовою. Ваша підтримка допомагає розширити охоплення цього сервісу.</p>\n    </div>\n</div>",
+    "sv": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Denna Utgåva är Reklamfri – Hjälp Oss Sprida Ordet\n    </div>\n    <div class=\"article-content hidden\">\n        <p>Dagens utgåva tillhandahålls utan annonser. TranslateTribune använder AI för att översätta och kurera globala nyheter, vilket gör internationell information tillgänglig över språkbarriärer.</p>\n\n        <p>Om du tycker att denna tjänst är värdefull, vänligen överväg att ge projektet en stjärna på GitHub eller dela TranslateTribune med andra som kan ha nytta av att få tillgång till nyheter på sitt språk. Ditt stöd hjälper till att utöka denna tjänsts räckvidd.</p>\n    </div>\n</div>",
+    "he": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        מהדורה זו ללא פרסומות - עזרו לנו להפיץ את הבשורה\n    </div>\n    <div class=\"article-content hidden\">\n        <p>גיליון היום מוגש ללא פרסומות. TranslateTribune משתמש בבינה מלאכותית לתרגום ואוצרות של חדשות גלובליות, מה שהופך מידע בינלאומי לנגיש מעבר למחסומי השפה.</p>\n\n        <p>אם אתם מוצאים ערך בשירות זה, אנא שקלו לתת כוכב לפרויקט ב-GitHub או לשתף את TranslateTribune עם אחרים שעשויים להפיק תועלת מגישה לחדשות בשפתם. תמיכתכם עוזרת להרחיב את הגעת השירות הזה.</p>\n    </div>\n</div>"
 }
-
+]

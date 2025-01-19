@@ -4,29 +4,11 @@
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "Polymarket",
-    "source_url": "https://polymarket.com/markets?_s=volume_24hr:desc",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "United States",
-    "source_language": "English",
-    "source_flag": "./assets/png/us.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
     "source": "USA Today",
     "source_url": "https://www.usatoday.com/",
     "source_parser": "readability",
     "finder_model": "Claude 3h",
     "summarizer_model": "Claude 3h"
-  },
-  {
-    "source_country": "United States",
-    "source_language": "English",
-    "source_flag": "./assets/png/us.png",
-    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "Github",
-    "source_url": "https://github.com/trending",
-    "source_parser": "readability"
   },
   {
     "source_country": "Germany",
@@ -37,28 +19,23 @@
     "source_url": "https://codeberg.org/explore/repos",
     "source_parser": "readability"
   },
- 
   {
-    "source_country": "Mexico",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/mexico.png",
-    "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
-    "source": "La Jornada",
-    "source_url": "https://www.jornada.com.mx",
-    "source_parser": "readability",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
+    "source_country": "France",
+    "source_language": "French",
+    "source_flag": "./assets/png/france.png",
+    "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
+    "source": "Le Figaro",
+    "source_url": "https://www.lefigaro.fr",
+    "source_parser": "readability"
   },
   {
-    "source_country": "Taiwan",
-    "source_language": "Chinese",
-    "source_flag": "./assets/png/taiwan.png",
-    "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
-    "source": "Liberty Times",
-    "source_url": "https://www.ltn.com.tw",
-    "source_parser": "text",
-    "finder_model": "Claude 3h",
-    "summarizer_model": "Claude 3h"
-  }
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "LibRed",
+    "source_url": "https://safereddit.com/",
+    "source_parser": "readability"
+  },
 ]
 

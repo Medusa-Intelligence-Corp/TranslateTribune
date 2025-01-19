@@ -176,6 +176,19 @@ def get_language_config(language):
         if item.get("publishing_language") == language:
             return item
     return None
+    
+    
+def get_available_ads(lang_code):
+    with open('config/ads.json', 'r') as file:
+        ad_configs = json.load(file)
+
+    available_ads = []
+
+    for item in ad_configs:
+        if lang_code in item:
+            available_ads.append(item)
+            
+    return available_ads
 
 
 def get_finder_models(lang1):
@@ -262,6 +275,26 @@ def publish(sources_config, lang_config, finder_template, \
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             logging.error("Exception occurred", exc_info=True)
     
+    try:
+        ads = get_available_ads(lang_config["publishing_language_short"])
+        if len(ads) > 0:
+            ad = random.choice(ads)
+            article_title, article_summary, front_page_score, article_id = add_required_html(\
+                                                                ad[lang_config["publishing_language_short"]],\
+                                                                ad["url"],\
+                                                                ad,\
+                                                                lang_config,\
+                                                                "Hard-Coded",\
+                                                                "Hard-Coded")
+            
+            article_dict[article_title] = {}
+            article_dict[article_title]["html"] = article_summary
+            article_dict[article_title]["score"] = front_page_score
+            article_dict[article_title]["id"] = article_id
+    except Exception as e:
+        logging.exception(f"An unexpected error occurred, ignoring: {e}")
+        logging.error("Exception occurred", exc_info=True)
+    
     sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
     article_html=""
     article_rss=""
@@ -331,7 +364,7 @@ if __name__ == "__main__":
     debug = os.environ.get('DEBUG', False)
     
     if debug:
-        deploy_language("Arabic")
+        #deploy_language("Arabic")
         deploy_language("English")
         deploy_language("Hungarian")
     else:
