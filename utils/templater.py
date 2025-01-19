@@ -14,7 +14,12 @@ def upload_and_invalidate(file_path, file_name, content_type):
     bucket_name = 'translatetribune.com'
     s3_key = file_name
     s3_client = boto3.client('s3')
-    extra_args = {'ContentType': content_type}
+
+    extra_args = {
+        'ContentType': content_type,
+        'CacheControl': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache'
+    }
     s3_client.upload_file(file_path, bucket_name, s3_key, ExtraArgs=extra_args)
 
     distribution_id = 'E12FININDDZ0ME'

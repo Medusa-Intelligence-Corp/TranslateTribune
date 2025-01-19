@@ -3,45 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+
     <!-- Auto-refresh script  -->
    <script>
-      (function() {
+    (function() {
         // Store the timestamp when the page was initially loaded
         const initialLoadTime = new Date().getTime();
 
         function shouldRefresh() {
-          const now = new Date().getTime();
-          // If more than 30 minutes have passed since initial load or last refresh
-          if ((now - initialLoadTime) > (30 * 60 * 1000)) {
-            return true;
-          }
-          return false;
+            const now = new Date().getTime();
+            // If more than 30 minutes have passed since initial load or last refresh
+            return (now - initialLoadTime) > (30 * 60 * 1000);
+        }
+
+        function forceRefresh() {
+            // Add cache-busting parameter to the URL
+            const timestamp = new Date().getTime();
+            const separator = window.location.href.indexOf('?') === -1 ? '?' : '&';
+            window.location.href = window.location.href + separator + '_t=' + timestamp;
         }
 
         function handleVisibilityChange() {
-          if (document.visibilityState === 'visible' && shouldRefresh()) {
-            window.location.reload(true);
-          }
+            if (document.visibilityState === 'visible' && shouldRefresh()) {
+                forceRefresh();
+            }
         }
 
         // Listen for visibility changes
         document.addEventListener('visibilitychange', handleVisibilityChange);
 
-        // Also check on page show (catches iOS webapp reopening)
+        // Handle page show events (catches iOS webapp reopening and back/forward navigation)
         window.addEventListener('pageshow', function(event) {
-          if (event.persisted && shouldRefresh()) {
-            window.location.reload(true);
-          }
+            if (event.persisted && shouldRefresh()) {
+                forceRefresh();
+            }
         });
-      })();
+
+        // Handle back/forward navigation explicitly
+        window.addEventListener('popstate', function() {
+            if (shouldRefresh()) {
+                forceRefresh();
+            }
+        });
+    })();
     </script>
 
     <title>TranslateTribune - {{ lang_config[section_key] }}</title>
