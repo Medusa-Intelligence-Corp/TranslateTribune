@@ -17,8 +17,6 @@ def upload_and_invalidate(file_path, file_name, content_type):
 
     extra_args = {
         'ContentType': content_type,
-        'CacheControl': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache'
     }
     s3_client.upload_file(file_path, bucket_name, s3_key, ExtraArgs=extra_args)
 
