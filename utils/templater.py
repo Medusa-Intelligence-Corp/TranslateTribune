@@ -45,7 +45,7 @@ def deploy_website(article_html, html_filename, article_rss, rss_filename, lang_
     current_utc_datetime = datetime.datetime.utcnow()
     current_utc_datetime = current_utc_datetime.replace(tzinfo=pytz.utc)
     eastern_time = current_utc_datetime.astimezone(pytz.timezone(lang_config["publishing_timezone"]))
-    date_string = eastern_time.strftime("%Y-%m-%d %H:%M %Z")
+    date_string = eastern_time.strftime("%Y-%m-%d • %H:%M %Z")
 
     template = env.get_template('template.html')
     rendered_html = template.render(**locals())
