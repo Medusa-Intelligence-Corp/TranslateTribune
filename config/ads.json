@@ -45,11 +45,11 @@
     "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        High-Performance Cloud Computing at Your Fingertips\n    </div>\n    <div class=\"article-content hidden\">\n        <p>TranslateTribune uses Vultr, you can too! Experience lightning-fast cloud infrastructure with Vultr's global network of 25+ data centers. Deploy powerful cloud servers, bare metal, and storage solutions in seconds. With their next-generation NVMe SSD storage and AMD EPYC™ processors, your applications will run at peak performance while maintaining cost-effectiveness.</p>\n\n        <p>Join over 1.5 million developers and businesses who trust Vultr for their cloud computing needs. Whether you're launching a startup or scaling an enterprise, our platform offers the flexibility and reliability you demand. Sign up now and receive $100 in credit to explore their cloud solutions (and support TranslateTribune)!</p>\n    </div>\n</div>"
 },
 {
-    "source": "TranslateTribune",
+    "source": "TranslateTribune (GitHub)",
     "status": false,
     "url": "https://github.com/Medusa-Intelligence-Corp/TranslateTribune/",
-    "source_country": "ADVERTISEMENT",
-    "source_flag": "./assets/png/ad.png",
+    "source_country": "FYI",
+    "source_flag": "./assets/png/tt.png",
     "source_flag_emoji": "&#x26A0;&#xFE0F;",
     "en": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        This Edition is Ad-Free – Help Spread the Word\n    </div>\n    <div class=\"article-content hidden\">\n        <p>TranslateTribune uses AI to translate and curate global news, making international information accessible across language barriers.</p>\n\n        <p>If you find this service valuable, please consider starring the project on GitHub or sharing TranslateTribune with others who might benefit from accessing news in their language. Your support helps expand this service's reach.</p>\n    </div>\n</div>",
     "hu": "<div class=\"article\" data-front-page-score=\"2\">\n    <div class=\"article-title\">\n        Ez a Kiadás Reklámmentes – Segítsen Terjeszteni\n    </div>\n    <div class=\"article-content hidden\">\n        <p>A mai szám reklámok nélkül jelenik meg. A TranslateTribune mesterséges intelligenciát használ a globális hírek fordításához és válogatásához, hogy a nemzetközi információk nyelvi akadályok nélkül elérhetőek legyenek.</p>\n\n        <p>Ha hasznosnak találja szolgáltatásunkat, kérjük, fontolja meg, hogy csillagot ad projektünknek GitHubon, vagy megosztja a TranslateTribune-t másokkal, akiknek hasznos lehet az anyanyelvükön olvasni a híreket. Támogatása segít szolgáltatásunk hatókörének bővítésében.</p>\n    </div>\n</div>",
