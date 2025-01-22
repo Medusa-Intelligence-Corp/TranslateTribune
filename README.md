@@ -76,8 +76,6 @@ A free and open-source project that leverages AI to curate, translate, and summa
 - 🚀 Overcome language barriers and media biases
 - 🌈 Highlight diverse perspectives
 - 🔄 Prove the potential of self-updating, self-improving projects
-- ⚖️ Demonstrate the limitations of copyright in the age of AI
-- 💡 Provide an alternative to expensive news subscriptions
 - 🗣️ Encourage a more informed and diverse global discourse
 - 🌟 Prove that privacy-protecting free and open source projects can thrive
 
@@ -100,8 +98,6 @@ A free and open-source project that leverages AI to curate, translate, and summa
 - 🚀 克服语言障碍和媒体偏见
 - 🌈 突出多元化观点
 - 🔄 证明自我更新、自我完善项目的潜力
-- ⚖️ 展示人工智能时代版权的局限性
-- 💡 为昂贵的新闻订阅提供替代方案
 - 🗣️ 鼓励更加知情和多元化的全球对话
 - 🌟 证明保护隐私的免费开源项目可以蓬勃发展
 
@@ -124,8 +120,6 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 - 🚀 Superar las barreras del idioma y los sesgos de los medios
 - 🌈 Destacar perspectivas diversas
 - 🔄 Demostrar el potencial de los proyectos autoactualizables y automejorables
-- ⚖️ Demostrar las limitaciones de los derechos de autor en la era de la IA
-- 💡 Proporcionar una alternativa a las costosas suscripciones a noticias
 - 🗣️ Fomentar un discurso global más informado y diverso
 - 🌟 Demostrar que los proyectos gratuitos y de código abierto que protegen la privacidad pueden prosperar
 
@@ -148,8 +142,6 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 - 🚀 التغلب على حواجز اللغة وتحيزات وسائل الإعلام
 - 🌈 تسليط الضوء على وجهات النظر المتنوعة
 - 🔄 إثبات إمكانات المشاريع ذاتية التحديث والتحسين الذاتي
-- ⚖️ إظهار قيود حقوق النشر في عصر الذكاء الاصطناعي
-- 💡 توفير بديل للاشتراكات الإخبارية المكلفة
 - 🗣️ تشجيع خطاب عالمي أكثر تنوعًا واطلاعًا
 - 🌟 إثبات أن المشاريع المجانية ومفتوحة المصدر التي تحمي الخصوصية يمكن أن تزدهر
 
@@ -172,8 +164,6 @@ Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire e
 - 🚀 Surmonter les barrières linguistiques et les biais médiatiques
 - 🌈 Mettre en avant des perspectives diverses
 - 🔄 Prouver le potentiel des projets auto-actualisables et auto-améliorables
-- ⚖️ Démontrer les limites du droit d'auteur à l'ère de l'IA
-- 💡 Fournir une alternative aux abonnements d'actualités coûteux
 - 🗣️ Encourager un discours mondial plus informé et diversifié
 - 🌟 Prouver que les projets gratuits et open source respectueux de la vie privée peuvent prospérer
 
@@ -196,8 +186,6 @@ Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire e
 - 🚀 Преодоление языковых барьеров и предвзятости СМИ
 - 🌈 Освещение разнообразных точек зрения
 - 🔄 Доказательство потенциала самообновляющихся и самосовершенствующихся проектов
-- ⚖️ Демонстрация ограничений авторского права в эпоху ИИ
-- 💡 Предоставление альтернативы дорогостоящим новостным подпискам
 - 🗣️ Поощрение более информированного и разнообразного глобального дискурса
 - 🌟 Доказательство того, что бесплатные проекты с открытым исходным кодом, защищающие конфиденциальность, могут процветать
 
@@ -220,8 +208,6 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 - 🚀 Superar barreiras linguísticas e vieses da mídia
 - 🌈 Destacar perspectivas diversas
 - 🔄 Provar o potencial de projetos auto-atualizáveis e auto-aperfeiçoáveis
-- ⚖️ Demonstrar as limitações dos direitos autorais na era da IA
-- 💡 Fornecer uma alternativa às caras assinaturas de notícias
 - 🗣️ Incentivar um discurso global mais informado e diversificado
 - 🌟 Provar que projetos gratuitos e de código aberto que protegem a privacidade podem prosperar
 
@@ -244,8 +230,6 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 🚀 Sprachbarrieren und Medienverzerrungen überwinden
 - 🌈 Vielfältige Perspektiven hervorheben
 - 🔄 Das Potenzial selbstaktualisierender, selbstverbessernder Projekte aufzeigen
-- ⚖️ Die Grenzen des Urheberrechts im Zeitalter der KI aufzeigen
-- 💡 Eine Alternative zu teuren Nachrichtenabonnements bieten
 - 🗣️ Einen besser informierten und vielfältigeren globalen Diskurs fördern
 - 🌟 Beweisen, dass datenschutzfreundliche, kostenlose und quelloffene Projekte gedeihen können
 
@@ -268,8 +252,6 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 🚀 言語の壁とメディアのバイアスを克服する
 - 🌈 多様な視点を強調する
 - 🔄 自己更新型、自己改善型プロジェクトの可能性を証明する
-- ⚖️ AI時代の著作権の限界を示す
-- 💡 高価なニュース購読の代替手段を提供する
 - 🗣️ より情報に基づいた多様なグローバルな議論を奨励する
 - 🌟 プライバシーを保護する無料のオープンソースプロジェクトが繁栄できることを証明する
 
@@ -292,8 +274,6 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 🚀 Dil engellerini ve medya önyargılarını aşmak
 - 🌈 Farklı bakış açılarını vurgulamak
 - 🔄 Kendini güncelleyen, kendini geliştiren projelerin potansiyelini kanıtlamak
-- ⚖️ AI çağında telif hakkının sınırlarını göstermek
-- 💡 Pahalı haber aboneliklerine alternatif sağlamak
 - 🗣️ Daha bilgili ve çeşitli küresel bir söylemi teşvik etmek
 - 🌟 Gizliliği koruyan ücretsiz ve açık kaynak projelerin gelişebileceğini kanıtlamak
 
@@ -316,8 +296,6 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 - 🚀 언어 장벽과 미디어 편견 극복
 - 🌈 다양한 관점 강조
 - 🔄 자가 업데이트, 자가 개선 프로젝트의 잠재력 입증
-- ⚖️ AI 시대의 저작권 한계 시연
-- 💡 비싼 뉴스 구독에 대한 대안 제공
 - 🗣️ 더 많은 정보와 다양한 글로벌 담론 장려
 - 🌟 프라이버시를 보호하는 무료 오픈 소스 프로젝트가 번창할 수 있음을 증명
 
@@ -340,8 +318,6 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 - 🚀 Superare le barriere linguistiche e i pregiudizi dei media
 - 🌈 Evidenziare prospettive diverse
 - 🔄 Dimostrare il potenziale di progetti auto-aggiornanti e auto-miglioranti
-- ⚖️ Dimostrare i limiti del copyright nell'era dell'AI
-- 💡 Fornire un'alternativa ai costosi abbonamenti alle notizie
 - 🗣️ Incoraggiare un discorso globale più informato e diversificato
 - 🌟 Dimostrare che i progetti gratuiti e open source che proteggono la privacy possono prosperare
 
@@ -364,8 +340,6 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - 🚀 Taalbarrières en mediavooroordelen overwinnen
 - 🌈 Diverse perspectieven benadrukken
 - 🔄 Het potentieel van zelfupdatende, zelfverbeterende projecten aantonen
-- ⚖️ De beperkingen van auteursrecht in het AI-tijdperk aantonen
-- 💡 Een alternatief bieden voor dure nieuwsabonnementen
 - 🗣️ Een beter geïnformeerd en diverser wereldwijd discours aanmoedigen
 - 🌟 Bewijzen dat privacybeschermende gratis en open-source projecten kunnen floreren
 
@@ -388,8 +362,6 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - 🚀 غلبه بر موانع زبانی و تعصبات رسانه ای
 - 🌈 برجسته کردن دیدگاه های متنوع
 - 🔄 اثبات پتانسیل پروژه های خودبه‌روزرسانی و خودبهبودی
-- ⚖️ نشان دادن محدودیت های کپی رایت در عصر هوش مصنوعی
-- 💡 ارائه جایگزینی برای اشتراک های گران قیمت اخبار
 - 🗣️ تشویق گفتمان جهانی آگاهانه تر و متنوع تر
 - 🌟 اثبات اینکه پروژه های رایگان و متن باز حافظ حریم خصوصی می توانند شکوفا شوند
 
@@ -412,8 +384,6 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 - 🚀 Подолання мовних бар'єрів та упереджень ЗМІ
 - 🌈 Висвітлення різноманітних точок зору
 - 🔄 Докази потенціалу проєктів, які самооновлюються та самовдосконалюються
-- ⚖️ Демонстрація обмежень авторського права в епоху ШІ
-- 💡 Пропозиція альтернативи дорогим підпискам на новини
 - 🗣️ Сприяння більш освіченому та різноманітному глобальному дискусу
 - 🌟 Доказ тому, що проєкти, які захищають приватність, можуть бути вільними та успішно розвиватися
 
@@ -436,8 +406,6 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 - 🚀 Överbrygga språkbarriärer och mediebias
 - 🌈 Lyfta fram olika perspektiv
 - 🔄 Bevisa potentialen för självuppdaterande, självförbättrande projekt
-- ⚖️ Demonstrera begränsningarna för upphovsrätt i AI-eran
-- 💡 Erbjuda ett alternativ till dyra nyhetsabonnemang
 - 🗣️ Uppmuntra en mer informerad och mångsidig global diskurs
 - 🌟 Bevisa att integritetsskyddande gratis och öppna källkodsprojekt kan frodas
 
@@ -460,8 +428,6 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 - 🚀 התגברות על מחסומי שפה והטיות תקשורתיות
 - 🌈 הדגשת נקודות מבט מגוונות
 - 🔄 הוכחת הפוטנציאל של פרויקטים המתעדכנים ומשתפרים בעצמם
-- ⚖️ הדגמת מגבלות זכויות היוצרים בעידן ה-AI
-- 💡 מתן חלופה למנויי חדשות יקרים
 - 🗣️ עידוד שיח גלובלי מגוון ומושכל יותר
 - 🌟 הוכחה שפרויקטים חינמיים וקוד פתוח המגנים על פרטיות יכולים לשגשג
 
@@ -484,8 +450,6 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 - 🚀 Nyelvi akadályok és médiaelfogultságok leküzdése
 - 🌈 Különböző nézőpontok kiemelése
 - 🔄 Az önfrissítő, önfejlesztő projektek lehetőségeinek bizonyítása
-- ⚖️ A szerzői jog korlátainak bemutatása az AI korában
-- 💡 Alternatívát kínálni a drága hírfeliratkozásokkal szemben
 - 🗣️ Egy tájékozottabb és sokszínűbb globális diskurzus ösztönzése
 - 🌟 Annak bizonyítása, hogy az adatvédelmet tiszteletben tartó ingyenes és nyílt forráskódú projektek virágozhatnak
 
@@ -508,8 +472,6 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 - 🚀 Kushinda vikwazo vya lugha na upendeleo wa vyombo vya habari
 - 🌈 Kuonyesha mitazamo mbalimbali
 - 🔄 Kuthibitisha uwezo wa miradi inayojisasisha na kujiboresha
-- ⚖️ Kuonyesha mipaka ya hakimiliki katika enzi ya AI
-- 💡 Kutoa mbadala kwa usajili wa habari ghali
 - 🗣️ Kuhimiza mazungumzo ya kimataifa yenye uelewa zaidi na yenye uanuwai
 - 🌟 Kuthibitisha kwamba miradi ya bure na chanzo wazi inayolinda faragha inaweza kustawi
 
