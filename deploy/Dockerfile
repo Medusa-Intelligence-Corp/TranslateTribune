@@ -1,4 +1,4 @@
-FROM selenium/standalone-chrome:126.0
+FROM selenium/standalone-chrome:latest
 
 WORKDIR /usr/src/app
 

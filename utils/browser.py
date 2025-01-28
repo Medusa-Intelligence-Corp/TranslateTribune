@@ -13,6 +13,7 @@ from goose3.text import StopWordsArabic, StopWordsKorean, StopWordsChinese
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -36,15 +37,32 @@ class BadPageException(Exception):
 
 
 def setup_driver():
-    # Initialize Chrome Options
     chrome_options = Options()
-    
+
+    # Basic options
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    # Set up driver with options
-    driver = webdriver.Chrome(options=chrome_options)
+    # Additional recommended options
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--disable-infobars")
+    chrome_options.add_argument("--window-size=1920,1080")
+
+    # Set timeouts in capabilities
+    chrome_options.set_capability("pageLoadStrategy", "normal")
+    chrome_options.set_capability("timeouts", {
+        "implicit": 30000,
+        "pageLoad": 30000,
+        "script": 30000
+    })
+
+    # Initialize driver with service and options
+    driver = webdriver.Chrome(
+        options=chrome_options
+    )
+
     return driver
 
 
