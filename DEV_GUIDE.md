@@ -25,7 +25,6 @@ This project sets up an automated task execution system that runs twice daily (9
 - User setup with SSH access
 - Automated task execution scripts
 - System service and timer configuration
-- Log viewing utilities
 
 ## Prerequisites
 
