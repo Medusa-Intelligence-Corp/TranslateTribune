@@ -66,7 +66,7 @@ For the provided configuration, you'll need to encode:
 
 ### 4. Modify Configuration File
 
-1. Replace the following placeholders in the Ignition configuration:
+1. Replace the following placeholders in the Ignition configuration ((see example [server-config-nosecrets.ign](./deploy/hosted_example/server-config-nosecrets.ign)):
    - `PASTE_PASSWORD_HASH_HERE`: Your generated password hash
    - `PASTE_YOUR_OWN_SSH_KEY_HERE`: Your SSH public key
    - `PASTE_BASE64_OUTPUT_HERE`: Base64 encoded content of your tt-run.sh script
@@ -81,39 +81,16 @@ Save the Ignition configuration and use it during server provisioning. We use Vu
 
 The configuration creates the following files:
 - `/home/bradmin/tt-run.sh`: Main task execution script
-- `/home/bradmin/run-now.sh`: Script to manually trigger the task
 - `/home/bradmin/view-logs.sh`: Script to view task logs
 - `/etc/systemd/system/tt-run.service`: Systemd service configuration
 - `/etc/systemd/system/tt-run.timer`: Timer configuration for scheduled execution
 
-## Usage
-
-### Viewing Logs
-Execute the view-logs script:
-```bash
-./view-logs.sh
-```
-
-### Manual Execution
-To run the task manually:
-```bash
-./run-now.sh
-```
-
-## Schedule
-
-The task runs automatically:
-- At 9:00 AM daily
-- At 9:00 PM daily
-
-## Security Considerations
-
-- The configuration creates a user named 'core' with sudo privileges
-- Access is restricted to SSH key authentication
-- Scripts are created with appropriate permissions (mode 484 = chmod 744)
-- Service runs as root user for system-level access
-
 ## Troubleshooting
+
+View the logs while the script is running:
+```bash 
+sudo bash view-logs.sh
+```
 
 Check service status:
 ```bash
