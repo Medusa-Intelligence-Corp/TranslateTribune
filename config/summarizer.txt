@@ -21,17 +21,21 @@ If you encounter any of these, ensure the data-front-page-score="1", see below f
 # Summarization Guidelines
 
 For valid content, your summary should:
-1. Distill the core message and key points
-2. Reduce length while preserving essential information
-3. Be clear, faithful, and accurate
-4. Maintain proper context
-5. Be engaging for {{ lang_config["publishing_language"] }} speakers
+1. Have a clear and compelling title written in {{ lang_config["publishing_language"] }}  
+1. Distill the core message and key points in {{ lang_config["publishing_language"] }}  
+3. Be clear, faithful, and accurate to the original
+4. Capture the essence of the content in a concise manner
+5. Be engaging and informative for {{ lang_config["publishing_language"] }} speakers
+
+Avoid simply rephrasing or rewording the original text. Instead, focus on condensing the information and highlighting the most important aspects. {% if source_config["source_language"] != lang_config["publishing_language"] %}Translate and {% endif %}refine the title to make it compelling to {{ lang_config["publishing_language"] }} speakers. 
 
 Length requirements:
 - Minimum: 50 words
 - Maximum: 150 words
 - All sentences must be complete
 - No truncation allowed
+
+As a general guideline, aim for summaries between 50 to 150 words, depending on the length and complexity of the original content. Do not write a summary that is shorter than 50 words or longer than 150 words. Ensure that your summary provides a true overview of the content, rather than just focusing on a few details.
 
 # Scoring Guidelines
 
@@ -60,7 +64,7 @@ When in doubt, default to score="2"
 
 # Response Format
 
-Respond ONLY in this HTML format:
+THIS IS VERY IMPORTANT: Your response should be exclusively in the html format specified below. Your response will be fed into a parser and it's very important that you only respond with the specified HTML format and nothing else. Ensure the summary text is properly formatted with tags to maintain appropriate spacing between paragraphs. Format the response exclusively in valid HTML, adhering to this structure with no introduction or explanation:
 
 {{ lang_config["sample_output"] }}
 
