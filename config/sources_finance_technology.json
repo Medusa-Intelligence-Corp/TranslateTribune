@@ -13,8 +13,8 @@
     "source_language": "Japanese",
     "source_flag": "./assets/png/japan.png",
     "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
-    "source": "Nikkei",
-    "source_url": "https://www.nikkei.com",
+    "source": "ASCII.jp",
+    "source_url": "https://ascii.jp",
     "source_parser": "readability"
   },
   {
@@ -40,8 +40,8 @@
     "source_language": "Portuguese",
     "source_flag": "./assets/png/brazil.png",
     "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
-    "source": "Valor Econômico",
-    "source_url": "https://valor.globo.com/",
+    "source": "TecMundo",
+    "source_url": "https://www.tecmundo.com.br/",
     "source_parser": "readability"
   },
   {
@@ -58,8 +58,8 @@
     "source_language": "Korean",
     "source_flag": "./assets/png/korea.png",
     "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
-    "source": "The Korea Economic Daily",
-    "source_url": "https://www.hankyung.com/",
+    "source": "Electronic Times",
+    "source_url": "http://etnews.com/",
     "source_parser": "goose"
   },
   {
@@ -76,8 +76,8 @@
     "source_language": "English",
     "source_flag": "./assets/png/singapore.png",
     "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
-    "source": "The Straits Times",
-    "source_url": "https://www.straitstimes.com/global",
+    "source": "Vulcan Post",
+    "source_url": "https://vulcanpost.com/",
     "source_parser": "readability"
   },
   {
@@ -185,17 +185,8 @@
     "source_language": "French",
     "source_flag": "./assets/png/france.png",
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "Gameblog",
-    "source_url": "https://www.gameblog.fr/",
-    "source_parser": "readability"
-  },
-  {
-    "source_country": "Japan",
-    "source_language": "Japanese",
-    "source_flag": "./assets/png/japan.png",
-    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
-    "source": "4Gamer",
-    "source_url": "https://www.4gamer.net",
+    "source": "Presse-citron",
+    "source_url": "https://www.presse-citron.net/",
     "source_parser": "readability"
   }
 ]
