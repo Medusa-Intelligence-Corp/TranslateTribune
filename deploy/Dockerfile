@@ -1,4 +1,4 @@
-FROM selenium/standalone-chrome:132
+FROM selenium/standalone-chrome:132.0
 
 WORKDIR /usr/src/app
 
