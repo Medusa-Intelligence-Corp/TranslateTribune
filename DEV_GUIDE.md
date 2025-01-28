@@ -73,7 +73,7 @@ For the provided configuration, you'll need to encode:
 
 ### 5. Deploy Configuration
 
-Save the Ignition configuration as `config.ign` and use it during server provisioning. We use Vultr and configure it like so:
+Save the Ignition configuration and use it during server provisioning. We use Vultr and configure it like so:
 
 <img src="./deploy/hosted_example/vultr_config.png" alt="Picture of the Vultr configuration page"/>
 
