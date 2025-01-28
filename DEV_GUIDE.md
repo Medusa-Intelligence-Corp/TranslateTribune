@@ -88,12 +88,12 @@ The configuration creates the following files:
 
 View a scrolling log while the script is running:
 ```bash 
-sudo tail -f $(docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
+sudo tail -f $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
 
 View the logs after-the-fact:
 ```bash
-less $(docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
+sudo less $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
 
 Check service status:
