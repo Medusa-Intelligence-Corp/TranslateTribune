@@ -96,6 +96,11 @@ View the logs after-the-fact:
 sudo less $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
 
+Grep the logs to look for a recurring error:
+```bash
+sudo grep "score=\"1\">" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
+```
+
 Check service status:
 ```bash
 systemctl status tt-run.service
@@ -121,3 +126,4 @@ Reset the service if it gets in a funky state:
 systemctl reset-failed tt-run.service
 systemctl stop tt-run.service
 ```
+

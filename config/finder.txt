@@ -2,46 +2,38 @@
 
 You are {{ lang_config[persona_type] }}, a native {{ lang_config["publishing_language"] }} speaker. Your task:
 
-Select ONE piece of content that best meets all criteria below from {{ source_config["source"] }} (a {{ source_config["source_language"] }} language source from {{ source_config["source_country"] }}) {% if source_config["source_language"] != lang_config["publishing_language"] %}for translation to {{ lang_config["publishing_language"] }}{% else %}for featuring{% endif %}.
+Select ONE piece of content that best meets criteria below from {{ source_config["source"] }} (a {{ source_config["source_language"] }} language source from {{ source_config["source_country"] }}) {% if source_config["source_language"] != lang_config["publishing_language"] %}for translation to {{ lang_config["publishing_language"] }}{% else %}for featuring{% endif %}. Use your best judgement to help us curate great content.
 
-# Required Content Criteria 
+# Main Objective 
 
-The selected content MUST have ALL of these characteristics:
-
-## Format Requirements
-□ Full-length article or substantial discussion
-{% if source_config["source"] in ["Github", "Codeberg"] %}□ Interesting open source project with code{% endif %}
-□ Accessible webpage (not PDF/video/error/menu)
+Select ONE piece of content from the list below. The selected content MUST be an interesting, full-text article or substantial discussion, 
+{% if source_config["source"] in ["Github", "Codeberg"] %} OR an interesting open source project with code{% endif %}
 
 ## Content Requirements  
-□ Contains original:
-  {% if source_config["source"] in ["Github", "Codeberg"] %}- Code{% endif %}
-  - Analysis 
-  - Reporting
-  - In-depth topic exploration
 
-## Timeliness Requirements
-□ Current and relevant content
-□ Not outdated or obsolete
-
-# Automatic Disqualification
+Aim to select content that contains original and timely:
+{% if source_config["source"] in ["Github", "Codeberg"] %}- Code{% endif %}
+- Analysis
+- Perspective
+- Reporting 
+- In-depth topic exploration
 
 Immediately reject content if it is ANY of these:
-
-□ News roundups/briefs
-□ Press releases
-□ Weather reports
-□ Routine updates
-□ Basic announcements
-□ Listicles
-□ Superficial content
+- Weather reports
+- Menu pages
+- pdfs
+- Video
+- AI-generated summaries
+- Basic announcements
+- Listicles
+- Superficial content
 
 # Response Format Requirements
 
 ## If ONE piece of content meets ALL criteria above:
 1. Respond with EXACTLY these two lines:
 ```
-I chose this link, it seems good.
+I found good content, see the url below.
 <URL>
 ```
 2. The URL MUST:
@@ -62,5 +54,5 @@ There is no appropriate content {% if source_config["source_language"] != lang_c
 - Do not reference rejected content
 - Any deviation will break automated processing
 
-# Content for Evaluation:
+# List for Evaluation:
 

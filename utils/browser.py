@@ -53,9 +53,9 @@ def setup_driver():
     # Set timeouts in capabilities
     chrome_options.set_capability("pageLoadStrategy", "normal")
     chrome_options.set_capability("timeouts", {
-        "implicit": 30000,
-        "pageLoad": 30000,
-        "script": 30000
+        "implicit": 60000,
+        "pageLoad": 90000,
+        "script": 60000
     })
 
     # Initialize driver with service and options
@@ -96,25 +96,10 @@ def fetch_content(url, mode, language):
         if status_code != 200:
             raise BadPageException(f"Bad status code: {status_code}")
 
-        driver.set_page_load_timeout(30)
         time.sleep(5)
         driver.get(url)
 
-        # Wait for body with shorter timeout but retry logic
-        max_retries = 3
-        retry_count = 0
-        while retry_count < max_retries:
-            try:
-                WebDriverWait(driver, 20).until(
-                    EC.presence_of_element_located((By.TAG_NAME, "body"))
-                )
-                break
-            except TimeoutException:
-                retry_count += 1
-                if retry_count == max_retries:
-                    raise
-                logging.warning(f"Retry {retry_count} loading page...")
-                driver.refresh()
+        WebDriverWait(driver, 45).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
         if mode=="text":
             text = driver.execute_script("return document.body.innerText")
