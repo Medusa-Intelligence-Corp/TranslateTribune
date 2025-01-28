@@ -17,7 +17,7 @@
 
 # Server Deployment (ADVANCED)
 
-This guide explains how to deploy and configure an automated task runner using Ignition configuration (see example [server-config-nosecrets.ign](./deploy/hosted_example/server-config-nosecrets.ign)). It should work on any linux you like but it has been successfully tested on **Flatcar Container Linux** and **Fedora CoreOS**.
+This guide explains how to deploy and configure an automated task runner using Ignition configuration (see example [server-config-nosecrets.ign](./deploy/hosted_example/server-config-nosecrets.ign)).
 
 ## Overview
 
@@ -29,7 +29,7 @@ This project sets up an automated task execution system that runs twice daily (9
 
 ## Prerequisites
 
-- A server running **Flatcar Container Linux** or **Fedora CoreOS**
+- A server running Linux (**Fedora CoreOS** is recommended)
 - SSH key pair
 - Access to server with administrative privileges
 
@@ -80,7 +80,7 @@ Save the Ignition configuration and use it during server provisioning. We use Vu
 ## File Structure
 
 The configuration creates the following files:
-- `/home/bradmin/tt-run.sh`: Main task execution script
+- `/home/core/tt-run.sh`: Main task execution script
 - `/etc/systemd/system/tt-run.service`: Systemd service configuration
 - `/etc/systemd/system/tt-run.timer`: Timer configuration for scheduled execution
 
