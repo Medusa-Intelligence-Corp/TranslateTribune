@@ -96,7 +96,7 @@ def fetch_content(url, mode, language):
         if status_code != 200:
             raise BadPageException(f"Bad status code: {status_code}")
 
-        driver.set_page_load_timeout(90)
+        driver.set_page_load_timeout(30)
         time.sleep(5)
         driver.get(url)
 

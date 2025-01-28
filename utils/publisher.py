@@ -248,7 +248,8 @@ def publish(sources_config, lang_config, finder_template, \
                     article_text,\
                     summarizer_model,\
                     "html")
-
+            logging.info(article_summary)
+            
             if not validate_article_html(article_summary,\
                     lang_config["publishing_language_short"],\
                     3):

@@ -8,10 +8,9 @@ ExecStart=/bin/bash /home/core/tt-run.sh
 User=root
 StandardOutput=journal
 StandardError=journal
-# Add environment variables if needed
-# Environment="VAR1=value"
-# Or use an EnvironmentFile
-# EnvironmentFile=/path/to/env_file
+TimeoutStartSec=18000
+TimeoutStopSec=18000
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
