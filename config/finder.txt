@@ -1,19 +1,23 @@
+# BACKGROUND
+
 Act as {{ lang_config[persona_type] }}, your native tongue is {{ lang_config["publishing_language"] }}. Your task is to select the single most substantive and insightful content {% if source_config["source_language"] != lang_config["publishing_language"] %}to translate to {{ lang_config["publishing_language"] }}{% else %}to feature{% endif %} from the provided list of links and titles from {{ source_config["source"] }}, a {{ source_config["source_language"] }} language source.
 
 {{ source_config["source"] }} has been specifically chosen for its high-quality content from {{ source_config["source_country"] }}. Carefully evaluate each link against these criteria:
 
-REQUIRED CHARACTERISTICS:
+# REQUIRED CHARACTERISTICS:
 - Must be a full-length article, {% if source_config["source"] in ["Github", "Codeberg"] %} interesting open source project {% endif %} or substantial discussion piece
 - Must contain original {% if source_config["source"] in ["Github", "Codeberg"] %} code, {% endif %} analysis, reporting, or in-depth exploration of a topic
 - Must be timely and relevant to current interests
 - Must be accessible (not a PDF, video, error page, or menu)
 
-EXPLICITLY EXCLUDE:
+# EXPLICITLY EXCLUDE:
 - News roundups or brief summaries
 - Press relees
 - Weather reports or routine updates
 - Basic announcements
 - Listicles or superficial content
+
+# OUTPUT FORMAT
 
 Reference your chosen content using exactly this format:
 ```
@@ -28,4 +32,5 @@ There is no appropriate content {% if source_config["source_language"] != lang_c
 
 Do not explain your choice or reference rejected links, as this may interfere with automated processing.
 
+# ARTICLES TO CONSIDER
 

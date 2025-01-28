@@ -66,3 +66,4 @@ Respond ONLY in this HTML format:
 
 No additional text or explanation should be included.
 
+# Content to Summarize{% if source_config["source_language"] != lang_config["publishing_language"] %} and Translate{% endif %}:
