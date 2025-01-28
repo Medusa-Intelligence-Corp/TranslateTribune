@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs tt-run twice per day at 9 AM and 9 PM
+
+[Timer]
+OnCalendar=*-*-* 09,21:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

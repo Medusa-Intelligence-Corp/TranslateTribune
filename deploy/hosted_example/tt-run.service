@@ -1,0 +1,18 @@
+[Unit]
+Description=tt runner
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/core/tt-run.sh
+User=root
+StandardOutput=journal
+StandardError=journal
+# Add environment variables if needed
+# Environment="VAR1=value"
+# Or use an EnvironmentFile
+# EnvironmentFile=/path/to/env_file
+
+[Install]
+WantedBy=multi-user.target
+

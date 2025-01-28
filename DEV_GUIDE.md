@@ -10,41 +10,128 @@
     - [```finder.txt```](./config/finder.txt): Prompt for finding articles to translate
     - [```summarizer.txt```](./config/summarizer.txt): Prompt for summarizing and ranking articles
     - [```templater.py```](./utils/templater.py): Creates html and deploys to AWS S3
-5. Output appears in the ```debug``` Podman volume (can also push to S3 with AWS credentials) run ```podman volume inspect tt-debug``` to find the directory on your machine.
-6. Access logs in the ```tt-logs``` Podman volume (**NOTE:** this directory might be different on your machine, run ```podman volume inspect tt-logs``` to confirm):
-    ```bash
-    [user@code TranslateTribune]$ podman volume inspect tt-logs
-    [
-         {
-              "Name": "tt-logs",
-              "Driver": "local",
-              "Mountpoint": "/home/user/.local/share/containers/storage/volumes/tt-logs/_data",
-              "CreatedAt": "2024-07-22T13:07:15.15786752-04:00",
-              "Labels": {},
-              "Scope": "local",
-              "Options": {},
-              "MountCount": 0,
-              "NeedsCopyUp": true,
-              "NeedsChown": true,
-              "LockNumber": 2
-         }
-    ]    
-    ```
+5. Output appears in the ```tt-debug``` Podman volume (can also push to S3 with AWS credentials) run ```bash deploy/view_logs.sh``` to view the output html.
+6. Access logs in the ```tt-logs``` Podman volume run ```bash deploy/view_logs.sh``` to tail them while the job is running.
 
-## Big-Picture Principles 🌍
+**NOTE** You can use ```docker``` if you prefer. You should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
 
-* **Privacy**: We think the news that people consume is sensitive, we don't want to know what you read
-* **Decentralization**: We don't want to be a single point of failure, we want to be able to run on any machine
-* **Open-Source**: We want to be able to share our code with the world
-* **Cheap**: We want to be able to run this on a Raspberry Pi if we have to
-* **Free (as in Freedom)**: We want this to be free to use and free to modify
+# Automated Task Runner - Server Deployment Guide (ADVANCED)
 
-## Can I use Docker instead of Podman? 🐳
+This guide explains how to deploy and configure an automated task runner using Ignition configuration (see example [server-config-nosecrets.ign](./deploy/hosted_example/server-config-nosecrets.ign)). It should work on any linux you like but it has been successfully tested on **Flatcar Container Linux** and **Fedora CoreOS**.
 
-Yes you should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
+## Overview
 
+This project sets up an automated task execution system that runs twice daily (9 AM and 9 PM) using systemd timers. The configuration includes:
+- User setup with SSH access
+- Automated task execution scripts
+- System service and timer configuration
+- Log viewing utilities
 
-## How do you connect to LLMs and which ones do you use? 🤔
+## Prerequisites
 
-TranslateTribune forked its original implementation of ```llm.py``` into its own project called [```smartenough```](https://pypi.org/project/smartenough/). It wraps the best cheap LLMs and makes classification and translation easy. The package is available on PyPi and can be installed via ```pip install smartenough```. We use most of the provied models in the package, and try to use the most free and open models available.
+- A server running **Flatcar Container Linux** or **Fedora CoreOS**
+- SSH key pair
+- Access to server with administrative privileges
+
+## Configuration Steps
+
+### 1. Generate Password Hash
+
+First, generate a password hash for the core user:
+
+```bash
+# On Linux systems
+openssl passwd -6
+
+# On macOS
+openssl passwd -6
+```
+
+### 2. Prepare SSH Key
+
+Ensure you have an SSH key pair. If not, generate one:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Your public key is typically located at `~/.ssh/id_ed25519.pub`
+
+### 3. Create Base64 Encoded Files
+
+To encode your script files to base64:
+
+```bash
+base64 -w 0 your-script.sh
+```
+
+For the provided configuration, you'll need to encode:
+- `tt-run.sh` (your main task script)
+
+### 4. Modify Configuration File
+
+1. Replace the following placeholders in the Ignition configuration:
+   - `PASTE_PASSWORD_HASH_HERE`: Your generated password hash
+   - `PASTE_YOUR_OWN_SSH_KEY_HERE`: Your SSH public key
+   - `PASTE_BASE64_OUTPUT_HERE`: Base64 encoded content of your tt-run.sh script
+
+### 5. Deploy Configuration
+
+Save the Ignition configuration as `config.ign` and use it during server provisioning. We use Vultr and configure it like so:
+
+<img src="./deploy/hosted_example/vultr_config.png" alt="Picture of the Vultr configuration page" width="300"/>
+
+## File Structure
+
+The configuration creates the following files:
+- `/home/bradmin/tt-run.sh`: Main task execution script
+- `/home/bradmin/run-now.sh`: Script to manually trigger the task
+- `/home/bradmin/view-logs.sh`: Script to view task logs
+- `/etc/systemd/system/tt-run.service`: Systemd service configuration
+- `/etc/systemd/system/tt-run.timer`: Timer configuration for scheduled execution
+
+## Usage
+
+### Viewing Logs
+Execute the view-logs script:
+```bash
+./view-logs.sh
+```
+
+### Manual Execution
+To run the task manually:
+```bash
+./run-now.sh
+```
+
+## Schedule
+
+The task runs automatically:
+- At 9:00 AM daily
+- At 9:00 PM daily
+
+## Security Considerations
+
+- The configuration creates a user named 'core' with sudo privileges
+- Access is restricted to SSH key authentication
+- Scripts are created with appropriate permissions (mode 484 = chmod 744)
+- Service runs as root user for system-level access
+
+## Troubleshooting
+
+Check service status:
+```bash
+systemctl status tt-run.service
+```
+
+View timer status:
+```bash
+systemctl list-timers tt-run.timer
+```
+
+View system logs:
+```bash
+journalctl -u tt-run.service
+```
+
 
