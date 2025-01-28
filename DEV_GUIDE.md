@@ -40,10 +40,6 @@ This project sets up an automated task execution system that runs twice daily (9
 First, generate a password hash for the core user:
 
 ```bash
-# On Linux systems
-openssl passwd -6
-
-# On macOS
 openssl passwd -6
 ```
 
@@ -66,7 +62,7 @@ base64 -w 0 your-script.sh
 ```
 
 For the provided configuration, you'll need to encode:
-- `tt-run.sh` (your main task script)
+- `tt-run.sh` (your main task script, add your API keys and encode from example found at [./deploy/hosted_example/tt-run.sh](./deploy/hosted_example/tt-run.sh))
 
 ### 4. Modify Configuration File
 
@@ -79,7 +75,7 @@ For the provided configuration, you'll need to encode:
 
 Save the Ignition configuration as `config.ign` and use it during server provisioning. We use Vultr and configure it like so:
 
-<img src="./deploy/hosted_example/vultr_config.png" alt="Picture of the Vultr configuration page" width="300"/>
+<img src="./deploy/hosted_example/vultr_config.png" alt="Picture of the Vultr configuration page"/>
 
 ## File Structure
 
