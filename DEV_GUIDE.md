@@ -81,7 +81,6 @@ Save the Ignition configuration and use it during server provisioning. We use Vu
 
 The configuration creates the following files:
 - `/home/bradmin/tt-run.sh`: Main task execution script
-- `/home/bradmin/view-logs.sh`: Script to view task logs
 - `/etc/systemd/system/tt-run.service`: Systemd service configuration
 - `/etc/systemd/system/tt-run.timer`: Timer configuration for scheduled execution
 
