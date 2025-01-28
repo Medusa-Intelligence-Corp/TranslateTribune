@@ -1,4 +1,4 @@
-# Getting Started 🏁
+# Running Locally (EASY)
 
 1. Clone the repository
 2. Navigate to the project folder
@@ -13,9 +13,9 @@
 5. Output appears in the ```tt-debug``` Podman volume (can also push to S3 with AWS credentials) run ```bash deploy/view_logs.sh``` to view the output html.
 6. Access logs in the ```tt-logs``` Podman volume run ```bash deploy/view_logs.sh``` to tail them while the job is running.
 
-**NOTE** You can use ```docker``` if you prefer. You should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
+**NOTE:** You can use ```docker``` if you prefer. You should be able to take any of the ```podman``` commands and replace them with ```docker``` and it should work.
 
-# Automated Task Runner - Server Deployment Guide (ADVANCED)
+# Server Deployment (ADVANCED)
 
 This guide explains how to deploy and configure an automated task runner using Ignition configuration (see example [server-config-nosecrets.ign](./deploy/hosted_example/server-config-nosecrets.ign)). It should work on any linux you like but it has been successfully tested on **Flatcar Container Linux** and **Fedora CoreOS**.
 
