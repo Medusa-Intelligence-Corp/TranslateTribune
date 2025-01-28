@@ -8,9 +8,9 @@ ExecStart=/bin/bash /home/core/tt-run.sh
 User=root
 StandardOutput=journal
 StandardError=journal
-TimeoutStartSec=18000
-TimeoutStopSec=18000
-RemainAfterExit=yes
+TimeoutStartSec=21600
+TimeoutStopSec=21600
+RemainAfterExit=no
 
 [Install]
 WantedBy=multi-user.target

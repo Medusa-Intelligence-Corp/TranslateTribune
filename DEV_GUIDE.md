@@ -87,9 +87,14 @@ The configuration creates the following files:
 
 ## Troubleshooting
 
-View the logs while the script is running:
+View a scrolling log while the script is running:
 ```bash 
-sudo bash view-logs.sh
+sudo tail -f $(docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
+```
+
+View the logs after-the-fact:
+```bash
+less $(docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
 
 Check service status:
@@ -107,4 +112,13 @@ View system logs:
 journalctl -u tt-run.service
 ```
 
+Run the service manually:
+```bash
+systemctl start tt-run.service
+```
 
+Reset the service if it gets in a funky state:
+```bash
+systemctl reset-failed tt-run.service
+systemctl stop tt-run.service
+```
