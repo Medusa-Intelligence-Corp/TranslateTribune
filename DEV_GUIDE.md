@@ -116,6 +116,11 @@ View system logs:
 journalctl -u tt-run.service
 ```
 
+Poke around inside the running docker container:
+```bash
+sudo docker exec -it $(sudo docker ps -q) /bin/bash
+```
+
 Run the service manually:
 ```bash
 systemctl start tt-run.service
