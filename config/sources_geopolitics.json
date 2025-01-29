@@ -81,15 +81,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "South Korea",
-    "source_language": "Korean",
-    "source_flag": "./assets/png/korea.png",
-    "source_flag_emoji": "&#x1F1F0;&#x1F1F7;",
-    "source": "JoongAng Ilbo",
-    "source_url": "https://www.joongang.co.kr",
-    "source_parser": "goose"
-  },
-  {
     "source_country": "Iran",
     "source_language": "Farsi",
     "source_flag": "./assets/png/iran.png",
@@ -135,15 +126,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Kenya",
-    "source_language": "Swahili",
-    "source_flag": "./assets/png/kenya.png",
-    "source_flag_emoji": "&#x1F1F0;&#x1F1EA;",
-    "source": "Taifa Leo",
-    "source_url": "https://taifaleo.nation.co.ke",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "United Kingdom",
     "source_language": "English",
     "source_flag": "./assets/png/uk.png",
@@ -161,13 +143,58 @@
     "source_url": "https://www.chosun.com/",
     "source_parser": "goose"
   },
+    {
+    "source_country": "Germany",
+    "source_language": "German",
+    "source_flag": "./assets/png/germany.png",
+    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
+    "source": "Der Spiegel",
+    "source_url": "https://www.spiegel.de/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Brazil",
+    "source_language": "Portuguese",
+    "source_flag": "./assets/png/brazil.png",
+    "source_flag_emoji": "&#x1F1E7;&#x1F1F7;",
+    "source": "Folha de São Paulo",
+    "source_url": "https://www.folha.uol.com.br/",
+    "source_parser": "readability"
+  },
   {
     "source_country": "India",
     "source_language": "English",
     "source_flag": "./assets/png/india.png",
     "source_flag_emoji": "&#x1F1EE;&#x1F1F3;",
-    "source": "News 18",
-    "source_url": "https://www.news18.com/",
+    "source": "The Hindu",
+    "source_url": "https://www.thehindu.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Singapore",
+    "source_language": "English",
+    "source_flag": "./assets/png/singapore.png",
+    "source_flag_emoji": "&#x1F1F8;&#x1F1EC;",
+    "source": "The Straits Times",
+    "source_url": "https://www.straitstimes.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "South Africa",
+    "source_language": "English",
+    "source_flag": "./assets/png/south-africa.png",
+    "source_flag_emoji": "&#x1F1FF;&#x1F1E6;",
+    "source": "News24",
+    "source_url": "https://www.news24.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Japan",
+    "source_language": "English",
+    "source_flag": "./assets/png/japan.png",
+    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
+    "source": "Nikkei Asia",
+    "source_url": "https://asia.nikkei.com/",
     "source_parser": "readability"
   }
 ]

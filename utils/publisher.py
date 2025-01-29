@@ -332,7 +332,7 @@ def deploy_language(publishing_language):
     summarizer_template = load_template('config/summarizer.txt')
     
     debug = os.environ.get('DEBUG', False)
-    sources_filename = 'config/sources_debug.json' if debug else 'config/sources.json'
+    sources_filename = 'config/sources_debug.json' if debug else 'config/sources_geopolitics.json'
     
     publish(get_sources_config(sources_filename),\
             lang_config,\
@@ -352,9 +352,9 @@ def deploy_language(publishing_language):
         shutil.copytree(assets_source_folder, assets_destination_folder)
        
 
-    # Create the finance and technology page
+    # Create the technology page
     if not debug:
-        publish(get_sources_config('config/sources_finance_technology.json'),\
+        publish(get_sources_config('config/sources_tech.json'),\
                 lang_config,\
                 finder_template,\
                 summarizer_template,\

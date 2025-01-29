@@ -81,7 +81,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 
 ## Features ✨
 
-- 🌍 Diverse sources from various countries and perspectives (see [sources.json](./config/sources.json) and [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Diverse sources from various countries and perspectives (see [sources_geopolitics.json](./config/sources_geopolitics.json) and [sources_finance_technology.json][sources-tech])
 - 🧠 AI-powered translations and summaries
 - 🔒 Private by Design: no cookies, minimial JavaScript, and no trackers. [Read our full privacy policy here.](https://translatetribune.com/privacy-en.html)
 
@@ -103,7 +103,7 @@ A free and open-source project that leverages AI to curate, translate, and summa
 
 ## 特点 ✨
 
-- 🌍 来自不同国家和观点的多样化资源（参见 [sources.json](./config/sources.json) 和 [sources_finance_technology.json][sources-fin-tech]）
+- 🌍 来自不同国家和观点的多样化资源（参见 [sources_geopolitics.json](./config/sources_geopolitics.json) 和 [sources_finance_technology.json][sources-tech]）
 - 🧠 人工智能驱动的翻译和摘要
 - 🔒 隐私设计：无 cookies，最少的 JavaScript，无跟踪器。[在此阅读我们完整的隐私政策。](https://translatetribune.com/privacy-zh.html)
 
@@ -125,7 +125,7 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 
 ## Características ✨
 
-- 🌍 Fuentes diversas de varios países y perspectivas (ver [sources.json](./config/sources.json) y [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Fuentes diversas de varios países y perspectivas (ver [sources_geopolitics.json](./config/sources_geopolitics.json) y [sources_finance_technology.json][sources-tech])
 - 🧠 Traducciones y resúmenes generados por IA
 - 🔒 Diseño privado: sin cookies, JavaScript mínimo y sin rastreadores. [Lea nuestra política de privacidad completa aquí.](https://translatetribune.com/privacy-es.html)
 
@@ -147,7 +147,7 @@ Un proyecto gratuito y de código abierto que aprovecha la IA para seleccionar, 
 
 ## الميزات ✨
 
-- 🌍 مصادر متنوعة من مختلف البلدان ووجهات النظر (انظر [sources.json](./config/sources.json) و [sources_finance_technology.json][sources-fin-tech])
+- 🌍 مصادر متنوعة من مختلف البلدان ووجهات النظر (انظر [sources_geopolitics.json](./config/sources_geopolitics.json) و [sources_finance_technology.json][sources-tech])
 - 🧠 ترجمات وملخصات مدعومة بالذكاء الاصطناعي
 - 🔒 تصميم يحمي الخصوصية: لا كوكيز، الحد الأدنى من جافا سكريبت، ولا أدوات تتبع. [اقرأ سياسة الخصوصية الكاملة هنا.](https://translatetribune.com/privacy-ar.html)
 
@@ -169,7 +169,7 @@ Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire e
 
 ## Fonctionnalités ✨
 
-- 🌍 Sources diverses provenant de différents pays et perspectives (voir [sources.json](./config/sources.json) et [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Sources diverses provenant de différents pays et perspectives (voir [sources_geopolitics.json](./config/sources_geopolitics.json) et [sources_finance_technology.json][sources-tech])
 - 🧠 Traductions et résumés générés par IA
 - 🔒 Conçu pour la confidentialité : pas de cookies, peu de JavaScript et aucun traceur. [Lisez notre politique de confidentialité complète ici.](https://translatetribune.com/privacy-fr.html)
 
@@ -191,7 +191,7 @@ Un projet gratuit et open-source qui utilise l'IA pour sélectionner, traduire e
 
 ## Особенности ✨
 
-- 🌍 Разнообразные источники из разных стран и точек зрения (см. [sources.json](./config/sources.json) и [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Разнообразные источники из разных стран и точек зрения (см. [sources_geopolitics.json](./config/sources_geopolitics.json) и [sources_finance_technology.json][sources-tech])
 - 🧠 Переводы и резюме на основе ИИ
 - 🔒 Конфиденциальность по дизайну: отсутствие файлов cookie, минимальное использование JavaScript и отсутствие трекеров. [Прочтите нашу полную политику конфиденциальности здесь.](https://translatetribune.com/privacy-ru.html)
 
@@ -213,7 +213,7 @@ Um projeto gratuito e de código aberto que aproveita a IA para selecionar, trad
 
 ## Recursos ✨
 
-- 🌍 Fontes diversas de vários países e perspectivas (veja [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Fontes diversas de vários países e perspectivas (veja [sources_geopolitics.json](./config/sources_geopolitics.json) e [sources_finance_technology.json][sources-tech])
 - 🧠 Traduções e resumos alimentados por IA
 - 🔒 Privacidade por Design: sem cookies, JavaScript mínimo e sem rastreadores. [Leia nossa política de privacidade completa aqui.](https://translatetribune.com/privacy-pt.html)
 
@@ -235,7 +235,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 
 ## Funktionen ✨
 
-- 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources.json](./config/sources.json) und [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Vielfältige Quellen aus verschiedenen Ländern und Perspektiven (siehe [sources_geopolitics.json](./config/sources_geopolitics.json) und [sources_finance_technology.json][sources-tech])
 - 🧠 KI-gestützte Übersetzungen und Zusammenfassungen
 - 🔒 Privacy by Design: keine Cookies, minimales JavaScript und keine Tracker. [Lesen Sie hier unsere vollständige Datenschutzerklärung.](https://translatetribune.com/privacy-de.html)
 
@@ -257,7 +257,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 
 ## 特徴 ✨
 
-- 🌍 様々な国や視点からの多様なソース（[sources.json](./config/sources.json)と[sources_finance_technology.json][sources-fin-tech]を参照）
+- 🌍 様々な国や視点からの多様なソース（[sources_geopolitics.json](./config/sources_geopolitics.json)と[sources_finance_technology.json][sources-tech]を参照）
 - 🧠 AIを活用した翻訳と要約
 - 🔒 プライバシー・バイ・デザイン：クッキーなし、最小限のJavaScript、トラッカーなし。[完全なプライバシーポリシーはこちらをご覧ください。](https://translatetribune.com/privacy-jp.html)
 
@@ -279,7 +279,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 
 ## Özellikler ✨
 
-- 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources.json](./config/sources.json) ve [sources_finance_technology.json][sources-fin-tech] dosyalarına bakın)
+- 🌍 Çeşitli ülkelerden ve bakış açılarından gelen çeşitli kaynaklar ([sources_geopolitics.json](./config/sources_geopolitics.json) ve [sources_finance_technology.json][sources-tech] dosyalarına bakın)
 - 🧠 AI destekli çeviriler ve özetler
 - 🔒 Tasarımla Gizlilik: çerez yok, minimum JavaScript ve takip yok. [Tam gizlilik politikamızı burada okuyun.](https://translatetribune.com/privacy-tr.html)
 
@@ -301,7 +301,7 @@ Ein kostenloses und quelloffenes Projekt, das KI nutzt, um fremdsprachige Nachri
 
 ## 특징 ✨
 
-- 🌍 다양한 국가와 관점의 다양한 출처 ([sources.json](./config/sources.json)과 [sources_finance_technology.json][sources-fin-tech] 참조)
+- 🌍 다양한 국가와 관점의 다양한 출처 ([sources_geopolitics.json](./config/sources_geopolitics.json)과 [sources_finance_technology.json][sources-tech] 참조)
 - 🧠 AI 기반 번역 및 요약
 - 🔒 프라이버시 중심 설계: 쿠키 없음, 최소한의 JavaScript, 추적기 없음. [전체 개인정보 보호정책은 여기에서 읽으세요.](https://translatetribune.com/privacy-ko.html)
 
@@ -323,7 +323,7 @@ Un progetto gratuito e open-source che sfrutta l'AI per curare, tradurre e riass
 
 ## Caratteristiche ✨
 
-- 🌍 Fonti diverse da vari paesi e prospettive (vedi [sources.json](./config/sources.json) e [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Fonti diverse da vari paesi e prospettive (vedi [sources_geopolitics.json](./config/sources_geopolitics.json) e [sources_finance_technology.json][sources-tech])
 - 🧠 Traduzioni e riassunti basati sull'AI
 - 🔒 Privacy by Design: nessun cookie, JavaScript minimo e nessun tracker. [Leggi qui la nostra informativa sulla privacy completa.](https://translatetribune.com/privacy-it.html)
 
@@ -345,7 +345,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 
 ## Functies ✨
 
-- 🌍 Diverse bronnen uit verschillende landen en perspectieven (zie [sources.json](./config/sources.json) en [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Diverse bronnen uit verschillende landen en perspectieven (zie [sources_geopolitics.json](./config/sources_geopolitics.json) en [sources_finance_technology.json][sources-tech])
 - 🧠 AI-aangedreven vertalingen en samenvattingen
 - 🔒 Privacy by Design: geen cookies, minimale JavaScript en geen trackers. [Lees hier ons volledige privacybeleid.](https://translatetribune.com/privacy-nl.html)
 
@@ -367,7 +367,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 
 ## ویژگی ها ✨
 
-- 🌍 منابع متنوع از کشورها و دیدگاه های مختلف (به [sources.json](./config/sources.json) و [sources_finance_technology.json][sources-fin-tech] مراجعه کنید)
+- 🌍 منابع متنوع از کشورها و دیدگاه های مختلف (به [sources_geopolitics.json](./config/sources_geopolitics.json) و [sources_finance_technology.json][sources-tech] مراجعه کنید)
 - 🧠 ترجمه ها و خلاصه های مبتنی بر هوش مصنوعی
 - 🔒 حریم خصوصی با طراحی: بدون کوکی، حداقل جاوا اسکریپت و بدون ردیاب. [سیاست حفظ حریم خصوصی کامل ما را اینجا بخوانید.](https://translatetribune.com/privacy-fa.html)
 
@@ -389,7 +389,7 @@ Een gratis en open-source project dat AI gebruikt om nieuwsartikelen in vreemde 
 
 ## Особливості ✨
 
-- 🌍 Різноманітні джерела з різних країн та різними точками зору (див. [sources.json](./config/sources.json) та [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Різноманітні джерела з різних країн та різними точками зору (див. [sources_geopolitics.json](./config/sources_geopolitics.json) та [sources_finance_technology.json][sources-tech])
 - 🧠 Переклади та підсумовування повністю виконані ШІ
 - 🔒 Приватність за замовчуванням: без cookies, мінімальне використання JavaScript та без жодних трекерів. [Читайте нашу повну політику конфіденційності тут.](https://translatetribune.com/privacy-uk.html)
 
@@ -411,7 +411,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 
 ## Funktioner ✨
 
-- 🌍 Olika källor från olika länder och perspektiv (se [sources.json](./config/sources.json) och [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Olika källor från olika länder och perspektiv (se [sources_geopolitics.json](./config/sources_geopolitics.json) och [sources_finance_technology.json][sources-tech])
 - 🧠 AI-drivna översättningar och sammanfattningar
 - 🔒 Integritet genom design: inga cookies, minimal JavaScript och inga spårare. [Läs vår fullständiga integritetspolicy här.](https://translatetribune.com/privacy-sv.html)
 
@@ -433,7 +433,7 @@ Ett gratis och öppet källkodsprojekt som utnyttjar AI för att kurera, övers�
 
 ## תכונות ✨
 
-- 🌍 מקורות מגוונים ממדינות ונקודות מבט שונות (ראה [sources.json](./config/sources.json) ו-[sources_finance_technology.json][sources-fin-tech])
+- 🌍 מקורות מגוונים ממדינות ונקודות מבט שונות (ראה [sources_geopolitics.json](./config/sources_geopolitics.json) ו-[sources_finance_technology.json][sources-tech])
 - 🧠 תרגומים ותקצירים מונעי AI
 - 🔒 פרטיות לפי עיצוב: ללא עוגיות, מינימום JavaScript וללא גששים. [קרא את מדיניות הפרטיות המלאה שלנו כאן.](https://translatetribune.com/privacy-he.html)
 
@@ -455,7 +455,7 @@ Egy ingyenes és nyílt forráskódú projekt, amely AI-t használ különböző
 
 ## Jellemzők ✨
 
-- 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources.json](./config/sources.json) és [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Különböző országokból és nézőpontokból származó változatos források (lásd [sources_geopolitics.json](./config/sources_geopolitics.json) és [sources_finance_technology.json][sources-tech])
 - 🧠 AI-vezérelt fordítások és összefoglalók
 - 🔒 Adatvédelem tervezés által: nincsenek sütik, minimális JavaScript és nincsenek nyomkövetők. [Olvasd el teljes adatvédelmi irányelveinket itt.](https://translatetribune.com/privacy-hu.html)
 
@@ -477,7 +477,7 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 
 ## Vipengele ✨
 
-- 🌍 Vyanzo mbalimbali kutoka nchi na mitazamo tofauti (tazama [sources.json](./config/sources.json) na [sources_finance_technology.json][sources-fin-tech])
+- 🌍 Vyanzo mbalimbali kutoka nchi na mitazamo tofauti (tazama [sources_geopolitics.json](./config/sources_geopolitics.json) na [sources_finance_technology.json][sources-tech])
 - 🧠 Tafsiri na muhtasari unaoendesha na AI
 - 🔒 Faragha kwa Muundo: hakuna vidakuzi, JavaScript ndogo, na hakuna vifuatiliaji. [Soma sera yetu kamili ya faragha hapa.](https://translatetribune.com/privacy-sw.html)
 
@@ -485,4 +485,4 @@ Mradi wa bure na chanzo wazi unaotumiwa AI kwa ajili ya kutunza, kutafsiri, na k
 
 **Patreon**: Kuwa mfadhili na [ahidi mchango wa kila mwezi wa $10 kupitia ukurasa wetu wa Patreon](https://www.patreon.com/medusaintel). Msaada wako thabiti utatusaidia kudumisha na kupanua mradi.
 
-[sources-fin-tech]: config/sources_finance_technology.json
+[sources-tech]: config/sources_tech.json

@@ -18,15 +18,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Switzerland",
-    "source_language": "French",
-    "source_flag": "./assets/png/switzerland.png",
-    "source_flag_emoji": "&#x1F1E8;&#x1F1ED;",
-    "source": "L'Agefi",
-    "source_url": "https://agefi.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "China",
     "source_language": "Chinese",
     "source_flag": "./assets/png/china.png",
@@ -61,15 +52,6 @@
     "source": "Electronic Times",
     "source_url": "http://etnews.com/",
     "source_parser": "goose"
-  },
-  {
-    "source_country": "Germany",
-    "source_language": "German",
-    "source_flag": "./assets/png/germany.png",
-    "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
-    "source": "Handelsblatt",
-    "source_url": "https://www.handelsblatt.com/", 
-    "source_parser": "readability"
   },
   {
     "source_country": "Singapore",
@@ -179,6 +161,63 @@
     "source": "Presse-citron",
     "source_url": "https://www.presse-citron.net/",
     "source_parser": "readability"
+  },
+  [
+  {
+    "source_country": "United States",
+    "source_language": "English",
+    "source_flag": "./assets/png/us.png",
+    "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "United Kingdom",
+    "source_language": "English",
+    "source_flag": "./assets/png/uk.png",
+    "source_flag_emoji": "&#x1F1EC;&#x1F1E7;",
+    "source": "The Register",
+    "source_url": "https://www.theregister.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Taiwan",
+    "source_language": "Chinese",
+    "source_flag": "./assets/png/taiwan.png",
+    "source_flag_emoji": "&#x1F1F9;&#x1F1FC;",
+    "source": "DigiTimes",
+    "source_url": "https://www.digitimes.com/",
+    "source_parser": "goose"
+  },
+  {
+    "source_country": "Spain",
+    "source_language": "Spanish",
+    "source_flag": "./assets/png/spain.png",
+    "source_flag_emoji": "&#x1F1EA;&#x1F1F8;",
+    "source": "Xataka",
+    "source_url": "https://www.xataka.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Israel",
+    "source_language": "English",
+    "source_flag": "./assets/png/israel.png",
+    "source_flag_emoji": "&#x1F1EE;&#x1F1F1;",
+    "source": "CTech",
+    "source_url": "https://www.calcalistech.com/",
+    "source_parser": "readability"
+  },
+  {
+    "source_country": "Japan",
+    "source_language": "English",
+    "source_flag": "./assets/png/japan.png",
+    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
+    "source": "TechCrunch Japan",
+    "source_url": "https://jp.techcrunch.com/",
+    "source_parser": "readability"
   }
+]
+
 ]
 

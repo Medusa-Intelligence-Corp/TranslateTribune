@@ -5,7 +5,7 @@
 3. Build the Podman container: ```bash deploy/build.sh```
 4. Run the curation and translation job: ```bash deploy/run.sh``` which uses the following:
     - [```publisher.py```](./utils/publisher.py): Main job control loop
-    - [```sources.json```](./config/sources.json): Source site configuration
+    - [```sources_XXXXXXX.json```](./config/): Source site configuration for each section
     - [```browser.py```](./utils/browser.py): Extracts text from sites
     - [```finder.txt```](./config/finder.txt): Prompt for finding articles to translate
     - [```summarizer.txt```](./config/summarizer.txt): Prompt for summarizing and ranking articles
