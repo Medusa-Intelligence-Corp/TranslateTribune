@@ -100,6 +100,10 @@ Grep the logs to look for a recurring error:
 ```bash
 sudo grep -B 5 -A 10 --group-separator="-------------------------------------" "score=\"1\">" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
+Get a report on sources that are failing:
+```bash
+sudo grep "Failed to summarize" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log | cut -d' ' -f5- | sort | uniq -c | sort -rn
+```
 
 Check service status:
 ```bash

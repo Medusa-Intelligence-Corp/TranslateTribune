@@ -36,15 +36,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Chile",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/chile.png",
-    "source_flag_emoji": "&#x1F1E8;&#x1F1F1;",
-    "source": "FayerWayer",
-    "source_url": "https://www.fayerwayer.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "South Korea",
     "source_language": "Korean",
     "source_flag": "./assets/png/korea.png",

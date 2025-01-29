@@ -37,11 +37,11 @@
   },
   {
     "source_country": "France",
-    "source_language": "French",
+    "source_language": "English",
     "source_flag": "./assets/png/france.png",
     "source_flag_emoji": "&#x1F1EB;&#x1F1F7;",
-    "source": "Le Figaro",
-    "source_url": "https://www.lefigaro.fr",
+    "source": "La Croix",
+    "source_url": "https://international.la-croix.com/",
     "source_parser": "readability"
   },
   {
@@ -109,11 +109,11 @@
   },
   {
     "source_country": "Türkiye",
-    "source_language": "Turkish",
+    "source_language": "English",
     "source_flag": "./assets/png/turkey.png",
     "source_flag_emoji": "&#x1F1F9;&#x1F1F7;",
-    "source": "Hürriyet",
-    "source_url": "https://www.hurriyet.com.tr",
+    "source": "Daily Sabah",
+    "source_url": "https://www.dailysabah.com/",
     "source_parser": "readability"
   },
   {
@@ -148,8 +148,8 @@
     "source_language": "German",
     "source_flag": "./assets/png/germany.png",
     "source_flag_emoji": "&#x1F1E9;&#x1F1EA;",
-    "source": "Der Spiegel",
-    "source_url": "https://www.spiegel.de/",
+    "source": "Tagesschau",
+    "source_url": "https://www.tagesschau.de/",
     "source_parser": "readability"
   },
   {
