@@ -19,12 +19,12 @@
   },
   {
     "source_country": "China",
-    "source_language": "Chinese",
+    "source_language": "English",
     "source_flag": "./assets/png/china.png",
     "source_flag_emoji": "&#x1F1E8;&#x1F1F3;",
     "source": "PingWest",
-    "source_url": "https://www.pingwest.com/",
-    "source_parser": "goose"
+    "source_url": "https://en.pingwest.com/",
+    "source_parser": "readability"
   },
   {
     "source_country": "Brazil",
