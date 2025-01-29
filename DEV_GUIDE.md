@@ -98,7 +98,7 @@ sudo less $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publis
 
 Grep the logs to look for a recurring error:
 ```bash
-sudo grep "score=\"1\">" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
+sudo grep -B 5 -A 10 --group-separator="-------------------------------------" "score=\"1\">" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log
 ```
 
 Check service status:

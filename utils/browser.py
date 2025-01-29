@@ -116,5 +116,9 @@ def fetch_content(url, mode, language):
                 driver.quit()
             except Exception as e:
                 logging.error(f"Error closing driver: {str(e)}")
-
+    logging.info("BROWSER RESULTS") 
+    logging.info(f"{url}")
+    logging.info(f"{language}-language source") 
+    logging.info(f"mode: {mode}")
+    logging.info(text)
     return text 
