@@ -295,8 +295,8 @@ def publish(sources_config, lang_config, finder_template, \
     except Exception as e:
         logging.exception(f"An unexpected error occurred, ignoring: {e}")
         logging.error("Exception occurred", exc_info=True)
-    
-    sorted_articles = sorted(article_dict.items(), key=lambda x: x[1]['score'], reverse=True)
+   
+    sorted_articles = sorted(article_dict.items(), key=lambda x: (x[1]['score'], random.random()), reverse=True)
     article_html=""
     article_rss=""
     for article_title, article_data in sorted_articles:
