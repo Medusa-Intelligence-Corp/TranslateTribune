@@ -90,15 +90,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "Mexico",
-    "source_language": "Spanish",
-    "source_flag": "./assets/png/mexico.png",
-    "source_flag_emoji": "&#x1F1F2;&#x1F1FD;",
-    "source": "ForoBeta",
-    "source_url": "https://www.forobeta.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "Netherlands",
     "source_language": "Dutch",
     "source_flag": "./assets/png/netherlands.png",

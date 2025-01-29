@@ -31,8 +31,8 @@
     "source_language": "English",
     "source_flag": "./assets/png/us.png",
     "source_flag_emoji": "&#x1F1FA;&#x1F1F8;",
-    "source": "The New York Times",
-    "source_url": "https://www.nytimes.com/",
+    "source": "Foreign Policy",
+    "source_url": "https://foreignpolicy.com/",
     "source_parser": "readability"
   },
   {
