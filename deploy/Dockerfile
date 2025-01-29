@@ -25,7 +25,6 @@ RUN pip3 install --upgrade --no-cache-dir pip
 RUN pip3 install --no-cache-dir \
     selenium \
     beautifulsoup4 \
-    requests \
     pytz \
     cachetools \
     urlextract \

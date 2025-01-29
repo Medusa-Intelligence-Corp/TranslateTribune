@@ -212,7 +212,7 @@ def get_sources_config(filename):
 
 
 def publish(sources_config, lang_config, finder_template, \
-        summarizer_template, html_filename, rss_filename, section_key, persona_type="persona"):        
+        summarizer_template, html_filename, rss_filename, section_key, persona_type):        
     article_dict = {}
 
     for source_config in sources_config:
@@ -273,6 +273,7 @@ def publish(sources_config, lang_config, finder_template, \
             logging.info("Function timed out")
             logging.error("Exception occurred", exc_info=True)
         except Exception as e:
+            logging.error(f"Failed to summarize {source_config['source']}")
             logging.exception(f"An unexpected error occurred, ignoring: {e}")
             logging.error("Exception occurred", exc_info=True)
     
@@ -339,7 +340,8 @@ def deploy_language(publishing_language):
             summarizer_template,\
             f'{lang_config["publishing_language_short"]}.html',\
             f'{lang_config["publishing_language_short"]}.xml',\
-            "world_news")
+            "geopolitics",\
+            "geopolitics_persona")
 
     # Copy assets to debug folder
     if debug:
@@ -358,8 +360,8 @@ def deploy_language(publishing_language):
                 summarizer_template,\
                 f'{lang_config["publishing_language_short"]}-ft.html',\
                 f'{lang_config["publishing_language_short"]}-ft.xml',\
-                "finance_technology",\
-                "finance_technology_persona")
+                "tech",\
+                "tech_persona")
 
 if __name__ == "__main__":
     debug = os.environ.get('DEBUG', False)

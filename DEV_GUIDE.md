@@ -131,14 +131,3 @@ Reset the service if it gets in a funky state:
 systemctl reset-failed tt-run.service
 systemctl stop tt-run.service
 ```
-
-Wild one-liner to get summary errors from the logs:
-```bash
-sudo grep "ERROR" $(sudo docker volume inspect tt-logs | jq -r '.[0].Mountpoint')/publisher.log | \
-awk -F':ERROR:' '{print $2}' | \
-grep -v "^Exception occurred" | \
-sed -E 's/Message: timeout: Timed out receiving message from renderer: [0-9.]+/TIMEOUT_ERROR/g' | \
-sed -E 's/Bad status code: [0-9]+/BAD_STATUS_CODE/g' | \
-sed -E 's/^(Error during content fetch: |An unexpected error occurred, ignoring: )//' | \
-sort | uniq -c | sort -nr
-```

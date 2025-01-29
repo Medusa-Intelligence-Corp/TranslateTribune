@@ -1,12 +1,7 @@
 import time
 import logging
 
-import requests
-
 from tempfile import mkdtemp
-
-from urllib import robotparser
-from urllib.parse import urlparse
 
 from readabilipy import simple_json_from_html_string
 
@@ -41,23 +36,15 @@ class BadPageException(Exception):
 def setup_driver():
     chrome_options = Options()
 
-    # Basic options
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument('--headless=new')  # for newer Chrome versions
-
-    # Additional recommended options
+    chrome_options.add_argument('--headless=new')
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--disable-infobars")
     chrome_options.add_argument("--window-size=1920,1080")
-    
-    #create user directory for each session
-    user_data_dir = mkdtemp()
-    chrome_options.add_argument(f'--user-data-dir={user_data_dir}')
-
-    # Set timeouts in capabilities
+    chrome_options.add_argument(f'--user-data-dir={mkdtemp()}')
     chrome_options.set_capability("pageLoadStrategy", "normal")
     chrome_options.set_capability("timeouts", {
         "implicit": 60000,
@@ -65,7 +52,6 @@ def setup_driver():
         "script": 60000
     })
 
-    # Initialize driver with service and options
     driver = webdriver.Chrome(
         options=chrome_options
     )
@@ -74,34 +60,9 @@ def setup_driver():
 
 
 def fetch_content(url, mode, language):
-    headers = {
-        "User-Agent": "TranslateTribune/1.0 (https://translatetribune.com)"
-    }
-
-    parsed_url = urlparse(url)
-    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
-    robots_url = f"{base_url}/robots.txt"
-    rp = robotparser.RobotFileParser()
-    rp.set_url(robots_url)
-
-    try:
-        rp.read()
-    except requests.exceptions.RequestException:
-        logging.info(f"Could not fetch robots.txt from {base_url}")
-
-    if not rp.can_fetch("TranslateTribune", url):
-        logging.info(f"Permission issue for {robots_url}, contact them.")
-
     driver = None
-    driver = setup_driver()
     try:
         driver = setup_driver()
-                    
-        response = requests.get(url, headers=headers, timeout=10)
-        status_code = response.status_code
-
-        if status_code != 200:
-            raise BadPageException(f"Bad status code: {status_code}")
 
         time.sleep(5)
         driver.get(url)
@@ -133,104 +94,17 @@ def fetch_content(url, mode, language):
         elif mode=="links":
             # check if the url contains codeberg or github
             if "codeberg.org" in url:
-                text = driver.execute_script("""
-                    function extractCodebergTextAndLinks() {
-                        function getAbsoluteUrl(relativeUrl) {
-                            return new URL(relativeUrl, window.location.origin).href;
-                        }
-
-                        function extractText(element, selector) {
-                            const el = element.querySelector(selector);
-                            return el ? el.textContent.trim() : '';
-                        }
-
-                        return Array.from(document.querySelectorAll('.flex-item')).map(container => {
-                            const nameElements = container.querySelectorAll('.flex-item-title .text.primary.name');
-                            const fullName = Array.from(nameElements).map(el => el.textContent.trim()).join('/');
-                            const link = nameElements.length ? getAbsoluteUrl(nameElements[nameElements.length - 1].getAttribute('href')) : '';
-
-                            const description = extractText(container, '.flex-item-body');
-                            const language = extractText(container, '.flex-item-trailing .flex-text-inline');
-                            const updateTime = container.querySelector('.flex-item-body relative-time')?.getAttribute('datetime') || '';
-
-                            return [
-                                fullName,
-                                link,
-                                description,
-                                language ? 'Language: ' + language : '',
-                                updateTime ? 'Updated: ' + updateTime : ''
-                            ].filter(Boolean).join('\\n');
-                        }).join('\\n\\n');
-                    }
-                    return extractCodebergTextAndLinks();
-                """)
-                text = text.replace('\\n', '\n')
+                with open('utils/codeberg_extractor.js', 'r') as file:
+                    js_script = file.read()
+                text = driver.execute_script(js_script).replace('\\n', '\n')
             elif "github.com" in url:
-                text = driver.execute_script("""
-                    function extractGitHubTextAndLinks() {
-                        function getVisibleText(element) {
-                            if (element.nodeType === Node.TEXT_NODE) {
-                                return element.textContent.trim();
-                            }
-                            if (element.nodeType !== Node.ELEMENT_NODE) {
-                                return '';
-                            }
-                            const style = window.getComputedStyle(element);
-                            if (style.display === 'none' || style.visibility === 'hidden') {
-                                return '';
-                            }
-                            let text = '';
-                            for (let child of element.childNodes) {
-                                text += getVisibleText(child);
-                            }
-                            return text;
-                        }
-
-                        function getAbsoluteUrl(relativeUrl) {
-                            const a = document.createElement('a');
-                            a.href = relativeUrl;
-                            return a.href;
-                        }
-
-                        let result = '';
-                        const containers = document.querySelectorAll('.Box-row');
-
-                        containers.forEach(container => {
-                            const visibleText = getVisibleText(container).replace(/\\s+/g, ' ').trim();
-                            const links = Array.from(container.querySelectorAll('a.Link'))
-                                .map(a => getAbsoluteUrl(a.getAttribute('href')))
-                                .filter(href => href && !href.endsWith('/stargazers') && !href.endsWith('/forks'));
-
-                            result += visibleText + '\\n';
-                            links.forEach(link => {
-                                result += link + '\\n';
-                            });
-                            result += '\\n';
-                        });
-
-                        return result.trim();
-                    }
-                    return extractGitHubTextAndLinks();
-                """)
-                text = text.replace('\\n', '\n')
+                with open('utils/github_extractor.js', 'r') as file:
+                    js_script = file.read()
+                text = driver.execute_script(js_script).replace('\\n', '\n')
             else:
-                #This selects all 'a' tags, keeps track of their order in the document
-                #Then gives the 50 longest links (combined length of url and text)
-                #The assumption is that article titles are optimized for SEO
-                #and an article name is longer than a command like "Sign Out" or 
-                #some other garbage link we don't want to see
-                text = driver.execute_script("""
-                  const links = Array.from(document.querySelectorAll('a'));
-                  const csvLines = links.map((link, index) => `${index + 1},"${link.textContent.trim()}","${link.href}"`);
-                  const sortedLines = csvLines.sort((a, b) => b.length - a.length);
-                  const topTenLines = sortedLines.slice(0, 50);
-                  const reorderedLines = topTenLines.sort((a, b) => {
-                    const indexA = parseInt(a.split(',')[0]);
-                    const indexB = parseInt(b.split(',')[0]);
-                    return indexA - indexB;
-                  });
-                  return reorderedLines.join('\\n');
-                """)
+                with open('utils/link_extractor.js', 'r') as file:
+                    js_script = file.read()
+                text = driver.execute_script(js_script)
         else:
             raise UnsupportedModeException(mode)
     except Exception as e:
