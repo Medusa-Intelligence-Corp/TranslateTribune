@@ -197,14 +197,5 @@
     "source": "CTech",
     "source_url": "https://www.calcalistech.com/",
     "source_parser": "readability"
-  },
-  {
-    "source_country": "Japan",
-    "source_language": "English",
-    "source_flag": "./assets/png/japan.png",
-    "source_flag_emoji": "&#x1F1EF;&#x1F1F5;",
-    "source": "TechCrunch Japan",
-    "source_url": "https://jp.techcrunch.com/",
-    "source_parser": "readability"
   }
 ]
