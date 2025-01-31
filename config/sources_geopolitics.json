@@ -180,15 +180,6 @@
     "source_parser": "readability"
   },
   {
-    "source_country": "South Africa",
-    "source_language": "English",
-    "source_flag": "./assets/png/south-africa.png",
-    "source_flag_emoji": "&#x1F1FF;&#x1F1E6;",
-    "source": "News24",
-    "source_url": "https://www.news24.com/",
-    "source_parser": "readability"
-  },
-  {
     "source_country": "Japan",
     "source_language": "English",
     "source_flag": "./assets/png/japan.png",
